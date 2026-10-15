@@ -54,3 +54,27 @@ def paired_bootstrap(diffs: list[float], n_boot: int = 2000, seed: int = 0) -> t
     m = len(diffs)
     means = sorted(sum(rng.choice(diffs) for _ in range(m)) / m for _ in range(n_boot))
     return (sum(diffs) / m, means[int(0.025 * n_boot)], means[int(0.975 * n_boot) - 1])
+
+
+def cohen_kappa(a: list[bool], b: list[bool]) -> float:
+    """Agreement between two raters on yes/no labels, corrected for chance (1 = perfect, 0 = chance)."""
+    n = len(a)
+    if n == 0 or n != len(b):
+        raise ValueError("need two equal-length, non-empty label lists")
+    observed = sum(x == y for x, y in zip(a, b)) / n
+    pa, pb = sum(a) / n, sum(b) / n
+    expected = pa * pb + (1 - pa) * (1 - pb)
+    return 1.0 if expected == 1 else (observed - expected) / (1 - expected)
+
+
+def bootstrap_ci(diffs: list[float], alpha: float = 0.05, n_boot: int = 4000, seed: int = 0) -> tuple[float, float, float]:
+    """Mean of per-case differences with a (1 - alpha) bootstrap interval. Use a smaller alpha when
+    several metrics are tested at once (Bonferroni: alpha / number of metrics)."""
+    if not diffs:
+        return (0.0, 0.0, 0.0)
+    rng = random.Random(seed)
+    m = len(diffs)
+    means = sorted(sum(rng.choice(diffs) for _ in range(m)) / m for _ in range(n_boot))
+    lo_i = max(0, int(alpha / 2 * n_boot))
+    hi_i = min(n_boot - 1, int((1 - alpha / 2) * n_boot) - 1)
+    return (sum(diffs) / m, means[lo_i], means[hi_i])

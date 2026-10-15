@@ -1,0 +1,733 @@
+[
+ {
+  "name": "Alexandra Mosciski",
+  "dob": "1981-05-25",
+  "age": 45,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Ali Krajcik",
+  "dob": "2000-09-17",
+  "age": 26,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Angelina West",
+  "dob": "1989-04-11",
+  "age": 37,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Armand McGlynn",
+  "dob": "1979-11-06",
+  "age": 46,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Arnulfo Boyer",
+  "dob": "1995-01-23",
+  "age": 31,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Aurelio Eichmann",
+  "dob": "1942-04-04",
+  "age": 84,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "alendronate",
+    "dose": "70 mg",
+    "frequency": "once weekly",
+    "aliases": [
+     "Fosamax"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Barbra Conn",
+  "dob": "1998-02-11",
+  "age": 28,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "loratadine",
+    "dose": "10 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Claritin"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Basilia Hagenes",
+  "dob": "1968-09-24",
+  "age": 58,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "ferrous sulfate",
+    "dose": "325 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "iron pill"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Bebe Simonis",
+  "dob": "1964-11-05",
+  "age": 61,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "amlodipine",
+    "dose": "5 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Norvasc"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Benedict Gibson",
+  "dob": "1960-11-08",
+  "age": 65,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "ferrous sulfate",
+    "dose": "325 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "iron pill"
+    ]
+   },
+   {
+    "name": "metformin ER",
+    "dose": "500 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Glucophage"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Bo Klein",
+  "dob": "1963-03-16",
+  "age": 63,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Boyce Nolan",
+  "dob": "1980-01-13",
+  "age": 46,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "amlodipine",
+    "dose": "5 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Norvasc"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Brady Olson",
+  "dob": "1980-01-13",
+  "age": 46,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Breana Gutkowski",
+  "dob": "1995-05-13",
+  "age": 31,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "loratadine",
+    "dose": "10 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Claritin"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Brittany Mante",
+  "dob": "1995-01-30",
+  "age": 31,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Brock Lockman",
+  "dob": "1991-12-06",
+  "age": 34,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "loratadine",
+    "dose": "10 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Claritin"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Carman Bergnaum",
+  "dob": "1988-12-25",
+  "age": 37,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Christiana O'Kon",
+  "dob": "1990-12-17",
+  "age": 35,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "ferrous sulfate",
+    "dose": "325 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "iron pill"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Clemencia Gaylord",
+  "dob": "1972-11-01",
+  "age": 53,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Cole Corwin",
+  "dob": "1944-10-11",
+  "age": 82,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "metformin ER",
+    "dose": "500 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Glucophage"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Danny Jacobs",
+  "dob": "1960-03-25",
+  "age": 66,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "amlodipine",
+    "dose": "5 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Norvasc"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Ellis Larson",
+  "dob": "1969-08-20",
+  "age": 57,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Emmanuel Considine",
+  "dob": "1956-10-18",
+  "age": 69,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Enrique Rojas",
+  "dob": "1984-12-14",
+  "age": 41,
+  "sex": "male",
+  "hispanic": true,
+  "background_meds": []
+ },
+ {
+  "name": "Gianna Murphy",
+  "dob": "1985-11-30",
+  "age": 40,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Grady Davis",
+  "dob": "1981-07-29",
+  "age": 45,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Grisel Balistreri",
+  "dob": "1948-06-15",
+  "age": 78,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "alendronate",
+    "dose": "70 mg",
+    "frequency": "once weekly",
+    "aliases": [
+     "Fosamax"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Guillermo VonRueden",
+  "dob": "1978-01-16",
+  "age": 48,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Hui Stoltenberg",
+  "dob": "1990-07-22",
+  "age": 36,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Jayne Bruen",
+  "dob": "2001-02-11",
+  "age": 25,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Jesica Cormier",
+  "dob": "1981-01-20",
+  "age": 45,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "John D'Amore",
+  "dob": "1994-05-08",
+  "age": 32,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Jordan Abbott",
+  "dob": "1999-11-07",
+  "age": 26,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "amlodipine",
+    "dose": "5 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Norvasc"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Josef Champlin",
+  "dob": "1986-06-15",
+  "age": 40,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Julian Walsh",
+  "dob": "1980-10-04",
+  "age": 46,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Ken Grant",
+  "dob": "1964-06-23",
+  "age": 62,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Lamar Beer",
+  "dob": "1971-02-16",
+  "age": 55,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Lou Little",
+  "dob": "1990-02-18",
+  "age": 36,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Madalyn Crist",
+  "dob": "1994-12-29",
+  "age": 31,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Manuel Frami",
+  "dob": "1981-01-08",
+  "age": 45,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Mario VonRueden",
+  "dob": "1990-01-14",
+  "age": 36,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Mathilde Hettinger",
+  "dob": "1980-09-21",
+  "age": 46,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Matilda Kihn",
+  "dob": "1967-10-07",
+  "age": 59,
+  "sex": "female",
+  "hispanic": true,
+  "background_meds": [
+   {
+    "name": "amlodipine",
+    "dose": "5 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Norvasc"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Maurice Auer",
+  "dob": "1973-03-25",
+  "age": 53,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Maximo Pagac",
+  "dob": "2000-02-14",
+  "age": 26,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Merlene Thompson",
+  "dob": "1972-09-11",
+  "age": 54,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "ferrous sulfate",
+    "dose": "325 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "iron pill"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Micaela Rendón",
+  "dob": "1985-06-12",
+  "age": 41,
+  "sex": "female",
+  "hispanic": true,
+  "background_meds": []
+ },
+ {
+  "name": "Micah Shanahan",
+  "dob": "1990-05-27",
+  "age": 36,
+  "sex": "female",
+  "hispanic": true,
+  "background_meds": []
+ },
+ {
+  "name": "Michale Ankunding",
+  "dob": "1962-05-09",
+  "age": 64,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Nan Bednar",
+  "dob": "1993-11-17",
+  "age": 32,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Nathaniel Kuhic",
+  "dob": "1964-02-22",
+  "age": 62,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Nilda Wiza",
+  "dob": "1984-10-08",
+  "age": 42,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "ferrous sulfate",
+    "dose": "325 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "iron pill"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Pat Rutherford",
+  "dob": "1975-10-22",
+  "age": 50,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "cetirizine",
+    "dose": "10 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Zyrtec"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Preston Little",
+  "dob": "1995-03-04",
+  "age": 31,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Raphael McLaughlin",
+  "dob": "1973-11-12",
+  "age": 52,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Rick Kulas",
+  "dob": "1954-10-05",
+  "age": 72,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Rogelio Monahan",
+  "dob": "1961-12-18",
+  "age": 64,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Rosanne Simonis",
+  "dob": "1989-01-18",
+  "age": 37,
+  "sex": "female",
+  "hispanic": true,
+  "background_meds": []
+ },
+ {
+  "name": "Shaun Cormier",
+  "dob": "1953-05-12",
+  "age": 73,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Stephine Christiansen",
+  "dob": "2001-05-20",
+  "age": 25,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Susan Barrows",
+  "dob": "1969-04-25",
+  "age": 57,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Tabatha Ruecker",
+  "dob": "1961-07-02",
+  "age": 65,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Tanner Lubowitz",
+  "dob": "1984-12-02",
+  "age": 41,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Theressa Carroll",
+  "dob": "1979-12-23",
+  "age": 46,
+  "sex": "female",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Thuy VonRueden",
+  "dob": "1998-07-22",
+  "age": 28,
+  "sex": "female",
+  "hispanic": true,
+  "background_meds": [
+   {
+    "name": "loratadine",
+    "dose": "10 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "Claritin"
+    ]
+   },
+   {
+    "name": "ferrous sulfate",
+    "dose": "325 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "iron pill"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Tony Schoen",
+  "dob": "1985-11-30",
+  "age": 40,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": [
+   {
+    "name": "ferrous sulfate",
+    "dose": "325 mg",
+    "frequency": "once daily",
+    "aliases": [
+     "iron pill"
+    ]
+   }
+  ]
+ },
+ {
+  "name": "Will Haley",
+  "dob": "1998-10-09",
+  "age": 28,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ },
+ {
+  "name": "Zachariah Morar",
+  "dob": "1963-09-25",
+  "age": 63,
+  "sex": "male",
+  "hispanic": false,
+  "background_meds": []
+ }
+]

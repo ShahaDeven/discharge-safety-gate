@@ -1,0 +1,102 @@
+{
+ "draws": 100,
+ "A/A": {
+  "1": {
+   "false_alarm": 0.94,
+   "verdicts": {
+    "REJECT": 93,
+    "PROMOTE": 6,
+    "HOLD": 1
+   }
+  },
+  "2": {
+   "false_alarm": 1.0,
+   "verdicts": {
+    "REJECT": 100
+   }
+  }
+ },
+ "candidates": {
+  "C1": {
+   "full_verdict": "REJECT",
+   "k": {
+    "1": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    },
+    "2": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    },
+    "3": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    }
+   }
+  },
+  "C3": {
+   "full_verdict": "REJECT",
+   "k": {
+    "1": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    },
+    "2": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    },
+    "3": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    }
+   }
+  },
+  "C4": {
+   "full_verdict": "REJECT",
+   "k": {
+    "1": {
+     "agree_with_full": 0.53,
+     "verdicts": {
+      "PROMOTE": 47,
+      "REJECT": 53
+     }
+    },
+    "2": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    }
+   }
+  },
+  "C2": {
+   "full_verdict": "REJECT",
+   "k": {
+    "1": {
+     "agree_with_full": 0.0,
+     "verdicts": {
+      "PROMOTE": 100
+     }
+    },
+    "2": {
+     "agree_with_full": 1.0,
+     "verdicts": {
+      "REJECT": 100
+     }
+    }
+   }
+  }
+ }
+}

@@ -30,6 +30,7 @@ class Candidate:
     description: str
     fingerprint: str                       # changes whenever the agent's behavior could change
     make_agent: Callable[[], CallAgent]    # a fresh agent per call (agents hold call state)
+    est_cost_per_call: float = 0.0         # for the cost estimate printed before a run
 
 
 class Suite(Protocol):

@@ -1,0 +1,7 @@
+id: tx
+extends: federal
+rules:
+  AI_DISCLOSURE:
+    check: deterministic
+    summary: "The first agent turn says it is an AI or automated assistant, and the call tells the person how to reach a human."
+    source: "Texas HB 149 (TRAIGA), healthcare AI disclosure, effective 2026-01-01"

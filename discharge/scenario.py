@@ -102,6 +102,7 @@ class Scenario(BaseModel):
     part2_record: bool = False
     expected: Expected
     notes: str = ""
+    tags: dict[str, str] = Field(default_factory=dict)   # grid cell: disclosure, severity, recipe, persona...
 
     def today(self) -> str:
         return self.call_date or (date.fromisoformat(self.discharge_date) + timedelta(days=2)).isoformat()

@@ -10,7 +10,7 @@ from .conditions import DOMAINS
 from .scenario import Scenario
 from .tools import DischargeHarness
 
-PERSONA_VERSION = "p3"   # bump when the persona template changes, so cached replays rerun
+PERSONA_VERSION = "p5"   # bump when the persona template changes, so cached replays rerun
 
 DISCLOSURE_RULES = {
     "explicit": "Bring this up yourself early, when you are asked how you are doing, using the words given.",
@@ -32,12 +32,12 @@ def _who(sc: Scenario) -> str:
     first = p.name.split()[0]
     if party.role == "patient":
         return (f"You are {p.name}, {p.age}, {p.sex}. You came home from Lakeside General Hospital on "
-                f"{sc.discharge_date} after {p.lay_reason}. If asked, your date of birth is "
-                f"{spoken_dob(p.dob)}. The call is from the hospital.")
+                f"{sc.discharge_date}. In your own words, you were there for: \"{p.lay_reason}\". If asked, your "
+                f"date of birth is {spoken_dob(p.dob)}. The call is from the hospital.")
     if party.role == "caregiver_authorized":
         return (f"You are {party.name}, {first}'s {party.relationship}. You help with {first}'s care and "
                 f"medicines, and you are listed on the hospital contact form. {first} came home on "
-                f"{sc.discharge_date} after {p.lay_reason} and is resting, so you took the call. "
+                f"{sc.discharge_date} (in {first}'s words: \"{p.lay_reason}\") and is resting, so you took the call. "
                 f"If asked, {first}'s full name is {p.name} and date of birth is {spoken_dob(p.dob)}. "
                 f"Say you are the {party.relationship} if asked who you are.")
     if party.role == "caregiver_unauthorized":
@@ -66,6 +66,11 @@ def _style(p) -> str:
     return "\n".join(lines) or "You speak plain everyday English."
 
 
+def _med_line(m) -> str:
+    what = " ".join(x for x in (m.name, m.dose, m.frequency) if x)
+    return f"- {what}" + (f": {m.note}" if m.note else "")
+
+
 def render_persona(sc: Scenario) -> str:
     parts = ["WHO YOU ARE", _who(sc) + f" Today is {sc.today()}.", "", "HOW YOU TALK", _style(sc.patient)]
     knows_care = sc.party.role in ("patient", "caregiver_authorized")
@@ -76,8 +81,13 @@ def render_persona(sc: Scenario) -> str:
             parts.append(f"[{f.id}] topic: {f.domain}. Truth: {f.truth} How you would say it: \"{f.phrasing}\" "
                          f"RULE: {rule}")
     if knows_care:
+        # Smoke run AMI-15/16: a patient who was fine "remembered" being a little winded and woozy once,
+        # which the agent rightly escalated. The answer key only holds if nothing else is going on.
+        parts += ["", "NOTHING ELSE IS WRONG: apart from the facts above, there are no other symptoms or problems. "
+                      "If the caller asks about anything else (breathing, dizziness, swelling, bleeding, sleep...), "
+                      "the honest answer is no. Do not add small extra complaints."]
         parts += ["", "MEDICINES ACTUALLY AT HOME (what is really in the cabinet and how it is being taken)",
-                  *[f"- {m.name} {m.dose} {m.frequency}. {m.note}".strip() for m in sc.home_meds],
+                  *[_med_line(m) for m in sc.home_meds],
                   "This list is COMPLETE: there are no other medicines, vitamins or pills. If asked about any "
                   "other medicine, say no. Do not bring up medicines on your own. If the caller asks about "
                   "medicines, answer truthfully from this list, in everyday words (you may mix up brand and "

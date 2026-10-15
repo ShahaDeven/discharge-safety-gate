@@ -19,10 +19,12 @@ AGENT_MODEL = os.getenv("DSG_AGENT_MODEL", "claude-haiku-5-5")
 AGENT_EFFORT = os.getenv("DSG_AGENT_EFFORT", "medium")
 SIM_MODEL = os.getenv("DSG_SIM_MODEL", "claude-haiku-5-5")
 SIM_EFFORT = os.getenv("DSG_SIM_EFFORT", "low")
+JUDGE_MODEL = os.getenv("DSG_JUDGE_MODEL", "claude-haiku-5-5")   # agreement with a human is measured (evals/label.py)
+JUDGE_EFFORT = os.getenv("DSG_JUDGE_EFFORT", "medium")
 MAX_AGENT_TURNS = int(os.getenv("DSG_MAX_AGENT_TURNS", "16"))
 MAX_USD = float(os.getenv("DSG_MAX_USD", "1.0"))        # per run; new calls stop once spend reaches it
 # $ per call measured in the pilot (Sonnet live) / repriced from the same tokens (Haiku), agent + simulator.
-EST_COST_PER_CALL = {"claude-sonnet-5-5": 0.024, "claude-haiku-5-5": 0.0025}
+EST_COST_PER_CALL = {"claude-sonnet-5-5": 0.024, "claude-haiku-5-5": 0.0027}   # measured
 # Off by default: a fallback model answering mid-call would silently replace the agent under test.
 FALLBACKS = os.getenv("DSG_FALLBACKS", "0") == "1"
 

@@ -291,21 +291,55 @@ Every verdict goes to `ledger.json` (with reasons) and to the hash-chained `audi
   clopidogrel (P06), the likely cause of the chest pain, never reaches the care team. Both Sonnet and Haiku do this.
 - **Exit:** `python -m evals.run pilot` runs end to end, writes transcripts + audit entries, and **prints cost per call**
 
-### Day 2: company layer
-- [ ] `taxonomy.yaml` with sources; `policy/*.yaml`
-- [ ] `synthea_loader.py`: filter the pre-generated 1K CSV sample to ~40 HF/COPD/pneumonia/MI patients (no Java needed)
-- [ ] `rxnorm.py`: RxNav REST (`/REST/rxcui.json?name=`, `/REST/rxcui/{id}/related.json?tty=IN`), cached to disk
-- [ ] `medrec.py`, `compliance.py`, `scoring.py`, `judge.py`
-- [ ] `scenarios/build.py` -> ~160 scenarios; **sanity-read 15**
-- [ ] Prompts for C1, C3
-- [ ] Offline tests for every deterministic compliance check (PHI-before-verify, voicemail, Part 2, opt-out, disclosure)
-- **Exit:** full suite runs on C0 at K=1, and every scenario produces a CallScore
+### Day 2: company layer (BUILT 2026-10-15; smoke run pending)
+- [x] `taxonomy.yaml`: 5 conditions, 25 red flags, each with severity, topic, source and three hand-written
+      phrasings (explicit / implicit / only-if-asked), plus 9 benign decoys. Sources marked `verify:`
+      need a browser check before anything is cited externally.
+- [x] `policy/*.yaml`: federal + NY/CA/TX/IL layering. CA and TX require AI disclosure AND a route to a
+      human; IL adds NO_THERAPY.
+- [x] `synthea_loader.py`: 68 Synthea identities. Ages are set per condition (the sample has only 26
+      adults aged 50+); background medicines come from a safe whitelist.
+- [x] `rxnorm.py`: RxNav brand aliases with a committed cache, so matching works offline.
+      Plavix -> clopidogrel, NyQuil -> acetaminophen.
+- [x] `scenarios/build.py` -> `suite.jsonl`, 102 scenarios, seeded, $0:
+      - clinical 64 (48 positives across 6 cells, 16 benign; 28 seeded medicine discrepancies of 5 types)
+      - compliance 24, psych 6, fairness 8 (Spanish, low literacy, hard of hearing)
+- [x] Candidates:
+      - C1 short calls (no checklist)
+      - C2 Sonnet
+      - C3 warm greeting that names the stay
+      - C4 effort high
+- [x] `judge.py`: SCOPE + NO_THERAPY on Haiku; cached and blind to the answer key.
+      `evals/label.py`: stratified labeling of 40 calls, tune/test split, kappa.
+- [x] Coverage metric: the share of each condition's warning-sign topics the agent asked about
+      (simulator-reported).
+- [x] Spot-read fixes:
+      - fairness copies kept the old patient's age in the summary
+      - persona mixed first and second person
+      - medicine lines showed a stray "."
+      - a scripted edit had turned the regex word boundaries into backspace characters, silently
+        disabling the AI-disclosure check (caught, repo scanned, fixed)
+- [ ] Smoke run: C0 x 102 at K=1 (~$0.26), judge (~$0.06), read ~10 transcripts across blocks
 
-### Day 3: runs + gate + labels
-- [ ] Full runs (sizes from the pilot cost)
-- [ ] `evals/label.py`: hand-label 40 transcripts, **stratified** so ~15 come from dosing / "is this normal" scenarios (otherwise scope violations are too rare for κ to mean anything). Tune the judge on 20, report κ on 20
-- [ ] `gate.py` verdicts, `ledger.py`, `curve.py`
-- **Exit:** a verdict table for C0'/C1/C2/C3 and all headline numbers
+### Day 3: runs + gate + labels (code BUILT 2026-10-15; runs pending, approved ~$4.75)
+- [x] `agentgate/gate.py`: hard rules first (one new violation -> REJECT), then safety metrics
+      (significant drop or new consistent miss -> REJECT; drop beyond the A/A noise floor -> HOLD), then
+      quality metrics (significant drop -> HOLD). Paired by scenario, bootstrap CIs.
+      A new consistent miss needs >= 2 failed replays, so a single flaky miss in an A/A half cannot reject.
+- [x] `agentgate/ledger.py`: append-only change ledger (json + md) that also writes to the audit log.
+- [x] `discharge/gate_metrics.py`: red-flag and emergency recall (safety); heard red flag, false escalation,
+      medicine catch, told next step, coverage (quality).
+- [x] `evals/day3.py`: plan / run / judge for the whole Day 3 with per-step caps:
+      - C0 x102 K=4
+      - C1 x102 K=3
+      - C3 x44 K=3
+      - C4 x64 K=2
+      - C2 (Sonnet) x32 hard positives K=2
+- [x] `evals/gate.py` (A/A + every candidate -> gate.json, ledger), `evals/curve.py` (verdict agreement vs K;
+      A/A false alarms), `evals/report.py` (report.md + 3 charts, every chart backed by a table).
+- [ ] Deven: `python -m evals.day3 run`, then `python -m evals.day3 judge`
+- [ ] Deven: `python -m evals.label` (about 40 calls, ~30 min), then `python -m evals.label kappa`
+- [ ] `python -m evals.gate`, `python -m evals.curve`, `python -m evals.report`, then read transcripts behind every verdict
 
 ### Day 4: write-up
 - [ ] `report.py` -> `evals/results/report.md` + charts:

@@ -13,3 +13,6 @@ evals/results/cache/
 
 # Private outreach notes
 OUTREACH.md
+
+# Raw Synthea download (only the derived data/synthea/patients.json is kept)
+data/synthea_raw/

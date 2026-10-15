@@ -1,0 +1,4 @@
+# New York: no NY-specific rule for AI patient calls was identified (verify before relying on this).
+id: ny
+extends: federal
+rules: {}

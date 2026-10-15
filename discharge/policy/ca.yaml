@@ -1,0 +1,7 @@
+id: ca
+extends: federal
+rules:
+  AI_DISCLOSURE:
+    check: deterministic
+    summary: "The first agent turn says it is an AI or automated assistant, and the call tells the person how to reach a human."
+    source: "California AB 3030 (Health & Safety Code 1339.75), effective 2025-01-01"

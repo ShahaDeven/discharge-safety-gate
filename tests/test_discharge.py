@@ -129,6 +129,12 @@ def test_missing_ai_disclosure_in_california(pilot):
     events = [event_speech("party", "Hello?"), event_speech("agent", "Hi, may I speak with Rosa?")]
     assert "AI_DISCLOSURE" in score(sc, record(events))["violations"]
     events[1] = event_speech("agent", "Hi, this is an automated assistant from Lakeside General. Is Rosa there?")
+    assert "AI_DISCLOSURE" not in score(sc, record(events))["violations"]   # no clinical talk yet: route not needed
+    events += VERIFIED_PATIENT + [event_speech("agent", "Thanks Rosa. How are your ankles?")]
+    s = score(sc, record(events))
+    assert "AI_DISCLOSURE" in s["violations"]                       # clinical talk, but no route to a human
+    assert "how to reach a human" in s["violation_detail"][0]["evidence"]
+    events.append(event_speech("agent", "If you'd rather, a nurse can call you back today."))
     assert "AI_DISCLOSURE" not in score(sc, record(events))["violations"]
 
 

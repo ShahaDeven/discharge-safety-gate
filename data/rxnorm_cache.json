@@ -1,0 +1,370 @@
+{
+ "acetaminophen": {
+  "brands": [
+   "Acephen",
+   "Acetadryl",
+   "Allzital",
+   "Anabar",
+   "Anacin AF",
+   "Anacin Advanced Headache Formula",
+   "Apadaz",
+   "Arthriten Inflammatory Pain",
+   "Backaid",
+   "Backaid IPF",
+   "Backprin",
+   "Bactimicina",
+   "Bupap",
+   "By Ache",
+   "Capacet",
+   "Cetafen",
+   "Combogesic",
+   "Comtrex Sore Throat Relief",
+   "Contragesic",
+   "CounterAct Pain",
+   "Dologesic",
+   "Ed Flex",
+   "Endocet",
+   "Esgic",
+   "Exaprin",
+   "Exaprin Plus",
+   "Excedrin",
+   "Excedrin Mild Headache",
+   "Excedrin PM",
+   "Excedrin PM Triple Action",
+   "Excedrin Quick Tab",
+   "Excedrin Tension Headache",
+   "Feverall",
+   "Fioricet",
+   "Fioricet with Codeine",
+   "Frenadol",
+   "Hycet",
+   "Legatrin PM",
+   "Little Fevers",
+   "Mapap",
+   "Marten-Tab",
+   "Nalocet",
+   "Ninjacof A",
+   "Norco",
+   "Nortemp",
+   "Pamprin Cramp Formula",
+   "Pamprin Max Formula",
+   "Pamprin Multi-Symptom",
+   "Panadol",
+   "Panadol Extra",
+   "Panadol PM",
+   "Percocet",
+   "Percogesic Reformulated Jan 2011",
+   "Pharbetol",
+   "Premsyn PMS",
+   "Primlev",
+   "Prolate",
+   "Redutemp",
+   "Relagesic",
+   "Repan",
+   "Ringl",
+   "Saleto",
+   "Sed-Max",
+   "Tactinal",
+   "Tempra Quicklets",
+   "Tencon",
+   "Trezix",
+   "Tycolene",
+   "Tylenol",
+   "Tylenol Gelcap Extra Strength",
+   "Tylenol PM",
+   "Tylenol with Codeine",
+   "Ultracet",
+   "Unisom with Pain Relief",
+   "Vanatol",
+   "Vanquish",
+   "Verdrocet",
+   "Vtol",
+   "Zebutal"
+  ],
+  "rxcui": "161"
+ },
+ "albuterol": {
+  "brands": [
+   "Airsupra",
+   "Combivent",
+   "ProAir",
+   "Proventil",
+   "Ventolin"
+  ],
+  "rxcui": "435"
+ },
+ "alendronate": {
+  "brands": [
+   "Binosto",
+   "Fosamax",
+   "Fosamax Plus D"
+  ],
+  "rxcui": "46041"
+ },
+ "amlodipine": {
+  "brands": [
+   "Amodip",
+   "Azor",
+   "Caduet",
+   "Consensi",
+   "Exforge",
+   "Exforge HCT",
+   "Katerzia",
+   "Lotrel",
+   "Norliqva",
+   "Norvasc",
+   "Prestalia",
+   "Sdamlo",
+   "Tribenzor",
+   "Twynsta",
+   "Widaplik"
+  ],
+  "rxcui": "17767"
+ },
+ "amoxicillin / clavulanate": {
+  "brands": [
+   "Augmentin",
+   "Betacilin",
+   "Clavacillin",
+   "Clavamox",
+   "Kesium",
+   "Umbrellin"
+  ],
+  "rxcui": "19711"
+ },
+ "aspirin": {
+  "brands": [
+   "Alka-Seltzer",
+   "Anacin",
+   "Anacin Advanced Headache Formula",
+   "Anacin Aspirin Regimen",
+   "Arthriten Inflammatory Pain",
+   "Ascomp",
+   "Aspergum",
+   "Aspi-Cor",
+   "BC Arthritis",
+   "BC Original Formula",
+   "Backaid IPF",
+   "Bayer Aspirin",
+   "Bromo Seltzer Antacid Pain Reliever",
+   "Bufferin",
+   "Durlaza",
+   "Ecotrin",
+   "Exaprin",
+   "Exaprin Plus",
+   "Excedrin",
+   "Excedrin PM Triple Action",
+   "Miniprin",
+   "Norgesic",
+   "Norwich Aspirin",
+   "Orphengesic",
+   "Pamprin Max Formula",
+   "Saleto",
+   "St. Joseph Aspirin",
+   "Stanback Headache Powder Reformulated Jan 2011",
+   "Vanquish",
+   "Vazalore",
+   "Yosprala"
+  ],
+  "rxcui": "1191"
+ },
+ "atorvastatin": {
+  "brands": [
+   "Atorvaliq",
+   "Caduet",
+   "Lipitor"
+  ],
+  "rxcui": "83367"
+ },
+ "budesonide / formoterol": {
+  "brands": [
+   "Breyna",
+   "Symbicort"
+  ],
+  "rxcui": "389132"
+ },
+ "buprenorphine / naloxone": {
+  "brands": [
+   "Bunavail",
+   "Suboxone",
+   "Zubsolv"
+  ],
+  "rxcui": "352364"
+ },
+ "cetirizine": {
+  "brands": [
+   "Aller-Tec",
+   "Aller-Tec D",
+   "Alleroff",
+   "Quzyttir",
+   "Wal Zyr 24 Hour Allergy",
+   "Wal Zyr D",
+   "Wal-Zyr",
+   "Zerviate",
+   "Zyrtec",
+   "Zyrtec-D"
+  ],
+  "rxcui": "20610"
+ },
+ "clopidogrel": {
+  "brands": [
+   "Plavix"
+  ],
+  "rxcui": "32968"
+ },
+ "ferrous sulfate": {
+  "brands": [
+   "Feosol",
+   "Fer-in-Sol",
+   "Folitab",
+   "Slow-Fe"
+  ],
+  "rxcui": "24947"
+ },
+ "fluticasone / salmeterol": {
+  "brands": [
+   "Advair",
+   "AirDuo",
+   "Wixela"
+  ],
+  "rxcui": "284635"
+ },
+ "furosemide": {
+  "brands": [
+   "Disal",
+   "Furoscix",
+   "Lasix"
+  ],
+  "rxcui": "4603"
+ },
+ "hydroxyzine": {
+  "brands": [
+   "Vistaril"
+  ],
+  "rxcui": "5553"
+ },
+ "lisinopril": {
+  "brands": [
+   "Prinivil",
+   "Qbrelis",
+   "Zestoretic",
+   "Zestril"
+  ],
+  "rxcui": "29046"
+ },
+ "loratadine": {
+  "brands": [
+   "Alavert",
+   "Alavert D",
+   "Allerclear",
+   "Claritin",
+   "Claritin-D",
+   "Cleartime Indoor & Outdoor Allergies",
+   "Loradamed",
+   "Tavist Non-Sedating",
+   "Wal-itin",
+   "Wal-itin D",
+   "Wal-vert"
+  ],
+  "rxcui": "28889"
+ },
+ "metformin": {
+  "brands": [
+   "Actoplus Met",
+   "Glucophage",
+   "Glumetza",
+   "Invokamet",
+   "Janumet",
+   "Jentadueto",
+   "Kazano",
+   "Kombiglyze",
+   "Riomet",
+   "Segluromet",
+   "Synjardy",
+   "Trijardy",
+   "Xigduo",
+   "Zituvimet"
+  ],
+  "rxcui": "6809"
+ },
+ "metoprolol": {
+  "brands": [
+   "Kapspargo",
+   "Lopressor",
+   "Lopressor HCT",
+   "Toprol"
+  ],
+  "rxcui": "6918"
+ },
+ "naproxen": {
+  "brands": [
+   "Aleve",
+   "Aleve PM",
+   "Anaprox",
+   "Naprelan",
+   "Naprosyn",
+   "Treximet",
+   "Vimovo",
+   "Wal-Proxen"
+  ],
+  "rxcui": "7258"
+ },
+ "nitroglycerin": {
+  "brands": [
+   "Gonitro",
+   "Nitro-Bid",
+   "Nitro-Dur",
+   "NitroMist",
+   "Nitrolingual",
+   "Nitrostat",
+   "Rectiv"
+  ],
+  "rxcui": "4917"
+ },
+ "nyquil": {
+  "brands": [],
+  "rxcui": null
+ },
+ "prednisone": {
+  "brands": [
+   "Deltasone",
+   "Rayos"
+  ],
+  "rxcui": "8640"
+ },
+ "sacubitril / valsartan": {
+  "brands": [
+   "Entresto"
+  ],
+  "rxcui": "1656339"
+ },
+ "sertraline": {
+  "brands": [
+   "Zoloft"
+  ],
+  "rxcui": "36437"
+ },
+ "simvastatin": {
+  "brands": [
+   "Flolipid",
+   "Vytorin",
+   "Zocor"
+  ],
+  "rxcui": "36567"
+ },
+ "spironolactone": {
+  "brands": [
+   "Aldactone",
+   "Cardalis",
+   "Carospir"
+  ],
+  "rxcui": "9997"
+ },
+ "tiotropium": {
+  "brands": [
+   "Spiriva",
+   "Stiolto"
+  ],
+  "rxcui": "69120"
+ }
+}
