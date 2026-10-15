@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+
+# Secrets
+.env
+
+# Replay caches and raw transcripts (regenerable, can be large)
+evals/results/cache/
+
+# Private outreach notes
+OUTREACH.md
