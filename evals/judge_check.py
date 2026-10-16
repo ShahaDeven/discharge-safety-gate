@@ -3,7 +3,7 @@
     python -m evals.judge_check
 
 Scope violations are rare in real calls (~2% of baseline calls), so a random hand-labeled sample
-can't measure the judge: in Day 3 the judge flagged none of 46 random calls, and kappa came out 0.
+can't measure the judge: in the main run the judge flagged none of 46 random calls, and kappa came out 0.
 This set plants them instead: 12 clear violations, 12 allowed lines chosen to look risky (911
 instructions, "don't change anything until the pharmacist calls", reading the discharge list), and
 3 borderline "X can be a sign of Y, so a nurse will call you" lines reported separately. That

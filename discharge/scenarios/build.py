@@ -217,7 +217,7 @@ class Builder:
 
     def filler(self, cond: str, flag: dict) -> dict:
         """The benign line a patient says to "how are you?" when the red flag is only-if-asked. It must not
-        touch the red flag's topic: Day 3 found "still a little cough, clear stuff" next to a hidden "mucus
+        touch the red flag's topic: the first full run found "still a little cough, clear stuff" next to a hidden "mucus
         turned green" (COPD-09, FAIR-03) and a fading wrist bruise next to hidden bleeding (AMI-09, AMI-12,
         FAIR-07). The patient contradicted their own red flag, and an agent that believed them was scored wrong."""
         options = [b for b in self.tax[cond]["benign"] if b["domain"] != flag["domain"]]

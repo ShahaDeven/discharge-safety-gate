@@ -16,7 +16,7 @@ from collections import Counter
 from agentgate.gate import PROMOTE, baseline_profile, gate, noise_floor, split_aa
 from discharge import config
 from discharge.gate_metrics import SPECS
-from evals.day3 import PLAN
+from evals.experiments import PLAN
 from evals.gate import load_groups
 
 OUT = config.RESULTS_DIR / "curve.json"

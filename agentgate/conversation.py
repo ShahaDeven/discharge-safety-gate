@@ -9,7 +9,7 @@ the person hangs up, the agent errors, or the turn cap is hit.
 """
 
 from dataclasses import asdict, dataclass, field
-from typing import Protocol
+from typing import Callable, Protocol
 
 from .adapter import AgentTurn, CallAgent, CallContext, Speech, ToolCall, ToolHarness, ToolResult
 
@@ -48,7 +48,17 @@ class CallRecord:
         return asdict(self)
 
 
-def _log_turn(record: CallRecord, turn: AgentTurn, harness: ToolHarness) -> tuple[list[ToolResult], bool]:
+OnEvent = Callable[[dict], None] | None
+
+
+def _add(record: CallRecord, event: dict, on_event: OnEvent) -> None:
+    record.events.append(event)
+    if on_event:
+        on_event(event)
+
+
+def _log_turn(record: CallRecord, turn: AgentTurn, harness: ToolHarness,
+              on_event: OnEvent = None) -> tuple[list[ToolResult], bool]:
     """Append an agent turn's steps in order and run its tool calls. Returns (results, call_ended)."""
     record.usage.extend(turn.usage)
     if turn.served_by:
@@ -58,26 +68,27 @@ def _log_turn(record: CallRecord, turn: AgentTurn, harness: ToolHarness) -> tupl
     for step in turn.steps:
         if isinstance(step, Speech):
             if step.text.strip():
-                record.events.append({"kind": "speech", "who": "agent", "text": step.text.strip()})
+                _add(record, {"kind": "speech", "who": "agent", "text": step.text.strip()}, on_event)
         elif isinstance(step, ToolCall):
-            record.events.append({"kind": "tool_call", "who": "agent", "name": step.name,
-                                  "input": step.input, "id": step.id})
+            _add(record, {"kind": "tool_call", "who": "agent", "name": step.name,
+                          "input": step.input, "id": step.id}, on_event)
             res = harness.run(step)
-            record.events.append({"kind": "tool_result", "who": "harness", "name": res.name,
-                                  "text": res.content, "id": res.tool_call_id, "ends_call": res.ends_call})
+            _add(record, {"kind": "tool_result", "who": "harness", "name": res.name,
+                          "text": res.content, "id": res.tool_call_id, "ends_call": res.ends_call}, on_event)
             results.append(res)
             ended = ended or res.ends_call
     if turn.error:
-        record.events.append({"kind": "error", "who": "agent", "text": turn.error})
+        _add(record, {"kind": "error", "who": "agent", "text": turn.error}, on_event)
     return results, ended
 
 
 def run_call(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: CallContext,
-             max_agent_turns: int = 12) -> CallRecord:
+             max_agent_turns: int = 12, on_event: OnEvent = None) -> CallRecord:
+    """on_event, if given, sees every event as it happens (the live console streams them)."""
     record = CallRecord(call_id=ctx.call_id)
     agent.start(ctx)
     opening = simulator.opening()
-    record.events.append({"kind": "speech", "who": "party", "text": opening})
+    _add(record, {"kind": "speech", "who": "party", "text": opening}, on_event)
     heard = opening
     sim_turn = 0
 
@@ -87,11 +98,11 @@ def run_call(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: 
             return record
         record.agent_turns += 1
         turn = agent.hear(heard)
-        results, ended = _log_turn(record, turn, harness)
+        results, ended = _log_turn(record, turn, harness, on_event)
         rounds = 0
         while results and not ended and not turn.error and rounds < MAX_TOOL_ROUNDS:
             turn = agent.tool_results(results)
-            results, ended = _log_turn(record, turn, harness)
+            results, ended = _log_turn(record, turn, harness, on_event)
             rounds += 1
         if turn.error:
             record.ended_by = "agent_error"
@@ -107,8 +118,8 @@ def run_call(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: 
         sim_turn += 1
         reply = simulator.reply(record.transcript(), sim_turn)
         record.usage.extend(reply.usage)
-        record.events.append({"kind": "speech", "who": "party", "text": reply.say,
-                              "disclosed": reply.disclosed, "asked": reply.asked})
+        _add(record, {"kind": "speech", "who": "party", "text": reply.say,
+                      "disclosed": reply.disclosed, "asked": reply.asked}, on_event)
         if reply.hang_up:
             record.ended_by = "party_hung_up"
             return record

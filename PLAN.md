@@ -329,7 +329,7 @@ Every verdict goes to `ledger.json` (with reasons) and to the hash-chained `audi
 - [x] `agentgate/ledger.py`: append-only change ledger (json + md) that also writes to the audit log.
 - [x] `discharge/gate_metrics.py`: red-flag and emergency recall (safety); heard red flag, false escalation,
       medicine catch, told next step, coverage (quality).
-- [x] `evals/day3.py`: plan / run / judge for the whole Day 3 with per-step caps:
+- [x] `evals/experiments.py`: plan / run / judge for the whole Day 3 with per-step caps:
       - C0 x102 K=4
       - C1 x102 K=3
       - C3 x44 K=3
@@ -337,7 +337,7 @@ Every verdict goes to `ledger.json` (with reasons) and to the hash-chained `audi
       - C2 (Sonnet) x32 hard positives K=2
 - [x] `evals/gate.py` (A/A + every candidate -> gate.json, ledger), `evals/curve.py` (verdict agreement vs K;
       A/A false alarms), `evals/report.py` (report.md + 3 charts, every chart backed by a table).
-- [ ] Deven: `python -m evals.day3 run`, then `python -m evals.day3 judge`
+- [ ] Deven: `python -m evals.experiments run`, then `python -m evals.experiments judge`
 - [ ] Deven: `python -m evals.label` (about 40 calls, ~30 min), then `python -m evals.label kappa`
 - [ ] `python -m evals.gate`, `python -m evals.curve`, `python -m evals.report`, then read transcripts behind every verdict
 

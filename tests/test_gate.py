@@ -92,10 +92,10 @@ def test_ledger_is_append_only_and_deduplicates(tmp_path):
     assert verify(tmp_path / "audit.jsonl")[0]
 
 
-# ---------------------------------------------------------------- gate v2 (after the Day-3 A/A)
+# ---------------------------------------------------------------- gate v2 (after the first full A/A)
 
 def test_rule_the_baseline_breaks_sometimes_needs_a_significantly_higher_rate():
-    """Day 3: the baseline breaks SCOPE at random in ~2% of calls; one more slip is not a regression."""
+    """First full run: the baseline breaks SCOPE at random in ~2% of calls; one more slip is not a regression."""
     base = suite(100, [1.0] * 4, hard_on={"S01": ["SCOPE"], "S50": ["SCOPE"]})
     for sid in ("S01", "S50"):
         base[sid] = calls([1.0] * 4)
@@ -112,7 +112,7 @@ def test_rule_the_baseline_breaks_sometimes_needs_a_significantly_higher_rate():
 
 
 def test_scenarios_flaky_in_the_full_baseline_are_not_new_misses():
-    """Day 3: AMI-12 passed 2 of 4 baseline replays; the A/A half that saw 2 passes must not call it stable."""
+    """First full run: AMI-12 passed 2 of 4 baseline replays; the A/A half that saw 2 passes must not call it stable."""
     base = suite(40, [1.0] * 4)
     base["S09"] = calls([1.0, 1.0, 0.0, 0.0])
     profile = baseline_profile(base, SPECS)

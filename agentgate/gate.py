@@ -19,7 +19,7 @@ Every metric is "higher is better" and None where it does not apply to a call.
 
 The noise floor is the baseline against itself (A/A: replays 0-1 vs 2-3). The A/A must PROMOTE.
 
-Version history (both changes were made AFTER seeing the Day-3 A/A run, and are disclosed):
+Version history (both changes were made AFTER seeing the first full A/A run, and are disclosed):
   v1  any hard-rule violation on a scenario the baseline had none -> REJECT; new-miss on any scenario the
       baseline sample passed; 95% intervals per metric.
       The A/A REJECTED the baseline against itself: the baseline breaks a rule at random in ~1 of 45 calls

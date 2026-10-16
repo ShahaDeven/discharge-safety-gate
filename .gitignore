@@ -16,3 +16,9 @@ OUTREACH.md
 
 # Raw Synthea download (only the derived data/synthea/patients.json is kept)
 data/synthea_raw/
+
+# Web console: dependencies and build output (rebuild with npm install && npm run build)
+web/frontend/node_modules/
+web/frontend/dist/
+# Live calls placed from the console (separate from the replay results)
+evals/results/live/

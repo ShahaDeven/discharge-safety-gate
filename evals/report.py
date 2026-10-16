@@ -20,7 +20,7 @@ from discharge import config  # noqa: E402
 from discharge.candidates import candidates  # noqa: E402
 from evals.gate import OUT as GATE_JSON, load_groups  # noqa: E402
 from evals.curve import OUT as CURVE_JSON  # noqa: E402
-from evals.day3 import PLAN  # noqa: E402
+from evals.experiments import PLAN  # noqa: E402
 
 REPORT = config.RESULTS_DIR / "report.md"
 CHARTS = config.RESULTS_DIR / "charts"
@@ -263,7 +263,14 @@ def main() -> None:
         for c, row in curve["candidates"].items():
             md.append(f"| {c} same verdict as full ({row['full_verdict']}) | " + " | ".join(
                 f"{row['k'][str(x)]['agree_with_full']:.0%}" if str(x) in row["k"] else "-" for x in (1, 2, 3)) + " |")
-        md += ["", f"Each cell resamples the cached replays {curve.get('draws')} times and re-runs the gate.", ""]
+        md += ["", f"Each cell resamples the cached replays {curve.get('draws')} times and re-runs the gate.", "",
+               "Read with care: these four changes were either large (C1, C3) or did nothing measurable (C4, C2), so "
+               "even one replay per scenario reaches the full verdict. What the extra replays bought is the part a "
+               "single run cannot give: the A/A noise floor, the baseline's flaky scenarios (which must not count as "
+               "regressions), and evidence that the gate does not false-alarm. Gate v1, which ignored all three, "
+               "rejected the unchanged baseline in 94% of K=1 draws and 100% of K=2 draws (first full run, before the "
+               "fix); gate v2 rejects it in 0%. A subtle change, a few points of recall, is where K starts to "
+               "matter, and no change in this run was that subtle.", ""]
 
     fair = defaultdict(list)
     for sc, _, s in c0:
@@ -286,8 +293,23 @@ def main() -> None:
                       f"flagged {a[0]}/{a[1]} allowed lines that look risky, flagged {b[0]}/{b[1]} borderline "
                       f"\"X can be a sign of Y\" lines.")
         if prec:
-            md.append(f"- **Every line it flagged in real calls**, reviewed by a human: {prec['agreed']}/"
-                      f"{prec['reviewed']} agreed to be violations.")
+            from evals.flag_categories import summary
+            from evals.label import FLAG_LABELS
+            rows = summary(json.loads(FLAG_LABELS.read_text(encoding="utf-8")))
+            total = sum(r["lines"] for r in rows)
+            strict = sum(r["strict_yes"] for r in rows)
+            misread = sum(r["lines"] for r in rows if r["kind"] == "error")
+            md.append(f"- **Every line it flagged in real calls** ({total}), reviewed by a human: "
+                      f"{prec['agreed']}/{prec['reviewed']} judged violations by the reviewer. Most of the gap is "
+                      f"policy, not error: {misread}/{total} flags were genuine misreads; the rest fall in three "
+                      f"categories where the answer depends on where the hospital draws the line. Precision is "
+                      f"{strict / total:.0%} under a strict policy (all three count) and "
+                      f"{prec['agreed'] / max(1, prec['reviewed']):.0%} under the reviewer's.")
+            md += ["", "| what the judge flagged | kind | lines | reviewer: violation | strict policy |",
+                   "|---|---|---|---|---|"]
+            md += [f"| {r['label']} | {r['kind']} | {r['lines']} | {r['reviewer_yes']}/{r['answered']} | "
+                   f"{r['strict_yes']}/{r['lines']} |" for r in rows]
+            md += ["", "Categories were assigned by reading each flagged line; answers are the human reviewer's.", ""]
         if agree:
             t = agree.get("test") or agree.get("tune")
             n = sum(x["n"] for x in agree.values())
@@ -296,8 +318,10 @@ def main() -> None:
                       f"this sample held almost none and Cohen's kappa ({t['kappa']:.2f}) is not informative; the "
                       f"disagreements were not scope issues (brand vs generic names; a missing crisis line, now "
                       f"its own safety metric).")
-        md += ["", "Open question for the clinical owner: is \"X can be a sign of Y, so a nurse will call\" an "
-               "acceptable explanation of urgency, or a diagnosis? The judge currently counts it as a diagnosis.", ""]
+        md += ["", "Open questions for the clinical owner, one per policy category: is \"X can be a sign of Y, so "
+               "call 911\" an acceptable explanation of urgency or a diagnosis? Is \"tiredness is common after a stay "
+               "like yours\" acceptable reassurance? Is \"don't take any more until the nurse calls\" a safe hold or "
+               "medication advice? The judge currently counts all three as violations; each answer is one line of policy.", ""]
 
     lines = notable(rows_by)
     if lines:

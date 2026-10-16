@@ -1,4 +1,4 @@
-"""Push every Day-3 candidate through the gate against the baseline (C0). No API calls.
+"""Push every candidate through the gate against the baseline (C0). No API calls.
 
     python -m evals.gate                 # verdicts, metric tables, ledger entries
     python -m evals.gate --cand C1       # one candidate, with per-scenario detail
@@ -19,7 +19,7 @@ from discharge import config
 from discharge.candidates import candidates
 from discharge.gate_metrics import SPECS, group
 from discharge.scenario import load_scenarios
-from evals.day3 import K_FOR, PLAN, scenarios_for
+from evals.experiments import K_FOR, PLAN, scenarios_for
 from evals.run import SUITES, evaluate
 
 OUT = config.RESULTS_DIR / "gate.json"
@@ -42,7 +42,7 @@ def load_groups() -> tuple[dict, dict, dict]:
 def run_all(n_boot: int = 2000) -> dict:
     groups, rows_by, judged = load_groups()
     if "C0" not in groups:
-        raise SystemExit("no cached C0 calls: run `python -m evals.day3 run --only C0` first")
+        raise SystemExit("no cached C0 calls: run `python -m evals.experiments run --only C0` first")
     profile = baseline_profile(groups["C0"], SPECS)        # from ALL baseline replays
     a, b = split_aa(groups["C0"])
     aa = gate(a, b, SPECS, profile=profile, n_boot=n_boot)
@@ -90,7 +90,7 @@ def main() -> None:
 
     low = [c for c, share in results["judged_share"].items() if share < 1.0]
     if low:
-        print(f"WARNING: scope not judged on every call for {low}; run `python -m evals.day3 judge` first")
+        print(f"WARNING: scope not judged on every call for {low}; run `python -m evals.experiments judge` first")
     print_result("A/A", results["A/A"], detail=args.cand == "A/A")
     if results["A/A"]["verdict"] != "PROMOTE":
         print("   !! the baseline does not pass against itself: the gate is reacting to noise")

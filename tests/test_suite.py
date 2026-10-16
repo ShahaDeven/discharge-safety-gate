@@ -1,4 +1,4 @@
-"""Day 2: built suite integrity, policy profiles, coverage, judge plumbing, kappa. Offline
+"""Built suite integrity, policy profiles, coverage, judge plumbing, kappa. Offline
 (RxNorm lookups come from the committed data/rxnorm_cache.json; the judge model is faked)."""
 
 import json
@@ -185,7 +185,7 @@ def test_persona_says_nothing_else_is_wrong(suite):
 
 
 def test_filler_line_never_shares_the_red_flags_topic(suite):
-    """Day 3: 'still a little cough, clear stuff' sat next to a hidden 'mucus turned green' (COPD-09)."""
+    """First full run: 'still a little cough, clear stuff' sat next to a hidden 'mucus turned green' (COPD-09)."""
     for sc in suite.values():
         flag_domains = {f.domain for f in sc.facts if f.red_flag}
         for f in sc.facts:

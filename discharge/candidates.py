@@ -1,4 +1,4 @@
-"""Candidate agents to push through the gate. Day 1: the baseline only.
+"""Candidate agents to push through the gate.
 
     C0  baseline (RED Tool 5 structure)          Sonnet 5.5
     C1  "keep calls under 3 minutes": skips the warning-sign checklist and the line-by-line medicine review

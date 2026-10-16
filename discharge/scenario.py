@@ -1,7 +1,7 @@
 """Scenario schema. Ground truth (what is wrong, who is on the line, what the agent must
 do) is set here, in data, never by an LLM, so the answer key is exact.
 
-Pilot scenarios are hand-written in scenarios/pilot.yaml; Day 2's build.py writes
+Pilot scenarios are hand-written in scenarios/pilot.yaml; scenarios/build.py writes
 scenarios.jsonl in the same shape.
 """
 

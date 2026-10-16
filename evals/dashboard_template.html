@@ -1,0 +1,564 @@
+<title>Discharge Safety Gate</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: report header -> verdict board -> findings -> one change in detail -> call explorer
+   (scenario card beside the transcript) -> how far to trust it. Clinical review sheet, not a marketing page. */
+:root {
+  --bg: #f5f7f6; --surface: #ffffff; --ink: #14201d; --muted: #586763; --rule: #d9e1de;
+  --accent: #0d6a65; --accent-soft: #e2efed;
+  --ok: #1b7a48; --ok-soft: #e3f2e9; --hold: #9a640a; --hold-soft: #faefd9; --bad: #b42318; --bad-soft: #fbe6e2;
+  --mark: #f9d9d3;
+  --display: "Spectral", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e1413; --surface: #151d1b; --ink: #e3ebe8; --muted: #93a29d; --rule: #26312e;
+  --accent: #4fb5ab; --accent-soft: #12302c;
+  --ok: #4cbf7e; --ok-soft: #133022; --hold: #e2a23a; --hold-soft: #352611; --bad: #f06b5b; --bad-soft: #3a1915;
+  --mark: #5a2620; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e1413; --surface: #151d1b; --ink: #e3ebe8; --muted: #93a29d; --rule: #26312e;
+  --accent: #4fb5ab; --accent-soft: #12302c;
+  --ok: #4cbf7e; --ok-soft: #133022; --hold: #e2a23a; --hold-soft: #352611; --bad: #f06b5b; --bad-soft: #3a1915;
+  --mark: #5a2620; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--body); }
+.page { max-width: 1180px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 44px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(30px, 4.4vw, 44px); letter-spacing: -0.01em; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+p { margin: 0; max-width: 68ch; }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.eyebrow { font: 500 12px/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+section { display: grid; gap: 16px; min-width: 0; }
+.sect-head { display: grid; gap: 6px; }
+button, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+/* header */
+.top { display: grid; gap: 14px; border-bottom: 1px solid var(--rule); padding-bottom: 26px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 18px; font: 13px/1.4 var(--mono); color: var(--muted); }
+.facts b { color: var(--ink); font-weight: 500; }
+.synthetic { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; color: var(--muted);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 4px 12px; width: fit-content; }
+
+/* how it works: a real sequence, so it is numbered */
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; counter-reset: step; }
+.step { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; }
+.step::before { counter-increment: step; content: counter(step); font: 500 12px var(--mono); color: var(--accent); }
+.step b { font-weight: 600; }
+.step span { color: var(--muted); font-size: 14px; }
+
+/* verdicts */
+.chip { display: inline-flex; align-items: center; gap: 6px; font: 600 12px/1 var(--mono); letter-spacing: 0.06em;
+  padding: 6px 10px; border-radius: 999px; white-space: nowrap; }
+.chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.v-PROMOTE { color: var(--ok); background: var(--ok-soft); }
+.v-HOLD { color: var(--hold); background: var(--hold-soft); }
+.v-REJECT { color: var(--bad); background: var(--bad-soft); }
+.board { display: grid; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); overflow: hidden; }
+.vrow { display: grid; grid-template-columns: minmax(0, 2.2fr) auto minmax(0, 2.4fr) minmax(0, 1.6fr) auto; gap: 18px;
+  align-items: center; padding: 16px 18px; border-top: 1px solid var(--rule); }
+.vrow:first-child { border-top: 0; }
+.vrow .name { display: grid; gap: 2px; min-width: 0; }
+.vrow .name b { font-weight: 600; }
+.vrow .why { font-size: 14px; min-width: 0; }
+.vrow.control { background: var(--accent-soft); }
+.bars { display: grid; gap: 6px; min-width: 0; }
+.bar { display: grid; grid-template-columns: 64px minmax(0, 1fr) 44px; gap: 8px; align-items: center; font: 12px var(--mono); color: var(--muted); }
+.bar .track { height: 8px; background: var(--rule); border-radius: 4px; overflow: hidden; }
+.bar .fill { height: 100%; border-radius: 4px; background: var(--muted); }
+.bar.cand .fill { background: var(--accent); }
+.bar.cand.worse .fill { background: var(--bad); }
+.bar .val { text-align: right; color: var(--ink); }
+.btn { border: 1px solid var(--rule); background: var(--surface); border-radius: 6px; padding: 7px 12px; font-size: 13px; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+
+/* findings */
+.findings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.finding { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 18px; display: grid; gap: 10px; align-content: start; }
+.finding .tag { font: 12px var(--mono); color: var(--muted); }
+.finding p { font-size: 14px; color: var(--muted); }
+
+/* change detail */
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab { border: 1px solid var(--rule); background: var(--surface); border-radius: 999px; padding: 6px 14px; font-size: 13px; }
+.tab[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; display: grid; gap: 18px; min-width: 0; }
+.panel-head { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th { text-align: left; font: 500 12px var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.st { font: 500 12px var(--mono); white-space: nowrap; }
+.st-bad { color: var(--bad); } .st-hold { color: var(--hold); } .st-ok { color: var(--ok); } .st-same { color: var(--muted); }
+.tier { font: 12px var(--mono); color: var(--muted); }
+.wrong { display: flex; flex-wrap: wrap; gap: 6px; }
+.sid { font: 12px var(--mono); border: 1px solid var(--rule); background: var(--bg); border-radius: 4px; padding: 4px 8px; }
+.sid:hover { border-color: var(--accent); color: var(--accent); }
+details summary { cursor: pointer; color: var(--accent); font-size: 14px; }
+details ul { margin: 10px 0 0; padding-left: 18px; font-size: 14px; color: var(--muted); display: grid; gap: 4px; }
+
+/* explorer */
+.controls { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: end; }
+.controls label { display: grid; gap: 4px; font: 12px var(--mono); color: var(--muted); }
+.controls select { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 7px 10px; max-width: 100%; }
+.check { display: flex !important; grid-auto-flow: column; gap: 8px; align-items: center; font: 14px var(--body) !important; color: var(--ink) !important; }
+.explore { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(0, 2.4fr); gap: 16px; align-items: start; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 16px; display: grid; gap: 14px; min-width: 0; }
+.kv { display: grid; gap: 3px; }
+.kv .k { font: 12px var(--mono); color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.quote { font-family: var(--display); font-size: 17px; line-height: 1.4; }
+.sev { font: 500 12px var(--mono); padding: 2px 8px; border-radius: 4px; width: fit-content; }
+.sev-red { color: var(--bad); background: var(--bad-soft); } .sev-yellow { color: var(--hold); background: var(--hold-soft); }
+.sev-none { color: var(--muted); background: var(--bg); }
+.calls { display: grid; gap: 16px; min-width: 0; }
+.calls.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* disposition ladder: what was expected vs what the agent did */
+.ladder { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+.rung { position: relative; text-align: center; font: 11px/1.2 var(--mono); color: var(--muted); padding: 8px 4px;
+  border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); }
+.rung.exp { border: 2px dashed var(--ink); color: var(--ink); }
+.rung.got { background: var(--ok); border-color: var(--ok); color: var(--surface); }
+.rung.got.missed { background: var(--bad); border-color: var(--bad); }
+.legend { font: 11px var(--mono); color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.result { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { font: 12px var(--mono); padding: 3px 8px; border-radius: 4px; background: var(--bg); border: 1px solid var(--rule); }
+.pill.bad { color: var(--bad); background: var(--bad-soft); border-color: transparent; }
+.pill.good { color: var(--ok); background: var(--ok-soft); border-color: transparent; }
+.replays { display: flex; gap: 6px; align-items: center; font: 12px var(--mono); color: var(--muted); flex-wrap: wrap; }
+.dot { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font: 11px var(--mono);
+  border: 1px solid var(--rule); background: var(--bg); color: var(--muted); padding: 0; }
+.dot.pass { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
+.dot.fail { background: var(--bad-soft); color: var(--bad); border-color: transparent; }
+.dot[aria-pressed="true"] { outline: 2px solid var(--ink); outline-offset: 1px; }
+
+.transcript { display: grid; gap: 8px; }
+.line { display: grid; gap: 3px; max-width: 92%; }
+.line .who { font: 11px var(--mono); color: var(--muted); letter-spacing: 0.04em; text-transform: uppercase; }
+.line .text { padding: 9px 12px; border-radius: 10px; font-size: 14px; }
+.line.p { justify-self: start; }
+.line.p .text { background: var(--bg); border: 1px solid var(--rule); border-top-left-radius: 2px; }
+.line.a { justify-self: end; }
+.line.a .text { background: var(--accent-soft); border-top-right-radius: 2px; }
+.line .note { font: 12px var(--mono); color: var(--bad); }
+.line .rev { font: 12px var(--mono); color: var(--hold); }
+mark.viol { background: var(--mark); color: inherit; border-bottom: 2px solid var(--bad); padding: 0 1px; }
+.line.flagged .text { box-shadow: inset 3px 0 0 var(--bad); }
+.action { justify-self: center; font: 12px var(--mono); color: var(--muted); border: 1px dashed var(--rule); border-radius: 6px;
+  padding: 5px 10px; max-width: 100%; overflow-wrap: anywhere; }
+.action b { color: var(--ink); font-weight: 500; }
+.empty { color: var(--muted); font-size: 14px; padding: 12px 0; }
+
+/* trust */
+.trust { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.stat-line { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.stat-line .big { font: 600 26px var(--display); }
+ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14px; color: var(--muted); max-width: 72ch; }
+
+@media (max-width: 960px) {
+  .vrow { grid-template-columns: minmax(0, 1fr) auto; }
+  .vrow .why, .vrow .bars { grid-column: 1 / -1; }
+  .explore, .calls.two, .findings, .trust { grid-template-columns: minmax(0, 1fr); }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="page">
+  <header class="top">
+    <span class="eyebrow">Release gate for a post-discharge call agent</span>
+    <h1>Discharge Safety Gate</h1>
+    <p>Every change to a patient-calling agent gets replayed against the same synthetic patients before it ships. The gate compares the change with the current agent, call by call, and decides: <b>promote</b>, <b>hold</b> for more evidence, or <b>reject</b>.</p>
+    <div class="facts" id="facts"></div>
+    <span class="synthetic">Synthetic patients and a reference agent only. No real patient data, no company's real agent.</span>
+  </header>
+
+  <section aria-labelledby="how-h">
+    <div class="sect-head"><span class="eyebrow">How it works</span><h2 id="how-h">One call, start to finish</h2></div>
+    <div class="steps">
+      <div class="step"><b>A scenario with a hidden answer key</b><span>A patient, a hidden warning sign and how readily they mention it, a planted medicine mistake, and who picks up the phone.</span></div>
+      <div class="step"><b>A simulated patient talks to the agent</b><span>The agent runs the whole call: checks identity, asks about symptoms, reviews medicines, escalates.</span></div>
+      <div class="step"><b>The call is scored against the key</b><span>Code checks escalation, medicines and privacy rules. A model judge checks only medical advice.</span></div>
+      <div class="step"><b>The gate compares versions</b><span>Same scenarios, several replays each, against the current agent. Rules broken by the change, or real drops, block it.</span></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="v-h">
+    <div class="sect-head"><span class="eyebrow">Verdicts</span><h2 id="v-h">Four changes, one control</h2>
+      <p class="muted">The control row replays the current agent against itself. It has to pass, and how much it wobbles sets the bar every real change must clear.</p></div>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section aria-labelledby="f-h">
+    <div class="sect-head"><span class="eyebrow">Findings</span><h2 id="f-h">What the calls showed</h2></div>
+    <div class="findings" id="findings"></div>
+  </section>
+
+  <section aria-labelledby="d-h" id="detail-sec">
+    <div class="sect-head"><span class="eyebrow">One change in detail</span><h2 id="d-h">Why the gate decided what it did</h2></div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="panel" id="detail"></div>
+  </section>
+
+  <section aria-labelledby="x-h" id="explorer">
+    <div class="sect-head"><span class="eyebrow">Call explorer</span><h2 id="x-h">Read any call</h2>
+      <p class="muted">Pick an agent version and a scenario. Marked text is where a rule was broken. Dots are the replays of the same scenario: green kept the patient safe, red did not.</p></div>
+    <div class="controls">
+      <label for="x-cand">Agent version<select id="x-cand"></select></label>
+      <label for="x-sid">Scenario<select id="x-sid"></select></label>
+      <label class="check" for="x-compare"><input type="checkbox" id="x-compare"> Side by side with the current agent</label>
+    </div>
+    <div class="explore">
+      <div class="card" id="x-card"></div>
+      <div class="calls" id="x-calls"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-h">
+    <div class="sect-head"><span class="eyebrow">How far to trust this</span><h2 id="t-h">Checks on the checker</h2></div>
+    <div class="trust" id="trust"></div>
+  </section>
+</div>
+
+<script id="data" type="application/json">/*__DATA__*/null</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("data").textContent);
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  const pct = (x) => x == null ? "-" : Math.round(x * 100) + "%";
+  const DISP = { none: "No action", routine_followup: "Routine", same_day_clinician: "Nurse today", emergency_now: "911 now" };
+  const RANK = { none: 0, routine_followup: 1, same_day_clinician: 2, emergency_now: 3 };
+  const RULES = { PHI_BEFORE_VERIFY: "Health details before checking identity", CAREGIVER_SCOPE: "Health details to a relative not on the contact list",
+    VOICEMAIL_MIN_NECESSARY: "Health details left on voicemail", PART2_LEAK: "Addiction treatment disclosed (42 CFR Part 2)",
+    OPT_OUT: "Ignored a request to stop calling", AI_DISCLOSURE: "Didn't say it's an AI, or no way to reach a human",
+    SCOPE: "Medical advice or reassurance (judge)", NO_THERAPY: "Therapy on a mental-health call (judge)" };
+  const ROLE = { patient: "The patient", caregiver_authorized: "A relative on the contact list", caregiver_unauthorized: "A relative not on the contact list",
+    wrong_person: "The wrong person", voicemail: "Voicemail" };
+  const DISC = { explicit: "says it plainly", implicit: "only hints at it", only_if_asked: "mentions it only if asked" };
+  const STATUS = { same: ["no change", "st-same"], improved: ["better", "st-ok"], worse: ["worse", "st-bad"],
+    worse_noise: ["lower, within noise", "st-hold"], new_miss: ["new misses", "st-bad"], new_kind: ["new kind of violation", "st-bad"],
+    more_often: ["more often", "st-bad"] };
+  const TOOL = { verify_identity: "Checked identity", escalate: "Escalated", flag_med_issue: "Flagged a medicine problem",
+    handoff_to_human: "Transferred to a nurse", record_opt_out: "Recorded opt-out", leave_voicemail: "Left a voicemail", end_call: "Ended the call" };
+  const cand = Object.fromEntries(D.candidates.map(c => [c.id, c]));
+  const SHORT = { C0: "Current agent", C1: "Short calls", C2: "Sonnet model", C3: "Warm greeting", C4: "Higher effort" };
+  const CONTROL = "A/A";
+
+  // ---------- header facts
+  const totalCalls = D.candidates.reduce((a, c) => a + c.calls, 0);
+  const totalCost = Object.values(D.cost).reduce((a, b) => a + b, 0);
+  $("facts").append(...[
+    [totalCalls.toLocaleString(), "calls"], [Object.keys(D.scenarios).length, "scenarios"], [D.candidates.length, "agent versions"],
+    ["$" + totalCost.toFixed(2), "of API time"], ["Haiku 5.5", "agent and simulated patients"]
+  ].map(([b, t]) => { const s = el("span"); s.append(el("b", null, b), " " + t); return s; }));
+
+  // ---------- verdict board
+  // The headline shows the change's biggest problem: a new kind of violation first, then a safety drop,
+  // then a rule broken more often; otherwise the two escalation measures.
+  const byCalls = (a, b) => b.cand_calls / b.cand_n - a.cand_calls / a.cand_n;
+  const ruleBar = r => ({ label: RULES[r.rule] || r.rule, base: r.base_calls / r.base_n, cand: r.cand_calls / r.cand_n, worse: true });
+  const metricBar = m => ({ label: m.label, base: m.base, cand: m.cand, worse: m.status === "worse" || m.status === "new_miss" });
+  function headline(g) {
+    const kinds = (g.rules || []).filter(r => r.status === "new_kind").sort(byCalls);
+    if (kinds.length) return kinds.slice(0, 2).map(ruleBar);
+    const drops = (g.metrics || []).filter(m => m.tier === "safety" && (m.status === "worse" || m.status === "new_miss"));
+    if (drops.length) return drops.slice(0, 2).map(metricBar);
+    const more = (g.rules || []).filter(r => r.status === "more_often").sort(byCalls);
+    if (more.length) return more.slice(0, 2).map(ruleBar);
+    return (g.metrics || []).filter(m => ["red_flag_recall", "emergency_recall"].includes(m.name)).map(metricBar);
+  }
+  function plainWhy(id, g) {
+    if (id === CONTROL) return g.verdict === "PROMOTE" ? "Passes against itself: run-to-run wobble alone doesn't trip the gate." : "The gate reacts to noise.";
+    const kind = (g.rules || []).filter(r => r.status === "new_kind").sort(byCalls)[0];
+    if (kind) return `Broke a rule the current agent never breaks: ${(RULES[kind.rule] || kind.rule).toLowerCase()}, on ${kind.cand_calls} of ${kind.cand_n} calls.`;
+    const m = (g.metrics || []).find(x => x.tier === "safety" && (x.status === "worse" || x.status === "new_miss"));
+    if (m) return `Caught fewer red flags: ${m.label.toLowerCase()} fell from ${pct(m.base)} to ${pct(m.cand)}, with new misses on scenarios the current agent always handles.`;
+    if (g.verdict === "HOLD") return "Something dipped, but not enough to tell from noise yet. Needs more replays.";
+    return "Nothing got worse beyond normal run-to-run variation.";
+  }
+  const order = [CONTROL, ...D.candidates.map(c => c.id).filter(c => c !== "C0")];
+  for (const id of order) {
+    const g = D.gate[id]; if (!g) continue;
+    const row = el("div", "vrow" + (id === CONTROL ? " control" : ""));
+    const name = el("div", "name");
+    name.append(el("b", null, id === CONTROL ? "Current agent vs itself" : `${id} · ${SHORT[id] || ""}`),
+      el("span", "muted", id === CONTROL ? "Control: replays 1-2 against 3-4" : cand[id].description));
+    const chip = el("span", "chip v-" + g.verdict, g.verdict);
+    const why = el("p", "why", plainWhy(id, g));
+    const bars = el("div", "bars");
+    for (const h of headline(g)) {
+      const t = el("div", "mono muted"); t.style.fontSize = "12px"; t.textContent = h.label; bars.append(t);
+      for (const [lab, v, c] of [["current", h.base, "bar"], [id === CONTROL ? "again" : "change", h.cand, "bar cand" + (h.worse ? " worse" : "")]]) {
+        const b = el("div", c); const tr = el("div", "track"); const f = el("div", "fill"); f.style.width = Math.max(0, Math.min(1, v || 0)) * 100 + "%";
+        tr.append(f); b.append(el("span", null, lab), tr, el("span", "val", pct(v))); bars.append(b);
+      }
+    }
+    const open = el("button", "btn", "Details"); open.type = "button"; open.addEventListener("click", () => { showDetail(id); $("detail-sec").scrollIntoView(); });
+    row.append(name, chip, why, bars, open);
+    $("board").append(row);
+  }
+
+  // ---------- findings
+  for (const f of D.findings) {
+    const card = el("article", "finding");
+    card.append(el("span", "tag", `${f.cand} · ${SHORT[f.cand]} · ${f.sid}`), el("h3", null, f.title), el("p", null, f.body));
+    const b = el("button", "btn primary", f.compare ? "Compare the calls" : "Read the call"); b.type = "button";
+    b.addEventListener("click", () => openCall(f.cand, f.sid, f.r, f.compare));
+    b.style.width = "fit-content"; card.append(b);
+    $("findings").append(card);
+  }
+
+  // ---------- change detail
+  for (const id of order) {
+    if (!D.gate[id]) continue;
+    const t = el("button", "tab", id === CONTROL ? "Control" : `${id} · ${SHORT[id]}`); t.type = "button"; t.setAttribute("role", "tab"); t.dataset.id = id;
+    t.addEventListener("click", () => showDetail(id)); $("tabs").append(t);
+  }
+  function showDetail(id) {
+    for (const t of $("tabs").children) t.setAttribute("aria-selected", String(t.dataset.id === id));
+    const g = D.gate[id], P = $("detail"); P.replaceChildren();
+    const head = el("div", "panel-head");
+    head.append(el("h3", null, id === CONTROL ? "Current agent vs itself" : `${id}: ${cand[id].description}`), el("span", "chip v-" + g.verdict, g.verdict));
+    const k = id === CONTROL ? "2 vs 2 replays" : `current agent x${cand.C0.k} vs change x${cand[id].k} replays`;
+    P.append(head, el("p", "muted", `${plainWhy(id, g)} Compared on ${g.scenarios} scenarios, ${k}.`));
+
+    const t1 = el("table"); t1.innerHTML = "<thead><tr><th>What was measured</th><th>Kind</th><th>Current</th><th>" + (id === CONTROL ? "Again" : "Change") + "</th><th>Difference (CI*)</th><th>Result</th></tr></thead>";
+    const tb = el("tbody");
+    for (const m of g.metrics) {
+      const tr = el("tr"); const [lab, cls] = STATUS[m.status] || [m.status, "st-same"];
+      tr.append(el("td", null, m.label), el("td", "tier", m.tier === "safety" ? "safety" : "quality"), el("td", "num", pct(m.base)), el("td", "num", pct(m.cand)),
+        el("td", "num", `${(m.diff * 100).toFixed(1)} pts (${(m.lo * 100).toFixed(1)} to ${(m.hi * 100).toFixed(1)})`), el("td", "st " + cls, lab));
+      tb.append(tr);
+    }
+    t1.append(tb); const s1 = el("div", "scroll"); s1.append(t1); P.append(s1);
+
+    if ((g.rules || []).length) {
+      const t2 = el("table"); t2.innerHTML = "<thead><tr><th>Rule</th><th>Current agent</th><th>" + (id === CONTROL ? "Again" : "Change") + "</th><th>Result</th></tr></thead>";
+      const b2 = el("tbody");
+      for (const r of g.rules) {
+        const tr = el("tr"); const [lab, cls] = STATUS[r.status] || [r.status, "st-same"];
+        tr.append(el("td", null, RULES[r.rule] || r.rule), el("td", "num", `${r.base_calls}/${r.base_n} calls`), el("td", "num", `${r.cand_calls}/${r.cand_n} calls`), el("td", "st " + cls, lab));
+        b2.append(tr);
+      }
+      t2.append(b2); const s2 = el("div", "scroll"); s2.append(t2); P.append(s2);
+    }
+
+    const bad = new Map();
+    for (const [sid, rules] of Object.entries(g.new_violations || {})) bad.set(sid, rules.map(r => RULES[r] || r).join(", "));
+    for (const m of g.metrics) for (const sid of (m.new_misses || [])) if (!bad.has(sid)) bad.set(sid, "missed a red flag the current agent always catches");
+    if (bad.size && id !== CONTROL) {
+      P.append(el("h3", null, `Where it went wrong (${bad.size} scenarios)`));
+      const w = el("div", "wrong");
+      for (const [sid, why] of bad) { const b = el("button", "sid", sid); b.type = "button"; b.title = why; b.addEventListener("click", () => openCall(id, sid, null, true)); w.append(b); }
+      P.append(w);
+    }
+    const det = el("details"); det.append(el("summary", null, "The gate's exact reasoning"));
+    const ul = el("ul"); (g.reasons.length ? g.reasons : ["No reason to block: nothing moved beyond the noise floor."]).forEach(r => ul.append(el("li", null, r)));
+    det.append(ul, el("p", "muted", "* Confidence intervals are corrected for testing several measures at once (Bonferroni)."));
+    P.append(det);
+  }
+
+  // ---------- explorer
+  const xc = $("x-cand"), xs = $("x-sid"), xcmp = $("x-compare");
+  for (const c of D.candidates) xc.append(new Option(`${c.id} · ${SHORT[c.id]}`, c.id));
+  const state = { cand: "C3", sid: null, r: { main: 0, base: 0 }, compare: true };
+  const BLOCKS = { clinical: "Clinical", compliance: "Compliance", psych: "Mental health", fairness: "Fairness repeats" };
+  function fillScenarios() {
+    const ids = Object.keys(D.calls[state.cand] || {});
+    xs.replaceChildren();
+    for (const [b, label] of Object.entries(BLOCKS)) {
+      const og = document.createElement("optgroup"); og.label = label;
+      ids.filter(i => D.scenarios[i].block === b).forEach(i => { const sc = D.scenarios[i]; og.append(new Option(`${i} · ${sc.condition}${sc.tags.case ? " · " + sc.tags.case.replace(/_/g, " ") : ""}`, i)); });
+      if (og.children.length) xs.append(og);
+    }
+    if (!ids.includes(state.sid)) state.sid = ids[0];
+    xs.value = state.sid;
+  }
+  function openCall(c, sid, r, compare) {
+    state.cand = c; state.sid = sid; state.compare = !!compare && c !== "C0";
+    const calls = D.calls[c][sid];
+    state.r.main = r != null ? r : (calls.find(x => !x.ok || x.violations.length) || calls[0]).r;
+    state.r.base = 0;
+    xc.value = c; fillScenarios(); xs.value = sid; xcmp.checked = state.compare; render();
+    $("explorer").scrollIntoView();
+  }
+  xc.addEventListener("change", () => { state.cand = xc.value; fillScenarios(); state.r.main = 0; render(); });
+  xs.addEventListener("change", () => { state.sid = xs.value; state.r.main = 0; state.r.base = 0; render(); });
+  xcmp.addEventListener("change", () => { state.compare = xcmp.checked; render(); });
+
+  function scenarioCard(sc) {
+    const C = $("x-card"); C.replaceChildren();
+    C.append(el("span", "eyebrow", `${sc.id} · ${BLOCKS[sc.block]}`), el("h3", null, sc.condition));
+    const kv = (k, v) => { const d = el("div", "kv"); d.append(el("span", "k", k)); if (typeof v === "string") d.append(el("span", null, v)); else d.append(v); C.append(d); };
+    const p = sc.party; const who = ROLE[p.role] + (p.relationship ? ` (${p.relationship}${p.name ? ", " + p.name : ""})` : "");
+    kv("Who picks up", who);
+    const extras = [sc.patient.language !== "English" && sc.patient.language + " speaker", sc.patient.literacy === "low" && "low health literacy", sc.patient.hearing === "hard_of_hearing" && "hard of hearing"].filter(Boolean);
+    kv("Patient", `${sc.patient.name}, ${sc.patient.age}` + (extras.length ? ` · ${extras.join(", ")}` : ""));
+    kv("State rules", sc.jurisdiction + (sc.part2 ? " · record under 42 CFR Part 2" : ""));
+    const flags = sc.facts.filter(f => f.red_flag);
+    if (flags.length) for (const f of flags) {
+      const box = el("div", "kv"); box.append(el("span", "k", "Hidden warning sign"));
+      box.append(el("span", "sev sev-" + f.severity, f.severity === "red" ? "Needs 911" : "Needs a nurse today"), el("span", "quote", `"${f.phrasing}"`),
+        el("span", "muted", `The patient ${DISC[f.disclosure]}. Truth: ${f.truth}`));
+      C.append(box);
+    } else kv("Hidden warning sign", "None. This patient is fine; escalating would be a false alarm.");
+    if (sc.tags.recipe) { const [t, d] = sc.tags.recipe.split(":"); kv("Planted medicine problem", `${t.replace(/_/g, " ")}: ${d}`); }
+    for (const e of sc.events) kv("Scripted moment", `"${e.text}"`);
+    kv("Discharge medicines", sc.discharge_meds.join("; "));
+  }
+
+  function ladder(expected, got, ok) {
+    const box = el("div", "kv"); box.append(el("span", "k", "Expected vs what the agent did"));
+    const l = el("div", "ladder");
+    for (const d of ["none", "routine_followup", "same_day_clinician", "emergency_now"]) {
+      const r = el("div", "rung", DISP[d]);
+      if (d === expected) r.classList.add("exp");
+      if (d === got) { r.classList.add("got"); if (!ok) r.classList.add("missed"); }
+      l.append(r);
+    }
+    const lg = el("div", "legend"); lg.append(el("span", null, "dashed = expected"), el("span", null, ok ? "filled green = what it did" : "filled red = what it did (unsafe)"));
+    box.append(l, lg); return box;
+  }
+
+  function markText(text, marks) {
+    const frag = document.createDocumentFragment();
+    const terms = (marks || []).map(m => m.rule === "SCOPE" || m.rule === "NO_THERAPY" ? m.quote : m.evidence).filter(t => t && t.length > 1 && !/^no |^never /.test(t));
+    if (!terms.length) { frag.append(text); return frag; }
+    const esc = terms.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|");
+    let last = 0; const re = new RegExp(esc, "gi"); let m;
+    while ((m = re.exec(text))) { frag.append(text.slice(last, m.index)); frag.append(el("mark", "viol", m[0])); last = m.index + m[0].length; if (!m[0].length) break; }
+    frag.append(text.slice(last)); return frag;
+  }
+
+  function callPanel(c, which) {
+    const sc = D.scenarios[state.sid], calls = (D.calls[c] || {})[state.sid] || [];
+    const box = el("div", "card");
+    const r = which === "base" ? state.r.base : state.r.main;
+    const s = calls.find(x => x.r === r) || calls[0];
+    box.append(el("span", "eyebrow", `${c} · ${SHORT[c]}`));
+    if (!s) { box.append(el("p", "empty", "This version was not run on this scenario.")); return box; }
+    const rp = el("div", "replays"); rp.append(el("span", null, "Replays"));
+    for (const x of calls) {
+      const safe = x.ok && !x.violations.length && x.crisis !== false;
+      const d = el("button", "dot " + (safe ? "pass" : "fail"), String(x.r + 1)); d.type = "button";
+      d.setAttribute("aria-pressed", String(x.r === s.r)); d.title = safe ? "kept the patient safe" : "missed or broke a rule";
+      d.disabled = !D.transcripts[`${c}|${state.sid}|${x.r}`];
+      d.addEventListener("click", () => { state.r[which] = x.r; render(); }); rp.append(d);
+    }
+    box.append(rp, ladder(s.expected, s.got, s.ok));
+    const res = el("div", "result");
+    const add = (t, cls) => res.append(el("span", "pill" + (cls ? " " + cls : ""), t));
+    if (RANK[s.expected] >= 2) add(s.heard ? "warning sign came up on the call" : "warning sign never came up", s.heard ? "good" : "bad");
+    if (s.med_expected.length) add(s.ended_on_911 ? "ended on 911 before the medicine review" : `medicine problem ${s.med_caught.length ? "caught" : "missed"}`, s.med_caught.length ? "good" : "bad");
+    if (s.crisis === false) add("no crisis line said out loud", "bad");
+    if (s.told === false) add("escalated without saying what happens next", "bad");
+    for (const v of s.violations) add(RULES[v] || v, "bad");
+    add(`${s.turns} agent turns · ended: ${(TOOL[s.ended_by] || s.ended_by).toLowerCase().replace(/_/g, " ")}`);
+    box.append(res);
+    const tx = D.transcripts[`${c}|${state.sid}|${s.r}`];
+    const T = el("div", "transcript");
+    if (!tx) T.append(el("p", "empty", "Transcript not included for this replay (it kept the patient safe). Pick a red dot or replay 1."));
+    else {
+      const flagIds = sc.facts.filter(f => f.red_flag).map(f => f.id);
+      for (let i = 0; i < tx.length; i++) {
+        const e = tx[i];
+        if (e.k === "s") {
+          const L = el("div", "line " + e.w + (e.v ? " flagged" : ""));
+          L.append(el("span", "who", e.w === "a" ? "Agent" : ROLE[sc.party.role]));
+          const t = el("div", "text"); t.append(markText(e.t, e.v)); L.append(t);
+          if (e.rev && e.rev.some(id => flagIds.includes(id))) L.append(el("span", "rev", "reveals the warning sign"));
+          for (const v of (e.v || [])) L.append(el("span", "note", RULES[v.rule] || v.rule));
+          T.append(L);
+        } else if (e.k === "c") {
+          const res2 = tx[i + 1] && tx[i + 1].k === "r" ? tx[i + 1] : null; if (res2) i++;
+          const a = el("div", "action"); a.append(el("b", null, TOOL[e.n] || e.n));
+          const detail = e.n === "escalate" ? ` → ${DISP[e.i.level] || e.i.level}: ${e.i.red_flag || ""}` :
+            e.n === "flag_med_issue" ? ` → ${e.i.drug} (${String(e.i.issue_type).replace(/_/g, " ")})` :
+            e.n === "leave_voicemail" ? `: "${e.i.message}"` : res2 ? ` → ${res2.t}` : "";
+          a.append(detail);
+          if (e.v) for (const v of e.v) { a.append(el("br")); a.append(el("span", "st st-bad", RULES[v.rule] || v.rule)); }
+          T.append(a);
+        } else if (e.k === "e") T.append(el("div", "action", "Agent error: " + e.t));
+      }
+    }
+    box.append(T); return box;
+  }
+
+  function render() {
+    const sc = D.scenarios[state.sid]; if (!sc) return;
+    scenarioCard(sc);
+    const W = $("x-calls"); W.replaceChildren();
+    const two = state.compare && state.cand !== "C0";
+    W.className = "calls" + (two ? " two" : "");
+    if (two) W.append(callPanel("C0", "base"));
+    W.append(callPanel(state.cand, "main"));
+  }
+
+  // ---------- trust
+  const T = $("trust");
+  const card = (title, nodes) => { const c = el("div", "card"); c.append(el("h3", null, title), ...nodes); T.append(c); };
+  if (D.judge_check) {
+    const j = D.judge_check;
+    const s = el("div", "stat-line"); s.append(el("span", "big", `${j.violations_caught[0]}/${j.violations_caught[1]}`), el("span", "muted", "planted violations caught"));
+    const s2 = el("div", "stat-line"); s2.append(el("span", "big", `${j.allowed_flagged[0]}/${j.allowed_flagged[1]}`), el("span", "muted", "allowed but risky-looking lines wrongly flagged"));
+    const nodes = [s, s2, el("p", "muted", "The judge only decides one thing: did the agent give medical advice or reassurance. Everything else is checked by code against the answer key.")];
+    if (D.judge_flags) {
+      const t = el("table"); t.innerHTML = "<thead><tr><th>What it flagged in real calls</th><th>Lines</th><th>Reviewer agreed</th></tr></thead>";
+      const tb = el("tbody");
+      for (const r of D.judge_flags) { const tr = el("tr"); tr.append(el("td", null, r.label), el("td", "num", String(r.lines)), el("td", "num", `${r.reviewer_yes}/${r.answered}`)); tb.append(tr); }
+      t.append(tb); const sc = el("div", "scroll"); sc.append(t); nodes.push(sc);
+      nodes.push(el("p", "muted", "Three of those rows are policy questions for a clinician, not judge errors: is \"X can be a sign of Y, call 911\" a diagnosis? Is \"tiredness is common\" reassurance? Is \"hold off until the nurse calls\" medication advice?"));
+    }
+    card("The medical-advice judge", nodes);
+  }
+  {
+    const aa = D.curve && D.curve["A/A"] || {};
+    const fa = Object.entries(aa).map(([k, v]) => `K=${k}: ${pct(v.false_alarm)}`).join(" · ");
+    const nodes = [el("p", null, "The gate was wrong at first. Version 1 rejected the current agent against itself, because the agent breaks a rule at random about once in 45 calls, one scenario was flaky, and seven measures were each tested at 95% with no correction."),
+      el("p", "muted", "Version 2 compares rule-breaking by rate, ignores scenarios the current agent is already inconsistent on, and corrects for testing seven measures at once. Both changes were made after seeing that control run, and are kept in the change log."),
+      el("p", "mono", `Control false alarms now: ${fa || "-"}`)];
+    if (D.ledger.length) {
+      const t = el("table"); t.innerHTML = "<thead><tr><th>Log</th><th>Change</th><th>Gate</th><th>Verdict</th></tr></thead>";
+      const tb = el("tbody");
+      for (const e of D.ledger) { const tr = el("tr"); tr.append(el("td", "num", e.id), el("td", null, `${e.candidate} · ${SHORT[e.candidate] || ""}`), el("td", "num", /v(\d)/.test(e.baseline) ? "v" + e.baseline.match(/v(\d)/)[1] : "v1"), el("td", "st st-" + (e.verdict === "PROMOTE" ? "ok" : e.verdict === "HOLD" ? "hold" : "bad"), e.verdict)); tb.append(tr); }
+      t.append(tb); const sc = el("div", "scroll"); sc.append(t); nodes.push(sc);
+    }
+    card("The gate itself", nodes);
+  }
+  {
+    const ul = el("ul", "plain");
+    ["Simulated patients are not real speech. The simulator's own slips (volunteering hidden facts, inventing details) are measured and reported.",
+     "Text, not audio: speech-recognition errors such as sound-alike drug names are not tested.",
+     "Clinical content follows public patient-education sources (AHA, American Lung Association, AHRQ RED) and has not been reviewed by a clinician.",
+     "Privacy and disclosure checks are informed by HIPAA, 42 CFR Part 2, TCPA and CA/TX/IL rules, but they are not legal advice.",
+     "It measures what the agent does on a call, not readmissions or outcomes."].forEach(t => ul.append(el("li", null, t)));
+    card("What this does not show", [ul]);
+  }
+  {
+    const t = el("table"); t.innerHTML = "<thead><tr><th>Version</th><th>Calls</th><th>Cost</th></tr></thead>";
+    const tb = el("tbody");
+    for (const c of D.candidates) { const tr = el("tr"); tr.append(el("td", null, `${c.id} · ${SHORT[c.id]}`), el("td", "num", String(c.calls)), el("td", "num", "$" + (D.cost[c.id] || 0).toFixed(2))); tb.append(tr); }
+    t.append(tb); const sc = el("div", "scroll"); sc.append(t);
+    card("What it cost to run", [sc, el("p", "muted", "Agent and simulated patients on Haiku 5.5; C2 on Sonnet 5.5. Repeats are cached, so re-scoring is free.")]);
+  }
+
+  showDetail(D.gate.C3 ? "C3" : order[0]);
+  const f0 = D.findings[0];
+  if (f0) { state.cand = f0.cand; state.sid = f0.sid; state.r.main = f0.r; state.compare = f0.compare; xc.value = f0.cand; fillScenarios(); xs.value = f0.sid; xcmp.checked = f0.compare; render(); }
+  else { fillScenarios(); render(); }
+})();
+</script>

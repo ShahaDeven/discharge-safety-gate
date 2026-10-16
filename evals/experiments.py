@@ -1,10 +1,10 @@
-"""Day 3: run every candidate the gate will judge, in one place, with costs up front.
+"""Experiments: run every candidate the gate will judge, in one place, with costs up front.
 
-    python -m evals.day3 plan                 # what will run, per step and in total ($0 - nothing is called)
-    python -m evals.day3 run                  # every step in order (each stops at its own cap)
-    python -m evals.day3 run --only C1,C3     # chosen steps
-    python -m evals.day3 run --only C3 --batch   # same calls via Message Batches (50% off if the cache stays warm)
-    python -m evals.day3 judge                # judge every cached call of every step
+    python -m evals.experiments plan                 # what will run, per step and in total ($0 - nothing is called)
+    python -m evals.experiments run                  # every step in order (each stops at its own cap)
+    python -m evals.experiments run --only C1,C3     # chosen steps
+    python -m evals.experiments run --only C3 --batch   # same calls via Message Batches (50% off if the cache stays warm)
+    python -m evals.experiments judge                # judge every cached call of every step
     then: python -m evals.gate  and  python -m evals.report
 
 Steps (approved budget: Standard + Sonnet comparison, ~$4.80):

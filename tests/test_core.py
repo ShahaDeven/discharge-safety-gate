@@ -140,3 +140,16 @@ def test_replay_caches_and_reruns_only_what_changed(tmp_path, pilot):
 
     ok, n, _ = verify(tmp_path / "audit.jsonl")
     assert ok and n == 12
+
+
+def test_on_event_sees_every_event_as_it_happens(pilot):
+    """The live console streams calls through this hook; it must see exactly what the record holds."""
+    sc = pilot["P01"]
+    agent = ScriptedAgent([[say("Hi, is Robert there?")],
+                           [tool("verify_identity", caller_name="Robert Hayes", relationship="self",
+                                 patient_name="Robert Hayes", patient_date_of_birth="1954-02-11")],
+                           [say("Thanks."), tool("end_call", summary="done")]])
+    sim = ScriptedSimulator("Hello?", ["Yes, Robert Hayes, February 11 1954."])
+    seen = []
+    rec = run_call(agent, sim, DischargeHarness(sc), sc.context("t"), on_event=seen.append)
+    assert seen == rec.events and len(seen) >= 6
