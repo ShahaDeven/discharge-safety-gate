@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import { ROLE, SHORT, go, type Overview, type Route, type Row, type Summary } from "../api";
+import { ROLE, go, shortName, token, type Budget, type Overview, type Route, type Row, type Summary } from "../api";
 import { Ladder, ResultPills, ScenarioCard, Transcript } from "./Call";
 import { ScenarioSelect } from "./Calls";
+import { useSpeech } from "./useSpeech";
 
 type Phase = "idle" | "running" | "done" | "error";
 
 /** Reads the server-sent-event stream with fetch, so a refused live call (spending cap) shows its reason. */
 async function stream(url: string, signal: AbortSignal, on: (event: string, data: any) => void) {
-  const res = await fetch(url, { signal });
+  const res = await fetch(url, { signal, headers: { "X-DSG-Token": token() } });
   if (!res.ok || !res.body) throw new Error((await res.json().catch(() => null))?.detail || `${res.status} ${res.statusText}`);
   const reader = res.body.getReader();
   const dec = new TextDecoder();
@@ -26,13 +27,14 @@ async function stream(url: string, signal: AbortSignal, on: (event: string, data
   }
 }
 
-export default function Live({ d, route, onSpent }: { d: Overview; route: Route; onSpent: (spent: number) => void }) {
+export default function Live({ d, route, onBudget }: { d: Overview; route: Route; onBudget: (b: Budget) => void }) {
   const cand = route.cand && d.calls[route.cand] ? route.cand : "C3";
   const ids = Object.keys(d.calls[cand] || {});
   const sid = route.sid && ids.includes(route.sid) ? route.sid : ids[0];
   const replays = d.calls[cand][sid] || [];
   const sc = d.scenarios[sid];
   const est = cand === "C2" ? 0.024 : cand === "C4" ? 0.004 : 0.003;
+  const voice = useSpeech(sc?.patient.language === "Spanish" ? "es" : "en");
 
   const [mode, setMode] = useState<"replay" | "live">("replay");
   const [r, setR] = useState(route.r ?? 0);
@@ -50,18 +52,20 @@ export default function Live({ d, route, onSpent }: { d: Overview; route: Route;
   useEffect(() => { if (phase === "running") bottom.current?.scrollIntoView({ block: "nearest" }); }, [rows.length, phase]);
   useEffect(() => () => abort.current?.abort(), []);
 
-  function stop() { abort.current?.abort(); abort.current = null; }
+  function stop() { abort.current?.abort(); abort.current = null; voice.stop(); }
 
   async function start() {
     stop();
     const ctl = new AbortController(); abort.current = ctl;
     setRows([]); setSummary(null); setCost(null); setMsg(""); setPhase("running");
-    const q = new URLSearchParams({ cand, sid, mode, r: String(r), speed: String(speed) });
+    // Spoken lines take ~3x longer than reading pace, so a voiced replay slows down to stay in step.
+    const pace = voice.on && mode === "replay" ? Math.max(0.3, speed * 0.3) : speed;
+    const q = new URLSearchParams({ cand, sid, mode, r: String(r), speed: String(pace) });
     try {
       await stream(`/api/stream?${q}`, ctl.signal, (ev, data) => {
-        if (ev === "row") setRows((x) => [...x, data]);
+        if (ev === "row") { setRows((x) => [...x, data]); if (data.k === "s") voice.say(data.t, data.w); }
         if (ev === "scored") { setRows(data.transcript); setSummary(data.summary); }
-        if (ev === "done") { setCost(data.cost); onSpent(data.spent); setPhase("done"); }
+        if (ev === "done") { setCost(data.cost); if (data.budget) onBudget(data.budget); setPhase("done"); }
         if (ev === "error") { setMsg(data.message); setPhase("error"); }
       });
       setPhase((p) => (p === "running" ? "done" : p));
@@ -70,7 +74,9 @@ export default function Live({ d, route, onSpent }: { d: Overview; route: Route;
     }
   }
 
-  const left = d.live.cap - d.live.spent;
+  const b = d.session.budget;
+  const left = Math.max(0, Math.min(b.session_max - b.session, b.day_max - b.today));
+  const liveBlocked = d.session.read_only ? "Live calls are off on this read-only demo." : !token() ? "Unlock with the access token (top right) to place live calls." : "";
   const last = rows[rows.length - 1];
   const typing = phase !== "running" ? undefined
     : !rows.length ? "dialing" : last?.k === "s" && last.w === "a" ? `${ROLE[sc.party.role].toLowerCase()} is answering` : "agent is responding";
@@ -82,7 +88,7 @@ export default function Live({ d, route, onSpent }: { d: Overview; route: Route;
       <div className="controls">
         <label htmlFor="l-cand">Agent version
           <select id="l-cand" value={cand} onChange={(e) => go({ page: "live", cand: e.target.value, sid: Object.keys(d.calls[e.target.value]).includes(sid) ? sid : undefined })}>
-            {d.candidates.map((c) => <option key={c.id} value={c.id}>{c.id} · {SHORT[c.id]}</option>)}
+            {d.candidates.map((c) => <option key={c.id} value={c.id}>{c.id} · {shortName(d, c.id)}</option>)}
           </select>
         </label>
         <label htmlFor="l-sid">Scenario<ScenarioSelect id="l-sid" d={d} cand={cand} sid={sid} onChange={(s) => go({ page: "live", cand, sid: s })} /></label>
@@ -104,20 +110,27 @@ export default function Live({ d, route, onSpent }: { d: Overview; route: Route;
             </label>
           </>
         ) : (
-          <span className="status">about ${est.toFixed(3)} per call · ${left.toFixed(2)} left of the ${d.live.cap.toFixed(2)} session cap</span>
+          <span className="status">about ${est.toFixed(3)} per call · ${left.toFixed(2)} left under today's and this session's caps</span>
+        )}
+        {voice.supported && (
+          <label className="check" htmlFor="l-voice">
+            <input id="l-voice" type="checkbox" checked={voice.on} onChange={(e) => voice.setOn(e.target.checked)} /> Hear the call
+          </label>
         )}
         {phase === "running"
           ? <button type="button" className="btn danger" onClick={() => { stop(); setPhase("idle"); }}>Stop</button>
-          : <button type="button" className="btn primary" onClick={start} disabled={mode === "live" && left < est}>
+          : <button type="button" className="btn primary" onClick={start} disabled={mode === "live" && (left < est || !!liveBlocked)}>
               {mode === "replay" ? "Play the call" : `Place a live call (~$${est.toFixed(3)})`}
             </button>}
       </div>
+      {mode === "live" && liveBlocked && <p className="warn">{liveBlocked}</p>}
       {mode === "live" && cand === "C2" && <p className="warn">C2 runs on Sonnet, about ten times the cost of the other versions.</p>}
+      {voice.on && <p className="sim-label">Simulated call · synthetic patient · computer voices, nothing is recorded</p>}
       <div className="explore">
         <ScenarioCard sc={sc} hideKey={!showKey && phase !== "done"} onReveal={() => setShowKey(true)} />
         <div className="card">
           <div className="live-head">
-            <span className="eyebrow">{cand} · {SHORT[cand]} · {mode === "replay" ? `replay ${r + 1}` : "live"}</span>
+            <span className="eyebrow">{cand} · {shortName(d, cand)} · {mode === "replay" ? `replay ${r + 1}` : "live"}</span>
             <span className="status">
               {phase === "idle" && "ready"}{phase === "running" && "on the call"}
               {phase === "done" && (cost ? `scored · cost $${cost.toFixed(4)}` : "scored")}{phase === "error" && "stopped"}

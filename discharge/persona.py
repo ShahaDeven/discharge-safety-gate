@@ -8,6 +8,7 @@ from agentgate.simulator import OUTPUT_RULES, SIM_RULES, LLMSimulator, ScriptedS
 from . import config
 from .conditions import DOMAINS
 from .scenario import Scenario
+from .guard import filter_simulator
 from .tools import DischargeHarness
 
 PERSONA_VERSION = "p5"   # bump when the persona template changes, so cached replays rerun
@@ -125,5 +126,6 @@ class DischargeSuite:
             sim = ScriptedSimulator(opening(sc), ["[silence: the voicemail is still recording]"], hang_up_after=2)
         else:
             sim = LLMSimulator(render_persona(sc), opening(sc), DOMAINS, model=config.SIM_MODEL,
-                               effort=config.SIM_EFFORT, scripted={e.at_reply: e.text for e in sc.events})
+                               effort=config.SIM_EFFORT, scripted={e.at_reply: e.text for e in sc.events},
+                               output_filter=filter_simulator)
         return ctx, sim, DischargeHarness(sc)

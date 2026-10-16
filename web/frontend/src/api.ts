@@ -28,8 +28,9 @@ export type Scenario = {
 };
 export type Metric = { name: string; tier: string; label: string; base: number | null; cand: number | null; diff: number; lo: number; hi: number; n: number; status: string; new_misses: string[] };
 export type Rule = { rule: string; base_calls: number; base_n: number; cand_calls: number; cand_n: number; p: number; status: string; scenarios: string[] };
-export type Gate = { verdict: "PROMOTE" | "HOLD" | "REJECT"; reasons: string[]; scenarios: number; version: number; metrics: Metric[]; rules: Rule[]; new_violations: Record<string, string[]>; description?: string };
-export type Candidate = { id: string; description: string; k: number; scenarios: number; calls: number; why: string };
+export type Gate = { verdict: "PROMOTE" | "HOLD" | "REJECT"; reasons: string[]; scenarios: number; version: number; metrics: Metric[]; rules: Rule[]; new_violations: Record<string, string[]>; description?: string;
+  sealed?: { verdict: string; scenarios: number; reasons: string[] } };
+export type Candidate = { id: string; description: string; k: number; scenarios: number; calls: number; why: string; proposal?: boolean };
 export type Finding = { cand: string; sid: string; r: number; compare: boolean; title: string; body: string };
 export type Overview = {
   candidates: Candidate[]; scenarios: Record<string, Scenario>; calls: Record<string, Record<string, Summary[]>>;
@@ -38,7 +39,8 @@ export type Overview = {
   ledger: { id: string; candidate: string; baseline: string; verdict: string; reasons: string[] }[];
   judge_check: { violations_caught: [number, number]; allowed_flagged: [number, number]; borderline_flagged: [number, number] } | null;
   judge_flags?: { label: string; kind: string; lines: number; answered: number; reviewer_yes: number }[];
-  findings: Finding[]; cost: Record<string, number>; live: { spent: number; cap: number };
+  findings: Finding[]; cost: Record<string, number>; session: Session;
+  redteam: null | { caught: number; total: number; results: { attack: string; proposal: string; expected: string[]; verdict: string; caught: boolean; caught_by?: string[] }[] };
 };
 
 export async function getJSON<T>(url: string): Promise<T> {
@@ -81,7 +83,7 @@ export const pct = (x: number | null | undefined) => (x == null ? "-" : `${Math.
 export const safe = (s: Summary) => s.ok && !s.violations.length && s.crisis !== false;
 
 // Where to send people: a hash route the whole app reads.
-export type Route = { page: "overview" | "changes" | "calls" | "live" | "method"; cand?: string; sid?: string; r?: number; compare?: boolean };
+export type Route = { page: "overview" | "changes" | "calls" | "live" | "propose" | "method"; cand?: string; sid?: string; r?: number; compare?: boolean };
 export function go(route: Route) {
   const q = new URLSearchParams();
   if (route.cand) q.set("cand", route.cand);
@@ -94,7 +96,47 @@ export function go(route: Route) {
 export function readRoute(): Route {
   const [path, query] = location.hash.replace(/^#\/?/, "").split("?");
   const q = new URLSearchParams(query || "");
-  const page = (["overview", "changes", "calls", "live", "method"].includes(path) ? path : "overview") as Route["page"];
+  const page = (["overview", "changes", "calls", "live", "propose", "method"].includes(path) ? path : "overview") as Route["page"];
   return { page, cand: q.get("cand") || undefined, sid: q.get("sid") || undefined,
     r: q.has("r") ? Number(q.get("r")) : undefined, compare: q.get("compare") === "1" };
+}
+
+// ---------- access token (kept for this browser tab only) and requests that spend or change things
+const TOKEN_KEY = "dsg-token";
+export function getToken(): string {
+  try { return sessionStorage.getItem(TOKEN_KEY) || ""; } catch { return ""; }
+}
+export function setToken(t: string) {
+  try { t ? sessionStorage.setItem(TOKEN_KEY, t) : sessionStorage.removeItem(TOKEN_KEY); } catch { /* storage blocked: token lives in memory only */ }
+  memToken = t;
+}
+let memToken = "";
+export const token = () => getToken() || memToken;
+
+async function errorText(r: Response) {
+  const j = await r.json().catch(() => null);
+  return (j && (typeof j.detail === "string" ? j.detail : JSON.stringify(j.detail))) || `${r.status} ${r.statusText}`;
+}
+export async function send<T>(url: string, method: "POST" | "GET", body?: unknown): Promise<T> {
+  const r = await fetch(url, {
+    method, headers: { "Content-Type": "application/json", "X-DSG-Token": token() },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  if (!r.ok) throw new Error(await errorText(r));
+  return r.json() as Promise<T>;
+}
+
+export type Budget = { session: number; session_max: number; today: number; day_max: number; run_max: number };
+export type Session = { read_only: boolean; budget: Budget; token_required: boolean };
+export type Estimate = { calls: number; baseline_calls: number; visible: number; holdout: number; k: number; usd: number; blocked: string[] };
+export type Proposal = {
+  id: string; name: string; note: string; model: string; effort: string; scenario_set: string; created_at: string;
+  status: "saved" | "running" | "done" | "error"; prompt?: string; estimate?: Estimate;
+  result: null | { verdict: Gate["verdict"]; reasons: string[]; spent_usd: number; k: number; blocked?: boolean; sealed: { verdict: string; scenarios: number; reasons: string[] } };
+};
+export type Job = { id: string; pid: string; state: "running" | "done" | "error"; phase: string; done: number; total: number; spent: number; error: string | null; estimate: Estimate; result: Proposal["result"] };
+
+/** Short label for any candidate, including proposals (P-001 ...). */
+export function shortName(d: { candidates: Candidate[] }, id: string): string {
+  return SHORT[id] || d.candidates.find((c) => c.id === id)?.description || id;
 }

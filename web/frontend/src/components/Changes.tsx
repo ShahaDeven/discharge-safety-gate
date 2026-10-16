@@ -1,4 +1,4 @@
-import { CONTROL, RULES, SHORT, STATUS, go, pct, type Overview } from "../api";
+import { CONTROL, RULES, STATUS, go, pct, shortName, type Overview } from "../api";
 import { order, plainWhy } from "./Overview";
 
 export default function Changes({ d, id }: { d: Overview; id?: string }) {
@@ -17,7 +17,7 @@ export default function Changes({ d, id }: { d: Overview; id?: string }) {
       <div className="tabs" role="tablist">
         {ids.map((x) => (
           <button key={x} type="button" role="tab" className="tab" aria-selected={x === cur} onClick={() => go({ page: "changes", cand: x })}>
-            {x === CONTROL ? "Control" : `${x} · ${SHORT[x]}`}
+            {x === CONTROL ? "Control" : `${x} · ${shortName(d, x)}`}
           </button>
         ))}
       </div>
@@ -27,6 +27,10 @@ export default function Changes({ d, id }: { d: Overview; id?: string }) {
           <span className={`chip v-${g.verdict}`}>{g.verdict}</span>
         </div>
         <p className="muted">{plainWhy(cur, g)} Compared on {g.scenarios} scenarios, {k}.</p>
+        {g.sealed && (
+          <p className="notice">Sealed set ({g.sealed.scenarios} scenarios this change never saw): <b>{g.sealed.verdict}</b>.
+            {g.sealed.verdict !== g.verdict && g.verdict === "HOLD" ? " It passes what it could see but not what it couldn't, so its results may not generalize." : ""}</p>
+        )}
 
         <div className="scroll">
           <table>

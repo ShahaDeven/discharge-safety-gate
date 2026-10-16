@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BLOCKS, SHORT, getJSON, go, safe, type Overview, type Route, type Row, type Summary } from "../api";
+import { BLOCKS, getJSON, go, safe, shortName, type Overview, type Route, type Row, type Summary } from "../api";
 import { Ladder, ResultPills, ScenarioCard, Transcript } from "./Call";
 
 export function ScenarioSelect({ d, cand, sid, onChange, id }: { d: Overview; cand: string; sid: string; onChange: (s: string) => void; id: string }) {
@@ -30,11 +30,11 @@ function CallPanel({ d, cand, sid, r, onPick }: { d: Overview; cand: string; sid
     setData(null); setErr("");
     getJSON<{ summary: Summary; transcript: Row[] }>(`/api/call/${cand}/${sid}/${r}`).then(setData).catch((e) => setErr(String(e)));
   }, [cand, sid, r, calls.length]);
-  if (!calls.length) return <div className="card"><span className="eyebrow">{cand} · {SHORT[cand]}</span><p className="empty">This version was not run on this scenario.</p></div>;
+  if (!calls.length) return <div className="card"><span className="eyebrow">{cand} · {shortName(d, cand)}</span><p className="empty">This version was not run on this scenario.</p></div>;
   return (
     <div className="card">
       <div className="live-head">
-        <span className="eyebrow">{cand} · {SHORT[cand]}</span>
+        <span className="eyebrow">{cand} · {shortName(d, cand)}</span>
         <button type="button" className="btn" onClick={() => go({ page: "live", cand, sid, r })}>Watch it play</button>
       </div>
       <div className="replays">
@@ -76,7 +76,7 @@ export default function Calls({ d, route }: { d: Overview; route: Route }) {
       <div className="controls">
         <label htmlFor="c-cand">Agent version
           <select id="c-cand" value={cand} onChange={(e) => set({ cand: e.target.value, sid: Object.keys(d.calls[e.target.value]).includes(sid) ? sid : undefined, r: undefined })}>
-            {d.candidates.map((c) => <option key={c.id} value={c.id}>{c.id} · {SHORT[c.id]}</option>)}
+            {d.candidates.map((c) => <option key={c.id} value={c.id}>{c.id} · {shortName(d, c.id)}</option>)}
           </select>
         </label>
         <label htmlFor="c-sid">Scenario<ScenarioSelect id="c-sid" d={d} cand={cand} sid={sid} onChange={(s) => set({ sid: s, r: undefined })} /></label>

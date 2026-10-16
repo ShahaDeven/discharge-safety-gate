@@ -23,6 +23,7 @@ class SimTurn:
     disclosed: list[str] = field(default_factory=list)   # hidden-fact ids revealed in this reply
     asked: list[str] = field(default_factory=list)       # domains the agent's last message asked about
     usage: list[dict] = field(default_factory=list)
+    filtered: str | None = None                           # set when an output filter replaced the reply
 
 
 class Simulator(Protocol):
@@ -118,8 +119,10 @@ def run_call(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: 
         sim_turn += 1
         reply = simulator.reply(record.transcript(), sim_turn)
         record.usage.extend(reply.usage)
-        _add(record, {"kind": "speech", "who": "party", "text": reply.say,
-                      "disclosed": reply.disclosed, "asked": reply.asked}, on_event)
+        event = {"kind": "speech", "who": "party", "text": reply.say, "disclosed": reply.disclosed, "asked": reply.asked}
+        if reply.filtered:
+            event["filtered"] = reply.filtered
+        _add(record, event, on_event)
         if reply.hang_up:
             record.ended_by = "party_hung_up"
             return record

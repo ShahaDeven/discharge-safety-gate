@@ -10,6 +10,8 @@ agent's last message asked about. That self-report is how the simulator leak rat
 measured: an "only if asked" fact revealed before the agent asked about its topic.
 """
 
+from typing import Callable
+
 from pydantic import BaseModel, Field
 
 from . import llm
@@ -48,13 +50,16 @@ def render_transcript(transcript: list[dict]) -> str:
 
 class LLMSimulator:
     def __init__(self, persona: str, opening: str, domains: list[str], *, model: str, effort: str = "low",
-                 scripted: dict[int, str] | None = None):
+                 scripted: dict[int, str] | None = None,
+                 output_filter: Callable[[str], tuple[str, str | None]] | None = None):
         self.persona = persona
         self._opening = opening
         self.domains = domains
         self.model = model
         self.effort = effort
         self.scripted = scripted or {}
+        # Runs on every reply before the agent hears it; returns (text to pass on, reason it was replaced or None).
+        self.output_filter = output_filter
         # Persona is fixed for the whole call: cache it, the transcript changes every reply.
         self.system = [
             {"type": "text", "text": SIM_RULES},
@@ -75,8 +80,11 @@ class LLMSimulator:
         out = llm.parse(self.system, user, SimReply, model=self.model, effort=self.effort,
                         role="simulator", log=usage)
         asked = [a for a in out.asked if a in self.domains]
-        return SimTurn(say=out.say.strip(), hang_up=out.hang_up, disclosed=out.disclosed,
-                       asked=asked, usage=usage)
+        say, filtered = out.say.strip(), None
+        if self.output_filter:
+            say, filtered = self.output_filter(say)
+        return SimTurn(say=say, hang_up=out.hang_up and not filtered, disclosed=[] if filtered else out.disclosed,
+                       asked=asked, usage=usage, filtered=filtered)
 
 
 class ScriptedSimulator:

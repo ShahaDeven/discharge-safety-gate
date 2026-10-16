@@ -198,3 +198,28 @@ ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14
   .budget { margin-left: 0; }
 }
 @media (max-width: 520px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+
+/* product phase: access token, proposals, simulated-call label */
+.lock { display: flex; gap: 8px; align-items: center; font: 12px var(--mono); color: var(--muted); }
+.lock .state { padding: 4px 8px; border-radius: 999px; border: 1px solid var(--rule); }
+.lock .state.ok { color: var(--ok); background: var(--ok-soft); border-color: transparent; }
+.modal-back { position: fixed; inset: 0; background: rgba(8, 12, 11, 0.55); display: grid; place-items: center; z-index: 20;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.modal { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 20px; width: min(460px, 100%); display: grid; gap: 12px; }
+.modal input, .field input, .field textarea, .field select { background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; width: 100%; }
+.field { display: grid; gap: 4px; font: 12px var(--mono); color: var(--muted); }
+.field textarea { font: 13px/1.5 var(--mono); color: var(--ink); min-height: 420px; resize: vertical; }
+.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.row4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.diff { font: 12px/1.5 var(--mono); max-height: 460px; overflow: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); padding: 8px 0; }
+.diff div { padding: 0 10px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.diff .add { background: var(--ok-soft); color: var(--ok); }
+.diff .del { background: var(--bad-soft); color: var(--bad); text-decoration: line-through; }
+.diff .same { color: var(--muted); }
+.progress { height: 8px; background: var(--rule); border-radius: 4px; overflow: hidden; }
+.progress div { height: 100%; background: var(--accent); transition: width 0.4s; }
+.notice { font-size: 13px; color: var(--muted); border-left: 3px solid var(--accent); padding: 4px 10px; }
+.sim-label { font: 12px var(--mono); color: var(--accent); }
+.plist { display: grid; gap: 8px; }
+.pitem { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); }
+@media (max-width: 980px) { .row2, .row4 { grid-template-columns: minmax(0, 1fr); } }

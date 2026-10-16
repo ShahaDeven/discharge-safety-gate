@@ -412,9 +412,53 @@ class Builder:
         return [Scenario.model_validate(s).model_dump(mode="json") for s in self.out]
 
 
+HOLDOUT = Path(__file__).resolve().parent / "holdout.jsonl"
+HOLDOUT_SEED = 1007
+# 20 = 12 red flags (3 per condition, mixed disclosure) + 2 healthy decoys + 6 compliance cases.
+HOLDOUT_SHAPE = {"clinical_positive": 12, "clinical_negative": 2,
+                 "compliance": ["wrong_person", "unauthorized_relative_part2", "voicemail", "opt_out",
+                                "ask_if_ai", "dosing_question"]}
+
+
+def build_holdout() -> list[dict]:
+    """The sealed set: never shown in the console or its API, so a proposed prompt can't be tuned to it.
+    Same grid as the suite but a different seed, and freshly mixed patient names (first and last names
+    recombined from the pool) so a prompt that special-cases visible patients' names can't recognize these."""
+    full = Builder(seed=HOLDOUT_SEED).build()
+    rng = random.Random(HOLDOUT_SEED)
+    picked = []
+    for cond in ["HF", "COPD", "PNA", "AMI"]:
+        pos = [s for s in full if s["block"] == "clinical" and s["condition"] == cond and s["tags"].get("severity") != "none"]
+        picked += rng.sample(pos, 3)
+    negs = [s for s in full if s["block"] == "clinical" and s["tags"].get("severity") == "none"]
+    picked += rng.sample(negs, HOLDOUT_SHAPE["clinical_negative"])
+    for case in HOLDOUT_SHAPE["compliance"]:
+        picked.append(next(s for s in full if s["block"] == "compliance" and s["tags"].get("case") == case))
+    firsts = [s["patient"]["name"].split()[0] for s in full]
+    lasts = [s["patient"]["name"].split()[-1] for s in full]
+    visible = {s["patient"]["name"] for s in Builder().build()}
+    out, used = [], set()
+    for i, s in enumerate(picked, 1):
+        s = json.loads(json.dumps(s))
+        old = s["patient"]["name"]
+        new = f"{rng.choice(firsts)} {rng.choice(lasts)}"
+        while new in visible or new in used:                              # never a name the visible suite uses
+            new = f"{rng.choice(firsts)} {rng.choice(lasts)}"
+        used.add(new)
+        s["id"], s["patient"]["name"] = f"H-{i:02d}", new
+        if s["party"].get("name", "").endswith(old.split()[-1]):            # relatives share the surname
+            s["party"]["name"] = s["party"]["name"].replace(old.split()[-1], new.split()[-1])
+        s["tags"]["holdout"] = "1"
+        out.append(Scenario.model_validate(s).model_dump(mode="json"))
+    return out
+
+
 def main() -> None:
     suite = Builder().build()
     OUT.write_text("\n".join(json.dumps(s, ensure_ascii=False) for s in suite) + "\n", encoding="utf-8")
+    holdout = build_holdout()
+    HOLDOUT.write_text("\n".join(json.dumps(s, ensure_ascii=False) for s in holdout) + "\n", encoding="utf-8")
+    print(f"sealed holdout: {len(holdout)} scenarios -> {HOLDOUT.relative_to(ROOT)}")
     blocks = Counter(s["block"] for s in suite)
     disp = Counter(s["expected"]["disposition"] for s in suite)
     recipes = Counter(s["tags"].get("recipe", "").split(":")[0] for s in suite if s["tags"].get("recipe"))

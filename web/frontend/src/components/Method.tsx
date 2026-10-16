@@ -1,4 +1,4 @@
-import { SHORT, pct, type Overview } from "../api";
+import { pct, shortName, type Overview } from "../api";
 
 export default function Method({ d }: { d: Overview }) {
   const j = d.judge_check;
@@ -35,13 +35,41 @@ export default function Method({ d }: { d: Overview }) {
               <thead><tr><th>Log</th><th>Change</th><th>Gate</th><th>Verdict</th></tr></thead>
               <tbody>{d.ledger.map((e) => (
                 <tr key={e.id}>
-                  <td className="num">{e.id}</td><td>{e.candidate} · {SHORT[e.candidate]}</td>
+                  <td className="num">{e.id}</td><td>{e.candidate} · {shortName(d, e.candidate)}</td>
                   <td className="num">v{e.baseline.match(/v(\d)/)?.[1] || "1"}</td>
                   <td className={`st st-${e.verdict === "PROMOTE" ? "ok" : e.verdict === "HOLD" ? "hold" : "bad"}`}>{e.verdict}</td>
                 </tr>))}
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div className="card">
+          <h3>Security</h3>
+          <p className="muted">Proposed prompts and outside agents are treated as untrusted. Mapped to the OWASP Top 10 for LLM Applications (2025):</p>
+          <div className="scroll">
+            <table>
+              <thead><tr><th>Risk</th><th>What stops it here</th></tr></thead>
+              <tbody>
+                <tr><td>Prompt injection (LLM01)</td><td>The judge reads calls as quoted data; anything the agent says to steer the judge or the simulated patient is the hard rule MANIPULATION, which rejects the change</td></tr>
+                <tr><td>Data disclosure (LLM02, LLM07)</td><td>The agent never sees the answer key; simulator replies that leak its instructions are replaced and flagged; a sealed set of scenarios never leaves the server</td></tr>
+                <tr><td>Supply chain (LLM03)</td><td>Pinned dependencies; pip-audit and npm audit in one check command</td></tr>
+                <tr><td>Poisoning (LLM04)</td><td>Scenarios are read-only; every call and verdict is fingerprinted in a tamper-evident audit log</td></tr>
+                <tr><td>Output handling (LLM05)</td><td>Model text is shown as plain text only; tool inputs are validated; nothing a model writes is executed</td></tr>
+                <tr><td>Excessive agency (LLM06)</td><td>The agent can only verify, escalate, flag, hand off, leave a voicemail or hang up. No network, files or code</td></tr>
+                <tr><td>Unbounded cost (LLM10)</td><td>Size limits on every input; spending caps per run, per session and per day; one gate run at a time</td></tr>
+              </tbody>
+            </table>
+          </div>
+          {d.redteam ? (
+            <>
+              <div className="stat-line"><span className="big">{d.redteam.caught}/{d.redteam.total}</span><span className="muted">red-team attacks caught</span></div>
+              <ul className="plain">{d.redteam.results.map((r) => <li key={r.attack}>{r.attack.replace(/_/g, " ")}: {r.caught
+                ? `caught by ${(r.caught_by ?? ["gate"]).join(" and ")}` : "MISSED"} <span className="muted">(gate on the calls alone: {r.verdict})</span></li>)}</ul>
+              <p className="muted">Two layers: the prompt check reads a proposed prompt before any call is placed; the gate judges what the agent actually does on the calls.</p>
+            </>
+          ) : <p className="muted">Red-team suite not run yet.</p>}
+          <p className="muted">The server listens on this machine only; actions that spend money need an access token; a public demo runs read-only.</p>
         </div>
 
         <div className="card">
@@ -60,7 +88,7 @@ export default function Method({ d }: { d: Overview }) {
           <div className="scroll">
             <table>
               <thead><tr><th>Version</th><th>Calls</th><th>Cost</th></tr></thead>
-              <tbody>{d.candidates.map((c) => <tr key={c.id}><td>{c.id} · {SHORT[c.id]}</td><td className="num">{c.calls}</td><td className="num">${(d.cost[c.id] || 0).toFixed(2)}</td></tr>)}</tbody>
+              <tbody>{d.candidates.map((c) => <tr key={c.id}><td>{c.id} · {shortName(d, c.id)}</td><td className="num">{c.calls}</td><td className="num">${(d.cost[c.id] || 0).toFixed(2)}</td></tr>)}</tbody>
             </table>
           </div>
           <p className="muted">Agent and simulated patients on Haiku 5.5; C2 on Sonnet 5.5. Repeats are cached, so re-scoring is free.</p>

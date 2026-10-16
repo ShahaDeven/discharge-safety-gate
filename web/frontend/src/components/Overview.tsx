@@ -1,4 +1,4 @@
-import { CONTROL, RULES, SHORT, go, pct, type Gate, type Metric, type Overview as Data, type Rule } from "../api";
+import { CONTROL, RULES, go, pct, shortName, type Gate, type Metric, type Overview as Data, type Rule } from "../api";
 
 type Bar = { label: string; base: number | null; cand: number | null; worse: boolean };
 const byRate = (a: Rule, b: Rule) => b.cand_calls / b.cand_n - a.cand_calls / a.cand_n;
@@ -67,7 +67,7 @@ export default function Overview({ d }: { d: Data }) {
             return (
               <div key={id} className={`vrow${id === CONTROL ? " control" : ""}`}>
                 <div className="vname">
-                  <b>{id === CONTROL ? "Current agent vs itself" : `${id} · ${SHORT[id]}`}</b>
+                  <b>{id === CONTROL ? "Current agent vs itself" : `${id} · ${shortName(d, id)}`}</b>
                   <span className="muted">{id === CONTROL ? "Control: replays 1-2 against 3-4" : cand[id].description}</span>
                 </div>
                 <span className={`chip v-${g.verdict}`}>{g.verdict}</span>
@@ -98,7 +98,7 @@ export default function Overview({ d }: { d: Data }) {
         <div className="findings">
           {d.findings.map((f) => (
             <article key={f.cand + f.sid} className="finding">
-              <span className="tag">{f.cand} · {SHORT[f.cand]} · {f.sid}</span>
+              <span className="tag">{f.cand} · {shortName(d, f.cand)} · {f.sid}</span>
               <h3>{f.title}</h3>
               <p>{f.body}</p>
               <div className="actions">
