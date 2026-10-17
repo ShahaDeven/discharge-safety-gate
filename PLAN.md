@@ -35,7 +35,7 @@ Each scenario is replayed K times, and every proposed change to the agent gets a
 
 ```
 Discharge_Safety_Gate/
-  README.md                      # written to Panagiotis (Day 4)
+  README.md                      # for clinical and engineering readers (Day 4)
   PLAN.md                        # this file
   pyproject.toml  requirements.txt  .env.example  .gitignore
 
@@ -349,7 +349,7 @@ Every verdict goes to `ledger.json` (with reasons) and to the hash-chained `audi
   - med catch by type
 - [ ] Failure analysis: 6 annotated transcripts (C1 only-if-asked miss, C3 PHI leak, a med miss, a psych handoff, a false escalation, a simulator-leak example)
 - [ ] `adapters/HTTP_CONTRACT.md` + `http_agent.py` with a 20-line example server
-- [ ] README (outline below), Loom, message (see `OUTREACH.md`, gitignored)
+- [ ] README (outline below) and a Loom walkthrough
 
 ### Stretch (only if ahead)
 - Sound-alike drug-name perturbation (ISMP confused-names list) on med scenarios: catch rate clean vs. perturbed
@@ -358,7 +358,7 @@ Every verdict goes to `ledger.json` (with reasons) and to the hash-chained `audi
 
 ---
 
-## 10. README outline (addressed to Panagiotis)
+## 10. README outline (for a clinical or engineering reader)
 
 1. **One-line result** plus the headline chart: recall by disclosure style, C0 vs. C1.
 2. Banner: *synthetic data only, no PHI, not clinical validation, not legal advice, does not measure readmissions.*
@@ -391,7 +391,7 @@ Day 1: make it a tool people use
 
 What it is: a page where you edit the agent's prompt in the browser (or switch model or effort), name the change, pick a scenario set (quick: 30 scenarios × 2 replays; full: 102 × 3), and click Run gate.
 What you see: the cost estimate up front, live progress as calls complete, then the verdict, which lands in the change log automatically.
-Why it matters: this is the product. On the Loom, Panagiotis watches you type "mention the patient's condition in the greeting," and the gate comes back REJECT with the exact call where it leaked.
+Why it matters: this is the product. On the Loom, the viewer watches you type "mention the patient's condition in the greeting," and the gate comes back REJECT with the exact call where it leaked.
 Effort and cost: about 5 hours. A quick run is about $0.15.
 2. "Bring your own agent."
 
@@ -407,17 +407,17 @@ Effort and cost: about 3 hours. Re-judging all calls once with the new labels is
 4. One-click validation pack.
 
 What it is: a printable PDF report shaped like what a hospital's AI governance committee asks vendors for (the Joint Commission/CHAI questions): what was tested, results with confidence ranges, the rules checked, how far to trust the judge, limits, and the change log.
-Why it matters: this is what Valene hands a hospital buyer. It makes the tool a sales asset, not only an engineering one.
+Why it matters: this is what a clinical-AI vendor hands a hospital buyer. It makes the tool a sales asset, not only an engineering one.
 Effort and cost: about 2–3 hours, $0.
 5. Hear the call (polish).
 
 What it is: a play button on any transcript that reads it aloud, with two different voices for agent and patient, using the browser's built-in speech.
-Why it matters: Valene's product is voice calls. Hearing a warm voice say "your heart failure stay" to a cousin lands harder than reading it.
+Why it matters: Discharge follow-up agents talk on voice calls. Hearing a warm voice say "your heart failure stay" to a cousin lands harder than reading it.
 Effort and cost: about 1 hour, $0.
 6. Shareable demo deployment.
 
 What it is: a Dockerfile plus a "read-only demo" switch: no live calls, no API key needed, deployable to a free host.
-Why it matters: Panagiotis gets a URL to click himself instead of only a video.
+Why it matters: A reviewer gets a URL to click themselves instead of only a video.
 Effort and cost: about 1–2 hours, $0.
 If there's time left
 Gate on every pull request: a GitHub Action that runs the quick suite whenever the prompt file changes and posts the verdict as a comment. That's "CI for agent safety," a very product-y sentence.
@@ -425,7 +425,7 @@ Scenario builder: a form where a clinician creates a new test patient (pick a wa
 
 ---
 
-## 12. Product phase: revised plan (DRAFT for approval, 2026-10-16)
+## 12. Product phase: revised plan (approved 2026-10-16)
 
 Revises the TO-DO above after Deven's review:
 - **Proposals and outside agents are untrusted input,** so they get security boundaries.
@@ -550,7 +550,29 @@ Foundations first: both new features sit on them.
 
 **Cost:** about $0.60 of API time. **Tests:** every control gets an offline test (token, Host check, redaction, caps, canary, output filter, injection detector).
 
-### 12.7 Product Day 2 (outline)
+### 12.7 Product Day 2
+
+**Bring your own agent: built (2026-10-17).** The rest of Day 2 (policy settings, validation pack, Docker demo) is not started.
+
+| part | where it lives |
+|---|---|
+| HTTP agent, endpoint guard (SSRF), signing, strict replies | `agentgate/http_agent.py` |
+| Register, check, run through the same gate (shared with proposals: `proposals.gate_candidate`) | `evals/agents.py` |
+| Owner-only views, agent endpoints, outside agents replay-only | `web/api.py`, `web/security.py` (`viewer`) |
+| Agents page, shared job card | `web/frontend/src/components/Agents.tsx`, `JobCard.tsx` |
+| Contract and example agent (C0 behind a URL, own spending cap) | `adapters/HTTP_CONTRACT.md`, `adapters/example_agent.py` |
+| Red-team attacks 5 and 6 (free) | `evals/redteam.py`: 13/13 URLs refused, 8/8 broken agents stopped |
+| Tests | `tests/test_agents.py` |
+
+Decisions made while building:
+- A run with failed calls is never promoted (HOLD at best); failed calls are not scored or cached.
+- An outside agent hears the sealed scenarios during its calls; from its second run on, the result says the sealed vote is weaker.
+- The prompt check can't apply (we never see an outside agent's prompt); only behaviour on the calls is judged.
+- Ownership is the access token that registered the agent; set `DSG_TOKEN` to keep it across restarts.
+- What we pay per outside call is the simulated person and the judge (about $0.0015); the agent's own costs are its owner's.
+
+Outline as approved:
+
 
 - **Bring your own agent,** on Day 1's foundation:
   - **Endpoint guard:** https only (plain http only for localhost in local mode). The hostname is resolved, and private, loopback and link-local addresses are refused unless the agent is registered as local. No redirects; time, size and concurrency limits.

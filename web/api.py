@@ -33,12 +33,13 @@ from discharge.candidates import candidates
 from discharge.persona import DischargeSuite
 from discharge.scenario import load_scenarios
 from discharge.scoring import score
-from evals import proposals
+from agentgate.http_agent import EndpointRefused
+from evals import agents, proposals
 from evals.dashboard import build_data, call_summary, transcript
 from evals.gate import load_groups  # noqa: F401  (kept for callers that refresh gate data)
 from evals.run import SUITES, evaluate
 
-from .security import READ_ONLY, TOKEN, TOKEN_ID, Budget, Guard, redact, require_token
+from .security import READ_ONLY, TOKEN, TOKEN_ID, Budget, Guard, redact, require_token, viewer
 
 LIVE_DIR = config.RESULTS_DIR / "live"
 DIST = Path(__file__).resolve().parent / "frontend" / "dist"
@@ -73,6 +74,30 @@ def _cached(cand: str) -> dict:
 
 def _known(cand: str) -> bool:
     return cand in candidates() or any(p["id"] == cand and p["status"] == "done" for p in proposals.all_proposals())
+
+
+def _agent(aid: str, who: str | None, owner_only: bool = True) -> dict:
+    """An outside agent's record; 404 if unknown, 403 if owner_only and `who` didn't register it."""
+    try:
+        rec = agents.load(aid)
+    except (ValueError, FileNotFoundError):
+        raise HTTPException(404, "no such agent")
+    if owner_only and rec["owner"] != who:
+        raise HTTPException(403, "only the access token that registered this agent can see or run it")
+    return rec
+
+
+def _add_candidate(data: dict, rec: dict, flag: str) -> None:
+    """A finished proposal or outside agent as an extra candidate (visible scenarios only)."""
+    k = rec["result"]["k"]
+    rows = evaluate(rec["id"], [s for s in SCENARIOS.values()], k)
+    data["calls"][rec["id"]] = {}
+    for sc, e, s in rows:
+        data["calls"][rec["id"]].setdefault(sc.id, []).append(call_summary(e, s))
+    data["candidates"].append({"id": rec["id"], "description": rec["name"], "k": k, "scenarios": len(data["calls"][rec["id"]]),
+                               "calls": len(rows), "why": rec["note"], flag: True})
+    data["gate"][rec["id"]] = {**rec["result"]["visible"], "verdict": rec["result"]["verdict"], "reasons": rec["result"]["reasons"],
+                               "description": rec["name"], "sealed": rec["result"]["sealed"]}
 
 
 def _scored(sid: str, entry: dict) -> tuple[dict, list]:
@@ -115,9 +140,10 @@ def _proposal_view(p: dict, short: bool = False) -> dict:
 
 
 @app.get("/api/overview")
-def overview(refresh: bool = False) -> dict:
+def overview(refresh: bool = False, who: str | None = Depends(viewer)) -> dict:
     """Everything the pages show except transcripts. Finished proposals appear as extra candidates
-    (visible scenarios only; their sealed-holdout result is a verdict and reasons, never scenario data)."""
+    (visible scenarios only; their sealed-holdout result is a verdict and reasons, never scenario data),
+    and so do outside agents, but only for the token that registered them."""
     global _overview
     if _overview is None or refresh:
         _overview = build_data(with_transcripts=False)
@@ -126,17 +152,11 @@ def overview(refresh: bool = False) -> dict:
     data["calls"] = dict(_overview["calls"])
     data["gate"] = dict(_overview["gate"])
     for p in proposals.all_proposals():
-        if p["status"] != "done" or not p["result"]["visible"]:          # blocked by the prompt check: no calls
-            continue
-        k = p["result"]["k"]
-        rows = evaluate(p["id"], [s for s in SCENARIOS.values()], k)
-        data["calls"][p["id"]] = {}
-        for sc, e, s in rows:
-            data["calls"][p["id"]].setdefault(sc.id, []).append(call_summary(e, s))
-        data["candidates"].append({"id": p["id"], "description": p["name"], "k": k, "scenarios": len(data["calls"][p["id"]]),
-                                   "calls": len(rows), "why": p["note"], "proposal": True})
-        data["gate"][p["id"]] = {**p["result"]["visible"], "verdict": p["result"]["verdict"], "reasons": p["result"]["reasons"],
-                                 "description": p["name"], "sealed": p["result"]["sealed"]}
+        if p["status"] == "done" and p["result"]["visible"]:             # not blocked by the prompt check
+            _add_candidate(data, p, "proposal")
+    for a in agents.all_agents():
+        if who and a["owner"] == who and a["status"] == "done" and a["result"]["visible"]:
+            _add_candidate(data, a, "agent")
     data["session"] = session()
     rt = config.RESULTS_DIR / "redteam.json"
     data["redteam"] = json.loads(rt.read_text(encoding="utf-8")) if rt.exists() else None
@@ -144,8 +164,12 @@ def overview(refresh: bool = False) -> dict:
 
 
 @app.get("/api/call/{cand}/{sid}/{r}")
-def call(cand: str, sid: str, r: int) -> dict:
-    if sid not in SCENARIOS or not _known(cand):                        # holdout ids are never in SCENARIOS
+def call(cand: str, sid: str, r: int, who: str | None = Depends(viewer)) -> dict:
+    if cand.startswith("A-"):
+        _agent(cand, who)                                               # an outside agent's calls: owner only
+    elif not _known(cand):
+        raise HTTPException(404, "no such call")
+    if sid not in SCENARIOS:                                            # holdout ids are never in SCENARIOS
         raise HTTPException(404, "no such call")
     entry = _cached(cand).get(f"{sid}#{r}")
     if not entry:
@@ -188,14 +212,20 @@ def run_proposal(pid: str, token_id: str = Depends(require_token)) -> dict:
     except (ValueError, FileNotFoundError):
         raise HTTPException(404, "no such proposal")
     est = proposals.estimate(rec)
+    BUDGET.check(est["usd"])
+    AUDIT.append("proposal_run", {"id": pid, "token_id": token_id, "estimate_usd": est["usd"]})
+    return _start_job(pid, est, proposals.run, proposals.load, proposals.save)
+
+
+def _start_job(cid: str, est: dict, runner, load, save) -> dict:
+    """One gate run at a time, in a background thread, within every spending cap."""
     BUDGET.check(est["usd"])                                           # refuses (402) past any cap
     with _job_lock:
         if any(j["state"] == "running" for j in _jobs.values()):
             raise HTTPException(409, "another gate run is in progress; one at a time")
-        job = {"id": f"J-{int(time.time())}", "pid": pid, "state": "running", "phase": "starting", "done": 0, "total": 0,
-               "spent": 0.0, "result": None, "error": None, "estimate": est}
+        job = {"id": f"J-{int(time.time() * 1000)}", "pid": cid, "state": "running", "phase": "starting", "done": 0,
+               "total": 0, "spent": 0.0, "result": None, "error": None, "estimate": est}
         _jobs[job["id"]] = job
-    AUDIT.append("proposal_run", {"id": pid, "token_id": token_id, "estimate_usd": est["usd"]})
     cap = min(BUDGET.run_max, BUDGET.session_max - BUDGET.session, BUDGET.day_max - BUDGET.today())
 
     def work():
@@ -203,18 +233,60 @@ def run_proposal(pid: str, token_id: str = Depends(require_token)) -> dict:
         def progress(phase, done, total, spent):
             job.update(phase=phase, done=done, total=total, spent=round(spent, 4))
         try:
-            job["result"] = proposals.run(pid, max_usd=cap, progress=progress)
+            job["result"] = runner(cid, max_usd=cap, progress=progress)
             job["state"] = "done"
             _overview = None                                           # the new candidate shows up everywhere
         except Exception as exc:
             job.update(state="error", error=redact(f"{type(exc).__name__}: {exc}"))
-            rec2 = proposals.load(pid)
-            rec2["status"] = "error"
-            proposals.save(rec2)
+            rec = load(cid)
+            rec["status"] = "error"
+            save(rec)
         finally:
             BUDGET.add(job["spent"])
     threading.Thread(target=work, daemon=True).start()
     return job
+
+
+# ------------------------------------------------------------------ outside agents (bring your own)
+
+@app.get("/api/agents")
+def list_agents(who: str | None = Depends(viewer)) -> list[dict]:
+    return [] if READ_ONLY else [agents.view(a, who) for a in agents.all_agents()][::-1]
+
+
+@app.post("/api/agents")
+def register_agent(body: agents.AgentIn, token_id: str = Depends(require_token)) -> dict:
+    with _create_lock:
+        try:
+            rec = agents.create(body, owner=token_id)
+        except (EndpointRefused, ValueError) as exc:
+            raise HTTPException(422, str(exc))
+    # The signing secret is shown here once; `python -m evals.agents secret <id>` prints it again locally.
+    return {**agents.view(rec, token_id), "secret": agents.secret(rec["id"]), "estimate": agents.estimate(rec)}
+
+
+@app.get("/api/agents/{aid}")
+def get_agent(aid: str, who: str | None = Depends(viewer)) -> dict:
+    rec = _agent(aid, who, owner_only=False)
+    view = agents.view(rec, who)
+    return {**view, "estimate": agents.estimate(rec)} if view["owned"] else view
+
+
+@app.post("/api/agents/{aid}/check")
+def check_agent(aid: str, token_id: str = Depends(require_token)) -> dict:
+    rec = _agent(aid, token_id)
+    out = agents.check(rec)
+    AUDIT.append("agent_check", {"id": aid, "ok": out["ok"], "token_id": token_id})
+    return out
+
+
+@app.post("/api/agents/{aid}/run")
+def run_agent(aid: str, token_id: str = Depends(require_token)) -> dict:
+    rec = _agent(aid, token_id)
+    est = agents.estimate(rec)
+    BUDGET.check(est["usd"])
+    AUDIT.append("agent_run", {"id": aid, "token_id": token_id, "estimate_usd": est["usd"]})
+    return _start_job(aid, est, agents.run, agents.load, agents.save)
 
 
 @app.get("/api/jobs/{jid}")
@@ -235,7 +307,13 @@ def _pace(row: dict) -> float:
 @app.get("/api/stream")
 async def stream(cand: str, sid: str, mode: str = "replay", r: int = 0, speed: float = 1.0,
                  x_dsg_token: str | None = Header(default=None)):
-    if sid not in SCENARIOS or not _known(cand):
+    if cand.startswith("A-"):
+        _agent(cand, viewer(x_dsg_token))                               # outside agents: owner only, replay only
+        if mode != "replay":
+            raise HTTPException(400, "live calls go to built-in agents and proposals; outside agents run through the gate")
+    elif not _known(cand):
+        raise HTTPException(404, "unknown agent version or scenario")
+    if sid not in SCENARIOS:
         raise HTTPException(404, "unknown agent version or scenario")
     if mode not in ("replay", "live"):
         raise HTTPException(400, "mode must be replay or live")

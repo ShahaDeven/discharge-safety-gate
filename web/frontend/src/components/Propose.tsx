@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { getJSON, go, send, token, type Estimate, type Job, type Overview, type Proposal } from "../api";
+import JobCard from "./JobCard";
 
 const MIN = 200, MAX = 12000;
 
@@ -42,15 +43,6 @@ export default function Propose({ d, onChanged }: { d: Overview; onChanged: () =
     getJSON<{ prompt: string }>("/api/prompts/C0").then((r) => { setBase(r.prompt); setPrompt(r.prompt); }).catch((e) => setErr(String(e)));
     refreshHistory();
   }, []);
-  useEffect(() => {
-    if (!job || job.state !== "running") return;
-    const t = setInterval(() => getJSON<Job>(`/api/jobs/${job.id}`).then((j) => {
-      setJob(j);
-      if (j.state !== "running") { refreshHistory(); onChanged(); }
-    }).catch((e) => setErr(String(e))), 1500);
-    return () => clearInterval(t);
-  }, [job?.id, job?.state]);
-
   function refreshHistory() { getJSON<Proposal[]>("/api/proposals").then(setHistory).catch(() => undefined); }
 
   async function save() {
@@ -69,7 +61,6 @@ export default function Propose({ d, onChanged }: { d: Overview; onChanged: () =
   }
 
   const tooShort = prompt.length < MIN, tooLong = prompt.length > MAX;
-  const pct = job && job.total ? Math.round((job.done / job.total) * 100) : 0;
 
   return (
     <section>
@@ -129,27 +120,7 @@ export default function Propose({ d, onChanged }: { d: Overview; onChanged: () =
             about ${saved.estimate.usd.toFixed(2)}, within your caps (${(d.session.budget.day_max - d.session.budget.today).toFixed(2)} left today).</p>
         )}
         {err && <p className="err">{err}</p>}
-        {job && (
-          <div className="card">
-            <div className="live-head"><span className="eyebrow">{job.pid} · {job.state === "running" ? job.phase : job.state}</span>
-              <span className="status">${job.spent.toFixed(3)} spent</span></div>
-            {job.state === "running" && <><div className="progress"><div style={{ width: `${pct}%` }} /></div>
-              <span className="status">{job.total ? `${job.done} of ${job.total} ${job.phase}` : job.phase}</span></>}
-            {job.error && <p className="err">{job.error}</p>}
-            {job.result && (
-              <>
-                <div className="panel-head"><span className={`chip v-${job.result.verdict}`}>{job.result.verdict}</span>
-                  <span className="muted">{job.result.blocked ? "stopped by the prompt check: no calls placed"
-                    : `visible scenarios and sealed set (${job.result.sealed.scenarios} scenarios: ${job.result.sealed.verdict})`}</span></div>
-                <ul className="plain">{(job.result.reasons.length ? job.result.reasons : ["Nothing got worse beyond normal run-to-run variation, on the visible or the sealed scenarios."]).map((r) => <li key={r}>{r}</li>)}</ul>
-                {!job.result.blocked && <div className="controls">
-                  <button type="button" className="btn" onClick={() => go({ page: "changes", cand: job.pid })}>See the full comparison</button>
-                  <button type="button" className="btn" onClick={() => go({ page: "calls", cand: job.pid, compare: true })}>Read its calls</button>
-                </div>}
-              </>
-            )}
-          </div>
-        )}
+        {job && <JobCard job={job} onUpdate={setJob} onFinished={() => { refreshHistory(); onChanged(); }} onError={setErr} />}
       </div>
 
       {history.length > 0 && (

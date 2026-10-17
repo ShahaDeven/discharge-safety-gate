@@ -5,10 +5,11 @@ import Changes from "./components/Changes";
 import Live from "./components/Live";
 import Method from "./components/Method";
 import Overview from "./components/Overview";
+import Agents from "./components/Agents";
 import Propose from "./components/Propose";
 
 const PAGES: [Route["page"], string][] = [["overview", "Overview"], ["changes", "Changes"], ["calls", "Calls"],
-  ["live", "Live call"], ["propose", "Propose"], ["method", "Method"]];
+  ["live", "Live call"], ["propose", "Propose"], ["agents", "Agents"], ["method", "Method"]];
 
 /** Paste the token the server printed; it is checked once and kept for this browser tab only. */
 function Unlock({ onClose }: { onClose: () => void }) {
@@ -70,7 +71,7 @@ export default function App() {
           )}
         </div>
       </header>
-      {unlocking && <Unlock onClose={() => { setUnlocking(false); force((x) => x + 1); }} />}
+      {unlocking && <Unlock onClose={() => { setUnlocking(false); force((x) => x + 1); load(); }} />}
       <main className="main">
         {err && <p className="err">Couldn't reach the API ({err}). Start it with: python -m web</p>}
         {!d && !err && <p className="loading">Loading the results...</p>}
@@ -79,6 +80,7 @@ export default function App() {
         {d && route.page === "calls" && <Calls d={d} route={route} />}
         {d && route.page === "live" && <Live d={d} route={route} onBudget={setBudget} />}
         {d && route.page === "propose" && <Propose d={d} onChanged={() => load(true)} />}
+        {d && route.page === "agents" && <Agents d={d} onChanged={() => load(true)} />}
         {d && route.page === "method" && <Method d={d} />}
       </main>
     </>

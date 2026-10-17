@@ -37,6 +37,8 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
   const voice = useSpeech(sc?.patient.language === "Spanish" ? "es" : "en");
 
   const [mode, setMode] = useState<"replay" | "live">("replay");
+  const isAgent = !!d.candidates.find((c) => c.id === cand)?.agent;
+  useEffect(() => { if (isAgent) setMode("replay"); }, [isAgent]);
   const [r, setR] = useState(route.r ?? 0);
   const [speed, setSpeed] = useState(1);
   const [showKey, setShowKey] = useState(false);
@@ -94,7 +96,8 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
         <label htmlFor="l-sid">Scenario<ScenarioSelect id="l-sid" d={d} cand={cand} sid={sid} onChange={(s) => go({ page: "live", cand, sid: s })} /></label>
         <div className="seg" role="group" aria-label="Mode">
           <button type="button" aria-pressed={mode === "replay"} onClick={() => setMode("replay")}>Replay</button>
-          <button type="button" aria-pressed={mode === "live"} onClick={() => setMode("live")}>Live</button>
+          <button type="button" aria-pressed={mode === "live"} onClick={() => setMode("live")} disabled={isAgent}
+            title={isAgent ? "Outside agents run through the gate (Agents page), not as live calls" : undefined}>Live</button>
         </div>
         {mode === "replay" ? (
           <>

@@ -10,6 +10,8 @@
 - Spending caps: per run, per server session, and per day. The day total is saved to disk, so a restart
   doesn't reset it (OWASP LLM10, unbounded consumption).
 - Read-only mode (DSG_READ_ONLY=1) for a public demo: nothing can spend money or change data.
+- Ownership: an outside agent belongs to the token that registered it; only that token sees its URL and
+  transcripts. Set DSG_TOKEN in .env to keep the same token (and your agents) across restarts.
 """
 
 import hashlib
@@ -53,6 +55,13 @@ def require_token(x_dsg_token: str | None = Header(default=None)) -> str:
         raise HTTPException(403, "this server is read-only (public demo mode)")
     if not x_dsg_token or not hmac.compare_digest(x_dsg_token, TOKEN):
         raise HTTPException(401, "missing or wrong access token: copy it from the terminal running the server")
+    return TOKEN_ID
+
+
+def viewer(x_dsg_token: str | None = Header(default=None)) -> str | None:
+    """FastAPI dependency for reads that show more to an owner: the token id, or None. Never raises."""
+    if READ_ONLY or not x_dsg_token or not hmac.compare_digest(x_dsg_token, TOKEN):
+        return None
     return TOKEN_ID
 
 

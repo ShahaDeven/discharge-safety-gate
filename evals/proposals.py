@@ -16,6 +16,7 @@ The console's Propose page calls these functions. A proposal is untrusted input:
 import json
 import re
 import sys
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from functools import partial
 from typing import Callable, Literal
@@ -175,6 +176,14 @@ def _hide_holdout_ids(reasons: list[str]) -> list[str]:
     return [re.sub(r"H-\d+", "a sealed scenario", r) for r in reasons]
 
 
+@dataclass(frozen=True)
+class Kind:
+    """Where a gated candidate's record lives: proposals here, outside agents in evals/agents.py."""
+    label: str
+    save: Callable[[dict], None]
+    audit: str
+
+
 def run(pid: str, max_usd: float, progress: Callable[[str, int, int, float], None] = lambda *a: None,
         check_prompt: bool = True) -> dict:
     """Run a proposal end to end and return its result (also saved in the proposal file and the ledger).
@@ -182,41 +191,55 @@ def run(pid: str, max_usd: float, progress: Callable[[str, int, int, float], Non
     rec = load(pid)
     flags = prompt_flags(rec["prompt"]) if check_prompt else []
     if flags:
-        return _finish(rec, REJECT, [f"[prompt] MANIPULATION: {f}" for f in flags], None,
-                       {"verdict": "not run", "scenarios": 0, "reasons": []}, 0.0, 0, {}, progress, blocked=True)
+        return finish(PROPOSAL, rec, REJECT, [f"[prompt] MANIPULATION: {f}" for f in flags], None,
+                      {"verdict": "not run", "scenarios": 0, "reasons": []}, 0.0, 0, {}, progress, blocked=True)
+    return gate_candidate(PROPOSAL, rec, candidate(rec), max_usd, progress)
+
+
+def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
+                   progress: Callable[[str, int, int, float], None]) -> dict:
+    """Replay a candidate on rec["scenario_set"] (visible + sealed), judge, gate against C0, record the verdict."""
     visible, holdout = scenario_sets(rec["scenario_set"])
     k = SETS[rec["scenario_set"]]["k"]
-    cand, base = candidate(rec), _baseline_candidate()
+    base = _baseline_candidate()
     spent = 0.0
     rec["status"] = "running"
-    save(rec)
+    kind.save(rec)
 
     # 1. The current agent on the sealed holdout (once; cached afterwards).
     rb = _replayer(holdout, max_usd)
     jobs = rb.pending(base, [s.model_dump() for s in holdout], BASELINE_HOLDOUT_K, load_cache(rb.cache_path("C0")))
-    done = [0]
+    done, failed = [0], []
 
-    def tick(phase, total):
+    def tick(phase, total, errors=None):
         def on(entry):
             done[0] += 1
+            if errors is not None and entry.get("error"):
+                errors.append(entry["error"])
             progress(phase, done[0], total, spent + rb.spent + rc.spent)
         return on
     rc = _replayer(visible + holdout, max_usd)
     if jobs:
         done[0] = 0
-        rb.run(base, [s.model_dump() for s in holdout], BASELINE_HOLDOUT_K, workers=6, on_done=tick("current agent on the sealed set", len(jobs)))
+        rb.run(base, [s.model_dump() for s in holdout], BASELINE_HOLDOUT_K, workers=6,
+               on_done=tick("current agent on the sealed set", len(jobs)))
     spent += rb.spent
 
-    # 2. The proposal on visible + sealed scenarios.
+    # 2. The candidate on visible + sealed scenarios. Failed calls are not cached (and not scored).
     rc.max_usd = max(0.0, max_usd - spent)
     jobs = rc.pending(cand, [s.model_dump() for s in visible + holdout], k, load_cache(rc.cache_path(cand.id)))
     done[0] = 0
-    rc.run(cand, [s.model_dump() for s in visible + holdout], k, workers=6, on_done=tick("calls", len(jobs)))
+    rc.run(cand, [s.model_dump() for s in visible + holdout], k, workers=6, on_done=tick("calls", len(jobs), failed))
     spent += rc.spent
+    rows_c = evaluate(cand.id, visible + holdout, k)
+    failure = (f"{len(failed)} of {len(jobs)} calls failed and were not scored (first error: {failed[0][:160]}). "
+               "Failed calls are not cached: fix the agent and run again; finished calls are reused.") if failed else ""
+    if not rows_c:
+        return finish(kind, rec, HOLD, [failure or "No call completed."], None,
+                      {"verdict": "not run", "scenarios": 0, "reasons": []}, spent, k, {}, progress)
 
     # 3. Judge the new calls (scope).
     progress("judging", 0, 1, spent)
-    rows_c = evaluate(cand.id, visible + holdout, k)
     rows_b = evaluate("C0", visible, 4) + evaluate("C0", holdout, BASELINE_HOLDOUT_K)
     spent += _judge(rows_c + rows_b, max(0.0, max_usd - spent))
 
@@ -235,35 +258,44 @@ def run(pid: str, max_usd: float, progress: Callable[[str, int, int, float], Non
     gh = gate(pick(rows_b, hold_ids), pick(rows_c, hold_ids), SPECS, noise=floor, profile=hold_profile)
 
     reasons = [f"[visible] {r}" for r in gv.reasons] + [f"[sealed] {r}" for r in _hide_holdout_ids(gh.reasons)]
-    if REJECT in (gv.verdict, gh.verdict):
-        verdict = REJECT
-    elif gv.verdict == PROMOTE and gh.verdict != PROMOTE:
-        verdict = HOLD
+    verdict = combine(gv.verdict, gh.verdict, failed=bool(failed))
+    if gv.verdict == PROMOTE and gh.verdict != PROMOTE and gh.verdict != REJECT:
         reasons.append("Passes the scenarios it could see but not the sealed ones: results may not generalize "
                        "(the change may be tuned to the visible tests).")
-    elif HOLD in (gv.verdict, gh.verdict):
-        verdict = HOLD
-    else:
-        verdict = PROMOTE
-    visible_gate = gv.to_dict()
+    if failure:
+        reasons.append(failure)
     sealed = {"verdict": gh.verdict, "scenarios": gh.scenarios, "reasons": _hide_holdout_ids(gh.reasons)}
-    return _finish(rec, verdict, reasons, visible_gate, sealed, spent, k, {"C0": 4, cand.id: k}, progress)
+    return finish(kind, rec, verdict, reasons, gv.to_dict(), sealed, spent, k, {"C0": 4, cand.id: k}, progress)
 
 
-def _finish(rec: dict, verdict: str, reasons: list[str], visible_gate: dict | None, sealed: dict, spent: float, k: int,
-            ks: dict, progress: Callable, blocked: bool = False) -> dict:
+def combine(visible: str, sealed: str, failed: bool = False) -> str:
+    """Either set rejects -> REJECT; passes what it saw but not the sealed set -> HOLD; any HOLD -> HOLD.
+    A run with failed calls is never promoted: what wasn't scored can't be vouched for."""
+    if REJECT in (visible, sealed):
+        return REJECT
+    if HOLD in (visible, sealed) or failed:
+        return HOLD
+    return PROMOTE
+
+
+def finish(kind: Kind, rec: dict, verdict: str, reasons: list[str], visible_gate: dict | None, sealed: dict,
+           spent: float, k: int, ks: dict, progress: Callable, blocked: bool = False) -> dict:
     result = {"verdict": verdict, "reasons": reasons, "visible": visible_gate, "sealed": sealed, "blocked": blocked,
               "spent_usd": round(spent, 4), "k": k, "finished_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     rec.update(status="done", result=result)
-    save(rec)
-    baseline = "prompt check (no calls placed)" if blocked else f"C0 (gate v{GATE_VERSION}, visible + sealed)"
+    kind.save(rec)
+    baseline = ("prompt check (no calls placed)" if blocked else "no calls completed" if visible_gate is None
+                else f"C0 (gate v{GATE_VERSION}, visible + sealed)")
     metrics = {m["name"]: [m["base"], m["cand"], m["status"]] for m in visible_gate["metrics"]} if visible_gate else {}
     Ledger(config.RESULTS_DIR / "ledger.json", config.RESULTS_DIR / "ledger.md", AuditLog(config.AUDIT_PATH)).record(
-        rec["id"], f"Proposal: {rec['name']}", rec["fingerprint"], baseline, verdict, reasons, metrics, ks)
-    AuditLog(config.AUDIT_PATH).append("proposal_verdict", {"id": rec["id"], "verdict": verdict, "spent_usd": round(spent, 4),
-                                                            "blocked": blocked})
+        rec["id"], f"{kind.label}: {rec['name']}", rec["fingerprint"], baseline, verdict, reasons, metrics, ks)
+    AuditLog(config.AUDIT_PATH).append(kind.audit, {"id": rec["id"], "verdict": verdict, "spent_usd": round(spent, 4),
+                                                    "blocked": blocked})
     progress("done", 1, 1, spent)
     return result
+
+
+PROPOSAL = Kind("Proposal", save, "proposal_verdict")
 
 
 def main() -> None:

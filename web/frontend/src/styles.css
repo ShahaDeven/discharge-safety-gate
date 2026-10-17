@@ -223,3 +223,11 @@ ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14
 .plist { display: grid; gap: 8px; }
 .pitem { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 8px; background: var(--surface); }
 @media (max-width: 980px) { .row2, .row4 { grid-template-columns: minmax(0, 1fr); } }
+
+/* Agents page */
+.secret { display: grid; gap: 8px; border: 1px solid var(--hold); background: var(--hold-soft); border-radius: 8px; padding: 12px; }
+.secret code { font: 13px var(--mono); overflow-wrap: anywhere; user-select: all; }
+.contract { font: 12px/1.5 var(--mono); background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 12px; overflow-x: auto; margin: 0; }
+.field.inline { display: flex; gap: 8px; align-items: center; font: 14px var(--body); color: var(--ink); }
+.field.inline input { width: auto; }
+.linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }

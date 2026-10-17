@@ -5,8 +5,9 @@ __pycache__/
 .venv/
 *.egg-info/
 
-# Secrets
+# Secrets (.secrets/ holds the master key that signs requests to outside agents)
 .env
+.secrets/
 
 # Replay caches and raw transcripts (regenerable, can be large)
 evals/results/cache/
@@ -22,3 +23,5 @@ web/frontend/node_modules/
 web/frontend/dist/
 # Live calls placed from the console (separate from the replay results)
 evals/results/live/
+# Outside agents registered from the console (their URLs are their owners' business)
+evals/results/agents/

@@ -30,7 +30,7 @@ export type Metric = { name: string; tier: string; label: string; base: number |
 export type Rule = { rule: string; base_calls: number; base_n: number; cand_calls: number; cand_n: number; p: number; status: string; scenarios: string[] };
 export type Gate = { verdict: "PROMOTE" | "HOLD" | "REJECT"; reasons: string[]; scenarios: number; version: number; metrics: Metric[]; rules: Rule[]; new_violations: Record<string, string[]>; description?: string;
   sealed?: { verdict: string; scenarios: number; reasons: string[] } };
-export type Candidate = { id: string; description: string; k: number; scenarios: number; calls: number; why: string; proposal?: boolean };
+export type Candidate = { id: string; description: string; k: number; scenarios: number; calls: number; why: string; proposal?: boolean; agent?: boolean };
 export type Finding = { cand: string; sid: string; r: number; compare: boolean; title: string; body: string };
 export type Overview = {
   candidates: Candidate[]; scenarios: Record<string, Scenario>; calls: Record<string, Record<string, Summary[]>>;
@@ -40,11 +40,12 @@ export type Overview = {
   judge_check: { violations_caught: [number, number]; allowed_flagged: [number, number]; borderline_flagged: [number, number] } | null;
   judge_flags?: { label: string; kind: string; lines: number; answered: number; reviewer_yes: number }[];
   findings: Finding[]; cost: Record<string, number>; session: Session;
-  redteam: null | { caught: number; total: number; results: { attack: string; proposal: string; expected: string[]; verdict: string; caught: boolean; caught_by?: string[] }[] };
+  redteam: null | { caught: number; total: number; results: { attack: string; proposal: string; expected: string[]; verdict: string; caught: boolean; caught_by?: string[]; detail?: string }[] };
 };
 
 export async function getJSON<T>(url: string): Promise<T> {
-  const r = await fetch(url);
+  const t = token();          // an owner sees more (their outside agents); nobody else does
+  const r = await fetch(url, t ? { headers: { "X-DSG-Token": t } } : undefined);
   if (!r.ok) throw new Error(`${r.status} ${await r.text()}`);
   return r.json() as Promise<T>;
 }
@@ -83,7 +84,7 @@ export const pct = (x: number | null | undefined) => (x == null ? "-" : `${Math.
 export const safe = (s: Summary) => s.ok && !s.violations.length && s.crisis !== false;
 
 // Where to send people: a hash route the whole app reads.
-export type Route = { page: "overview" | "changes" | "calls" | "live" | "propose" | "method"; cand?: string; sid?: string; r?: number; compare?: boolean };
+export type Route = { page: "overview" | "changes" | "calls" | "live" | "propose" | "agents" | "method"; cand?: string; sid?: string; r?: number; compare?: boolean };
 export function go(route: Route) {
   const q = new URLSearchParams();
   if (route.cand) q.set("cand", route.cand);
@@ -96,7 +97,7 @@ export function go(route: Route) {
 export function readRoute(): Route {
   const [path, query] = location.hash.replace(/^#\/?/, "").split("?");
   const q = new URLSearchParams(query || "");
-  const page = (["overview", "changes", "calls", "live", "propose", "method"].includes(path) ? path : "overview") as Route["page"];
+  const page = (["overview", "changes", "calls", "live", "propose", "agents", "method"].includes(path) ? path : "overview") as Route["page"];
   return { page, cand: q.get("cand") || undefined, sid: q.get("sid") || undefined,
     r: q.has("r") ? Number(q.get("r")) : undefined, compare: q.get("compare") === "1" };
 }
@@ -135,6 +136,13 @@ export type Proposal = {
   result: null | { verdict: Gate["verdict"]; reasons: string[]; spent_usd: number; k: number; blocked?: boolean; sealed: { verdict: string; scenarios: number; reasons: string[] } };
 };
 export type Job = { id: string; pid: string; state: "running" | "done" | "error"; phase: string; done: number; total: number; spent: number; error: string | null; estimate: Estimate; result: Proposal["result"] };
+
+export type Agent = {
+  id: string; name: string; status: Proposal["status"]; created_at: string; owned: boolean; result: Proposal["result"];
+  url?: string; endpoint?: string; version?: string; note?: string; local?: boolean; scenario_set?: string;
+  estimate?: Estimate; secret?: string;
+};
+export type AgentCheck = { ok: boolean; seconds: number | null; error: string | null };
 
 /** Short label for any candidate, including proposals (P-001 ...). */
 export function shortName(d: { candidates: Candidate[] }, id: string): string {

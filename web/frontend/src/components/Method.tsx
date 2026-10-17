@@ -65,8 +65,8 @@ export default function Method({ d }: { d: Overview }) {
             <>
               <div className="stat-line"><span className="big">{d.redteam.caught}/{d.redteam.total}</span><span className="muted">red-team attacks caught</span></div>
               <ul className="plain">{d.redteam.results.map((r) => <li key={r.attack}>{r.attack.replace(/_/g, " ")}: {r.caught
-                ? `caught by ${(r.caught_by ?? ["gate"]).join(" and ")}` : "MISSED"} <span className="muted">(gate on the calls alone: {r.verdict})</span></li>)}</ul>
-              <p className="muted">Two layers: the prompt check reads a proposed prompt before any call is placed; the gate judges what the agent actually does on the calls.</p>
+                ? `caught by ${(r.caught_by ?? ["gate"]).join(" and ")}` : "MISSED"} <span className="muted">({r.detail ?? `gate on the calls alone: ${r.verdict}`})</span></li>)}</ul>
+              <p className="muted">Layers: the prompt check reads a proposed prompt before any call is placed; the gate judges what the agent actually does on the calls; for outside agents, the endpoint guard refuses private addresses before sending anything and the reply limits end a call that breaks the contract.</p>
             </>
           ) : <p className="muted">Red-team suite not run yet.</p>}
           <p className="muted">The server listens on this machine only; actions that spend money need an access token; a public demo runs read-only.</p>
