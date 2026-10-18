@@ -53,8 +53,9 @@ def select(args) -> list[Scenario]:
     return scenarios
 
 
-def evaluate(cand_id: str, scenarios: list[Scenario], k: int) -> list[tuple[Scenario, dict, dict]]:
-    """(scenario, cached entry, score) for every cached replay r < k, with judge verdicts when cached."""
+def evaluate(cand_id: str, scenarios: list[Scenario], k: int, pol=None) -> list[tuple[Scenario, dict, dict]]:
+    """(scenario, cached entry, score) for every cached replay r < k, with judge labels when cached,
+    under a clinical policy (default: the active one)."""
     cache = load_cache(config.CACHE_DIR / f"{cand_id}.json")
     verdicts = judge.load_cache()
     rows = []
@@ -62,7 +63,7 @@ def evaluate(cand_id: str, scenarios: list[Scenario], k: int) -> list[tuple[Scen
         for r in range(k):
             entry = cache.get(f"{sc.id}#{r}")
             if entry:
-                rows.append((sc, entry, score(sc, entry["record"], judge.cached(entry["record"], verdicts))))
+                rows.append((sc, entry, score(sc, entry["record"], judge.cached(entry["record"], verdicts), pol)))
     return rows
 
 

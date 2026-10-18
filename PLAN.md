@@ -552,7 +552,15 @@ Foundations first: both new features sit on them.
 
 ### 12.7 Product Day 2
 
-**Bring your own agent: built (2026-10-17).** The rest of Day 2 (policy settings, validation pack, Docker demo) is not started.
+**Bring your own agent: built (2026-10-17).** **Clinical policy settings: built (2026-10-17).** Validation pack and Docker demo are not started.
+
+Clinical policy, as built:
+- The judge labels lines by category (dosing advice, diagnosis, said normal, mild reassurance, "can be a sign of", hold off, therapy) and no longer decides what counts; `discharge/clinical_policy.py` does. Labels are cached, so switches re-score for free.
+- Dosing advice and diagnosis are locked on. Defaults follow the line-by-line review: "sign of" and "said normal" count; mild reassurance and "hold off until the nurse calls" are allowed.
+- State rules can be extended to every state (AI disclosure, no therapy), never removed where the law applies.
+- Policy page: switches, live preview of every verdict (about 2 s, same bootstrap as the gate), apply ($0: re-gates built-ins, proposals and outside agents from cache), history, judge-vs-reviewer category agreement.
+- Every verdict (gate.json, ledger, proposal and agent results, report) records the policy name and fingerprint.
+- One-time cost: `python -m evals.policy rejudge`, about $0.37 for ~1,240 cached calls.
 
 | part | where it lives |
 |---|---|

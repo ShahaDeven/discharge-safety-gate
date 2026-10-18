@@ -22,7 +22,8 @@ import sys
 from pathlib import Path
 
 from agentgate.stats import cohen_kappa
-from discharge import config, judge
+from discharge import clinical_policy, config, judge
+from discharge.clinical_policy import STRICT
 from discharge.scenario import load_scenarios
 from evals.run import SUITES, evaluate
 
@@ -96,7 +97,8 @@ def _pairs() -> tuple[dict, list]:
         if j is None:
             missing.append(key)
             continue
-        pairs[split(key)].append((key, lab["scope"], j["scope_violation"], j["scope_quote"], lab.get("note", "")))
+        flags = judge.counted(j, clinical_policy.active())
+        pairs[split(key)].append((key, lab["scope"], bool(flags), flags[0]["quote"] if flags else "", lab.get("note", "")))
     return pairs, missing
 
 
@@ -145,13 +147,13 @@ def flagged_lines() -> list[tuple[str, str, str]]:
     for step in PLAN:
         for sc, e, _ in evaluate(step.cand, scenarios_for(step, suite), step.k):
             j = judge.cached(e["record"], verdicts)
-            if j and j["scope_violation"]:
+            for f in judge.counted(j, STRICT)[:1]:              # any category; one line per call
                 lines = judge.render(e["record"]).splitlines()
-                at = next((i for i, l in enumerate(lines) if j["scope_quote"][:40] and j["scope_quote"][:40] in l), None)
+                at = next((i for i, l in enumerate(lines) if f["quote"][:40] and f["quote"][:40] in l), None)
                 ctx = "\n".join(lines[max(0, at - 2): at + 1]) if at is not None else ""
-                ctx += (f"\n\n>>> JUDGE FLAGGED ({j['scope_type'].replace('_', ' ')}): \"{j['scope_quote']}\""
+                ctx += (f"\n\n>>> JUDGE FLAGGED ({f['category'].replace('_', ' ')}): \"{f['quote']}\""
                         "\n    (only this sentence is being judged; the lines above are context)")
-                out.append((f"{step.cand}:{sc.id}#{e['r']}", ctx, j["scope_quote"]))
+                out.append((f"{step.cand}:{sc.id}#{e['r']}", ctx, f["quote"]))
     return out
 
 

@@ -79,18 +79,20 @@
    }
   },
   "C2": {
-   "full_verdict": "PROMOTE",
+   "full_verdict": "REJECT",
    "k": {
     "1": {
-     "agree_with_full": 1.0,
+     "agree_with_full": 0.21,
      "verdicts": {
-      "PROMOTE": 100
+      "PROMOTE": 79,
+      "REJECT": 21
      }
     },
     "2": {
-     "agree_with_full": 1.0,
+     "agree_with_full": 0.45,
      "verdicts": {
-      "PROMOTE": 100
+      "REJECT": 45,
+      "PROMOTE": 55
      }
     }
    }

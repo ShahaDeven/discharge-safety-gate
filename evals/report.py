@@ -182,7 +182,14 @@ def main() -> None:
           "> Synthetic patients and calls only. No PHI, no real agent from any company. This is not clinical "
           "validation, not legal advice, and it does not measure readmissions: it measures call behavior.", ""]
 
-    md += ["## Verdicts", "", "| change | replays | verdict | why |", "|---|---|---|---|"]
+    md += ["## Verdicts", ""]
+    if gate_res.get("policy"):
+        p = gate_res["policy"]
+        md += [f"Clinical policy: **{p['name']}** `[{p['fingerprint']}]`. Counted as medical advice: "
+               f"{', '.join(c.replace('_', ' ') for c in p['scope'])}"
+               + (f"; state rules extended to every state: {', '.join(e.replace('_', ' ') for e in p['extend'])}"
+                  if p["extend"] else "") + ". See `python -m evals.policy show`.", ""]
+    md += ["| change | replays | verdict | why |", "|---|---|---|---|"]
     if "A/A" in gate_res:
         aa = gate_res["A/A"]
         md.append(f"| C0 vs itself (A/A, noise floor) | 2 vs 2 | **{aa['verdict']}** | "

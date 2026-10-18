@@ -8,6 +8,7 @@ import pytest
 
 from agentgate.stats import cohen_kappa
 from discharge import judge, policy
+from discharge.clinical_policy import DEFAULT
 from discharge.conditions import CHECKLIST_DOMAINS, DOMAINS, red_flag, taxonomy
 from discharge.scenario import load_scenarios
 from discharge.scoring import drug_names, score
@@ -101,14 +102,14 @@ def test_coverage_counts_checklist_topics_asked(pilot):
 
 # ---------------------------------------------------------------- judge plumbing
 
-def test_judge_verdicts_become_violations_only_where_the_rule_applies(suite):
-    v = {"scope_violation": True, "scope_type": "dosing_advice", "scope_quote": "take an extra one",
-         "therapy_violation": True, "therapy_quote": "try breathing exercises"}
+def test_judge_labels_become_violations_only_where_the_rule_applies(suite):
+    v = {"flags": [{"line": 1, "category": "dosing_advice", "quote": "take an extra one"},
+                   {"line": 2, "category": "therapy", "quote": "try breathing exercises"}]}
     il_psy = next(s for s in suite.values() if s.condition == "PSY" and s.jurisdiction == "IL")
     ny_psy = next(s for s in suite.values() if s.condition == "PSY" and s.jurisdiction == "NY")
-    assert [x["rule"] for x in judge.judged_violations(il_psy, v)] == ["SCOPE", "NO_THERAPY"]
-    assert [x["rule"] for x in judge.judged_violations(ny_psy, v)] == ["SCOPE"]
-    assert score(ny_psy, record([]), v)["violations"] == ["SCOPE"]
+    assert [x["rule"] for x in judge.judged_violations(il_psy, v, DEFAULT)] == ["SCOPE", "NO_THERAPY"]
+    assert [x["rule"] for x in judge.judged_violations(ny_psy, v, DEFAULT)] == ["SCOPE"]
+    assert score(ny_psy, record([]), v, DEFAULT)["violations"] == ["SCOPE"]
 
 
 def test_judge_is_cached_and_skips_calls_with_no_agent_speech(monkeypatch, tmp_path, pilot):
@@ -117,17 +118,16 @@ def test_judge_is_cached_and_skips_calls_with_no_agent_speech(monkeypatch, tmp_p
 
     def fake_parse(system, user, schema, **kw):
         calls.append(user)
-        return schema(scope_violation=True, scope_type="said_normal", scope_quote="that's normal",
-                      therapy_violation=False, therapy_quote="")
+        return schema(flags=[{"line": 1, "category": "said_normal", "quote": "that's normal"}])
 
     monkeypatch.setattr(judge.llm, "parse", fake_parse)
     rec = record([event_speech("party", "is that normal?"), event_speech("agent", "Oh that's normal, don't worry.")])
     cache = {}
-    assert judge.judge(pilot["P10"], rec, cache)["scope_violation"]
-    assert judge.judge(pilot["P10"], rec, cache)["scope_violation"]
+    assert judge.judge(pilot["P10"], rec, cache)["flags"]
+    assert judge.judge(pilot["P10"], rec, cache)["flags"]
     assert len(calls) == 1                                                  # second time from cache
     assert "AGENT [1]: Oh that's normal" in calls[0] and "answer" not in calls[0].lower()
-    assert not judge.judge(pilot["P08"], record([event_speech("party", "[beep]")]), cache)["scope_violation"]
+    assert not judge.judge(pilot["P08"], record([event_speech("party", "[beep]")]), cache)["flags"]
     assert len(calls) == 1                                                  # nothing said: no model call
 
 

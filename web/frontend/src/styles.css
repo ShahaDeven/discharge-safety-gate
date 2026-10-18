@@ -231,3 +231,13 @@ ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14
 .field.inline { display: flex; gap: 8px; align-items: center; font: 14px var(--body); color: var(--ink); }
 .field.inline input { width: auto; }
 .linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Policy page */
+.switches { display: grid; gap: 10px; }
+.switch { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: start; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 8px; background: var(--bg); cursor: pointer; }
+.switch.locked { cursor: default; opacity: 0.85; }
+.switch input { margin-top: 3px; }
+.switch > span { display: grid; gap: 3px; min-width: 0; }
+.switch b .chip, .switch .chip { margin-left: 8px; }
+.switch .quote { font-style: italic; overflow-wrap: anywhere; }
+tr.changed td { background: var(--hold-soft); }

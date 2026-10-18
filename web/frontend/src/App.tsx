@@ -6,10 +6,11 @@ import Live from "./components/Live";
 import Method from "./components/Method";
 import Overview from "./components/Overview";
 import Agents from "./components/Agents";
+import Policy from "./components/Policy";
 import Propose from "./components/Propose";
 
 const PAGES: [Route["page"], string][] = [["overview", "Overview"], ["changes", "Changes"], ["calls", "Calls"],
-  ["live", "Live call"], ["propose", "Propose"], ["agents", "Agents"], ["method", "Method"]];
+  ["live", "Live call"], ["propose", "Propose"], ["agents", "Agents"], ["policy", "Policy"], ["method", "Method"]];
 
 /** Paste the token the server printed; it is checked once and kept for this browser tab only. */
 function Unlock({ onClose }: { onClose: () => void }) {
@@ -81,6 +82,7 @@ export default function App() {
         {d && route.page === "live" && <Live d={d} route={route} onBudget={setBudget} />}
         {d && route.page === "propose" && <Propose d={d} onChanged={() => load(true)} />}
         {d && route.page === "agents" && <Agents d={d} onChanged={() => load(true)} />}
+        {d && route.page === "policy" && <Policy d={d} onChanged={() => load(true)} />}
         {d && route.page === "method" && <Method d={d} />}
       </main>
     </>

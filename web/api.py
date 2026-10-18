@@ -34,7 +34,9 @@ from discharge.persona import DischargeSuite
 from discharge.scenario import load_scenarios
 from discharge.scoring import score
 from agentgate.http_agent import EndpointRefused
+from discharge import clinical_policy
 from evals import agents, proposals
+from evals import policy as policies
 from evals.dashboard import build_data, call_summary, transcript
 from evals.gate import load_groups  # noqa: F401  (kept for callers that refresh gate data)
 from evals.run import SUITES, evaluate
@@ -158,6 +160,7 @@ def overview(refresh: bool = False, who: str | None = Depends(viewer)) -> dict:
         if who and a["owner"] == who and a["status"] == "done" and a["result"]["visible"]:
             _add_candidate(data, a, "agent")
     data["session"] = session()
+    data["policy"] = clinical_policy.active().to_dict()
     rt = config.RESULTS_DIR / "redteam.json"
     data["redteam"] = json.loads(rt.read_text(encoding="utf-8")) if rt.exists() else None
     return data
@@ -287,6 +290,60 @@ def run_agent(aid: str, token_id: str = Depends(require_token)) -> dict:
     BUDGET.check(est["usd"])
     AUDIT.append("agent_run", {"id": aid, "token_id": token_id, "estimate_usd": est["usd"]})
     return _start_job(aid, est, agents.run, agents.load, agents.save)
+
+
+# ------------------------------------------------------------------ clinical policy
+
+_preview_lock = threading.Lock()
+
+
+@app.get("/api/policy")
+def get_policy() -> dict:
+    """Switches, the active policy and its history, how often each kind of line occurs, how well the judge's
+    categories match the reviewer's, and every built-in verdict under the active policy."""
+    active = clinical_policy.active()
+    with _preview_lock:
+        verdicts = policies.preview(active)
+    return {"categories": [vars(c) for c in clinical_policy.CATEGORIES],
+            "extensions": [vars(e) for e in clinical_policy.EXTENSIONS],
+            "active": active.to_dict(), "history": clinical_policy.history()[-10:][::-1],
+            "counts": policies.flag_counts(), "reviewer": policies.reviewer_agreement(), "verdicts": verdicts}
+
+
+@app.post("/api/policy/preview")
+def preview_policy(body: policies.PolicyIn) -> dict:
+    """Every built-in verdict under a draft policy. Free; a few seconds; one at a time."""
+    if not _preview_lock.acquire(blocking=False):
+        raise HTTPException(409, "a preview is already running")
+    try:
+        pol = body.policy()
+        return {"policy": pol.to_dict(), "verdicts": policies.preview(pol)}
+    finally:
+        _preview_lock.release()
+
+
+@app.post("/api/policy")
+def apply_policy(body: policies.PolicyIn, token_id: str = Depends(require_token)) -> dict:
+    """Make a policy active and re-gate everything under it (no calls placed, $0)."""
+    pol = body.policy()
+    with _job_lock:
+        if any(j["state"] == "running" for j in _jobs.values()):
+            raise HTTPException(409, "a gate run is in progress; apply the policy when it finishes")
+        job = {"id": f"J-{int(time.time() * 1000)}", "pid": "policy", "state": "running", "phase": "starting", "done": 0,
+               "total": 0, "spent": 0.0, "result": None, "error": None, "estimate": {"usd": 0}}
+        _jobs[job["id"]] = job
+
+    def work():
+        global _overview
+        try:
+            job["result"] = policies.apply(pol, note=body.note, owner=token_id,
+                                           progress=lambda phase, done, total: job.update(phase=phase, done=done, total=total))
+            job["state"] = "done"
+            _overview = None
+        except Exception as exc:
+            job.update(state="error", error=redact(f"{type(exc).__name__}: {exc}"))
+    threading.Thread(target=work, daemon=True).start()
+    return job
 
 
 @app.get("/api/jobs/{jid}")

@@ -28,7 +28,7 @@ from agentgate.audit import AuditLog, content_hash
 from agentgate.gate import GATE_VERSION, HOLD, PROMOTE, REJECT, baseline_profile, gate, noise_floor, split_aa
 from agentgate.ledger import Ledger
 from agentgate.replay import Candidate, Replayer, load_cache
-from discharge import config, judge
+from discharge import clinical_policy, config, judge
 from discharge.gate_metrics import SPECS, group
 from discharge.guard import manipulation
 from discharge.persona import DischargeSuite
@@ -197,8 +197,9 @@ def run(pid: str, max_usd: float, progress: Callable[[str, int, int, float], Non
 
 
 def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
-                   progress: Callable[[str, int, int, float], None]) -> dict:
-    """Replay a candidate on rec["scenario_set"] (visible + sealed), judge, gate against C0, record the verdict."""
+                   progress: Callable[[str, int, int, float], None], place_calls: bool = True) -> dict:
+    """Replay a candidate on rec["scenario_set"] (visible + sealed), judge, gate against C0, record the verdict.
+    place_calls=False re-gates from what is cached (a new clinical policy): no calls, no judge, $0."""
     visible, holdout = scenario_sets(rec["scenario_set"])
     k = SETS[rec["scenario_set"]]["k"]
     base = _baseline_candidate()
@@ -219,7 +220,7 @@ def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
             progress(phase, done[0], total, spent + rb.spent + rc.spent)
         return on
     rc = _replayer(visible + holdout, max_usd)
-    if jobs:
+    if jobs and place_calls:
         done[0] = 0
         rb.run(base, [s.model_dump() for s in holdout], BASELINE_HOLDOUT_K, workers=6,
                on_done=tick("current agent on the sealed set", len(jobs)))
@@ -229,7 +230,10 @@ def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
     rc.max_usd = max(0.0, max_usd - spent)
     jobs = rc.pending(cand, [s.model_dump() for s in visible + holdout], k, load_cache(rc.cache_path(cand.id)))
     done[0] = 0
-    rc.run(cand, [s.model_dump() for s in visible + holdout], k, workers=6, on_done=tick("calls", len(jobs), failed))
+    if place_calls:
+        rc.run(cand, [s.model_dump() for s in visible + holdout], k, workers=6, on_done=tick("calls", len(jobs), failed))
+    else:
+        failed = ["never completed (re-gated from cache)"] * len(jobs)
     spent += rc.spent
     rows_c = evaluate(cand.id, visible + holdout, k)
     failure = (f"{len(failed)} of {len(jobs)} calls failed and were not scored (first error: {failed[0][:160]}). "
@@ -241,7 +245,8 @@ def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
     # 3. Judge the new calls (scope).
     progress("judging", 0, 1, spent)
     rows_b = evaluate("C0", visible, 4) + evaluate("C0", holdout, BASELINE_HOLDOUT_K)
-    spent += _judge(rows_c + rows_b, max(0.0, max_usd - spent))
+    if place_calls:
+        spent += _judge(rows_c + rows_b, max(0.0, max_usd - spent))
 
     # 4. Gate, separately on what the proposer could see and on the sealed set.
     full_c0 = group(evaluate("C0", load_scenarios(SUITES["suite"]), 4))
@@ -284,8 +289,11 @@ def finish(kind: Kind, rec: dict, verdict: str, reasons: list[str], visible_gate
               "spent_usd": round(spent, 4), "k": k, "finished_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
     rec.update(status="done", result=result)
     kind.save(rec)
+    pol = clinical_policy.active()
+    result["policy"] = pol.to_dict()
+    kind.save(rec)
     baseline = ("prompt check (no calls placed)" if blocked else "no calls completed" if visible_gate is None
-                else f"C0 (gate v{GATE_VERSION}, visible + sealed)")
+                else f"C0 (gate v{GATE_VERSION}, visible + sealed, policy {pol.label()})")
     metrics = {m["name"]: [m["base"], m["cand"], m["status"]] for m in visible_gate["metrics"]} if visible_gate else {}
     Ledger(config.RESULTS_DIR / "ledger.json", config.RESULTS_DIR / "ledger.md", AuditLog(config.AUDIT_PATH)).record(
         rec["id"], f"{kind.label}: {rec['name']}", rec["fingerprint"], baseline, verdict, reasons, metrics, ks)

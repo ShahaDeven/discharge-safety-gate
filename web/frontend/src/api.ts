@@ -39,7 +39,7 @@ export type Overview = {
   ledger: { id: string; candidate: string; baseline: string; verdict: string; reasons: string[] }[];
   judge_check: { violations_caught: [number, number]; allowed_flagged: [number, number]; borderline_flagged: [number, number] } | null;
   judge_flags?: { label: string; kind: string; lines: number; answered: number; reviewer_yes: number }[];
-  findings: Finding[]; cost: Record<string, number>; session: Session;
+  findings: Finding[]; cost: Record<string, number>; session: Session; policy?: PolicyDef;
   redteam: null | { caught: number; total: number; results: { attack: string; proposal: string; expected: string[]; verdict: string; caught: boolean; caught_by?: string[]; detail?: string }[] };
 };
 
@@ -84,7 +84,7 @@ export const pct = (x: number | null | undefined) => (x == null ? "-" : `${Math.
 export const safe = (s: Summary) => s.ok && !s.violations.length && s.crisis !== false;
 
 // Where to send people: a hash route the whole app reads.
-export type Route = { page: "overview" | "changes" | "calls" | "live" | "propose" | "agents" | "method"; cand?: string; sid?: string; r?: number; compare?: boolean };
+export type Route = { page: "overview" | "changes" | "calls" | "live" | "propose" | "agents" | "policy" | "method"; cand?: string; sid?: string; r?: number; compare?: boolean };
 export function go(route: Route) {
   const q = new URLSearchParams();
   if (route.cand) q.set("cand", route.cand);
@@ -97,7 +97,7 @@ export function go(route: Route) {
 export function readRoute(): Route {
   const [path, query] = location.hash.replace(/^#\/?/, "").split("?");
   const q = new URLSearchParams(query || "");
-  const page = (["overview", "changes", "calls", "live", "propose", "agents", "method"].includes(path) ? path : "overview") as Route["page"];
+  const page = (["overview", "changes", "calls", "live", "propose", "agents", "policy", "method"].includes(path) ? path : "overview") as Route["page"];
   return { page, cand: q.get("cand") || undefined, sid: q.get("sid") || undefined,
     r: q.has("r") ? Number(q.get("r")) : undefined, compare: q.get("compare") === "1" };
 }
@@ -141,6 +141,16 @@ export type Agent = {
   id: string; name: string; status: Proposal["status"]; created_at: string; owned: boolean; result: Proposal["result"];
   url?: string; endpoint?: string; version?: string; note?: string; local?: boolean; scenario_set?: string;
   estimate?: Estimate; secret?: string;
+};
+export type PolicyDef = { name: string; fingerprint: string; scope: string[]; extend: string[] };
+export type PolicyVerdicts = Record<string, { verdict: Gate["verdict"]; reasons: string[]; rules: Record<string, number[]> }>;
+export type PolicyPage = {
+  categories: { key: string; label: string; example: string; locked: boolean; default: boolean }[];
+  extensions: { key: string; label: string; law: string; rule: string }[];
+  active: PolicyDef; history: (PolicyDef & { note: string; owner: string; applied_at: string })[];
+  counts: { categories: Record<string, { lines: number; calls: number }>; judged: number; calls: number };
+  reviewer: null | { rows: { category: string; label: string; lines: number; judge_agrees: number }[]; agree: number; n: number };
+  verdicts: PolicyVerdicts;
 };
 export type AgentCheck = { ok: boolean; seconds: number | null; error: string | null };
 
