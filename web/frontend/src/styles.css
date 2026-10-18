@@ -241,3 +241,25 @@ ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 14
 .switch b .chip, .switch .chip { margin-left: 8px; }
 .switch .quote { font-style: italic; overflow-wrap: anywhere; }
 tr.changed td { background: var(--hold-soft); }
+
+/* Validation pack: reads as a document on screen, prints clean */
+.pack .doc { display: grid; gap: 12px; max-width: 920px; }
+.pack .doc h3 { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--rule); }
+.pack .doc ul { margin: 0; padding-left: 20px; }
+.doc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; font-size: 14px; }
+@media (max-width: 760px) { .doc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@page { margin: 14mm 12mm; }
+@media print {
+  .bar, .no-print, .modal-back { display: none !important; }
+  :root, body { background: #fff !important; color: #000 !important; }
+  /* Chrome pushes a grid taller than the rest of a page onto the next page (a blank first page): print as blocks. */
+  .main, section.pack, .pack .doc { display: block !important; max-width: none; padding: 0 !important; margin: 0 !important; }
+  .pack .doc > * + * { margin-top: 10px; }
+  /* Tables split between rows (keeping a whole table together leaves half-empty pages); a row never splits,
+     the column headings repeat on each page, and a heading stays with what follows it. */
+  .pack .doc h3 { break-after: avoid; }
+  .pack tr, .pack li { break-inside: avoid; }
+  .pack thead { display: table-header-group; }
+  .chip { border: 1px solid #000; }
+  .muted { color: #444 !important; }
+}

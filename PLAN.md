@@ -552,7 +552,17 @@ Foundations first: both new features sit on them.
 
 ### 12.7 Product Day 2
 
-**Bring your own agent: built (2026-10-17).** **Clinical policy settings: built (2026-10-17).** Validation pack and Docker demo are not started.
+**Bring your own agent: built (2026-10-17).** **Clinical policy settings: built (2026-10-17).** **Validation pack: built (2026-10-17).** Docker demo is not started.
+
+Validation pack, as built (`evals/validation.py`, Validation page, `/api/validation/{version}`):
+- One printable page per agent version (C0 uses its noise check), saved as PDF from the browser. Nothing is re-run.
+- Sections follow governance-committee questions: intended use; what it was tested on; results (absolute rates with
+  Wilson 95% ranges, the gate's comparison with C0, rule counts); subgroups (by how the warning sign comes up, and
+  fairness repeats against their original case); rules checked with sources and the clinical policy; how far to trust
+  the judge (planted lines, reviewed lines, held-out labels with kappa and its caveat); red team and audit-chain check;
+  ledger entries; limits.
+- Medicine catch is shown twice: on calls that reached the medicine review (the gate's number) and on every call with a
+  seeded problem, because 911 calls end before the review (C0: 65%).
 
 Clinical policy, as built:
 - The judge labels lines by category (dosing advice, diagnosis, said normal, mild reassurance, "can be a sign of", hold off, therapy) and no longer decides what counts; `discharge/clinical_policy.py` does. Labels are cached, so switches re-score for free.

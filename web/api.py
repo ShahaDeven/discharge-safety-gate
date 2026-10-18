@@ -37,6 +37,7 @@ from agentgate.http_agent import EndpointRefused
 from discharge import clinical_policy
 from evals import agents, proposals
 from evals import policy as policies
+from evals import validation
 from evals.dashboard import build_data, call_summary, transcript
 from evals.gate import load_groups  # noqa: F401  (kept for callers that refresh gate data)
 from evals.run import SUITES, evaluate
@@ -290,6 +291,17 @@ def run_agent(aid: str, token_id: str = Depends(require_token)) -> dict:
     BUDGET.check(est["usd"])
     AUDIT.append("agent_run", {"id": aid, "token_id": token_id, "estimate_usd": est["usd"]})
     return _start_job(aid, est, agents.run, agents.load, agents.save)
+
+
+# ------------------------------------------------------------------ validation pack
+
+@app.get("/api/validation/{cand}")
+def validation_pack(cand: str, who: str | None = Depends(viewer)) -> dict:
+    """One printable pack per agent version (outside agents: owner only, like everything else about them)."""
+    try:
+        return validation.build(overview(who=who), cand)
+    except KeyError:
+        raise HTTPException(404, "no gate result for that agent version")
 
 
 # ------------------------------------------------------------------ clinical policy

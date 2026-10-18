@@ -25,6 +25,7 @@ export default function Changes({ d, id }: { d: Overview; id?: string }) {
         <div className="panel-head">
           <h3>{cur === CONTROL ? "Current agent vs itself" : `${cur}: ${cand[cur].description}`}</h3>
           <span className={`chip v-${g.verdict}`}>{g.verdict}</span>
+          <button type="button" className="linklike" onClick={() => go({ page: "validation", cand: cur === CONTROL ? "C0" : cur })}>Validation pack</button>
         </div>
         <p className="muted">{plainWhy(cur, g)} Compared on {g.scenarios} scenarios, {k}.</p>
         {g.sealed && (
