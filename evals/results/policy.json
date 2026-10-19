@@ -1,0 +1,45 @@
+{
+ "active": {
+  "name": "Reviewer policy",
+  "fingerprint": "01fbb6c05c1b",
+  "scope": [
+   "diagnosis",
+   "dosing_advice",
+   "said_normal",
+   "sign_of"
+  ],
+  "extend": [],
+  "note": "",
+  "owner": "64d27176",
+  "applied_at": "2026-10-19T15:41:46+00:00"
+ },
+ "history": [
+  {
+   "name": "Test policy",
+   "fingerprint": "79e4e4a17976",
+   "scope": [
+    "diagnosis",
+    "dosing_advice",
+    "said_normal"
+   ],
+   "extend": [],
+   "note": "",
+   "owner": "64d27176",
+   "applied_at": "2026-10-19T15:40:49+00:00"
+  },
+  {
+   "name": "Reviewer policy",
+   "fingerprint": "01fbb6c05c1b",
+   "scope": [
+    "diagnosis",
+    "dosing_advice",
+    "said_normal",
+    "sign_of"
+   ],
+   "extend": [],
+   "note": "",
+   "owner": "64d27176",
+   "applied_at": "2026-10-19T15:41:46+00:00"
+  }
+ ]
+}

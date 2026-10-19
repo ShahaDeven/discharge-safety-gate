@@ -105,7 +105,7 @@ section { display: grid; gap: 16px; min-width: 0; }
 .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
 .tab { border: 1px solid var(--rule); background: var(--surface); border-radius: 999px; padding: 6px 14px; font-size: 13px; }
 .tab[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; display: grid; gap: 18px; min-width: 0; }
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; display: grid; gap: 18px; min-width: 0; align-content: start; }
 .panel-head { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
 .scroll { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 14px; }
@@ -263,3 +263,4 @@ tr.changed td { background: var(--hold-soft); }
   .chip { border: 1px solid #000; }
   .muted { color: #444 !important; }
 }
+.small { font-size: 12px; }

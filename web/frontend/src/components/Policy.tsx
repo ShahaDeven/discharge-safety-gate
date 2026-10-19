@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { getJSON, send, shortName, token, type Job, type Overview, type PolicyPage, type PolicyVerdicts } from "../api";
+import { getJSON, RULES, send, shortName, token, type Job, type Overview, type PolicyPage, type PolicyVerdicts } from "../api";
 
 const sameSet = (a: string[], b: string[]) => a.length === b.length && a.every((x) => b.includes(x));
 
@@ -57,6 +57,16 @@ export default function Policy({ d, onChanged }: { d: Overview; onChanged: () =>
   const toggle = (list: string[], set: (x: string[]) => void, key: string) =>
     set(list.includes(key) ? list.filter((x) => x !== key) : [...list, key]);
 
+  /** Rules whose call counts move under the draft, as "AI disclosure: 7 → 24 of 306 calls" (the changed version's side). */
+  function ruleChanges(id: string): string[] {
+    if (!page || !draft?.[id]) return [];
+    const now = page.verdicts[id].rules, then = draft[id].rules;
+    return Object.keys({ ...now, ...then }).flatMap((r) => {
+      const a = now[r] ?? [0, 0, 0, 0], b = then[r] ?? [0, 0, 0, 0];
+      return a[2] === b[2] && a[0] === b[0] ? [] : [`${RULES[r] ?? r}: ${a[2]} → ${b[2]} of ${b[3] || a[3]} calls`];
+    });
+  }
+
   if (!page) return <p className="loading">{err || "Loading the policy…"}</p>;
   const missing = page.counts.calls - page.counts.judged;
   const rows = Object.keys(page.verdicts);
@@ -107,13 +117,14 @@ export default function Policy({ d, onChanged }: { d: Overview; onChanged: () =>
               return (
                 <tr key={id} className={draft && now !== then ? "changed" : undefined}>
                   <td>{label(id)}</td><td><span className={`chip v-${now}`}>{now}</span></td>
-                  <td>{then && <span className={`chip v-${then}`}>{then}</span>}</td>
+                  <td>{then && <span className={`chip v-${then}`}>{then}</span>}
+                    {draft && ruleChanges(id).map((c) => <div key={c} className="muted small">{c}</div>)}</td>
                 </tr>
               );
             })}</tbody>
           </table>
           {draft && rows.every((id) => page.verdicts[id].verdict === draft[id]?.verdict) &&
-            <p className="notice">No verdict changes with these switches; the rule counts behind them may.</p>}
+            <p className="notice">No verdict changes with these switches{rows.some((id) => ruleChanges(id).length) ? ", but the rule counts under them do" : ""}.</p>}
 
           <h3>Apply</h3>
           <div className="row2">

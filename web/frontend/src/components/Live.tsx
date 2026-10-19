@@ -54,23 +54,50 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
   useEffect(() => { if (phase === "running") bottom.current?.scrollIntoView({ block: "nearest" }); }, [rows.length, phase]);
   useEffect(() => () => abort.current?.abort(), []);
 
-  function stop() { abort.current?.abort(); abort.current = null; voice.stop(); }
+  // With the voice on, events wait in a queue and each line shows when it starts being spoken, so text and
+  // voice stay in step even when a live call writes faster than it can be read aloud.
+  const queue = useRef<{ ev: string; data: any }[]>([]);
+  const pumping = useRef(false);
+  const generation = useRef(0);
+
+  function stop() { generation.current += 1; queue.current = []; abort.current?.abort(); abort.current = null; voice.stop(); }
+
+  function apply(ev: string, data: any) {
+    if (ev === "row") setRows((x) => [...x, data]);
+    if (ev === "scored") { setRows(data.transcript); setSummary(data.summary); }
+    if (ev === "done") { setCost(data.cost); if (data.budget) onBudget(data.budget); setPhase("done"); }
+    if (ev === "error") { setMsg(data.message); setPhase("error"); }
+  }
+
+  async function pump(gen: number, rate: number) {
+    if (pumping.current) return;
+    pumping.current = true;
+    try {
+      while (queue.current.length && gen === generation.current) {
+        const { ev, data } = queue.current.shift()!;
+        apply(ev, data);
+        if (ev === "row" && data.k === "s") await voice.say(data.t, data.w, rate);
+        else if (ev === "row" && voice.onRef.current) await new Promise((ok) => setTimeout(ok, 350 / rate));
+      }
+    } finally { pumping.current = false; }
+    if (queue.current.length && gen === generation.current) pump(gen, rate);
+  }
 
   async function start() {
     stop();
     const ctl = new AbortController(); abort.current = ctl;
     setRows([]); setSummary(null); setCost(null); setMsg(""); setPhase("running");
-    // Spoken lines take ~3x longer than reading pace, so a voiced replay slows down to stay in step.
-    const pace = voice.on && mode === "replay" ? Math.max(0.3, speed * 0.3) : speed;
+    // With the voice on, the voice sets the pace (the speed choice changes how fast it talks), so a replay
+    // streams quickly and waits in the queue.
+    const gen = generation.current;
+    const pace = voice.on && mode === "replay" ? 8 : speed;
     const q = new URLSearchParams({ cand, sid, mode, r: String(r), speed: String(pace) });
     try {
       await stream(`/api/stream?${q}`, ctl.signal, (ev, data) => {
-        if (ev === "row") { setRows((x) => [...x, data]); if (data.k === "s") voice.say(data.t, data.w); }
-        if (ev === "scored") { setRows(data.transcript); setSummary(data.summary); }
-        if (ev === "done") { setCost(data.cost); if (data.budget) onBudget(data.budget); setPhase("done"); }
-        if (ev === "error") { setMsg(data.message); setPhase("error"); }
+        if (voice.onRef.current || queue.current.length) { queue.current.push({ ev, data }); pump(gen, speed); }
+        else apply(ev, data);
       });
-      setPhase((p) => (p === "running" ? "done" : p));
+      if (!queue.current.length && !pumping.current) setPhase((p) => (p === "running" ? "done" : p));
     } catch (e: any) {
       if (e?.name !== "AbortError") { setMsg(String(e.message || e)); setPhase("error"); }
     }

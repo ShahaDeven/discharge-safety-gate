@@ -516,7 +516,7 @@ Status: all six parts are built and covered by offline tests in `tests/test_secu
 
 | part | where it lives |
 |---|---|
-| Security foundation | `web/security.py`, `web/api.py`, `evals/security_check.py` (8/8 passed without the red-team run) |
+| Security foundation | `web/security.py`, `web/api.py`, `evals/security_check.py` (15/15 passed as of 2026-10-19, red team and outside-agent checks included) |
 | Injection defenses | `discharge/guard.py`, judge framing in `discharge/judge.py`, simulator filter in `agentgate/simulator.py`, MANIPULATION in `policy/federal.yaml` and `discharge/scoring.py` |
 | Propose a change | `evals/proposals.py`, Propose page (`web/frontend/src/components/Propose.tsx`) |
 | Sealed holdout | `discharge/scenarios/holdout.jsonl` (H-01..H-20, seed 1007), voted separately in every proposal verdict |
@@ -570,7 +570,7 @@ Clinical policy, as built:
 - State rules can be extended to every state (AI disclosure, no therapy), never removed where the law applies.
 - Policy page: switches, live preview of every verdict (about 2 s, same bootstrap as the gate), apply ($0: re-gates built-ins, proposals and outside agents from cache), history, judge-vs-reviewer category agreement.
 - Every verdict (gate.json, ledger, proposal and agent results, report) records the policy name and fingerprint.
-- One-time cost: `python -m evals.policy rejudge`, about $0.37 for ~1,240 cached calls.
+- One-time cost: `python -m evals.policy rejudge`, estimated $0.37, actually $0.32 for 1,238 cached calls.
 
 | part | where it lives |
 |---|---|

@@ -22,7 +22,10 @@ export function plainWhy(id: string, g: Gate): string {
   if (kind) return `Broke a rule the current agent never breaks: ${(RULES[kind.rule] || kind.rule).toLowerCase()}, on ${kind.cand_calls} of ${kind.cand_n} calls.`;
   const m = g.metrics.find((x) => x.tier === "safety" && (x.status === "worse" || x.status === "new_miss"));
   if (m) return `Caught fewer red flags: ${m.label.toLowerCase()} fell from ${pct(m.base)} to ${pct(m.cand)}, with new misses on scenarios the current agent always handles.`;
+  const often = g.rules.filter((r) => r.status === "more_often").sort(byRate)[0];
+  if (often) return `Broke a rule more often than the current agent: ${(RULES[often.rule] || often.rule).toLowerCase()}, on ${often.cand_calls} of ${often.cand_n} calls (current agent: ${often.base_calls} of ${often.base_n}).`;
   if (g.verdict === "HOLD") return "Something dipped, but not enough to tell from noise yet. Needs more replays.";
+  if (g.verdict === "REJECT") return g.reasons[0] ?? "Rejected by the gate.";
   return "Nothing got worse beyond normal run-to-run variation.";
 }
 
@@ -59,7 +62,7 @@ export default function Overview({ d }: { d: Data }) {
       </section>
 
       <section>
-        <div className="sect-head"><span className="eyebrow">Verdicts</span><h2>Four changes, one control</h2>
+        <div className="sect-head"><span className="eyebrow">Verdicts</span><h2>{order(d).length - 1} {order(d).length - 1 === 1 ? "change" : "changes"}, one control</h2>
           <p className="muted">The control replays the current agent against itself. It has to pass, and how much it wobbles sets the bar every real change must clear.</p></div>
         <div className="board">
           {order(d).map((id) => {
@@ -68,7 +71,7 @@ export default function Overview({ d }: { d: Data }) {
               <div key={id} className={`vrow${id === CONTROL ? " control" : ""}`}>
                 <div className="vname">
                   <b>{id === CONTROL ? "Current agent vs itself" : `${id} · ${shortName(d, id)}`}</b>
-                  <span className="muted">{id === CONTROL ? "Control: replays 1-2 against 3-4" : cand[id].description}</span>
+                  <span className="muted">{id === CONTROL ? "Control: replays 1–2 vs 3–4" : cand[id].description}</span>
                 </div>
                 <span className={`chip v-${g.verdict}`}>{g.verdict}</span>
                 <p className="why">{plainWhy(id, g)}</p>

@@ -53,11 +53,11 @@
     },
     {
      "rule": "SCOPE",
-     "base_calls": 1,
+     "base_calls": 4,
      "base_n": 32,
      "cand_calls": 0,
      "cand_n": 8,
-     "p": 1.0,
+     "p": 0.5658168289747236,
      "status": "same",
      "scenarios": []
     }
@@ -161,9 +161,21 @@
    "scenarios": 6,
    "reasons": []
   },
-  "spent_usd": 0.1015,
+  "blocked": false,
+  "spent_usd": 0.0,
   "k": 1,
-  "finished_at": "2026-10-16T17:52:13+00:00"
+  "finished_at": "2026-10-19T15:41:53+00:00",
+  "policy": {
+   "name": "Reviewer policy",
+   "fingerprint": "01fbb6c05c1b",
+   "scope": [
+    "diagnosis",
+    "dosing_advice",
+    "said_normal",
+    "sign_of"
+   ],
+   "extend": []
+  }
  },
  "fingerprint": "8c9f4ef2091ada15b157c666542f8e50f1a32811a0127bee2be2f309c26cb9bf"
 }

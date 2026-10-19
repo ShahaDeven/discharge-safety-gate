@@ -28,17 +28,17 @@ export default function Validation({ d, cand }: { d: Overview; cand?: string }) 
 
   const today = new Date().toISOString().slice(0, 10);
 
-  /** The browser names the PDF after the page title, so set it for the print and put it back after. */
-  function print() {
-    if (!v) return;
-    const label = shortName(d, v.candidate.id).replace(/[^A-Za-z0-9 ._-]/g, "").trim();
-    const printed = today !== v.candidate.results_date ? ` - printed ${today}` : "";
+  /** The browser names a saved PDF after the page title: while a pack is open, the title is its file name,
+   *  so the button and Ctrl+P both suggest it. The app's usual title comes back when you leave the page. */
+  const fileName = v ? `Validation pack ${v.candidate.id} ${shortName(d, v.candidate.id).replace(/[^A-Za-z0-9 ._-]/g, "").trim()}`
+    + ` - results ${v.candidate.results_date}${today !== v.candidate.results_date ? ` - printed ${today}` : ""}` : "";
+  useEffect(() => {
+    if (!fileName) return;
     const previous = document.title;
-    document.title = `Validation pack ${v.candidate.id} ${label} - results ${v.candidate.results_date}${printed}`;
-    const restore = () => { document.title = previous; window.removeEventListener("afterprint", restore); };
-    window.addEventListener("afterprint", restore);
-    window.print();
-  }
+    document.title = fileName;
+    return () => { document.title = previous; };
+  }, [fileName]);
+
   return (
     <section className="pack">
       <div className="controls no-print">
@@ -46,7 +46,7 @@ export default function Validation({ d, cand }: { d: Overview; cand?: string }) 
           <select id="v-cand" value={id} onChange={(e) => go({ page: "validation", cand: e.target.value })}>
             {options.map((o) => <option key={o} value={o}>{o} · {shortName(d, o)}</option>)}
           </select></label>
-        <button type="button" className="btn primary" onClick={print} disabled={!v}>Print or save as PDF</button>
+        <button type="button" className="btn primary" onClick={() => window.print()} disabled={!v}>Print or save as PDF</button>
       </div>
       {err && <p className="err">{err}</p>}
       {!v && !err && <p className="loading">Assembling the pack…</p>}
@@ -56,7 +56,7 @@ export default function Validation({ d, cand }: { d: Overview; cand?: string }) 
             <span className="eyebrow">Validation pack · results of {v.candidate.results_date}{today !== v.candidate.results_date ? ` · printed ${today}` : ""}</span>
             <h2>{v.candidate.id}: {v.candidate.description}</h2>
             <p className="panel-head"><span className={`chip v-${v.verdict.verdict}`}>{v.verdict.verdict}</span>
-              <span className="muted">{v.verdict.baseline ? "current agent, checked against itself (replays 0-1 vs 2-3)" : "against the current agent (C0)"} · gate v{v.verdict.gate_version} · clinical policy {v.policy.name} <span className="mono">[{v.policy.fingerprint}]</span></span></p>
+              <span className="muted">{v.verdict.baseline ? "current agent, checked against itself (replays 1–2 vs 3–4)" : "against the current agent (C0)"} · gate v{v.verdict.gate_version} · clinical policy {v.policy.name} <span className="mono">[{v.policy.fingerprint}]</span></span></p>
             <p className="muted">Synthetic patients and simulated calls only. Not clinical validation, not legal advice, does not measure readmissions. Assembled from saved results; nothing was re-run.</p>
           </header>
 
@@ -84,7 +84,7 @@ export default function Validation({ d, cand }: { d: Overview; cand?: string }) 
           </table>
           <p className="muted">Each replay counts as a call, so the ranges are slightly narrower than with one call per scenario.</p>
           <table>
-            <thead><tr><th>{v.verdict.baseline ? "Replays 0-1 vs 2-3" : "Compared with the current agent"}</th><th>Before</th><th>After</th><th>Change, 95% range</th><th></th></tr></thead>
+            <thead><tr><th>{v.verdict.baseline ? "Replays 1–2 vs 3–4" : "Compared with the current agent"}</th><th>Before</th><th>After</th><th>Change, 95% range</th><th></th></tr></thead>
             <tbody>{v.performance.metrics.map((m) => (
               <tr key={m.name}><td>{m.label} <span className="muted">({m.tier})</span></td><td className="num">{pct(m.base)}</td><td className="num">{pct(m.cand)}</td>
                 <td className="num">{(m.diff * 100).toFixed(1)} ({(m.lo * 100).toFixed(1)} to {(m.hi * 100).toFixed(1)})</td>
