@@ -30,6 +30,20 @@ Spot-checking a few calls doesn't catch these. The agent and the person on the l
 the same scenario passes on Monday and fails on Tuesday. The team needs a way to say, with numbers, *this
 change is safe to ship* or *this change breaks something*, and the hospital buying the agent needs proof.
 
+## Who it helps
+
+The people who use it day to day are the team building the agent. The people it protects are the
+patients and the nurses on the other end of the escalations.
+
+| Who | Their problem today | What the gate gives them |
+|---|---|---|
+| **AI and product engineers** building the calling agent | Every prompt or model change is a gamble; manual spot checks miss the failures that matter | A verdict with evidence in minutes, for cents, before anything ships (Propose a change, bring your own agent) |
+| **Clinical leads**: CMIO, nurse informaticist, care-transitions medical director | They own what the agent may say but can't read thousands of transcripts | They set what counts as medical advice in plain switches, see every verdict change instantly, and review the exact flagged lines (Policy page) |
+| **Transitions-of-care nurses** who take the escalations | An agent that misses a hinted warning sign, or ends on "call 911" without passing on the medicine problem, leaves the gap to them | The gate checks the agent escalates at the right level, says what happens next, and gets medicine problems to the team, and blocks changes that make any of that worse |
+| **Compliance and privacy officers** | Health details told before identity is checked, to the wrong relative, or on a voicemail; state AI laws | Every rule written down with its legal source and checked on every change; a tamper-evident log of who changed what |
+| **Hospital AI governance committees** evaluating a vendor | "What did you test, on whom, how sure are you, what changed?" | A printable validation pack per agent version (Validation page) |
+| **Patients and caregivers** | A missed warning sign means a readmission or worse | Changes that miss red flags, leak their information or give advice don't reach them; fairness repeats check that Spanish speakers, people with low health literacy and people hard of hearing are treated the same |
+
 ## Why it is hard
 
 1. **Calls are random.** One run per scenario proves nothing; a real regression has to be told apart from noise.
