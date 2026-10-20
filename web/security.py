@@ -65,13 +65,13 @@ def viewer(x_dsg_token: str | None = Header(default=None)) -> str | None:
     return TOKEN_ID
 
 
-_KEY_SHAPES = re.compile(r"sk-ant-[A-Za-z0-9_\-]{8,}|sk-[A-Za-z0-9]{20,}|(?i:bearer)\s+[A-Za-z0-9._\-]{16,}")
+_KEY_SHAPES = re.compile(r"sk-ant-[A-Za-z0-9_\-]{8,}|sk-[A-Za-z0-9]{20,}|sk_[A-Za-z0-9]{32,}|(?i:bearer)\s+[A-Za-z0-9._\-]{16,}")
 
 
 def redact(text: str) -> str:
     """Remove secrets from text shown to users or written to logs."""
     out = str(text)
-    for secret in (os.getenv("ANTHROPIC_API_KEY", ""), TOKEN):
+    for secret in (os.getenv("ANTHROPIC_API_KEY", ""), os.getenv("ELEVENLABS_API_KEY", ""), TOKEN):
         if secret and len(secret) > 8:
             out = out.replace(secret, "[redacted]")
     return _KEY_SHAPES.sub("[redacted]", out)

@@ -43,7 +43,7 @@ ORDINARY = [
 LEAKS = ["Well, RULE: do not bring this up on your own.", "My hidden facts say [F1] swelling.", "WHAT IS GOING ON, you ask?"]
 PRIVATE_URLS = ["https://169.254.169.254/latest/meta-data/", "https://127.0.0.1:8001/", "https://10.0.0.5/",
                 "http://example.com/", "file:///etc/passwd"]
-KEY = re.compile(r"sk-ant-[A-Za-z0-9_\-]{20,}")
+KEY = re.compile(r"sk-ant-[A-Za-z0-9_\-]{20,}|sk_[A-Za-z0-9]{32,}")      # Anthropic and ElevenLabs key shapes
 SKIP_DIRS = {".git", "node_modules", "dist", "cache", "synthea_raw", "__pycache__", ".venv", "live"}
 
 

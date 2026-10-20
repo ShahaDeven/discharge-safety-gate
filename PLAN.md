@@ -669,6 +669,92 @@ sources disagree on the Flash rate. Every paid command prints its estimate first
 
 ### 13.2 Day 2: the voice pipeline (under $0.50)
 
+**Built (2026-10-19); the first paid batch is pending Deven's run.**
+
+| Part | Where |
+|---|---|
+| Voice interfaces and caches | `agentgate/voice/base.py` |
+| Phone line | `agentgate/voice/phone.py` (300-3400 Hz, 8 kHz, mu-law, deterministic) |
+| ElevenLabs over httpx | `agentgate/voice/elevenlabs.py` |
+| Fact checks | `discharge/voice_facts.py` |
+| 50-line benchmark | `discharge/scenarios/voice_benchmark.jsonl` (every line passes its own facts) |
+| Command | `evals/voice.py` (estimate first, credit cap, balance read before and after) |
+| Tests | 19 offline tests in `tests/test_voice.py` |
+
+- **Measured:** Flash v2.5 costs about 0.2 credits per character (6 for 32), and Scribe v2 kept "not" in the test sentence.
+
+**First run (50 lines, Roger, clear vs clean phone line; 629 credits): the clean phone line damaged nothing**
+(48/50 clear, 49/50 phone). Two real transcription failures, neither from the phone line:
+- **V-NEG-10:** "I can't catch my breath when I lie down" came back as "[outro jingle]" on clear audio. A red-flag
+  sentence was replaced by a sound-event tag.
+- **V-SND-08:** "Toprol" came back as "top roll" on both channels.
+
+So the clean phone line becomes the **harmless control** (it must not be rejected), not the headline regression.
+
+**Expanded (approved 2026-10-19):**
+- **100 lines:** negation 18, sound-alike 18, number 14, late symptom 14, correction 10, Spanish 14, control 12.
+- **Two voices:** Roger, and Matilda (female, middle-aged, American).
+- **Five conditions,** each compared with clear on the same clips with an exact McNemar test:
+
+  | Condition | Role |
+  |---|---|
+  | clear | the reference |
+  | clean phone line | harmless control |
+  | noisy, lossy phone line | 15 dB SNR, 3% of 20 ms packets lost |
+  | transcription forced to English | a config mistake |
+  | sound-event tags off | candidate fix for V-NEG-10 |
+
+- **Estimate:** about 2,700 credits (cap 3,000). Day 3's harmless "different voice" control will be Eric, the closest
+  match to Roger.
+
+**Run 2 (200 clips, five conditions; 2,940 credits in total so far).**
+1. **The transcriber deletes whole sentences.** With sound-event tags on (the API default), 11 of 800 transcripts
+   (1.4%) were nothing but a tag ("[outro jingle]", once "[背景音楽]"), on every channel including clear audio.
+   Deleted sentences included "I can't catch my breath when I lie down" (a red flag). With tags off: 0 of 200.
+   At about 6 patient lines per call, that is roughly one call in 12 missing a sentence, with no error raised.
+   **Decision: tags off is the default from here;** tags on stays as one documented condition.
+2. **The noisy, lossy line damages drug names and Spanish.** Excluding the random tag deletions, it lost 8 clips
+   vs 1 on clear.
+   - Drug names: Plavix -> "Plopik", glipizide -> "Lipizide", Lantus -> "lanterns", Toprol -> "pop roll".
+   - Spanish: 23/28 vs 28/28 (lost 5, gained 0, p = 0.0625).
+   - Overall it was not yet significant (lost 11 / gained 4, p = 0.12), diluted by the random tag deletions on both sides.
+3. **The clean phone line is harmless** (197/200).
+4. **Forcing English is harmless for Scribe v2:** it still wrote the Spanish correctly. Dropped as a candidate.
+
+**Run 3 design (approved 2026-10-19).**
+- Tags off everywhere except the documented "event_tags" condition.
+- **Three independent noise and packet-loss samples per clip** for the noisy line (15 dB, 3%), and a **harsher level**
+  (10 dB, 5%). A rise in damage with severity shows the cause, not only the effect.
+- Each sample is paired with its clip's clear transcript in the McNemar test.
+- Estimate: 1,400 transcripts, about 1,350 credits (1,612 with margin).
+
+**Run 3 results (2026-10-20; 1,407 credits, estimate 1,343; voice total 4,379 of 40,000).** Clips that kept every
+critical fact; "lost / gained" is vs clear on the same clips, exact McNemar:
+
+| Condition | All | Sound-alike drugs | Spanish | Lost / gained | p |
+|---|---|---|---|---|---|
+| clear (tags off) | 199/200 | 35/36 | 28/28 | | |
+| tags on (API default) | 195/200 | 33/36 | 28/28 | 4 / 0 | 0.12 |
+| clean phone line | 198/200 | 34/36 | 28/28 | 1 / 0 | 1 |
+| noisy line, 15 dB, 3% loss (3 samples) | 577/600 (96%) | 91/108 (84%) | 78/84 (93%) | 20 / 0 | 2e-6 |
+| harsher line, 10 dB, 5% loss (3 samples) | 550/600 (92%) | 81/108 (75%) | 67/84 (80%) | 47 / 0 | 1e-14 |
+
+- **The noisy line is a real, significant regression, and it gets worse with severity** (20 lost, then 47; never
+  gained). Damage concentrates on drug names and Spanish:
+  - Plavix -> "Clopix", Lasix -> "latex", Zyprexa -> "Zoprexa", metoprolol -> "Metapromol"
+  - Spanish falls to 80% on the harsher line
+- **Robust under every condition:** numbers, late symptoms, corrections and controls.
+- **The clean phone line is harmless** (1 lost: Celexa -> "Selexa"). It is the control the gate must PROMOTE.
+- **Tags on:** 4 whole-sentence deletions and 0 gains. Its p of 0.12 reflects only 4 events; the mechanism is not in doubt.
+- **The fact checks are strict on spelling.** "Selexa" or "Metapromol" counts as lost, though an agent might still
+  understand them; Day 3 measures what the agent actually does. One false alarm was fixed
+  (V-NEG-18: "result" vs "results").
+
+**For Day 3:**
+- Seeded regression: the noisy (and harsh) phone line.
+- Must PROMOTE: the clean phone line and the Eric voice.
+- Scenarios: those with drug names and Spanish speakers.
+
 - **Provider-neutral interfaces** in `agentgate/voice/`:
   - `TextToSpeech.speak(text, voice) -> Audio` (bytes, sample rate, metadata)
   - `SpeechToText.transcribe(audio) -> Transcript` (text, metadata)

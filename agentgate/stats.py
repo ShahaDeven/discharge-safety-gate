@@ -33,6 +33,16 @@ def fisher_exact(a: int, b: int, c: int, d: int) -> float:
     return min(1.0, sum(p for x in range(lo, hi + 1) if (p := prob(x)) <= observed * (1 + 1e-9)))
 
 
+def mcnemar_exact(b: int, c: int) -> float:
+    """Two-sided exact McNemar p-value for paired yes/no outcomes. b and c are the discordant pairs (yes then
+    no, no then yes); pairs that agree carry no information about a difference."""
+    n = b + c
+    if n == 0:
+        return 1.0
+    tail = sum(math.comb(n, i) for i in range(min(b, c) + 1)) / 2 ** n
+    return min(1.0, 2 * tail)
+
+
 def benjamini_hochberg(pvals: list[float]) -> list[float]:
     """Adjusted p-values controlling the false discovery rate across many cases."""
     m = len(pvals)
