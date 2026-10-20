@@ -50,6 +50,19 @@ class CallRecord:
 
 
 OnEvent = Callable[[dict], None] | None
+# An input channel turns what the person said into what the agent hears (speech, a phone line, transcription):
+# text -> (heard text, details). The person's event keeps "text" (what they said, which the simulator and the
+# judge see) and adds "heard" (what the agent got) and "voice" (the channel's details).
+Channel = Callable[[str], tuple[str, dict]] | None
+
+
+def _party(text: str, channel: Channel, extra: dict | None = None) -> tuple[dict, str]:
+    event = {"kind": "speech", "who": "party", "text": text, **(extra or {})}
+    if channel is None:
+        return event, text
+    heard, meta = channel(text)
+    event["heard"], event["voice"] = heard, meta
+    return event, heard
 
 
 def _add(record: CallRecord, event: dict, on_event: OnEvent) -> None:
@@ -84,13 +97,14 @@ def _log_turn(record: CallRecord, turn: AgentTurn, harness: ToolHarness,
 
 
 def run_call(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: CallContext,
-             max_agent_turns: int = 12, on_event: OnEvent = None) -> CallRecord:
-    """on_event, if given, sees every event as it happens (the live console streams them)."""
+             max_agent_turns: int = 12, on_event: OnEvent = None, channel: Channel = None) -> CallRecord:
+    """on_event, if given, sees every event as it happens (the live console streams them).
+    channel, if given, is the path the person's words take to the agent (for example speech -> phone line ->
+    transcription); the agent hears its output, everyone else keeps what was actually said."""
     record = CallRecord(call_id=ctx.call_id)
     agent.start(ctx)
-    opening = simulator.opening()
-    _add(record, {"kind": "speech", "who": "party", "text": opening}, on_event)
-    heard = opening
+    event, heard = _party(simulator.opening(), channel)
+    _add(record, event, on_event)
     sim_turn = 0
 
     while True:
@@ -119,11 +133,12 @@ def run_call(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: 
         sim_turn += 1
         reply = simulator.reply(record.transcript(), sim_turn)
         record.usage.extend(reply.usage)
-        event = {"kind": "speech", "who": "party", "text": reply.say, "disclosed": reply.disclosed, "asked": reply.asked}
+        extra = {"disclosed": reply.disclosed, "asked": reply.asked}
         if reply.filtered:
-            event["filtered"] = reply.filtered
+            extra["filtered"] = reply.filtered
+        # A line the person hangs up on is never heard by the agent: don't send it through the channel.
+        event, heard = _party(reply.say, None if reply.hang_up else channel, extra)
         _add(record, event, on_event)
         if reply.hang_up:
             record.ended_by = "party_hung_up"
             return record
-        heard = reply.say

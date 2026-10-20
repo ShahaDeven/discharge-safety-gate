@@ -46,6 +46,27 @@ export function useSpeech(lang: "en" | "es") {
     });
   }
 
+  /** A short hold chime for a transfer to a nurse ("connecting you, please stay on the line"). */
+  function jingle(): Promise<void> {
+    if (!onRef.current) return Promise.resolve();
+    return new Promise((done) => {
+      try {
+        const ctx = new AudioContext();
+        [523.25, 659.25, 783.99, 659.25].forEach((f, i) => {
+          const osc = ctx.createOscillator(), gain = ctx.createGain();
+          osc.frequency.value = f;
+          gain.gain.setValueAtTime(0.0001, ctx.currentTime + i * 0.35);
+          gain.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + i * 0.35 + 0.03);
+          gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + i * 0.35 + 0.32);
+          osc.connect(gain).connect(ctx.destination);
+          osc.start(ctx.currentTime + i * 0.35);
+          osc.stop(ctx.currentTime + i * 0.35 + 0.34);
+        });
+        window.setTimeout(() => { ctx.close(); done(); }, 4 * 350 + 150);
+      } catch { done(); /* audio blocked: skip the chime */ }
+    });
+  }
+
   /** Speak one line at conversational pace (rate scales it, e.g. the replay speed); resolves when it ends. */
   async function say(text: string, who: "a" | "p", rate = 1): Promise<void> {
     if (!onRef.current || !supported) return;
@@ -66,5 +87,5 @@ export function useSpeech(lang: "en" | "es") {
     });
   }
 
-  return { supported, on, setOn, onRef, say, stop: () => supported && window.speechSynthesis.cancel() };
+  return { supported, on, setOn, onRef, say, jingle, stop: () => supported && window.speechSynthesis.cancel() };
 }

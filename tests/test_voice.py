@@ -222,14 +222,15 @@ def test_unknown_fact_kind_is_refused():
 
 def test_benchmark_is_complete_and_every_line_passes_its_own_facts():
     lines = [json.loads(x) for x in (config.SCENARIO_DIR / "voice_benchmark.jsonl").read_text(encoding="utf-8").splitlines()]
-    assert len(lines) == 100 and len({x["id"] for x in lines}) == 100
+    assert len(lines) == 135 and len({x["id"] for x in lines}) == 135
     counts = {}
     for x in lines:
         counts[x["category"]] = counts.get(x["category"], 0) + 1
         assert x["facts"] and all(preserved(x["facts"], x["text"])), x["id"]
         assert x["language"] in ("en", "es") and x["expect"]
     assert counts == {"negation": 18, "sound_alike": 18, "number": 14, "late_symptom": 14, "correction": 10,
-                      "spanish": 14, "control": 12}
+                      "spanish": 14, "control": 12, "name": 20, "dob": 10, "name_decoy": 5}
+    assert all(x.get("keyterms") for x in lines if x["category"] in ("name", "dob", "name_decoy"))
 
 
 def test_mcnemar_exact():
@@ -261,3 +262,42 @@ def test_benchmark_summary_compares_each_condition_with_clear_on_the_same_clips(
     assert s["phone"]["negation"]["kept"] == 1 and s["phone"]["negation"]["lost_vs_clear"] == ["A/VVVV"]
     assert s["phone"]["number"]["gained_vs_clear"] == ["C/VVVV"]
     assert s["phone"]["all"]["p_vs_clear"] == 1.0 and s["clear"]["all"]["kept"] == 2
+
+
+# ---------------------------------------------------------------- names, dates of birth, keyterms (PLAN 13.8)
+
+@pytest.mark.parametrize("text,value", [("November fifth, nineteen sixty-nine", 1969), ("June twelve nineteen sixty three", 1963),
+                                        ("el doce de junio de mil novecientos cuarenta y seis", 1946), ("May 3rd 1950", 1950)])
+def test_spoken_years_parse_as_years(text, value):
+    assert value in [v for _, v in numbers(tokens(text))]
+
+
+def test_name_dob_and_decoy_facts():
+    assert check({"kind": "name", "value": "Micaela Rendón"}, "Yes, this is Micaela Rendon")
+    assert not check({"kind": "name", "value": "Micaela Rendón"}, "Yes, this is Michaela Rendon")
+    assert check({"kind": "dob", "value": "1969-11-05"}, "My birthday is November fifth, nineteen sixty-nine")
+    assert not check({"kind": "dob", "value": "1984-05-27"}, "May 27, 1974")                  # the year VH misheard
+    assert check({"kind": "not_name", "value": "Micaela Rendón"}, "This is Michelle Renton")
+    assert not check({"kind": "not_name", "value": "Micaela Rendón"}, "This is Micaela Rendón")  # a stranger became her
+
+
+def test_keyterms_are_sent_and_are_part_of_the_cache_key(monkeypatch):
+    monkeypatch.setenv("ELEVENLABS_API_KEY", "sk_" + "d4" * 24)
+    seen = []
+
+    def handler(req):
+        seen.append(req)
+        return httpx.Response(200, json={"text": "ok"})
+    elevenlabs.ElevenLabsSTT(keyterms=["Micaela Rendón", "x" * 80], transport=httpx.MockTransport(handler)).transcribe(Audio(b"\0\0" * 10, RATE))
+    body = seen[0].content                                                  # bytes: the WAV audio is in there too
+    assert body.count(b'name="keyterms"') == 2 and "Micaela Rendón".encode() in body
+    assert b"x" * 50 in body and b"x" * 51 not in body                      # the 50-character limit
+    assert elevenlabs.ElevenLabsSTT(keyterms=["A"]).settings == {"keyterms": ["A"]}
+
+
+def test_keyterm_conditions_only_run_on_lines_with_keyterms():
+    from evals.voice import CONDITIONS, stt_for
+    kt = next(c for c in CONDITIONS if c.name == "phone_keyterms")
+    assert stt_for(kt, {"text": "x"}) is None
+    assert stt_for(kt, {"text": "x", "keyterms": ["Bebe Simonis"]}).keyterms == ("Bebe Simonis",)
+    assert stt_for(next(c for c in CONDITIONS if c.name == "clear"), {"text": "x", "keyterms": ["B"]}).keyterms == ()

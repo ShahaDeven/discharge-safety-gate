@@ -21,7 +21,7 @@ from typing import Callable, Protocol
 from . import llm
 from .adapter import CallAgent, CallContext, ToolHarness
 from .audit import AuditLog, content_hash
-from .conversation import Simulator, run_call
+from .conversation import Channel, Simulator, run_call
 
 
 @dataclass(frozen=True)
@@ -31,6 +31,10 @@ class Candidate:
     fingerprint: str                       # changes whenever the agent's behavior could change
     make_agent: Callable[[], CallAgent]    # a fresh agent per call (agents hold call state)
     est_cost_per_call: float = 0.0         # for the cost estimate printed before a run
+    # Optional input path for the person's words (speech -> phone line -> transcription), made per call from the
+    # call context (so it can, say, hint the patient's name to the transcriber); its settings must be part of
+    # `fingerprint`, so changing the channel reruns the calls.
+    make_channel: Callable[[CallContext], Channel] | None = None
 
 
 class Suite(Protocol):
@@ -81,13 +85,17 @@ class Replayer:
         call_id = f"{cand.id}:{scenario['id']}#{r}"
         ctx, sim, harness = self.suite.build(scenario, call_id)
         agent = cand.make_agent()
+        channel = cand.make_channel(ctx) if cand.make_channel else None
         try:
-            rec = run_call(agent, sim, harness, ctx, max_agent_turns=self.max_agent_turns).to_dict()
-        except Exception as exc:                     # API failure mid-call: not cached, retried next run
+            rec = run_call(agent, sim, harness, ctx, max_agent_turns=self.max_agent_turns, channel=channel).to_dict()
+        except Exception as exc:                     # API or voice failure mid-call: not cached, retried next run
             return {"scenario_id": scenario["id"], "r": r, "fingerprint": fp,
                     "error": f"{type(exc).__name__}: {exc}"}
-        return {"scenario_id": scenario["id"], "r": r, "fingerprint": fp, "record": rec, "error": None,
-                "cost_usd": round(llm.cost_usd(rec["usage"]), 6)}
+        entry = {"scenario_id": scenario["id"], "r": r, "fingerprint": fp, "record": rec, "error": None,
+                 "cost_usd": round(llm.cost_usd(rec["usage"]), 6)}
+        if channel is not None:
+            entry["voice_credits"] = sum((e.get("voice") or {}).get("credits") or 0 for e in rec["events"])
+        return entry
 
     def run(self, cand: Candidate, scenarios: list[dict], k: int, workers: int = 4,
             on_done: Callable[[dict], None] | None = None, transport=None) -> dict:

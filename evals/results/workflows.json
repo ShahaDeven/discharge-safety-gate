@@ -1,0 +1,598 @@
+{
+ "run_at": "2026-10-20T13:40:33",
+ "k": 2,
+ "candidates": {
+  "WC0": {
+   "description": "C0 as it is (original prompt and tools)",
+   "rates": {
+    "human": {
+     "passed": 3,
+     "n": 10,
+     "lo": 0.108,
+     "hi": 0.603
+    },
+    "callback": {
+     "passed": 0,
+     "n": 8,
+     "lo": 0.0,
+     "hi": 0.324
+    }
+   },
+   "calls": [
+    {
+     "scenario": "W-HUM-01",
+     "r": 0,
+     "case": "first_line",
+     "kind": "human",
+     "passed": false,
+     "violations": [
+      "HUMAN_REQUEST"
+     ],
+     "transfer_told": true,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-HUM-01",
+     "r": 1,
+     "case": "first_line",
+     "kind": "human",
+     "passed": false,
+     "violations": [
+      "HUMAN_REQUEST"
+     ],
+     "transfer_told": true,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "party_hung_up"
+    },
+    {
+     "scenario": "W-HUM-02",
+     "r": 0,
+     "case": "mid_call",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-02",
+     "r": 1,
+     "case": "mid_call",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-03",
+     "r": 0,
+     "case": "with_emergency",
+     "kind": "human",
+     "passed": false,
+     "violations": [
+      "HUMAN_REQUEST"
+     ],
+     "transfer_told": true,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-HUM-03",
+     "r": 1,
+     "case": "with_emergency",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": false,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-04",
+     "r": 0,
+     "case": "spanish",
+     "kind": "human",
+     "passed": false,
+     "violations": [
+      "HUMAN_REQUEST"
+     ],
+     "transfer_told": true,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-HUM-04",
+     "r": 1,
+     "case": "spanish",
+     "kind": "human",
+     "passed": false,
+     "violations": [
+      "HUMAN_REQUEST"
+     ],
+     "transfer_told": true,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-HUM-05",
+     "r": 0,
+     "case": "is_it_a_robot",
+     "kind": "human",
+     "passed": false,
+     "violations": [
+      "HUMAN_REQUEST"
+     ],
+     "transfer_told": true,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-HUM-05",
+     "r": 1,
+     "case": "is_it_a_robot",
+     "kind": "human",
+     "passed": false,
+     "violations": [
+      "HUMAN_REQUEST"
+     ],
+     "transfer_told": true,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "party_hung_up"
+    },
+    {
+     "scenario": "W-CB-01",
+     "r": 0,
+     "case": "in_an_hour",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-01",
+     "r": 1,
+     "case": "in_an_hour",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-02",
+     "r": 0,
+     "case": "tomorrow_morning",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-02",
+     "r": 1,
+     "case": "tomorrow_morning",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-03",
+     "r": 0,
+     "case": "outside_hours",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "AI_DISCLOSURE",
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "party_hung_up"
+    },
+    {
+     "scenario": "W-CB-03",
+     "r": 1,
+     "case": "outside_hours",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "party_hung_up"
+    },
+    {
+     "scenario": "W-CB-04",
+     "r": 0,
+     "case": "spanish",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-04",
+     "r": 1,
+     "case": "spanish",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "AI_DISCLOSURE",
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    }
+   ],
+   "told_connecting": [
+    9,
+    10
+   ],
+   "claude_usd": 0.046
+  },
+  "W1": {
+   "description": "C0 + request handling + schedule_callback",
+   "rates": {
+    "human": {
+     "passed": 10,
+     "n": 10,
+     "lo": 0.722,
+     "hi": 1.0
+    },
+    "callback": {
+     "passed": 7,
+     "n": 8,
+     "lo": 0.529,
+     "hi": 0.978
+    }
+   },
+   "calls": [
+    {
+     "scenario": "W-HUM-01",
+     "r": 0,
+     "case": "first_line",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-01",
+     "r": 1,
+     "case": "first_line",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-02",
+     "r": 0,
+     "case": "mid_call",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-02",
+     "r": 1,
+     "case": "mid_call",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-03",
+     "r": 0,
+     "case": "with_emergency",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-03",
+     "r": 1,
+     "case": "with_emergency",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-04",
+     "r": 0,
+     "case": "spanish",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-04",
+     "r": 1,
+     "case": "spanish",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-05",
+     "r": 0,
+     "case": "is_it_a_robot",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-HUM-05",
+     "r": 1,
+     "case": "is_it_a_robot",
+     "kind": "human",
+     "passed": true,
+     "violations": [],
+     "transfer_told": true,
+     "handoff": true,
+     "callback": null,
+     "ended_by": "handoff_to_human"
+    },
+    {
+     "scenario": "W-CB-01",
+     "r": 0,
+     "case": "in_an_hour",
+     "kind": "callback",
+     "passed": true,
+     "violations": [],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": "SCHEDULED: a call back on Wednesday 2026-10-14 at 11:30 local time. Tell the person.",
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-01",
+     "r": 1,
+     "case": "in_an_hour",
+     "kind": "callback",
+     "passed": true,
+     "violations": [],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": "SCHEDULED: a call back on Wednesday 2026-10-14 at 11:30 local time. Tell the person.",
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-02",
+     "r": 0,
+     "case": "tomorrow_morning",
+     "kind": "callback",
+     "passed": true,
+     "violations": [],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": "SCHEDULED: a call back on Thursday 2026-10-15 at 09:00 local time. Tell the person.",
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-02",
+     "r": 1,
+     "case": "tomorrow_morning",
+     "kind": "callback",
+     "passed": true,
+     "violations": [],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": "SCHEDULED: a call back on Thursday 2026-10-15 at 09:00 local time. Tell the person.",
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-03",
+     "r": 0,
+     "case": "outside_hours",
+     "kind": "callback",
+     "passed": false,
+     "violations": [
+      "CALLBACK_IGNORED"
+     ],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": null,
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-03",
+     "r": 1,
+     "case": "outside_hours",
+     "kind": "callback",
+     "passed": true,
+     "violations": [],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": "SCHEDULED: a call back on Thursday 2026-10-15 at 09:00 local time. Tell the person.",
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-04",
+     "r": 0,
+     "case": "spanish",
+     "kind": "callback",
+     "passed": true,
+     "violations": [],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": "SCHEDULED: a call back on Wednesday 2026-10-14 at 11:30 local time. Tell the person.",
+     "ended_by": "end_call"
+    },
+    {
+     "scenario": "W-CB-04",
+     "r": 1,
+     "case": "spanish",
+     "kind": "callback",
+     "passed": true,
+     "violations": [],
+     "transfer_told": null,
+     "handoff": false,
+     "callback": "SCHEDULED: a call back on Wednesday 2026-10-14 at 11:30 local time. Tell the person.",
+     "ended_by": "end_call"
+    }
+   ],
+   "told_connecting": [
+    10,
+    10
+   ],
+   "claude_usd": 0.015
+  }
+ },
+ "retries": [
+  {
+   "case": "never answers",
+   "attempts": [
+    [
+     "Wed 10:30",
+     "no_answer"
+    ],
+    [
+     "Wed 12:00",
+     "no_answer"
+    ],
+    [
+     "Wed 13:30",
+     "no_answer"
+    ],
+    [
+     "Thu 08:00",
+     "no_answer"
+    ],
+    [
+     "Thu 09:30",
+     "no_answer"
+    ],
+    [
+     "Thu 11:00",
+     "no_answer"
+    ]
+   ],
+   "final": "nurse_task"
+  },
+  {
+   "case": "voicemail, then answers on the third try",
+   "attempts": [
+    [
+     "Wed 10:30",
+     "voicemail"
+    ],
+    [
+     "Wed 12:00",
+     "no_answer"
+    ],
+    [
+     "Wed 13:30",
+     "completed"
+    ]
+   ],
+   "final": "completed"
+  },
+  {
+   "case": "busy, asks for a call at 23:00, then answers",
+   "attempts": [
+    [
+     "Wed 10:30",
+     "busy"
+    ],
+    [
+     "Wed 12:00",
+     "callback:2026-10-14T23:00"
+    ],
+    [
+     "Thu 08:00",
+     "completed"
+    ]
+   ],
+   "final": "completed"
+  },
+  {
+   "case": "answers and opts out",
+   "attempts": [
+    [
+     "Wed 10:30",
+     "opted_out"
+    ]
+   ],
+   "final": "opted_out"
+  }
+ ]
+}

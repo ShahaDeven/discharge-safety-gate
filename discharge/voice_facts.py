@@ -9,6 +9,13 @@ punctuation, contractions and number words (English and Spanish):
         a negation (not, n't, never, no, ... / no, nunca, ...) within `window` words before one of `near`
     {"kind": "number", "value": 5, "near": ["pounds"], "window": 4}
         the number 5 (digits or words) within `window` words of one of `near`
+    {"kind": "name", "value": "Micaela Rendón"}
+        first and last name come through, compared without accents (the identity check's own rule)
+    {"kind": "not_name", "value": "Micaela Rendón"}
+        the patient's name must NOT appear: a wrong person with a similar name, transcribed with the
+        patient's name as a hint, must not be turned into the patient
+    {"kind": "dob", "value": "1963-06-12"}
+        the day, the month (name or number) and the year all come through
 """
 
 import re
@@ -24,6 +31,17 @@ _TENS = {"twenty": 20, "thirty": 30, "forty": 40, "fifty": 50, "sixty": 60, "sev
          "ninety": 90, "treinta": 30, "cuarenta": 40, "cincuenta": 50, "sesenta": 60, "setenta": 70,
          "ochenta": 80, "noventa": 90}
 _SCALES = {"hundred": 100, "cien": 100, "ciento": 100}
+_HUNDREDS = {"doscientos": 200, "trescientos": 300, "cuatrocientos": 400, "quinientos": 500, "seiscientos": 600,
+             "setecientos": 700, "ochocientos": 800, "novecientos": 900}
+_THOUSAND = {"thousand", "mil"}
+_ORDINALS = {"first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5, "sixth": 6, "seventh": 7, "eighth": 8,
+             "ninth": 9, "tenth": 10, "eleventh": 11, "twelfth": 12, "thirteenth": 13, "fourteenth": 14,
+             "fifteenth": 15, "sixteenth": 16, "seventeenth": 17, "eighteenth": 18, "nineteenth": 19,
+             "twentieth": 20, "thirtieth": 30, "primero": 1}
+MONTHS = {m: i for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july", "august",
+                                      "september", "october", "november", "december"], 1)}
+MONTHS.update({m: i for i, m in enumerate(["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
+                                           "septiembre", "octubre", "noviembre", "diciembre"], 1)})
 _JOINERS = {"and", "y"}
 
 
@@ -41,19 +59,46 @@ def numbers(words: list[str]) -> list[tuple[int, int]]:
     out, i = [], 0
     while i < len(words):
         w = words[i]
-        if w.isdigit():
-            out.append((i, int(w)))
+        if w.isdigit() or re.fullmatch(r"\d+(st|nd|rd|th)", w):
+            out.append((i, int(re.match(r"\d+", w).group())))
             i += 1
             continue
-        start, total, current, seen = i, 0, 0, False
+        # A spoken year: "nineteen sixty three" is 1963, not 19 + 60 + 3.
+        if w in ("nineteen", "twenty") and i + 1 < len(words) and (words[i + 1] in _TENS or words[i + 1] in _UNITS):
+            rest = numbers(words[i + 1:i + 3])
+            if rest and rest[0][0] == 0 and rest[0][1] < 100 and words[i + 1] not in ("one", "two", "three", "four",
+                                                                                      "five", "six", "seven", "eight", "nine"):
+                out.append((i, (1900 if w == "nineteen" else 2000) + rest[0][1]))
+                i += 1 + (2 if len(words) > i + 2 and words[i + 1] in _TENS and words[i + 2] in _UNITS else 1)
+                continue
+        start, total, current, seen, last = i, 0, 0, False, ""
         while i < len(words):
             w = words[i]
+            # Two plain number words in a row start a new number ("june twelve nineteen sixty" is 12, then a
+            # year), and an ordinal ends one ("november fifth, nineteen sixty nine" is 5, then 1969).
+            if w in _UNITS and last == "unit":
+                break
+            if w in _TENS and last in ("unit", "tens"):
+                break
             if w in _UNITS:
                 current += _UNITS[w]
+                last = "unit"
+            elif w in _ORDINALS:
+                current += _ORDINALS[w]
+                seen = True
+                i += 1
+                break
+            elif w in _HUNDREDS:
+                current += _HUNDREDS[w]
+            elif w in _THOUSAND and (seen or i == start):
+                total += max(current, 1) * 1000
+                current = 0
             elif w in _TENS:
                 current += _TENS[w]
+                last = "tens"
             elif w in _SCALES and (seen or i == start or words[i - 1] == "a"):
                 current = max(current, 1) * _SCALES[w]
+                last = "scale"
             elif w in _JOINERS and seen and i + 1 < len(words) and (words[i + 1] in _UNITS or words[i + 1] in _TENS):
                 i += 1
                 continue
@@ -93,6 +138,15 @@ def check(fact: dict, text: str) -> bool:
         w = fact.get("window", 4)
         nums = numbers(words)
         return any(abs(pos - i) <= w and val == fact["value"] for i in _positions(words, fact["near"]) for pos, val in nums)
+    if kind in ("name", "not_name"):
+        from .tools import name_matches
+        found = name_matches(text, fact["value"])
+        return found if kind == "name" else not found
+    if kind == "dob":
+        y, m, d = (int(x) for x in fact["value"].split("-"))
+        vals = [v for _, v in numbers(words)]
+        month_ok = any(MONTHS.get(w) == m for w in words) or m in vals
+        return y in vals and d in vals and month_ok
     raise ValueError(f"unknown fact kind {kind!r}")
 
 

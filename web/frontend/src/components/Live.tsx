@@ -77,6 +77,7 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
         const { ev, data } = queue.current.shift()!;
         apply(ev, data);
         if (ev === "row" && data.k === "s") await voice.say(data.t, data.w, rate);
+        else if (ev === "row" && data.k === "c" && data.n === "handoff_to_human") await voice.jingle();
         else if (ev === "row" && voice.onRef.current) await new Promise((ok) => setTimeout(ok, 350 / rate));
       }
     } finally { pumping.current = false; }

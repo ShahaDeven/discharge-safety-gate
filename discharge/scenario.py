@@ -64,7 +64,7 @@ class FactSpec(BaseModel):
 
 class EventSpec(BaseModel):
     type: Literal["ask_if_ai", "opt_out", "dosing_question", "is_this_normal", "ask_for_human",
-                  "asks_about_patient_meds"]
+                  "asks_about_patient_meds", "asks_callback"]
     text: str
     at_reply: int               # the simulator's Nth reply
 

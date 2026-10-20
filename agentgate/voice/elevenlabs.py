@@ -83,16 +83,22 @@ class ElevenLabsSTT:
     provider = "elevenlabs"
 
     def __init__(self, model: str = STT_MODEL, language: str | None = None, tag_audio_events: bool | None = None,
-                 transport: httpx.BaseTransport | None = None):
+                 keyterms: list[str] | tuple[str, ...] | None = None, transport: httpx.BaseTransport | None = None):
         """language: None lets the model detect it (the default); a code such as "en" forces it.
-        tag_audio_events: None keeps the API default (tags such as "[laughter]" on); False turns them off."""
+        tag_audio_events: None keeps the API default (tags such as "[laughter]" on); False turns them off.
+        keyterms: words to bias the transcription toward, such as the name of the patient being called (Scribe v2;
+        up to 1,000 terms of 50 characters; extra cost)."""
         self.model, self.language, self.tag_audio_events = model, language, tag_audio_events
+        self.keyterms = tuple(k[:50] for k in (keyterms or ()))[:1000]
         self.transport = transport
 
     @property
     def settings(self) -> dict:
         """Settings beyond model and language that change the transcript (part of the cache key)."""
-        return {} if self.tag_audio_events is None else {"tag_audio_events": self.tag_audio_events}
+        out = {} if self.tag_audio_events is None else {"tag_audio_events": self.tag_audio_events}
+        if self.keyterms:
+            out["keyterms"] = list(self.keyterms)
+        return out
 
     def transcribe(self, audio: Audio) -> Transcript:
         data = {"model_id": self.model}
@@ -100,6 +106,8 @@ class ElevenLabsSTT:
             data["language_code"] = self.language
         if self.tag_audio_events is not None:
             data["tag_audio_events"] = "true" if self.tag_audio_events else "false"
+        if self.keyterms:
+            data["keyterms"] = list(self.keyterms)              # sent as repeated form fields
         t0 = time.monotonic()
         r = _post(self.transport, f"{API}/speech-to-text", "speech to text", headers={"xi-api-key": _key()},
                   data=data, files={"file": ("audio.wav", audio.wav(), "audio/wav")})

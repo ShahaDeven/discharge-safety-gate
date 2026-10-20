@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-20T14:55:20+00:00",
+ "run_at": "2026-10-20T18:03:57+00:00",
  "voices": {
   "CwhRBWXzGAHq8TQ4Fs17": "Roger (male, middle-aged, American)",
   "XrExE9yKIg1WjnnlVkGX": "Matilda (female, middle-aged, American)"
@@ -15,12 +15,14 @@
   "phone_noisy#3": "noisy, lossy phone line (15 dB SNR, 3% packets lost)",
   "phone_harsh#1": "harsher phone line (10 dB SNR, 5% packets lost)",
   "phone_harsh#2": "harsher phone line (10 dB SNR, 5% packets lost)",
-  "phone_harsh#3": "harsher phone line (10 dB SNR, 5% packets lost)"
+  "phone_harsh#3": "harsher phone line (10 dB SNR, 5% packets lost)",
+  "clear_keyterms": "as voiced, patient's name as a keyterm",
+  "phone_keyterms": "clean phone line, patient's name as a keyterm"
  },
  "credits": {
-  "tts_reported": 0,
-  "balance_before": 4393,
-  "balance_after": 4393,
+  "tts_reported": 462,
+  "balance_before": 11557,
+  "balance_after": 12633,
   "note": "the balance can lag a few minutes; text-to-speech cost is reported with each reply"
  },
  "complete": true,
@@ -97,12 +99,42 @@
     "gained_vs_clear": [],
     "p_vs_clear": 1.0
    },
-   "all": {
-    "kept": 199,
-    "n": 200,
+   "name": {
+    "kept": 14,
+    "n": 40,
     "samples": 1,
-    "lo": 0.972,
-    "hi": 0.999,
+    "lo": 0.221,
+    "hi": 0.505,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "dob": {
+    "kept": 18,
+    "n": 20,
+    "samples": 1,
+    "lo": 0.699,
+    "hi": 0.972,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "name_decoy": {
+    "kept": 10,
+    "n": 10,
+    "samples": 1,
+    "lo": 0.722,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "all": {
+    "kept": 241,
+    "n": 270,
+    "samples": 1,
+    "lo": 0.85,
+    "hi": 0.924,
     "lost_vs_clear": [],
     "gained_vs_clear": [],
     "p_vs_clear": 1.0
@@ -185,20 +217,54 @@
     "gained_vs_clear": [],
     "p_vs_clear": 1.0
    },
-   "all": {
-    "kept": 195,
-    "n": 200,
+   "name": {
+    "kept": 15,
+    "n": 40,
     "samples": 1,
-    "lo": 0.943,
-    "hi": 0.989,
+    "lo": 0.242,
+    "hi": 0.53,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [
+     "V-NAME-17/XrEx"
+    ],
+    "p_vs_clear": 1.0
+   },
+   "dob": {
+    "kept": 18,
+    "n": 20,
+    "samples": 1,
+    "lo": 0.699,
+    "hi": 0.972,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "name_decoy": {
+    "kept": 10,
+    "n": 10,
+    "samples": 1,
+    "lo": 0.722,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "all": {
+    "kept": 238,
+    "n": 270,
+    "samples": 1,
+    "lo": 0.837,
+    "hi": 0.915,
     "lost_vs_clear": [
      "V-NEG-10/CwhR",
      "V-SND-17/CwhR",
      "V-NEG-05/XrEx",
      "V-SND-06/XrEx"
     ],
-    "gained_vs_clear": [],
-    "p_vs_clear": 0.125
+    "gained_vs_clear": [
+     "V-NAME-17/XrEx"
+    ],
+    "p_vs_clear": 0.375
    }
   },
   "phone": {
@@ -274,17 +340,61 @@
     "gained_vs_clear": [],
     "p_vs_clear": 1.0
    },
-   "all": {
-    "kept": 198,
-    "n": 200,
+   "name": {
+    "kept": 15,
+    "n": 40,
     "samples": 1,
-    "lo": 0.964,
-    "hi": 0.997,
+    "lo": 0.242,
+    "hi": 0.53,
     "lost_vs_clear": [
-     "V-SND-03/XrEx"
+     "V-NAME-20/XrEx"
+    ],
+    "gained_vs_clear": [
+     "V-NAME-18/CwhR",
+     "V-NAME-20/CwhR"
+    ],
+    "p_vs_clear": 1.0
+   },
+   "dob": {
+    "kept": 16,
+    "n": 20,
+    "samples": 1,
+    "lo": 0.584,
+    "hi": 0.919,
+    "lost_vs_clear": [
+     "V-DOB-06/CwhR",
+     "V-DOB-07/XrEx"
     ],
     "gained_vs_clear": [],
+    "p_vs_clear": 0.5
+   },
+   "name_decoy": {
+    "kept": 10,
+    "n": 10,
+    "samples": 1,
+    "lo": 0.722,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
     "p_vs_clear": 1.0
+   },
+   "all": {
+    "kept": 239,
+    "n": 270,
+    "samples": 1,
+    "lo": 0.842,
+    "hi": 0.918,
+    "lost_vs_clear": [
+     "V-DOB-06/CwhR",
+     "V-SND-03/XrEx",
+     "V-NAME-20/XrEx",
+     "V-DOB-07/XrEx"
+    ],
+    "gained_vs_clear": [
+     "V-NAME-18/CwhR",
+     "V-NAME-20/CwhR"
+    ],
+    "p_vs_clear": 0.6875
    }
   },
   "phone_noisy": {
@@ -380,12 +490,63 @@
     "gained_vs_clear": [],
     "p_vs_clear": 1.0
    },
-   "all": {
-    "kept": 577,
-    "n": 600,
+   "name": {
+    "kept": 32,
+    "n": 120,
     "samples": 3,
-    "lo": 0.943,
-    "hi": 0.974,
+    "lo": 0.196,
+    "hi": 0.352,
+    "lost_vs_clear": [
+     "V-NAME-12/CwhR#1",
+     "V-NAME-12/CwhR#2",
+     "V-NAME-12/CwhR#3",
+     "V-NAME-12/XrEx#1",
+     "V-NAME-12/XrEx#2",
+     "V-NAME-12/XrEx#3",
+     "V-NAME-18/XrEx#1",
+     "V-NAME-18/XrEx#3",
+     "V-NAME-20/XrEx#1",
+     "V-NAME-20/XrEx#2",
+     "V-NAME-20/XrEx#3"
+    ],
+    "gained_vs_clear": [
+     "V-NAME-06/XrEx#2"
+    ],
+    "p_vs_clear": 0.00634765625
+   },
+   "dob": {
+    "kept": 48,
+    "n": 60,
+    "samples": 3,
+    "lo": 0.682,
+    "hi": 0.882,
+    "lost_vs_clear": [
+     "V-DOB-06/CwhR#1",
+     "V-DOB-06/CwhR#2",
+     "V-DOB-06/CwhR#3",
+     "V-DOB-04/XrEx#2",
+     "V-DOB-09/XrEx#1",
+     "V-DOB-09/XrEx#2"
+    ],
+    "gained_vs_clear": [],
+    "p_vs_clear": 0.03125
+   },
+   "name_decoy": {
+    "kept": 30,
+    "n": 30,
+    "samples": 3,
+    "lo": 0.886,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "all": {
+    "kept": 687,
+    "n": 810,
+    "samples": 3,
+    "lo": 0.822,
+    "hi": 0.871,
     "lost_vs_clear": [
      "V-SND-10/CwhR#1",
      "V-SND-15/CwhR#1",
@@ -393,6 +554,12 @@
      "V-SND-15/CwhR#3",
      "V-SND-17/CwhR#2",
      "V-ES-06/CwhR#3",
+     "V-NAME-12/CwhR#1",
+     "V-NAME-12/CwhR#2",
+     "V-NAME-12/CwhR#3",
+     "V-DOB-06/CwhR#1",
+     "V-DOB-06/CwhR#2",
+     "V-DOB-06/CwhR#3",
      "V-SND-07/XrEx#2",
      "V-SND-08/XrEx#1",
      "V-SND-08/XrEx#2",
@@ -406,10 +573,23 @@
      "V-ES-08/XrEx#1",
      "V-ES-08/XrEx#2",
      "V-ES-08/XrEx#3",
-     "V-ES-10/XrEx#1"
+     "V-ES-10/XrEx#1",
+     "V-NAME-12/XrEx#1",
+     "V-NAME-12/XrEx#2",
+     "V-NAME-12/XrEx#3",
+     "V-NAME-18/XrEx#1",
+     "V-NAME-18/XrEx#3",
+     "V-NAME-20/XrEx#1",
+     "V-NAME-20/XrEx#2",
+     "V-NAME-20/XrEx#3",
+     "V-DOB-04/XrEx#2",
+     "V-DOB-09/XrEx#1",
+     "V-DOB-09/XrEx#2"
     ],
-    "gained_vs_clear": [],
-    "p_vs_clear": 1.9073486328125e-06
+    "gained_vs_clear": [
+     "V-NAME-06/XrEx#2"
+    ],
+    "p_vs_clear": 2.837623469531536e-10
    }
   },
   "phone_harsh": {
@@ -536,12 +716,66 @@
     "gained_vs_clear": [],
     "p_vs_clear": 1.0
    },
-   "all": {
-    "kept": 550,
-    "n": 600,
+   "name": {
+    "kept": 30,
+    "n": 120,
     "samples": 3,
-    "lo": 0.892,
-    "hi": 0.936,
+    "lo": 0.181,
+    "hi": 0.334,
+    "lost_vs_clear": [
+     "V-NAME-12/CwhR#1",
+     "V-NAME-12/CwhR#2",
+     "V-NAME-12/CwhR#3",
+     "V-NAME-17/CwhR#2",
+     "V-NAME-17/CwhR#3",
+     "V-NAME-12/XrEx#1",
+     "V-NAME-12/XrEx#2",
+     "V-NAME-12/XrEx#3",
+     "V-NAME-18/XrEx#1",
+     "V-NAME-18/XrEx#2",
+     "V-NAME-18/XrEx#3",
+     "V-NAME-20/XrEx#1",
+     "V-NAME-20/XrEx#2",
+     "V-NAME-20/XrEx#3"
+    ],
+    "gained_vs_clear": [
+     "V-NAME-06/XrEx#2",
+     "V-NAME-17/XrEx#3"
+    ],
+    "p_vs_clear": 0.004180908203125
+   },
+   "dob": {
+    "kept": 49,
+    "n": 60,
+    "samples": 3,
+    "lo": 0.701,
+    "hi": 0.894,
+    "lost_vs_clear": [
+     "V-DOB-06/CwhR#1",
+     "V-DOB-06/CwhR#2",
+     "V-DOB-06/CwhR#3",
+     "V-DOB-06/XrEx#2",
+     "V-DOB-09/XrEx#3"
+    ],
+    "gained_vs_clear": [],
+    "p_vs_clear": 0.0625
+   },
+   "name_decoy": {
+    "kept": 30,
+    "n": 30,
+    "samples": 3,
+    "lo": 0.886,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "all": {
+    "kept": 659,
+    "n": 810,
+    "samples": 3,
+    "lo": 0.785,
+    "hi": 0.839,
     "lost_vs_clear": [
      "V-NEG-06/CwhR#3",
      "V-SND-07/CwhR#2",
@@ -554,6 +788,14 @@
      "V-SND-17/CwhR#3",
      "V-ES-07/CwhR#3",
      "V-ES-08/CwhR#2",
+     "V-NAME-12/CwhR#1",
+     "V-NAME-12/CwhR#2",
+     "V-NAME-12/CwhR#3",
+     "V-NAME-17/CwhR#2",
+     "V-NAME-17/CwhR#3",
+     "V-DOB-06/CwhR#1",
+     "V-DOB-06/CwhR#2",
+     "V-DOB-06/CwhR#3",
      "V-NEG-09/XrEx#1",
      "V-SND-04/XrEx#2",
      "V-SND-04/XrEx#3",
@@ -589,10 +831,220 @@
      "V-ES-10/XrEx#3",
      "V-ES-11/XrEx#3",
      "V-ES-13/XrEx#1",
-     "V-ES-13/XrEx#3"
+     "V-ES-13/XrEx#3",
+     "V-NAME-12/XrEx#1",
+     "V-NAME-12/XrEx#2",
+     "V-NAME-12/XrEx#3",
+     "V-NAME-18/XrEx#1",
+     "V-NAME-18/XrEx#2",
+     "V-NAME-18/XrEx#3",
+     "V-NAME-20/XrEx#1",
+     "V-NAME-20/XrEx#2",
+     "V-NAME-20/XrEx#3",
+     "V-DOB-06/XrEx#2",
+     "V-DOB-09/XrEx#3"
+    ],
+    "gained_vs_clear": [
+     "V-NAME-06/XrEx#2",
+     "V-NAME-17/XrEx#3"
+    ],
+    "p_vs_clear": 1.5903890617646743e-17
+   }
+  },
+  "clear_keyterms": {
+   "name": {
+    "kept": 40,
+    "n": 40,
+    "samples": 1,
+    "lo": 0.912,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [
+     "V-NAME-01/CwhR",
+     "V-NAME-02/CwhR",
+     "V-NAME-03/CwhR",
+     "V-NAME-05/CwhR",
+     "V-NAME-07/CwhR",
+     "V-NAME-08/CwhR",
+     "V-NAME-09/CwhR",
+     "V-NAME-10/CwhR",
+     "V-NAME-11/CwhR",
+     "V-NAME-14/CwhR",
+     "V-NAME-16/CwhR",
+     "V-NAME-18/CwhR",
+     "V-NAME-20/CwhR",
+     "V-NAME-01/XrEx",
+     "V-NAME-02/XrEx",
+     "V-NAME-03/XrEx",
+     "V-NAME-05/XrEx",
+     "V-NAME-06/XrEx",
+     "V-NAME-07/XrEx",
+     "V-NAME-08/XrEx",
+     "V-NAME-09/XrEx",
+     "V-NAME-10/XrEx",
+     "V-NAME-11/XrEx",
+     "V-NAME-14/XrEx",
+     "V-NAME-16/XrEx",
+     "V-NAME-17/XrEx"
+    ],
+    "p_vs_clear": 2.9802322387695312e-08
+   },
+   "dob": {
+    "kept": 18,
+    "n": 20,
+    "samples": 1,
+    "lo": 0.699,
+    "hi": 0.972,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "name_decoy": {
+    "kept": 10,
+    "n": 10,
+    "samples": 1,
+    "lo": 0.722,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "all": {
+    "kept": 68,
+    "n": 70,
+    "samples": 1,
+    "lo": 0.902,
+    "hi": 0.992,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [
+     "V-NAME-01/CwhR",
+     "V-NAME-02/CwhR",
+     "V-NAME-03/CwhR",
+     "V-NAME-05/CwhR",
+     "V-NAME-07/CwhR",
+     "V-NAME-08/CwhR",
+     "V-NAME-09/CwhR",
+     "V-NAME-10/CwhR",
+     "V-NAME-11/CwhR",
+     "V-NAME-14/CwhR",
+     "V-NAME-16/CwhR",
+     "V-NAME-18/CwhR",
+     "V-NAME-20/CwhR",
+     "V-NAME-01/XrEx",
+     "V-NAME-02/XrEx",
+     "V-NAME-03/XrEx",
+     "V-NAME-05/XrEx",
+     "V-NAME-06/XrEx",
+     "V-NAME-07/XrEx",
+     "V-NAME-08/XrEx",
+     "V-NAME-09/XrEx",
+     "V-NAME-10/XrEx",
+     "V-NAME-11/XrEx",
+     "V-NAME-14/XrEx",
+     "V-NAME-16/XrEx",
+     "V-NAME-17/XrEx"
+    ],
+    "p_vs_clear": 2.9802322387695312e-08
+   }
+  },
+  "phone_keyterms": {
+   "name": {
+    "kept": 40,
+    "n": 40,
+    "samples": 1,
+    "lo": 0.912,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [
+     "V-NAME-01/CwhR",
+     "V-NAME-02/CwhR",
+     "V-NAME-03/CwhR",
+     "V-NAME-05/CwhR",
+     "V-NAME-07/CwhR",
+     "V-NAME-08/CwhR",
+     "V-NAME-09/CwhR",
+     "V-NAME-10/CwhR",
+     "V-NAME-11/CwhR",
+     "V-NAME-14/CwhR",
+     "V-NAME-16/CwhR",
+     "V-NAME-18/CwhR",
+     "V-NAME-20/CwhR",
+     "V-NAME-01/XrEx",
+     "V-NAME-02/XrEx",
+     "V-NAME-03/XrEx",
+     "V-NAME-05/XrEx",
+     "V-NAME-06/XrEx",
+     "V-NAME-07/XrEx",
+     "V-NAME-08/XrEx",
+     "V-NAME-09/XrEx",
+     "V-NAME-10/XrEx",
+     "V-NAME-11/XrEx",
+     "V-NAME-14/XrEx",
+     "V-NAME-16/XrEx",
+     "V-NAME-17/XrEx"
+    ],
+    "p_vs_clear": 2.9802322387695312e-08
+   },
+   "dob": {
+    "kept": 17,
+    "n": 20,
+    "samples": 1,
+    "lo": 0.64,
+    "hi": 0.948,
+    "lost_vs_clear": [
+     "V-DOB-06/CwhR"
     ],
     "gained_vs_clear": [],
-    "p_vs_clear": 1.4210854715202004e-14
+    "p_vs_clear": 1.0
+   },
+   "name_decoy": {
+    "kept": 10,
+    "n": 10,
+    "samples": 1,
+    "lo": 0.722,
+    "hi": 1.0,
+    "lost_vs_clear": [],
+    "gained_vs_clear": [],
+    "p_vs_clear": 1.0
+   },
+   "all": {
+    "kept": 67,
+    "n": 70,
+    "samples": 1,
+    "lo": 0.881,
+    "hi": 0.985,
+    "lost_vs_clear": [
+     "V-DOB-06/CwhR"
+    ],
+    "gained_vs_clear": [
+     "V-NAME-01/CwhR",
+     "V-NAME-02/CwhR",
+     "V-NAME-03/CwhR",
+     "V-NAME-05/CwhR",
+     "V-NAME-07/CwhR",
+     "V-NAME-08/CwhR",
+     "V-NAME-09/CwhR",
+     "V-NAME-10/CwhR",
+     "V-NAME-11/CwhR",
+     "V-NAME-14/CwhR",
+     "V-NAME-16/CwhR",
+     "V-NAME-18/CwhR",
+     "V-NAME-20/CwhR",
+     "V-NAME-01/XrEx",
+     "V-NAME-02/XrEx",
+     "V-NAME-03/XrEx",
+     "V-NAME-05/XrEx",
+     "V-NAME-06/XrEx",
+     "V-NAME-07/XrEx",
+     "V-NAME-08/XrEx",
+     "V-NAME-09/XrEx",
+     "V-NAME-10/XrEx",
+     "V-NAME-11/XrEx",
+     "V-NAME-14/XrEx",
+     "V-NAME-16/XrEx",
+     "V-NAME-17/XrEx"
+    ],
+    "p_vs_clear": 4.172325134277344e-07
    }
   }
  },
@@ -8412,6 +8864,3086 @@
    }
   },
   {
+   "id": "V-NAME-01",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Micaela Rendón.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.95,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Micaela Rendón",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Micaela Rendón",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-02",
+   "category": "name",
+   "language": "en",
+   "text": "It's Bebe Simonis, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.72,
+   "results": {
+    "clear": {
+     "text": "It's BB Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's BB Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's BB Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Phoebe Simone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Phoebe Simone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Phoebe Simone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Phoebe Simone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Phoebe Simone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Phoebe Simone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Bebe Simonis speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Bebe Simonis speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-03",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Matilda Kihn.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.63,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Matilda Kihn",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Matilda Kihn",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-04",
+   "category": "name",
+   "language": "en",
+   "text": "It's Micah Shanahan, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.81,
+   "results": {
+    "clear": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's Micah Shanahan speaking.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-05",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Mathilde Hettinger.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.0,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Matilda Hettinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Matilda Hettinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Matilda Hettinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Matilda Hettinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Matilda Hettinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Matilda Hettinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Matilda Sheddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Matilda Hettinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Mathilde Hettinger",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Mathilde Hettinger",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-06",
+   "category": "name",
+   "language": "en",
+   "text": "It's Brady Olson, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.9,
+   "results": {
+    "clear": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-07",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Rosanne Simonis.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.09,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Roseanne Simonis.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Rosanne Simonis.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Rosanne Simonis",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-08",
+   "category": "name",
+   "language": "en",
+   "text": "It's Carman Bergnaum, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.9,
+   "results": {
+    "clear": {
+     "text": "It's Carman Birgnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Carman Birgnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Carman Birgnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Carman Birdnum speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Carman Birgnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Carman Birgnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Carman Birdnum speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Carman Birgnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Carman Birgnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Carman Bergnaum speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Carman Bergnaum speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-09",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Jesica Cormier.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.81,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Jesica Cormier",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Jesica Cormier",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-10",
+   "category": "name",
+   "language": "en",
+   "text": "It's Basilia Hagenes, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.14,
+   "results": {
+    "clear": {
+     "text": "",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Basilia Haginess speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Basilia Hogginus speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Basilia Hogginus speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Vasili Hogenest speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Vasili Ahogganis speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Basilia Hageness speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Basilia Hagenist speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Cecilia Hogness speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Basilia Hagenes speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Basilia Hagenes speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-11",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Manuel Frami.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.81,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Manuel Frommi",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Manuel Frommy",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Manuel Fromme",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Manuel Fromme",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Manuel Promi",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Manuel Frommy",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Manuel Trami",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Manuel Crommie",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Manuel Fromme",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Manuel Frami",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Manuel Frami",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-12",
+   "category": "name",
+   "language": "en",
+   "text": "It's Maurice Auer, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.81,
+   "results": {
+    "clear": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's Maurice Hauer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Maurice Hauer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Maurice Hower speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Maurice Howard speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Maurice Howard speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Maurice Howard speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-13",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Emmanuel Considine.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.09,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-14",
+   "category": "name",
+   "language": "en",
+   "text": "It's John D'Amore, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.67,
+   "results": {
+    "clear": {
+     "text": "It's John DeMors speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's John DeMoor speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's John DeMoor speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's John D'Amore speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's John D'Amore speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-15",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Angelina West.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.86,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-16",
+   "category": "name",
+   "language": "en",
+   "text": "It's Grisel Balistreri, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.28,
+   "results": {
+    "clear": {
+     "text": "It's Grizzel Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Grisel Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Grisel Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Grisel Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Grisel Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Rizzo Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Cristo Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Rizzo Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Rizzo Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Grisel Balistreri speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Grisel Balistreri speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-17",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Tony Schoen.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.58,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Tony Jones",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Tony Jones",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-18",
+   "category": "name",
+   "language": "en",
+   "text": "It's Arnulfo Boyer, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.04,
+   "results": {
+    "clear": {
+     "text": "It's Arnolfo Boyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Arnolfo Boyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's Arnolfo Boyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Arnulf Oboyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Arnolfo Boyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Arnold Foboyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Arnolfo Boyette speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Arnolfo Boyette speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-19",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Gianna Murphy.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.67,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-20",
+   "category": "name",
+   "language": "en",
+   "text": "It's Brittany Mante, speaking.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 1.63,
+   "results": {
+    "clear": {
+     "text": "It's Brittany Mantey speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Brittany Mantey speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Brittany Mante speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's Brittany Mantey speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Brittany Mantey speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Brittany Mantey speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Brittany Massey speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Brittany Mantis speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Brittany Massey speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Brittany Mante speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Brittany Mante speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-01",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is June 12, 1963.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.11,
+   "results": {
+    "clear": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is June 12th, 1963.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is June twelfth, nineteen sixty-three.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is June twelfth, nineteen sixty-three.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is June twelfth, nineteen sixty-three.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is June twelfth, nineteen sixty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is June twelfth, nineteen sixty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is June 12th, 1963.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-02",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is November 5, 1969.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.74,
+   "results": {
+    "clear": {
+     "text": "My date of birth is November 5th, 1960.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "My date of birth is November 5th, 1960.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "My date of birth is November fifth, nineteen sixty",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is November fifth, nineteen sixteen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is November fifth, nineteen sixteen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is November fifth, nineteen sixteen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is November fifth, nineteen sixty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is November fifth, nineteen sixteen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is November fifth, nineteen sixty",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is November 5th, 1960.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is November fifth, nineteen sixty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    }
+   }
+  },
+  {
+   "id": "V-DOB-03",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is October 7, 1948.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.02,
+   "results": {
+    "clear": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is October seventh, nineteen forty-eight",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is October 7th, 1948.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-04",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is May 27, 1943.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.2,
+   "results": {
+    "clear": {
+     "text": "My date of birth is May 27th, 1943.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is May 27th, 1943.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is May twenty-seventh, nineteen forty-three.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is May twenty-seventh, nineteen forty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is May twenty-seventh, nineteen forty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is May twenty-seventh, nineteen forty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is May twenty-seventh, nineteen forty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is May 27th, 1943.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-05",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is September 21, 1960.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.11,
+   "results": {
+    "clear": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is September twenty-first, nineteen sixty",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is September twenty-first, nineteen sixty",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is September twenty-first, nineteen sixty",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is September twenty-first, nineteen sixty",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is September twenty-first, nineteen sixty",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is September twenty-first, nineteen sixty",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-06",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is January 13, 1953.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.34,
+   "results": {
+    "clear": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-six",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-six",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-six",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-six",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-six",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-two",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-six",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-six",
+     "facts": [
+      false
+     ],
+     "kept": false
+    }
+   }
+  },
+  {
+   "id": "V-DOB-07",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is January 18, 1951.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.25,
+   "results": {
+    "clear": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is January eighteenth, nineteen fifty-one",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is January eighteenth, nineteen fifty-one",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is January eighteenth, nineteen fifty-one",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-08",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is December 25, 1956.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.25,
+   "results": {
+    "clear": {
+     "text": "My date of birth is December 25th, 1956.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is December 25th, 1956.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is December twenty-fifth, nineteen fifty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is December twenty-fifth, nineteen fifty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is December twenty-fifth, nineteen fifty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is December twenty-fifth, nineteen fifty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is December 25th, 1956.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-09",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is January 20, 1963.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.25,
+   "results": {
+    "clear": {
+     "text": "My date of birth is January 20th, 1963.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is January 20th, 1963.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is January twentieth, nineteen sixty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is January twentieth, nineteen sixty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is January twentieth, nineteen sixty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is January 20th, 1963.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-10",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is September 24, 1946.",
+   "expect": "verify_identity",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 3.16,
+   "results": {
+    "clear": {
+     "text": "My date of birth is September 24th, 1940",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "My date of birth is September 24th, 1940",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, my date of birth is September twenty-fourth, nineteen forty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-two",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is September 24th, 1940s",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-eight",
+     "facts": [
+      false
+     ],
+     "kept": false
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-01",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Michelle Renton, I'm her neighbor.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.32,
+   "results": {
+    "clear": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Michelle Renson. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Michelle Rendon. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-02",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Phoebe Simmons, I just live next door.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.65,
+   "results": {
+    "clear": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-03",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Matthew Keene, I'm a friend of the family.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.79,
+   "results": {
+    "clear": {
+     "text": "This is Matthew Keen. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Matthew Kihn. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Matthew Kihn. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-04",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Michael Shannon, I'm his coworker.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.46,
+   "results": {
+    "clear": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Michael Shannon. I'm his coworker.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-05",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Rosanna Simons, I'm her cousin.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "CwhRBWXzGAHq8TQ4Fs17",
+   "audio_seconds": 2.6,
+   "results": {
+    "clear": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Rosanna Simon. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Rosanna Simon. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Rosanna Simon. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Rosanna Simon. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Rosanna Simonis. I'm her cousin.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
    "id": "V-NEG-01",
    "category": "negation",
    "language": "en",
@@ -16218,6 +19750,3086 @@
     },
     "phone_harsh#3": {
      "text": "Okay, thank you. Goodbye",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-01",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Micaela Rendón.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.72,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Michaela Rendon",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Micaela Rendón",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Micaela Rendón",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-02",
+   "category": "name",
+   "language": "en",
+   "text": "It's Bebe Simonis, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.53,
+   "results": {
+    "clear": {
+     "text": "It's Bebe Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Bebe Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Bebe Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Phoebe Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Phoebe Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Phoebe Simotas speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Phoebe Simone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Phoebe Simona speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Phoebe Simotas speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Bebe Simonis speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Bebe Simonis speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-03",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Matilda Kihn.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.58,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Matilda Keane",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Matilda Keene",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Matilda King",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Matilda Kihn",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Matilda Kihn",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-04",
+   "category": "name",
+   "language": "en",
+   "text": "It's Micah Shanahan, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.63,
+   "results": {
+    "clear": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Micah Shanahan speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-05",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Mathilde Hettinger.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.76,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Matilda Hedinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Matilda Hedinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Matilda Heddinger",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Mathilde Hettinger",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Mathilde Hettinger",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-06",
+   "category": "name",
+   "language": "en",
+   "text": "It's Brady Olson, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.58,
+   "results": {
+    "clear": {
+     "text": "It's Brady Olsen speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Brady Olsen speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Brady Olsen speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Brady Olsen speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "It's Brady Olsen speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Brady Olsen speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "It's Brady Olsen speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Brady Olson speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-07",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Rosanne Simonis.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.76,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Roseanne Simonis",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Rosanne Simonis",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Rosanne Simonis",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-08",
+   "category": "name",
+   "language": "en",
+   "text": "It's Carman Bergnaum, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.81,
+   "results": {
+    "clear": {
+     "text": "It's Carmen Bergnaum speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Carmen Bergnaum speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Carmen Bergnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Carmen Bergnone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Carmen Bergnam speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Carmen Birknow speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Carmen Bergnone speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Carmen Burknown speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Carmen Burknow speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Carman Bergnaum speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Carman Bergnaum speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-09",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Jesica Cormier.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.67,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Jesika Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Jesika Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Jesika Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Jessica Cormier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Jessica Fournier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Jaicy Formier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Jessica Fournier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Jessica Fournier",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Jesica Cormier",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Jesica Cormier",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-10",
+   "category": "name",
+   "language": "en",
+   "text": "It's Basilia Hagenes, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.81,
+   "results": {
+    "clear": {
+     "text": "It's Basilia Haganas speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Basilia Haganas speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Basilia Haganas speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Cecilia Hagenis speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Cecilia Haganis speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Cecilia Haganis speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Cecilia Haganis speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Cecilia Haganis speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Cecilia Higgins speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Basilia Hagenes speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Basilia Hagenes speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-11",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Manuel Frami.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.72,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Manuel Fromm",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Manuel Fromme",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "Yes, this is Manuel Fromme",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Manuel Frommie",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Manuel Fromme",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Manuel Fromme",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Manuel Frommy",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Manuel Crommie",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Manuel Promi",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Manuel Frami",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Manuel Frami",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-12",
+   "category": "name",
+   "language": "en",
+   "text": "It's Maurice Auer, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.63,
+   "results": {
+    "clear": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's Marie Sauer speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Maurice Ours speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Maurice Sauer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Marie Power speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Maurice Powers speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Marie Sauer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Maurice Auer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-13",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Emmanuel Considine.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.32,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Emmanuel Considine.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Emmanuel Considine.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Emmanuel Considine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-14",
+   "category": "name",
+   "language": "en",
+   "text": "It's John D'Amore, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.67,
+   "results": {
+    "clear": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's John Damore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's John Damore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's John Damore speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's John Damore speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's John Damore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's John Damore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's John Demore speaking.",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's John Demore speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's John D'Amore speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's John D'Amore speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-15",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Angelina West.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.81,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Angelina West",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-16",
+   "category": "name",
+   "language": "en",
+   "text": "It's Grisel Balistreri, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.86,
+   "results": {
+    "clear": {
+     "text": "It's Grizelle Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "It's Grizelle Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone": {
+     "text": "It's Grizelle Balestreiri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Grizelle Balustreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Grizelle Balestreiri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Griselle Balestre speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Griselda Ostreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Grisel Balestreri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Griselda Austieri speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Grisel Balistreri speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Grisel Balistreri speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-17",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Tony Schoen.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.09,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Toni Schoen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "event_tags": {
+     "text": "Yes, this is Tony Schoen.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Toni Schoen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Toni Schoen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Toni Schoen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "Yeah. This is Toni Schoen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Toni Schoen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Toni Schoen",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Tony Schoen.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Tony Schoen",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-18",
+   "category": "name",
+   "language": "en",
+   "text": "It's Arnulfo Boyer, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.72,
+   "results": {
+    "clear": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "It's our notebook lawyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "It's Arnulfa Boyer speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Arnold Provoir speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's our notebook warrior speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Arnulfo lawyers speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Arnulfo Boyer speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-19",
+   "category": "name",
+   "language": "en",
+   "text": "Yes, this is Gianna Murphy.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.04,
+   "results": {
+    "clear": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "Yes, this is Gianna Murphy",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-NAME-20",
+   "category": "name",
+   "language": "en",
+   "text": "It's Brittany Mante, speaking.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 1.76,
+   "results": {
+    "clear": {
+     "text": "It's Brittany Mante speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "It's Brittany Mante speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "It's Brittany Mantay speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "It's Brittany Mantay speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "It's Brittany Mantay speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "It's Brittany Mantay speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#1": {
+     "text": "It's Brittany Mantay speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#2": {
+     "text": "It's Brittany Mantay speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "It's Brittany Mantay speaking",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "It's Brittany Mante speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "It's Brittany Mante speaking",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-01",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is June 12, 1963.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.79,
+   "results": {
+    "clear": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is June 12th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-02",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is November 5, 1969.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.83,
+   "results": {
+    "clear": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is November 5th, 1969.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is November 5th, 1969.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is November fifth, nineteen sixty-nine",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is November 5th, 1969",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-03",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is October 7, 1948.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.69,
+   "results": {
+    "clear": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is October 7th, 1948",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is October seventh, nineteen forty-eight",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-04",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is May 27, 1943.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.83,
+   "results": {
+    "clear": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is May twenty-seventh, nineteen forty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is May twenty-seventh, nineteen forty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is May 27th, 1943",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-05",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is September 21, 1960.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.79,
+   "results": {
+    "clear": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is September 21st, 1960",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-06",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is January 13, 1953.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.88,
+   "results": {
+    "clear": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is January thirteenth, nineteen fifty-three",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is January thirteenth, nineteen sixty-three",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is January 13th, 1953",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-07",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is January 18, 1951.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 3.02,
+   "results": {
+    "clear": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is January 18th, 1951",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-08",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is December 25, 1956.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 3.02,
+   "results": {
+    "clear": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is December twenty-fifth, nineteen fifty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is December 25th, 1956",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-09",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is January 20, 1963.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 3.02,
+   "results": {
+    "clear": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is January twentieth, nine sixty-three",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is January twentieth, nine sixty-three",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is January twentieth, nine sixty-three",
+     "facts": [
+      false
+     ],
+     "kept": false
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is January 20th, 1963",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DOB-10",
+   "category": "dob",
+   "language": "en",
+   "text": "My date of birth is September 24, 1946.",
+   "expect": "verify_identity",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 3.07,
+   "results": {
+    "clear": {
+     "text": "My date of birth is September 24th, 1946",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "My date of birth is September 24th, 1946",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "My date of birth is September 24th, 1946",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "My date of birth is September 24th, 1946",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "My date of birth is September 24th, 1946",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "My date of birth is September 24th, 1946",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "My date of birth is September twenty-fourth, nineteen forty-six",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-01",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Michelle Renton, I'm her neighbor.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.32,
+   "results": {
+    "clear": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Michelle Rendón. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Michelle Renton. I'm her neighbor",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-02",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Phoebe Simmons, I just live next door.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.28,
+   "results": {
+    "clear": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Phoebe Simmons by Just Live Next Door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Phoebe Simmons. I just live next door",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-03",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Matthew Keene, I'm a friend of the family.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 3.02,
+   "results": {
+    "clear": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Matthew Keen. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Matthew Teen. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Matthew Keane. I'm a friend of the family.",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Matthew Teen. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Matthew Keane. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Matthew Kihn. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Matthew Kihn. I'm a friend of the family",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-04",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Michael Shannon, I'm his coworker.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.32,
+   "results": {
+    "clear": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Michael Shannon. I'm his coworker",
+     "facts": [
+      true
+     ],
+     "kept": true
+    }
+   }
+  },
+  {
+   "id": "V-DECOY-05",
+   "category": "name_decoy",
+   "language": "en",
+   "text": "This is Rosanna Simons, I'm her cousin.",
+   "expect": "NOT VERIFIED (a different person)",
+   "voice": "XrExE9yKIg1WjnnlVkGX",
+   "audio_seconds": 2.09,
+   "results": {
+    "clear": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "event_tags": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#1": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#2": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_noisy#3": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#1": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#2": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_harsh#3": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "clear_keyterms": {
+     "text": "This is Rosanna Simons. I'm her cousin",
+     "facts": [
+      true
+     ],
+     "kept": true
+    },
+    "phone_keyterms": {
+     "text": "This is Rosanna Simons. I'm her cousin",
      "facts": [
       true
      ],

@@ -34,7 +34,8 @@ VOICES = {"CwhRBWXzGAHq8TQ4Fs17": "Roger (male, middle-aged, American)",
 CREDITS_PER_CHAR = 0.2          # text to speech, Flash v2.5: measured 525 credits for 2,628 characters
 CREDITS_PER_MINUTE = 21         # transcription, Scribe v2: measured about 104 credits for 4.9 minutes of audio
 SECONDS_PER_CHAR = 0.056        # speech length: measured 146 seconds for 2,628 characters
-ORDER = ["negation", "sound_alike", "number", "late_symptom", "correction", "spanish", "control"]
+ORDER = ["negation", "sound_alike", "number", "late_symptom", "correction", "spanish", "control", "name", "dob",
+         "name_decoy"]
 
 
 @dataclass(frozen=True)
@@ -43,6 +44,8 @@ class Condition:
     label: str
     channel: Callable[[Audio], Audio]
     stt: dict                                   # ElevenLabsSTT settings
+    keyterms: bool = False                      # pass the line's keyterms (the patient's name) to the transcriber;
+                                                # such a condition runs only on lines that have keyterms
 
     @property
     def group(self) -> str:
@@ -68,7 +71,17 @@ CONDITIONS = [
                 _noisy(15, 0.03, s), NO_TAGS) for i, s in enumerate(SEEDS)],
     *[Condition(f"phone_harsh#{i + 1}", "harsher phone line (10 dB SNR, 5% packets lost)",
                 _noisy(10, 0.05, s), NO_TAGS) for i, s in enumerate(SEEDS)],
+    # The name fix being measured (PLAN 13.8): the transcriber is told the name of the patient being called.
+    Condition("clear_keyterms", "as voiced, patient's name as a keyterm", lambda a: a, NO_TAGS, keyterms=True),
+    Condition("phone_keyterms", "clean phone line, patient's name as a keyterm", phone_line, NO_TAGS, keyterms=True),
 ]
+
+
+def stt_for(c: Condition, line: dict) -> "elevenlabs.ElevenLabsSTT | None":
+    """The transcriber for this condition and line; None when the condition doesn't apply to the line."""
+    if c.keyterms and not line.get("keyterms"):
+        return None
+    return elevenlabs.ElevenLabsSTT(**c.stt, **({"keyterms": line["keyterms"]} if c.keyterms else {}))
 
 
 def load() -> list[dict]:
@@ -85,11 +98,12 @@ def estimate(lines: list[dict], voices: list[str]) -> dict:
             if not CACHE.has_audio(tts, x["text"]):
                 chars += len(x["text"])
                 clips_todo += 1
-                seconds += secs * len(CONDITIONS)
+                seconds += secs * sum(stt_for(c, x) is not None for c in CONDITIONS)
             else:
                 audio, _ = CACHE.speak(tts, x["text"])
                 for c in CONDITIONS:
-                    if not CACHE.has_transcript(elevenlabs.ElevenLabsSTT(**c.stt), c.channel(audio)):
+                    stt = stt_for(c, x)
+                    if stt is not None and not CACHE.has_transcript(stt, c.channel(audio)):
                         seconds += audio.seconds
     tts_credits, stt_credits = chars * CREDITS_PER_CHAR, seconds / 60 * CREDITS_PER_MINUTE
     return {"clips": len(lines) * len(voices), "clips_to_voice": clips_todo, "characters": chars,
@@ -106,7 +120,6 @@ def run(voices: list[str], max_credits: int) -> dict:
     if est["credits"] > max_credits:
         sys.exit(f"refused: estimate {est['credits']} credits is above the cap {max_credits} (raise --max-credits)")
     before, reported, rows = _balance(), 0, []
-    stts = {c.name: elevenlabs.ElevenLabsSTT(**c.stt) for c in CONDITIONS}
     errors = []
     for v in voices:
         tts = elevenlabs.ElevenLabsTTS(v)
@@ -120,7 +133,10 @@ def run(voices: list[str], max_credits: int) -> dict:
                 row = {k: x[k] for k in ("id", "category", "language", "text", "expect")}
                 row.update(voice=v, audio_seconds=round(audio.seconds, 2), results={})
                 for c in CONDITIONS:
-                    tr, _ = CACHE.transcribe(stts[c.name], c.channel(audio))
+                    stt = stt_for(c, x)
+                    if stt is None:
+                        continue
+                    tr, _ = CACHE.transcribe(stt, c.channel(audio))
                     ok = preserved(x["facts"], tr.text)
                     row["results"][c.name] = {"text": tr.text, "facts": ok, "kept": all(ok)}
             except VoiceError as exc:
@@ -128,7 +144,7 @@ def run(voices: list[str], max_credits: int) -> dict:
                 print(f"  {x['id']:<10} {name:<8} ERROR (skipped; run again to retry): {exc}")
                 continue
             rows.append(row)
-            lost = [c.name for c in CONDITIONS if not row["results"][c.name]["kept"]]
+            lost = [k for k, v in row["results"].items() if not v["kept"]]
             print(f"  {x['id']:<10} {name:<8} " + (f"lost in: {', '.join(lost)}" if lost else "kept everywhere"))
     after = _balance()
     result = {"run_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -153,7 +169,7 @@ def summarize(rows: list[dict]) -> dict:
     """Per condition group and category: transcripts that kept every fact (Wilson 95% range), and vs "clear"
     on the same clips: lost only here, kept only here, and the exact McNemar p-value. A group with several
     noise samples ("phone_noisy#1".."#3") pools them: each sample is paired with its clip's clear transcript."""
-    keys = list(rows[0]["results"]) if rows else []
+    keys = list(dict.fromkeys(k for r in rows for k in r["results"]))
     groups = list(dict.fromkeys(k.split("#")[0] for k in keys))
     out = {}
     for g in groups:
@@ -163,7 +179,9 @@ def summarize(rows: list[dict]) -> dict:
             sel = [r for r in rows if cat == "all" or r["category"] == cat]
             if not sel:
                 continue
-            pairs = [(r, k) for r in sel for k in members]
+            pairs = [(r, k) for r in sel for k in members if k in r["results"]]
+            if not pairs:
+                continue
             kept = sum(r["results"][k]["kept"] for r, k in pairs)
             lo, hi = wilson(kept, len(pairs))
             tag = lambda r, k: f"{r['id']}/{r['voice'][:4]}" + (f"#{k.split('#')[1]}" if "#" in k else "")
@@ -181,8 +199,10 @@ def show(result: dict) -> None:
     print(f"\nvoices: {', '.join(result['voices'].values())} | TTS {result['tts_model']} | STT {result['stt_model']}")
     print(f"{'category':<14}" + "".join(f"{n:>16}" for n in names))
     for cat in ORDER + ["all"]:
-        if cat in s[names[0]]:
-            print(f"{cat:<14}" + "".join(f"{s[n][cat]['kept']:>8}/{s[n][cat]['n']:<3} {s[n][cat]['kept'] / s[n][cat]['n']:>3.0%}" for n in names))
+        if any(cat in s[n] for n in names):
+            cell = lambda n: (f"{s[n][cat]['kept']:>8}/{s[n][cat]['n']:<3} {s[n][cat]['kept'] / s[n][cat]['n']:>3.0%}"
+                              if cat in s[n] else f"{'-':>16}")
+            print(f"{cat:<14}" + "".join(cell(n) for n in names))
     labels = {k.split("#")[0]: v for k, v in result["conditions"].items()}
     print("\nvs clear, on the same clips (exact McNemar; noise groups pool their samples):")
     for n in names[1:]:
