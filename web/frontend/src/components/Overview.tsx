@@ -24,6 +24,7 @@ export function plainWhy(id: string, g: Gate): string {
   if (m) return `Caught fewer red flags: ${m.label.toLowerCase()} fell from ${pct(m.base)} to ${pct(m.cand)}, with new misses on scenarios the current agent always handles.`;
   const often = g.rules.filter((r) => r.status === "more_often").sort(byRate)[0];
   if (often) return `Broke a rule more often than the current agent: ${(RULES[often.rule] || often.rule).toLowerCase()}, on ${often.cand_calls} of ${often.cand_n} calls (current agent: ${often.base_calls} of ${often.base_n}).`;
+  if (g.verdict === "INCOMPLETE") return g.reasons.find((r) => r.includes("Incomplete")) ?? "Not every planned call finished, so it can't pass yet.";
   if (g.verdict === "HOLD") return "Something dipped, but not enough to tell from noise yet. Needs more replays.";
   if (g.verdict === "REJECT") return g.reasons[0] ?? "Rejected by the gate.";
   return "Nothing got worse beyond normal run-to-run variation.";

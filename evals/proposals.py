@@ -25,7 +25,8 @@ from pydantic import BaseModel, ConfigDict, Field
 
 from agentgate import llm
 from agentgate.audit import AuditLog, content_hash
-from agentgate.gate import GATE_VERSION, HOLD, PROMOTE, REJECT, baseline_profile, gate, noise_floor, split_aa
+from agentgate.gate import (GATE_VERSION, HOLD, INCOMPLETE, PROMOTE, REJECT, baseline_profile, gate, noise_floor,
+                            split_aa)
 from agentgate.ledger import Ledger
 from agentgate.replay import Candidate, Replayer, load_cache
 from discharge import clinical_policy, config, judge
@@ -239,7 +240,7 @@ def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
     failure = (f"{len(failed)} of {len(jobs)} calls failed and were not scored (first error: {failed[0][:160]}). "
                "Failed calls are not cached: fix the agent and run again; finished calls are reused.") if failed else ""
     if not rows_c:
-        return finish(kind, rec, HOLD, [failure or "No call completed."], None,
+        return finish(kind, rec, INCOMPLETE, [failure or "No call completed."], None,
                       {"verdict": "not run", "scenarios": 0, "reasons": []}, spent, k, {}, progress)
 
     # 3. Judge the new calls (scope).
@@ -257,14 +258,21 @@ def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
     rows_c = evaluate(cand.id, visible + holdout, k)
     rows_b = evaluate("C0", visible, 4) + evaluate("C0", holdout, BASELINE_HOLDOUT_K)
     pick = lambda rows, ids: group([r for r in rows if r[0].id in ids])
-    gv = gate(pick(rows_b, vis_ids), pick(rows_c, vis_ids), SPECS, noise=floor, profile=profile)
+    # Every planned scenario at its planned replays, on both sides, or the set is INCOMPLETE (gate v3).
+    gv = gate(pick(rows_b, vis_ids), pick(rows_c, vis_ids), SPECS, noise=floor, profile=profile,
+              expected=sorted(vis_ids), min_k=(4, k))
     hold_profile = baseline_profile(pick(rows_b, hold_ids), SPECS)
     hold_profile["known_rules"] |= profile["known_rules"]
-    gh = gate(pick(rows_b, hold_ids), pick(rows_c, hold_ids), SPECS, noise=floor, profile=hold_profile)
+    gh = gate(pick(rows_b, hold_ids), pick(rows_c, hold_ids), SPECS, noise=floor, profile=hold_profile,
+              expected=sorted(hold_ids), min_k=(BASELINE_HOLDOUT_K, k))
 
     reasons = [f"[visible] {r}" for r in gv.reasons] + [f"[sealed] {r}" for r in _hide_holdout_ids(gh.reasons)]
-    verdict = combine(gv.verdict, gh.verdict, failed=bool(failed))
-    if gv.verdict == PROMOTE and gh.verdict != PROMOTE and gh.verdict != REJECT:
+    unlabeled = sum(not s["judged"] for _, _, s in rows_c + rows_b)
+    if unlabeled:
+        reasons.append(f"Incomplete: {unlabeled} calls have no judge labels yet, so their medical-advice checks "
+                       "are missing (run python -m evals.policy rejudge).")
+    verdict = combine(gv.verdict, gh.verdict, failed=bool(failed) or bool(unlabeled))
+    if gv.verdict == PROMOTE and gh.verdict == HOLD:
         reasons.append("Passes the scenarios it could see but not the sealed ones: results may not generalize "
                        "(the change may be tuned to the visible tests).")
     if failure:
@@ -274,11 +282,14 @@ def gate_candidate(kind: Kind, rec: dict, cand: Candidate, max_usd: float,
 
 
 def combine(visible: str, sealed: str, failed: bool = False) -> str:
-    """Either set rejects -> REJECT; passes what it saw but not the sealed set -> HOLD; any HOLD -> HOLD.
-    A run with failed calls is never promoted: what wasn't scored can't be vouched for."""
+    """Either set rejects -> REJECT; either set incomplete, or calls that failed or have no labels ->
+    INCOMPLETE (what wasn't scored can't be vouched for); passes what it saw but not the sealed set, or any
+    HOLD -> HOLD."""
     if REJECT in (visible, sealed):
         return REJECT
-    if HOLD in (visible, sealed) or failed:
+    if INCOMPLETE in (visible, sealed) or failed:
+        return INCOMPLETE
+    if HOLD in (visible, sealed):
         return HOLD
     return PROMOTE
 

@@ -37,7 +37,7 @@ export default function Method({ d }: { d: Overview }) {
                 <tr key={e.id}>
                   <td className="num">{e.id}</td><td>{e.candidate} · {shortName(d, e.candidate)}</td>
                   <td className="num">v{e.baseline.match(/v(\d)/)?.[1] || "1"}</td>
-                  <td className={`st st-${e.verdict === "PROMOTE" ? "ok" : e.verdict === "HOLD" ? "hold" : "bad"}`}>{e.verdict}</td>
+                  <td className={`st st-${e.verdict === "PROMOTE" ? "ok" : (e.verdict === "HOLD" || e.verdict === "INCOMPLETE") ? "hold" : "bad"}`}>{e.verdict}</td>
                 </tr>))}
               </tbody>
             </table>

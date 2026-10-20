@@ -28,7 +28,7 @@ export type Scenario = {
 };
 export type Metric = { name: string; tier: string; label: string; base: number | null; cand: number | null; diff: number; lo: number; hi: number; n: number; status: string; new_misses: string[] };
 export type Rule = { rule: string; base_calls: number; base_n: number; cand_calls: number; cand_n: number; p: number; status: string; scenarios: string[] };
-export type Gate = { verdict: "PROMOTE" | "HOLD" | "REJECT"; reasons: string[]; scenarios: number; version: number; metrics: Metric[]; rules: Rule[]; new_violations: Record<string, string[]>; description?: string;
+export type Gate = { verdict: "PROMOTE" | "HOLD" | "REJECT" | "INCOMPLETE"; reasons: string[]; scenarios: number; version: number; metrics: Metric[]; rules: Rule[]; new_violations: Record<string, string[]>; description?: string;
   sealed?: { verdict: string; scenarios: number; reasons: string[] } };
 export type Candidate = { id: string; description: string; k: number; scenarios: number; calls: number; why: string; proposal?: boolean; agent?: boolean };
 export type Finding = { cand: string; sid: string; r: number; compare: boolean; title: string; body: string };

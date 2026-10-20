@@ -180,7 +180,7 @@ def test_a_failed_outside_call_is_not_cached(tmp_path):
 
 def test_a_run_with_failed_calls_is_never_promoted():
     assert proposals.combine("PROMOTE", "PROMOTE") == "PROMOTE"
-    assert proposals.combine("PROMOTE", "PROMOTE", failed=True) == "HOLD"
+    assert proposals.combine("PROMOTE", "PROMOTE", failed=True) == "INCOMPLETE"
     assert proposals.combine("REJECT", "PROMOTE", failed=True) == "REJECT"
 
 

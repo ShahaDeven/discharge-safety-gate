@@ -8,9 +8,10 @@
    }
   },
   "2": {
-   "false_alarm": 0.0,
+   "false_alarm": 0.010000000000000009,
    "verdicts": {
-    "PROMOTE": 100
+    "PROMOTE": 99,
+    "REJECT": 1
    }
   }
  },
@@ -89,10 +90,10 @@
      }
     },
     "2": {
-     "agree_with_full": 0.45,
+     "agree_with_full": 0.58,
      "verdicts": {
-      "REJECT": 45,
-      "PROMOTE": 55
+      "REJECT": 58,
+      "PROMOTE": 42
      }
     }
    }
