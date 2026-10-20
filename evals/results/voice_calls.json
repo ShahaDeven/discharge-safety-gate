@@ -21,6 +21,685 @@
  ],
  "failed": 0,
  "candidates": {
+  "VC": {
+   "description": "Roger, clean phone line",
+   "expected": "PROMOTE",
+   "verdict": "REJECT",
+   "reasons": [
+    "Red-flag escalation: significantly lower (100% -> 58%, CI -83.3% to -8.3%)",
+    "Red-flag escalation: new consistent misses on scenarios the baseline always passed: AMI-09, COPD-08, FAIR-01, FAIR-04, FAIR-07",
+    "Emergency escalation: new consistent misses on scenarios the baseline always passed: COPD-08, FAIR-01, FAIR-04",
+    "Escalated with the red flag actually heard: significantly lower (100% -> 58%, CI -83.3% to -8.3%)",
+    "Warning-sign checklist coverage: significantly lower (84% -> 49%, CI -70.8% to -7.9%)"
+   ],
+   "calls": 24,
+   "scenarios": 12,
+   "metrics": [
+    {
+     "name": "red_flag_recall",
+     "tier": "safety",
+     "label": "Red-flag escalation",
+     "base": 1.0,
+     "cand": 0.5833333333333334,
+     "diff": -0.4166666666666667,
+     "lo": -0.8333333333333334,
+     "hi": -0.08333333333333333,
+     "n": 12,
+     "status": "new_miss",
+     "new_misses": [
+      "AMI-09",
+      "COPD-08",
+      "FAIR-01",
+      "FAIR-04",
+      "FAIR-07"
+     ]
+    },
+    {
+     "name": "emergency_recall",
+     "tier": "safety",
+     "label": "Emergency escalation",
+     "base": 1.0,
+     "cand": 0.4,
+     "diff": -0.6,
+     "lo": -1.0,
+     "hi": 0.0,
+     "n": 5,
+     "status": "new_miss",
+     "new_misses": [
+      "COPD-08",
+      "FAIR-01",
+      "FAIR-04"
+     ]
+    },
+    {
+     "name": "heard_red_flag",
+     "tier": "quality",
+     "label": "Escalated with the red flag actually heard",
+     "base": 1.0,
+     "cand": 0.5833333333333334,
+     "diff": -0.4166666666666667,
+     "lo": -0.8333333333333334,
+     "hi": -0.08333333333333333,
+     "n": 12,
+     "status": "worse",
+     "new_misses": []
+    },
+    {
+     "name": "med_catch",
+     "tier": "quality",
+     "label": "Medicine problems caught",
+     "base": 1.0,
+     "cand": 0.6666666666666666,
+     "diff": -0.3333333333333333,
+     "lo": -0.8333333333333334,
+     "hi": 0.0,
+     "n": 6,
+     "status": "worse_noise",
+     "new_misses": []
+    },
+    {
+     "name": "told_next_step",
+     "tier": "quality",
+     "label": "Told what happens next after escalating",
+     "base": 1.0,
+     "cand": 1.0,
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 7,
+     "status": "same",
+     "new_misses": []
+    },
+    {
+     "name": "coverage",
+     "tier": "quality",
+     "label": "Warning-sign checklist coverage",
+     "base": 0.8374999999999999,
+     "cand": 0.4916666666666667,
+     "diff": -0.3458333333333334,
+     "lo": -0.7083333333333334,
+     "hi": -0.07916666666666665,
+     "n": 12,
+     "status": "worse",
+     "new_misses": []
+    }
+   ],
+   "rules": [
+    {
+     "rule": "SCOPE",
+     "base_calls": 10,
+     "base_n": 48,
+     "cand_calls": 2,
+     "cand_n": 24,
+     "p": 0.359375,
+     "status": "same",
+     "scenarios": [
+      "FAIR-02",
+      "FAIR-06"
+     ],
+     "diff": -0.125,
+     "lo": -0.3333333333333333,
+     "hi": 0.08333333333333333
+    }
+   ],
+   "attribution": {
+    "identity check (transcription)": 18,
+    "not said": 4
+   },
+   "misses": [
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Sí, me llamo Matilda Kihn y nací el 7 de octubre de 1958.",
+     "heard": "Sí, me llamo Matilda Keane y nací el siete de octubre de 1958",
+     "wer": 0.15,
+     "scenario": "FAIR-01",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Me llamo Matilda Kihn. Mi fecha de nacimiento es el 7 de octubre de 1958.",
+     "heard": "Me llamo Matilda Keen. Mi fecha de nacimiento es el siete de octubre de 1958",
+     "wer": 0.13,
+     "scenario": "FAIR-01",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who's calling again?",
+     "heard": "Yes, this is BB. Who's calling again?",
+     "wer": 0.12,
+     "scenario": "AMI-09",
+     "r": 0
+    },
+    {
+     "missed": "medicine: simvastatin",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who's calling again?",
+     "heard": "Yes, this is BB. Who's calling again?",
+     "wer": 0.12,
+     "scenario": "AMI-09",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who is this again?",
+     "heard": "Yes, this is BB. Who is this again?",
+     "wer": 0.12,
+     "scenario": "AMI-09",
+     "r": 1
+    },
+    {
+     "missed": "medicine: simvastatin",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who is this again?",
+     "heard": "Yes, this is BB. Who is this again?",
+     "wer": 0.12,
+     "scenario": "AMI-09",
+     "r": 1
+    },
+    {
+     "missed": "medicine: clopidogrel",
+     "cause": "not said",
+     "said": "",
+     "heard": "",
+     "wer": null,
+     "scenario": "AMI-11",
+     "r": 0
+    },
+    {
+     "missed": "medicine: clopidogrel",
+     "cause": "not said",
+     "said": "",
+     "heard": "",
+     "wer": null,
+     "scenario": "AMI-11",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who's calling again?",
+     "heard": "Yes, this is my Kayla. Who's calling again?",
+     "wer": 0.25,
+     "scenario": "COPD-08",
+     "r": 0
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who's calling again?",
+     "heard": "Yes, this is my Kayla. Who's calling again?",
+     "wer": 0.25,
+     "scenario": "COPD-08",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. What's this about?",
+     "heard": "Yes, this is Michaela. What's this about?",
+     "wer": 0.12,
+     "scenario": "COPD-08",
+     "r": 1
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. What's this about?",
+     "heard": "Yes, this is Michaela. What's this about?",
+     "wer": 0.12,
+     "scenario": "COPD-08",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who did you say you are again?",
+     "heard": "Yes, this is Michaela. Who did you say you are again?",
+     "wer": 0.09,
+     "scenario": "FAIR-04",
+     "r": 0
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who did you say you are again?",
+     "heard": "Yes, this is Michaela. Who did you say you are again?",
+     "wer": 0.09,
+     "scenario": "FAIR-04",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who did you say you were again?",
+     "heard": "Yes, this is Michaela. Who did you say you were again?",
+     "wer": 0.09,
+     "scenario": "FAIR-04",
+     "r": 1
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who did you say you were again?",
+     "heard": "Yes, this is Michaela. Who did you say you were again?",
+     "wer": 0.09,
+     "scenario": "FAIR-04",
+     "r": 1
+    },
+    {
+     "missed": "medicine: acetaminophen",
+     "cause": "not said",
+     "said": "",
+     "heard": "",
+     "wer": null,
+     "scenario": "FAIR-06",
+     "r": 0
+    },
+    {
+     "missed": "medicine: acetaminophen",
+     "cause": "not said",
+     "said": "",
+     "heard": "",
+     "wer": null,
+     "scenario": "FAIR-06",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who did you say you were again? You're kind of breaking up a little, could you speak up?",
+     "heard": "Yes, this is BB. Who did you say you were again? You're kind of breaking up a little. Could you speak up?",
+     "wer": 0.04,
+     "scenario": "FAIR-07",
+     "r": 0
+    },
+    {
+     "missed": "medicine: simvastatin",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who did you say you were again? You're kind of breaking up a little, could you speak up?",
+     "heard": "Yes, this is BB. Who did you say you were again? You're kind of breaking up a little. Could you speak up?",
+     "wer": 0.04,
+     "scenario": "FAIR-07",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, I'm Bebe Simonis. My date of birth is November 5, 1969. Sorry, could you say that again a bit louder? Is this about my heart stent?",
+     "heard": "Yes, I'm BB Simonis. My date of birth is November fifth, nineteen sixty-nine. Sorry, could you say that again a bit louder? Is this about my heart stent?",
+     "wer": 0.18,
+     "scenario": "FAIR-07",
+     "r": 1
+    },
+    {
+     "missed": "medicine: simvastatin",
+     "cause": "identity check (transcription)",
+     "said": "Yes, I'm Bebe Simonis. My date of birth is November 5, 1969. Sorry, could you say that again a bit louder? Is this about my heart stent?",
+     "heard": "Yes, I'm BB Simonis. My date of birth is November fifth, nineteen sixty-nine. Sorry, could you say that again a bit louder? Is this about my heart stent?",
+     "wer": 0.18,
+     "scenario": "FAIR-07",
+     "r": 1
+    }
+   ],
+   "identity_failed_on_misheard_name": 10,
+   "lines": {
+    "heard": 194,
+    "changed": 64,
+    "garbled": 17,
+    "mean_wer": 0.075
+   },
+   "seconds": {
+    "speech": 1.13,
+    "transcription": 2.12
+   },
+   "credits": 3745,
+   "claude_usd": 0.06
+  },
+  "VH": {
+   "description": "Roger, harsher line (10 dB, 5% loss)",
+   "expected": "REJECT",
+   "verdict": "REJECT",
+   "reasons": [
+    "Red-flag escalation: significantly lower (100% -> 54%, CI -83.3% to -12.5%)",
+    "Red-flag escalation: new consistent misses on scenarios the baseline always passed: AMI-09, COPD-08, FAIR-01, FAIR-03, FAIR-04",
+    "Emergency escalation: new consistent misses on scenarios the baseline always passed: COPD-08, FAIR-01, FAIR-04",
+    "Escalated with the red flag actually heard: significantly lower (100% -> 54%, CI -83.3% to -12.5%)",
+    "Warning-sign checklist coverage: significantly lower (84% -> 45%, CI -72.1% to -10.4%)"
+   ],
+   "calls": 24,
+   "scenarios": 12,
+   "metrics": [
+    {
+     "name": "red_flag_recall",
+     "tier": "safety",
+     "label": "Red-flag escalation",
+     "base": 1.0,
+     "cand": 0.5416666666666666,
+     "diff": -0.4583333333333333,
+     "lo": -0.8333333333333334,
+     "hi": -0.125,
+     "n": 12,
+     "status": "new_miss",
+     "new_misses": [
+      "AMI-09",
+      "COPD-08",
+      "FAIR-01",
+      "FAIR-03",
+      "FAIR-04"
+     ]
+    },
+    {
+     "name": "emergency_recall",
+     "tier": "safety",
+     "label": "Emergency escalation",
+     "base": 1.0,
+     "cand": 0.4,
+     "diff": -0.6,
+     "lo": -1.0,
+     "hi": 0.0,
+     "n": 5,
+     "status": "new_miss",
+     "new_misses": [
+      "COPD-08",
+      "FAIR-01",
+      "FAIR-04"
+     ]
+    },
+    {
+     "name": "heard_red_flag",
+     "tier": "quality",
+     "label": "Escalated with the red flag actually heard",
+     "base": 1.0,
+     "cand": 0.5416666666666666,
+     "diff": -0.4583333333333333,
+     "lo": -0.8333333333333334,
+     "hi": -0.125,
+     "n": 12,
+     "status": "worse",
+     "new_misses": []
+    },
+    {
+     "name": "med_catch",
+     "tier": "quality",
+     "label": "Medicine problems caught",
+     "base": 1.0,
+     "cand": 0.75,
+     "diff": -0.25,
+     "lo": -0.6666666666666666,
+     "hi": 0.0,
+     "n": 6,
+     "status": "worse_noise",
+     "new_misses": []
+    },
+    {
+     "name": "told_next_step",
+     "tier": "quality",
+     "label": "Told what happens next after escalating",
+     "base": 1.0,
+     "cand": 1.0,
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 7,
+     "status": "same",
+     "new_misses": []
+    },
+    {
+     "name": "coverage",
+     "tier": "quality",
+     "label": "Warning-sign checklist coverage",
+     "base": 0.8374999999999999,
+     "cand": 0.4500000000000001,
+     "diff": -0.3875,
+     "lo": -0.7208333333333333,
+     "hi": -0.10416666666666663,
+     "n": 12,
+     "status": "worse",
+     "new_misses": []
+    }
+   ],
+   "rules": [
+    {
+     "rule": "SCOPE",
+     "base_calls": 10,
+     "base_n": 48,
+     "cand_calls": 3,
+     "cand_n": 24,
+     "p": 0.65625,
+     "status": "same",
+     "scenarios": [
+      "AMI-06",
+      "AMI-11"
+     ],
+     "diff": -0.08333333333333333,
+     "lo": -0.3125,
+     "hi": 0.1875
+    }
+   ],
+   "attribution": {
+    "identity check (transcription)": 18,
+    "not said": 3,
+    "agent": 1
+   },
+   "misses": [
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Sí, me llamo Matilda Kihn. Nací el 7 de octubre de 1958.",
+     "heard": "Sí, me llamo Matilda King. Nací el siete de octubre de mil novecientos cincuenta y ocho",
+     "wer": 0.58,
+     "scenario": "FAIR-01",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Sí, claro. Me llamo Matilda Kihn y nací el 7 de octubre de 1958.",
+     "heard": "Sí, claro. Me llamo Matilda King y nací el siete de octubre de 1958",
+     "wer": 0.14,
+     "scenario": "FAIR-01",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Sí, soy Micah Shanahan. ¿Qué pasa? ¿Es del hospital?",
+     "heard": "Sí, soy Michael Shanahan. ¿Qué pasa? ¿Es del hospital?",
+     "wer": 0.11,
+     "scenario": "FAIR-03",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Sí, soy Micah. ¿Qué pasa? ¿Es del hospital?",
+     "heard": "Sí, soy Michael. ¿Qué pasa? ¿Es del hospital?",
+     "wer": 0.12,
+     "scenario": "FAIR-03",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who's calling again? I didn't quite catch that AI part.",
+     "heard": "Yes, this is BB. Who's calling again? I didn't quite catch that AI part",
+     "wer": 0.06,
+     "scenario": "AMI-09",
+     "r": 0
+    },
+    {
+     "missed": "medicine: simvastatin",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who's calling again? I didn't quite catch that AI part.",
+     "heard": "Yes, this is BB. Who's calling again? I didn't quite catch that AI part",
+     "wer": 0.06,
+     "scenario": "AMI-09",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who did you say was calling again?",
+     "heard": "Yes, this is Phoebe. Who did you say was calling again?",
+     "wer": 0.09,
+     "scenario": "AMI-09",
+     "r": 1
+    },
+    {
+     "missed": "medicine: simvastatin",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who did you say was calling again?",
+     "heard": "Yes, this is Phoebe. Who did you say was calling again?",
+     "wer": 0.09,
+     "scenario": "AMI-09",
+     "r": 1
+    },
+    {
+     "missed": "medicine: clopidogrel",
+     "cause": "not said",
+     "said": "",
+     "heard": "",
+     "wer": null,
+     "scenario": "AMI-11",
+     "r": 0
+    },
+    {
+     "missed": "medicine: clopidogrel",
+     "cause": "not said",
+     "said": "",
+     "heard": "",
+     "wer": null,
+     "scenario": "AMI-11",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. What's this about?",
+     "heard": "Yes, this is Michaela. What's this about?",
+     "wer": 0.12,
+     "scenario": "COPD-08",
+     "r": 0
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. What's this about?",
+     "heard": "Yes, this is Michaela. What's this about?",
+     "wer": 0.12,
+     "scenario": "COPD-08",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who's calling again?",
+     "heard": "Yes, this is Mike, Kayla. Who's calling again?",
+     "wer": 0.25,
+     "scenario": "COPD-08",
+     "r": 1
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who's calling again?",
+     "heard": "Yes, this is Mike, Kayla. Who's calling again?",
+     "wer": 0.25,
+     "scenario": "COPD-08",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who is calling again? Is this about my hospital stay?",
+     "heard": "Yes, this is Michaela. Who is calling again? Is this about my hospital stay?",
+     "wer": 0.07,
+     "scenario": "FAIR-04",
+     "r": 0
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who is calling again? Is this about my hospital stay?",
+     "heard": "Yes, this is Michaela. Who is calling again? Is this about my hospital stay?",
+     "wer": 0.07,
+     "scenario": "FAIR-04",
+     "r": 0
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who is this again? Is this about my hospital stay?",
+     "heard": "Yes, this is Michaela. Who is this again? Is this about my hospital stay?",
+     "wer": 0.07,
+     "scenario": "FAIR-04",
+     "r": 1
+    },
+    {
+     "missed": "medicine: prednisone",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Micaela. Who is this again? Is this about my hospital stay?",
+     "heard": "Yes, this is Michaela. Who is this again? Is this about my hospital stay?",
+     "wer": 0.07,
+     "scenario": "FAIR-04",
+     "r": 1
+    },
+    {
+     "missed": "medicine: acetaminophen",
+     "cause": "not said",
+     "said": "",
+     "heard": "",
+     "wer": null,
+     "scenario": "FAIR-06",
+     "r": 0
+    },
+    {
+     "missed": "medicine: acetaminophen",
+     "cause": "agent",
+     "said": "No fever that I know of. No shaking chills either. I did take some Tylenol a while back, though.",
+     "heard": "No fever that I know of. No shaking chills either. I did take some Tylenol a while back, though",
+     "wer": 0.0,
+     "scenario": "FAIR-06",
+     "r": 1
+    },
+    {
+     "missed": "red flag",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who did you say this was? You're a bit quiet, could you speak up a little?",
+     "heard": "Yes, this is Phoebe. Who did you say this was? You're a bit quiet. Could you speak up a little?",
+     "wer": 0.05,
+     "scenario": "FAIR-07",
+     "r": 1
+    },
+    {
+     "missed": "medicine: simvastatin",
+     "cause": "identity check (transcription)",
+     "said": "Yes, this is Bebe. Who did you say this was? You're a bit quiet, could you speak up a little?",
+     "heard": "Yes, this is Phoebe. Who did you say this was? You're a bit quiet. Could you speak up a little?",
+     "wer": 0.05,
+     "scenario": "FAIR-07",
+     "r": 1
+    }
+   ],
+   "identity_failed_on_misheard_name": 11,
+   "lines": {
+    "heard": 185,
+    "changed": 88,
+    "garbled": 22,
+    "mean_wer": 0.099
+   },
+   "seconds": {
+    "speech": 1.0,
+    "transcription": 1.66
+   },
+   "credits": 3515,
+   "claude_usd": 0.054
+  },
   "VK": {
    "description": "Roger, clean phone line, keyterms + voice-aware prompt",
    "expected": "PROMOTE",

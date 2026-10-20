@@ -1041,8 +1041,26 @@ patient and judge is about $0.10-0.20.
 - WC0 (C0 as it is): transferred in the next turn 3/10; callback booked 0/8 (it has no tool for it).
 - W1: transferred 10/10; told they're being connected 10/10; callback booked 7/8. The miss was the 11 pm request.
 
-**Next: VK** = clean line + keyterms (patient name, discharge medicines, hospital; never other people's names) +
-the voice-aware prompt. About 5,700-7,000 credits; expected PROMOTE vs C0 text.
+**Full calls with the fix (2026-10-20; 5,603 credits, $0.08; 18,323 of 40,000 used):**
+VK = clean line + keyterms (patient name, discharge medicines, hospital; never other people's names) + the
+voice-aware prompt. 12 scenarios x 2, baseline C0 in text.
+
+| | C0 text | VC clean line | VH harsher line | **VK clean + fix** |
+|---|---|---|---|---|
+| Red-flag escalation | 100% | 58% | 54% | **100%** |
+| Emergency escalation | 100% | 40% | 40% | **100%** |
+| Checklist coverage | 84% | 49% | 45% | **86%** |
+| Medicine problems caught | 100% | 67% | 75% | **100%** |
+| Identity check failed on a misheard name | 0/48 | 10/24 | 11/24 | **0/24** |
+| Verdict | | REJECT | REJECT | **PROMOTE** |
+
+- **The story in one line:** the clean phone line was rejected; the cause was misheard names failing the identity
+  check, not the agent's medicine; hinting the expected names and spelling back the date of birth closed it.
+- VK still heard 78 of 269 patient lines differently (16 garbled), and it didn't matter: the gate checks outcomes,
+  not word error rate.
+- All 8 remaining misses were "not said" (the simulated patient never disclosed the fact): none were transcription
+  or agent errors.
+- Caveat: 12 scenarios x 2 is small; the harsh line was not re-run with the fix.
 
 1. **Measure first (~500 credits).** Add about 30 name and date-of-birth lines to the voice benchmark, from the real
    scenario names (Rendón, Kihn, Simonis, Shanahan...). Measure name accuracy with and without Scribe **keyterms**:
