@@ -1080,6 +1080,13 @@ voice-aware prompt. 12 scenarios x 2, baseline C0 in text.
   - every failure linked to its scenario and call
 - **Console.** In a call transcript, a line the agent heard differently shows both versions ("said: *not taken*";
   "heard: *taken*") next to the rule that failed. That trace is the demo, more than any waveform.
+  **Built (2026-10-20, $0):**
+  - The Live page replays VC, VH and VK. Patient lines play the saved ElevenLabs recording; a toggle switches
+    to "as heard on the line", which rebuilds the exact 8 kHz phone audio the transcriber got.
+  - The agent keeps the browser voice.
+  - Under each patient line, the console shows what the agent heard when it differs.
+  - The line whose misheard name failed the identity check is marked.
+  - `/api/voice/...` serves only saved audio and never calls ElevenLabs. Voice candidates are replay-only.
 - **CI.** A GitHub Action runs the offline tests and the free security checks on every push.
 - **Docs:**
   - `docs/architecture.md`

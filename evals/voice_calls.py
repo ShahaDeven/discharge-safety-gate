@@ -30,7 +30,7 @@ from agentgate.gate import INCOMPLETE, REJECT, baseline_profile, gate, noise_flo
 from agentgate.replay import Candidate, Replayer, load_cache
 from agentgate.voice import elevenlabs
 from agentgate.voice.base import VoiceCache, VoiceError
-from agentgate.voice.channel import VoiceChannel
+from agentgate.voice.channel import VoiceChannel, line_seed
 from agentgate.voice.phone import phone_line
 from discharge import config
 from discharge.candidates import candidates, reference
@@ -62,6 +62,17 @@ LINES = {  # name: (description, voice, snr_db, loss, agent prompt)
 }
 KEYTERMS = {"VK"}
 EXPECTED = {"VC": "PROMOTE", "VE": "PROMOTE", "VN": "REJECT", "VH": "REJECT", "VF": "PROMOTE", "VK": "PROMOTE"}
+PLAYBACK = ("VC", "VH", "VK")                # the voice calls the console replays with their saved audio
+
+
+def recording(cid: str, said: str, as_heard: bool = False) -> bytes | None:
+    """One patient line's saved ElevenLabs audio as WAV: clean, or as the transcriber got it (the phone line is
+    deterministic per sentence, so it is rebuilt here, exactly). Never calls ElevenLabs: unsaved -> None."""
+    _, voice, snr, loss, _ = LINES[cid]
+    audio = CACHE.cached_audio(elevenlabs.ElevenLabsTTS(voice), said)
+    if audio is None:
+        return None
+    return (phone_line(audio, snr_db=snr, loss=loss, seed=line_seed(said)) if as_heard else audio).wav()
 
 
 def call_keyterms(ctx) -> list[str]:

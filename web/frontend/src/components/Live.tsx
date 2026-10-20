@@ -28,17 +28,29 @@ async function stream(url: string, signal: AbortSignal, on: (event: string, data
 }
 
 export default function Live({ d, route, onBudget }: { d: Overview; route: Route; onBudget: (b: Budget) => void }) {
-  const cand = route.cand && d.calls[route.cand] ? route.cand : "C3";
-  const ids = Object.keys(d.calls[cand] || {});
+  // Voice calls (real ElevenLabs audio on the patient's lines) sit next to the agent versions, replay only.
+  const voiceCands = d.voice?.candidates || [];
+  const allCalls = { ...d.calls, ...(d.voice?.calls || {}) };
+  const cand = route.cand && allCalls[route.cand] ? route.cand : "C3";
+  const vcand = voiceCands.find((c) => c.id === cand);
+  const isVoice = !!vcand;
+  const dd: Overview = isVoice ? { ...d, calls: allCalls } : d;
+  const name = (id: string) => (id === cand && vcand?.description) || shortName(d, id);
+  const ids = Object.keys(allCalls[cand] || {});
   const sid = route.sid && ids.includes(route.sid) ? route.sid : ids[0];
-  const replays = d.calls[cand][sid] || [];
+  const replays = allCalls[cand][sid] || [];
   const sc = d.scenarios[sid];
   const est = cand === "C2" ? 0.024 : cand === "C4" ? 0.004 : 0.003;
   const voice = useSpeech(sc?.patient.language === "Spanish" ? "es" : "en");
 
   const [mode, setMode] = useState<"replay" | "live">("replay");
   const isAgent = !!d.candidates.find((c) => c.id === cand)?.agent;
-  useEffect(() => { if (isAgent) setMode("replay"); }, [isAgent]);
+  const replayOnly = isAgent || isVoice;
+  useEffect(() => { if (replayOnly) setMode("replay"); }, [replayOnly]);
+  // Which recording a voice call's patient lines play: as recorded, or as the transcriber got it on the line.
+  const [line, setLineState] = useState<"clean" | "phone">("clean");
+  const lineRef = useRef(line);
+  function setLine(v: "clean" | "phone") { lineRef.current = v; setLineState(v); }
   const [r, setR] = useState(route.r ?? 0);
   const [speed, setSpeed] = useState(1);
   const [showKey, setShowKey] = useState(false);
@@ -76,7 +88,11 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
       while (queue.current.length && gen === generation.current) {
         const { ev, data } = queue.current.shift()!;
         apply(ev, data);
-        if (ev === "row" && data.k === "s") await voice.say(data.t, data.w, rate);
+        if (ev === "row" && data.k === "s" && data.w === "p" && data.au != null && isVoice) {
+          const url = `/api/voice/${encodeURIComponent(cand)}/${encodeURIComponent(sid)}/${r}/${data.au}?line=${lineRef.current}`;
+          if (!(await voice.play(url, rate))) await voice.say(data.t, data.w, rate);
+        }
+        else if (ev === "row" && data.k === "s") await voice.say(data.t, data.w, rate);
         else if (ev === "row" && data.k === "c" && data.n === "handoff_to_human") await voice.jingle();
         else if (ev === "row" && voice.onRef.current) await new Promise((ok) => setTimeout(ok, 350 / rate));
       }
@@ -117,15 +133,23 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
         <p className="muted"><b>Replay</b> plays a call from the results at talking speed, for free. <b>Live</b> places a brand-new call through the real agent and simulated patient, then scores it. Live calls are saved separately and never change the results.</p></div>
       <div className="controls">
         <label htmlFor="l-cand">Agent version
-          <select id="l-cand" value={cand} onChange={(e) => go({ page: "live", cand: e.target.value, sid: Object.keys(d.calls[e.target.value]).includes(sid) ? sid : undefined })}>
-            {d.candidates.map((c) => <option key={c.id} value={c.id}>{c.id} · {shortName(d, c.id)}</option>)}
+          <select id="l-cand" value={cand} onChange={(e) => go({ page: "live", cand: e.target.value, sid: Object.keys(allCalls[e.target.value]).includes(sid) ? sid : undefined })}>
+            <optgroup label="Agent versions">
+              {d.candidates.map((c) => <option key={c.id} value={c.id}>{c.id} · {shortName(d, c.id)}</option>)}
+            </optgroup>
+            {voiceCands.length > 0 && (
+              <optgroup label="Voice calls · real ElevenLabs audio">
+                {voiceCands.map((c) => <option key={c.id} value={c.id}>{c.id} · {c.description} · {c.verdict}</option>)}
+              </optgroup>
+            )}
           </select>
         </label>
-        <label htmlFor="l-sid">Scenario<ScenarioSelect id="l-sid" d={d} cand={cand} sid={sid} onChange={(s) => go({ page: "live", cand, sid: s })} /></label>
+        <label htmlFor="l-sid">Scenario<ScenarioSelect id="l-sid" d={dd} cand={cand} sid={sid} onChange={(s) => go({ page: "live", cand, sid: s })} /></label>
         <div className="seg" role="group" aria-label="Mode">
           <button type="button" aria-pressed={mode === "replay"} onClick={() => setMode("replay")}>Replay</button>
-          <button type="button" aria-pressed={mode === "live"} onClick={() => setMode("live")} disabled={isAgent}
-            title={isAgent ? "Outside agents run through the gate (Agents page), not as live calls" : undefined}>Live</button>
+          <button type="button" aria-pressed={mode === "live"} onClick={() => setMode("live")} disabled={replayOnly}
+            title={isAgent ? "Outside agents run through the gate (Agents page), not as live calls"
+              : isVoice ? "Voice calls replay their saved audio; new ones cost ElevenLabs credits and run from the command line" : undefined}>Live</button>
         </div>
         {mode === "replay" ? (
           <>
@@ -143,7 +167,13 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
         ) : (
           <span className="status">about ${est.toFixed(3)} per call · ${left.toFixed(2)} left under today's and this session's caps</span>
         )}
-        {voice.supported && (
+        {isVoice && (
+          <div className="seg" role="group" aria-label="Patient audio">
+            <button type="button" aria-pressed={line === "clean"} onClick={() => setLine("clean")} title="The patient's voice as ElevenLabs recorded it">Recording</button>
+            <button type="button" aria-pressed={line === "phone"} onClick={() => setLine("phone")} title="The same recording after the simulated phone line: what the transcriber got">As heard on the line</button>
+          </div>
+        )}
+        {(voice.supported || isVoice) && (
           <label className="check" htmlFor="l-voice">
             <input id="l-voice" type="checkbox" checked={voice.on} onChange={(e) => voice.setOn(e.target.checked)} /> Hear the call
           </label>
@@ -156,12 +186,15 @@ export default function Live({ d, route, onBudget }: { d: Overview; route: Route
       </div>
       {mode === "live" && liveBlocked && <p className="warn">{liveBlocked}</p>}
       {mode === "live" && cand === "C2" && <p className="warn">C2 runs on Sonnet, about ten times the cost of the other versions.</p>}
-      {voice.on && <p className="sim-label">Simulated call · synthetic patient · computer voices, nothing is recorded</p>}
+      {isVoice && <p className="muted voice-note">A call from the voice test: the patient's lines play the real ElevenLabs audio the agent's transcriber received{line === "phone" ? ", after the simulated phone line" : ""}. Under each line is what the agent heard.{vcand?.identity_failed ? ` In ${vcand.identity_failed} of this version's ${vcand.calls} calls a misheard name failed the identity check.` : ""}</p>}
+      {voice.on && <p className="sim-label">{isVoice
+        ? "Simulated call · synthetic patient · patient: ElevenLabs voice (generic, recorded during testing) · agent: browser voice"
+        : "Simulated call · synthetic patient · computer voices, nothing is recorded"}</p>}
       <div className="explore">
         <ScenarioCard sc={sc} hideKey={!showKey && phase !== "done"} onReveal={() => setShowKey(true)} />
         <div className="card">
           <div className="live-head">
-            <span className="eyebrow">{cand} · {shortName(d, cand)} · {mode === "replay" ? `replay ${r + 1}` : "live"}</span>
+            <span className="eyebrow">{cand} · {name(cand)} · {mode === "replay" ? `replay ${r + 1}` : "live"}</span>
             <span className="status">
               {phase === "idle" && "ready"}{phase === "running" && "on the call"}
               {phase === "done" && (cost ? `scored · cost $${cost.toFixed(4)}` : "scored")}{phase === "error" && "stopped"}

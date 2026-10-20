@@ -18,7 +18,7 @@ STAGE = re.compile(r"\[[^\]]*\]")
 STT_CREDITS_PER_MINUTE = 21          # measured on Scribe v2 (2026-10-19); ElevenLabs doesn't report it per request
 
 
-def _seed(text: str) -> int:
+def line_seed(text: str) -> int:
     return int(hashlib.sha256(text.encode("utf-8")).hexdigest()[:8], 16)
 
 
@@ -32,7 +32,7 @@ class VoiceChannel:
         if not spoken:
             return text, {"channel": self.name, "skipped": "nothing to say aloud"}
         audio, tts_hit = self.cache.speak(self.tts, spoken)
-        sent = self.line(audio, _seed(spoken)) if self.line else audio
+        sent = self.line(audio, line_seed(spoken)) if self.line else audio
         tr, stt_hit = self.cache.transcribe(self.stt, sent)
         credits = (0 if tts_hit else (audio.meta.get("credits") or 0)) + \
                   (0 if stt_hit else round(sent.seconds / 60 * STT_CREDITS_PER_MINUTE, 1))

@@ -9,6 +9,9 @@ export type Row = {
   i?: Record<string, unknown>;
   rev?: string[];
   v?: Mark[];
+  h?: string;       // voice calls: what the agent heard (the transcription of a patient line)
+  au?: number;      // voice calls: event index of a patient line with saved audio (/api/voice/...)
+  idf?: boolean;    // voice calls: this misheard line made the identity check fail
 };
 export type Summary = {
   r: number | string; expected: string; got: string; ok: boolean; under: boolean; false_esc: boolean;
@@ -31,6 +34,7 @@ export type Rule = { rule: string; base_calls: number; base_n: number; cand_call
 export type Gate = { verdict: "PROMOTE" | "HOLD" | "REJECT" | "INCOMPLETE"; reasons: string[]; scenarios: number; version: number; metrics: Metric[]; rules: Rule[]; new_violations: Record<string, string[]>; description?: string;
   sealed?: { verdict: string; scenarios: number; reasons: string[] } };
 export type Candidate = { id: string; description: string; k: number; scenarios: number; calls: number; why: string; proposal?: boolean; agent?: boolean };
+export type VoiceCand = { id: string; description: string; verdict: Gate["verdict"]; calls: number; identity_failed: number | null };
 export type Finding = { cand: string; sid: string; r: number; compare: boolean; title: string; body: string };
 export type Overview = {
   candidates: Candidate[]; scenarios: Record<string, Scenario>; calls: Record<string, Record<string, Summary[]>>;
@@ -40,6 +44,7 @@ export type Overview = {
   judge_check: { violations_caught: [number, number]; allowed_flagged: [number, number]; borderline_flagged: [number, number] } | null;
   judge_flags?: { label: string; kind: string; lines: number; answered: number; reviewer_yes: number }[];
   findings: Finding[]; cost: Record<string, number>; session: Session; policy?: PolicyDef;
+  voice?: { candidates: VoiceCand[]; calls: Record<string, Record<string, Summary[]>> };
   redteam: null | { caught: number; total: number; results: { attack: string; proposal: string; expected: string[]; verdict: string; caught: boolean; caught_by?: string[]; detail?: string }[] };
 };
 

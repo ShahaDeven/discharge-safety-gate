@@ -14,6 +14,8 @@ from discharge import config, judge
 from discharge.candidates import candidates
 from discharge.conditions import CONDITIONS, red_flag
 from discharge.scenario import load_scenarios
+from discharge.voice_attribution import identity_failed
+from evals import voice_calls as vc
 from evals.experiments import PLAN, scenarios_for
 from evals.flag_categories import summary as flag_summary
 from evals.label import FLAG_LABELS, agreement
@@ -62,7 +64,28 @@ def call_summary(entry: dict, s: dict) -> dict:
             "turns": entry["record"]["agent_turns"], "cost": entry["cost_usd"]}
 
 
-def transcript(entry: dict, s: dict) -> list[dict]:
+def row(e: dict, i: int | None = None) -> dict:
+    """One call event as a console row. A voice call's patient lines also carry what the agent heard ("h") and,
+    when the line was voiced, its event index ("au") for fetching the saved audio."""
+    if e["kind"] == "speech":
+        out = {"k": "s", "w": "a" if e["who"] == "agent" else "p", "t": e["text"]}
+        if e.get("disclosed"):
+            out["rev"] = [d.strip("[] ") for d in e["disclosed"]]
+        if "heard" in e:
+            out["h"] = e["heard"]
+        if i is not None and (e.get("voice") or {}).get("said"):
+            out["au"] = i
+        return out
+    if e["kind"] == "tool_call":
+        return {"k": "c", "n": e["name"], "i": e["input"]}
+    if e["kind"] == "tool_result":
+        return {"k": "r", "n": e["name"], "t": e["text"]}
+    return {"k": "e", "t": e.get("text", "")}
+
+
+def transcript(entry: dict, s: dict, sc=None) -> list[dict]:
+    """Rows with rule marks. Given the scenario, a voice call's misheard line that failed the identity check is
+    marked too ("idf")."""
     marks = defaultdict(list)
     events = entry["record"]["events"]
     for v in s["violation_detail"]:
@@ -73,21 +96,32 @@ def transcript(entry: dict, s: dict) -> list[dict]:
                         and quote and quote in e["text"]), None)
         if idx is not None:
             marks[idx].append({"rule": v["rule"], "evidence": v.get("evidence", ""), "quote": v.get("text", "")})
+    broke = identity_failed(sc, entry["record"]) if sc is not None else None
     out = []
     for i, e in enumerate(events):
-        if e["kind"] == "speech":
-            row = {"k": "s", "w": "a" if e["who"] == "agent" else "p", "t": e["text"]}
-            if e.get("disclosed"):
-                row["rev"] = [d.strip("[] ") for d in e["disclosed"]]
-        elif e["kind"] == "tool_call":
-            row = {"k": "c", "n": e["name"], "i": e["input"]}
-        elif e["kind"] == "tool_result":
-            row = {"k": "r", "n": e["name"], "t": e["text"]}
-        else:
-            row = {"k": "e", "t": e.get("text", "")}
+        r = row(e, i)
         if marks.get(i):
-            row["v"] = marks[i]
-        out.append(row)
+            r["v"] = marks[i]
+        if broke and e["kind"] == "speech" and e["who"] != "agent" and e["text"] == broke["said"]:
+            r["idf"] = True
+            broke = None                                    # mark the first such line only
+        out.append(r)
+    return out
+
+
+def voice_data() -> dict:
+    """The voice calls the console replays with their saved audio: verdict per candidate and call summaries."""
+    res = _load("voice_calls.json") or {}
+    out = {"candidates": [], "calls": {}}
+    for cid in vc.PLAYBACK:
+        g = res.get("candidates", {}).get(cid)
+        rows = evaluate(cid, vc.scenarios(len(vc.SCENARIOS)), res.get("k", 2))
+        if not g or not rows:
+            continue
+        for sc, e, s in rows:
+            out["calls"].setdefault(cid, {}).setdefault(sc.id, []).append(call_summary(e, s))
+        out["candidates"].append({"id": cid, "description": vc.LINES[cid][0], "verdict": g["verdict"],
+                                  "calls": len(rows), "identity_failed": g.get("identity_failed_on_misheard_name")})
     return out
 
 

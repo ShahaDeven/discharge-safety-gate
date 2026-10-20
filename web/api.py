@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, Header, HTTPException
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from sse_starlette.sse import EventSourceResponse
 
@@ -36,9 +36,10 @@ from discharge.scoring import score
 from agentgate.http_agent import EndpointRefused
 from discharge import clinical_policy
 from evals import agents, proposals
+from evals import voice_calls
 from evals import policy as policies
 from evals import validation
-from evals.dashboard import build_data, call_summary, transcript
+from evals.dashboard import build_data, call_summary, row as _row, transcript, voice_data
 from evals.gate import load_groups  # noqa: F401  (kept for callers that refresh gate data)
 from evals.run import SUITES, evaluate
 
@@ -76,7 +77,7 @@ def _cached(cand: str) -> dict:
 
 
 def _known(cand: str) -> bool:
-    return cand in candidates() or any(p["id"] == cand and p["status"] == "done" for p in proposals.all_proposals())
+    return cand in candidates() or cand in voice_calls.PLAYBACK or any(p["id"] == cand and p["status"] == "done" for p in proposals.all_proposals())
 
 
 def _agent(aid: str, who: str | None, owner_only: bool = True) -> dict:
@@ -106,20 +107,7 @@ def _add_candidate(data: dict, rec: dict, flag: str) -> None:
 def _scored(sid: str, entry: dict) -> tuple[dict, list]:
     sc = SCENARIOS[sid]
     s = score(sc, entry["record"], judge.cached(entry["record"], judge.load_cache()))
-    return call_summary(entry, s), transcript(entry, s)
-
-
-def _row(e: dict) -> dict:
-    if e["kind"] == "speech":
-        row = {"k": "s", "w": "a" if e["who"] == "agent" else "p", "t": e["text"]}
-        if e.get("disclosed"):
-            row["rev"] = [d.strip("[] ") for d in e["disclosed"]]
-        return row
-    if e["kind"] == "tool_call":
-        return {"k": "c", "n": e["name"], "i": e["input"]}
-    if e["kind"] == "tool_result":
-        return {"k": "r", "n": e["name"], "t": e["text"]}
-    return {"k": "e", "t": e.get("text", "")}
+    return call_summary(entry, s), transcript(entry, s, sc)
 
 
 # ------------------------------------------------------------------ session and results (read-only)
@@ -150,6 +138,7 @@ def overview(refresh: bool = False, who: str | None = Depends(viewer)) -> dict:
     global _overview
     if _overview is None or refresh:
         _overview = build_data(with_transcripts=False)
+        _overview["voice"] = voice_data()
     data = {k: v for k, v in _overview.items()}
     data["candidates"] = list(_overview["candidates"])
     data["calls"] = dict(_overview["calls"])
@@ -180,6 +169,23 @@ def call(cand: str, sid: str, r: int, who: str | None = Depends(viewer)) -> dict
         raise HTTPException(404, "no such call")
     summary, rows = _scored(sid, entry)
     return {"summary": summary, "transcript": rows}
+
+
+@app.get("/api/voice/{cand}/{sid}/{r}/{i}")
+def voice_line(cand: str, sid: str, r: int, i: int, line: str = "clean") -> Response:
+    """The saved ElevenLabs audio of one patient line in a voice call: "clean" as recorded, or "phone" as the
+    transcriber got it. Read-only and free: it plays from the cache and never calls ElevenLabs."""
+    if cand not in voice_calls.PLAYBACK or sid not in SCENARIOS:
+        raise HTTPException(404, "no such call")
+    if line not in ("clean", "phone"):
+        raise HTTPException(400, "line must be clean or phone")
+    entry = _cached(cand).get(f"{sid}#{r}")
+    events = entry["record"]["events"] if entry else []
+    said = (events[i].get("voice") or {}).get("said") if 0 <= i < len(events) else None
+    wav = voice_calls.recording(cand, said, line == "phone") if said else None
+    if wav is None:
+        raise HTTPException(404, "no saved audio for this line")
+    return Response(wav, media_type="audio/wav", headers={"Cache-Control": "private, max-age=3600"})
 
 
 @app.get("/api/prompts/C0")
@@ -382,6 +388,9 @@ async def stream(cand: str, sid: str, mode: str = "replay", r: int = 0, speed: f
             raise HTTPException(400, "live calls go to built-in agents and proposals; outside agents run through the gate")
     elif not _known(cand):
         raise HTTPException(404, "unknown agent version or scenario")
+    elif cand in voice_calls.PLAYBACK and mode != "replay":
+        raise HTTPException(400, "voice calls replay their saved audio; new voice calls cost ElevenLabs credits "
+                                 "and run from the command line (python -m evals.voice_calls)")
     if sid not in SCENARIOS:
         raise HTTPException(404, "unknown agent version or scenario")
     if mode not in ("replay", "live"):
@@ -399,8 +408,8 @@ async def stream(cand: str, sid: str, mode: str = "replay", r: int = 0, speed: f
 
         async def replay():
             yield {"event": "meta", "data": json.dumps({"mode": "replay", "cand": cand, "sid": sid, "r": r, "cost": 0})}
-            for e in entry["record"]["events"]:
-                row = _row(e)
+            for i, e in enumerate(entry["record"]["events"]):
+                row = _row(e, i)
                 await asyncio.sleep(_pace(row) / max(0.25, min(speed, 8.0)))
                 yield {"event": "row", "data": json.dumps(row)}
             summary, rows = _scored(sid, entry)

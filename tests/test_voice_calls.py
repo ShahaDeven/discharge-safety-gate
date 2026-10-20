@@ -188,3 +188,64 @@ def test_keyterms_hint_the_patient_medicines_and_hospital_never_other_people(pil
     ch = voice_candidate("VK").make_channel(sc.context("t"))
     assert ch.stt.keyterms[0] == sc.patient.name and ch.stt.tag_audio_events is False
     assert voice_candidate("VC").make_channel(sc.context("t")).stt.keyterms == ()
+
+
+# ---------------------------------------------------------------- replaying voice calls in the console
+
+def _saved(tmp_path, monkeypatch, text):
+    """A voice-call cache holding one recording of `text`, as Roger (the voice of VC, VH and VK)."""
+    from agentgate.voice import elevenlabs
+    from evals import voice_calls
+
+    class Saved:                                  # stands in for ElevenLabs once, to put the recording in the cache
+        provider, model, voice, rate = "elevenlabs", elevenlabs.TTS_MODEL, voice_calls.ROGER, 16000
+
+        def speak(self, t):
+            return Audio((np.sin(np.arange(16000) / 5) * 8000).astype("<i2").tobytes(), 16000, {})
+
+    cache = VoiceCache(tmp_path)
+    cache.speak(Saved(), text)
+    monkeypatch.setattr(voice_calls, "CACHE", cache)
+    return voice_calls
+
+
+def test_playback_reads_saved_audio_and_never_calls_the_provider(tmp_path, monkeypatch):
+    vc = _saved(tmp_path, monkeypatch, "This is Bebe.")
+    monkeypatch.setattr("agentgate.voice.elevenlabs._key", lambda: (_ for _ in ()).throw(AssertionError("called ElevenLabs")))
+    assert Audio.from_wav(vc.recording("VC", "This is Bebe.")).rate == 16000
+    heard = vc.recording("VH", "This is Bebe.", as_heard=True)
+    assert Audio.from_wav(heard).rate == 8000 and heard == vc.recording("VH", "This is Bebe.", as_heard=True)
+    assert vc.recording("VC", "Never voiced.") is None
+
+
+def test_console_rows_show_what_was_heard_and_mark_the_misheard_name(pilot):
+    from evals.dashboard import row, transcript
+    sc = next(s for s in pilot.values() if s.party.role == "patient")
+    said = f"This is {sc.patient.name.split()[0]}."
+    events = [
+        {"kind": "speech", "who": "agent", "text": "Who am I speaking with?"},
+        {"kind": "speech", "who": "party", "text": said, "heard": "This is B B.", "voice": {"said": said}},
+        {"kind": "tool_result", "name": "verify_identity", "text": "NOT VERIFIED: the details do not match the record."}]
+    assert row(events[1], 1) == {"k": "s", "w": "p", "t": said, "h": "This is B B.", "au": 1}
+    assert "au" not in row(events[1]) and "h" not in row(events[0], 0)       # live calls and text calls: unchanged
+    rows = transcript({"record": {"events": events}}, {"violation_detail": []}, sc)
+    assert rows[1]["idf"] and not any(r.get("idf") for r in (rows[0], rows[2]))
+    assert not any(r.get("idf") for r in transcript({"record": {"events": events}}, {"violation_detail": []}))
+
+
+def test_console_serves_voice_audio_read_only_and_never_places_voice_calls(tmp_path, monkeypatch):
+    from fastapi.testclient import TestClient
+    from web import api
+    _saved(tmp_path, monkeypatch, "This is Bebe.")
+    sid = next(iter(api.SCENARIOS))
+    entry = {"record": {"events": [{"kind": "speech", "who": "party", "text": "This is Bebe. [beep]",
+                                    "heard": "This is BB", "voice": {"said": "This is Bebe."}}]}}
+    monkeypatch.setattr(api, "_cached", lambda cand: {f"{sid}#0": entry})
+    c = TestClient(api.app, base_url="http://localhost:8001")
+    ok = c.get(f"/api/voice/VK/{sid}/0/0")
+    assert ok.status_code == 200 and ok.headers["content-type"] == "audio/wav"
+    assert Audio.from_wav(c.get(f"/api/voice/VK/{sid}/0/0?line=phone").content).rate == 8000
+    assert c.get(f"/api/voice/C0/{sid}/0/0").status_code == 404                 # only voice calls have audio
+    assert c.get(f"/api/voice/VK/{sid}/0/5").status_code == 404
+    assert c.get(f"/api/voice/VK/{sid}/0/0?line=raw").status_code == 400
+    assert c.get(f"/api/stream?cand=VK&sid={sid}&mode=live").status_code == 400  # replay only: a click spends no credits

@@ -10,6 +10,7 @@ export function useSpeech(lang: "en" | "es") {
   const [on, setOnState] = useState(false);
   const onRef = useRef(false);                       // read by code running across renders (the line queue)
   const voices = useRef<SpeechSynthesisVoice[]>([]);
+  const playing = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     if (!supported) return;
@@ -22,7 +23,12 @@ export function useSpeech(lang: "en" | "es") {
   function setOn(v: boolean) {
     onRef.current = v;
     setOnState(v);
-    if (!v && supported) window.speechSynthesis.cancel();
+    if (!v) halt();
+  }
+
+  function halt() {
+    playing.current?.pause();
+    if (supported) window.speechSynthesis.cancel();
   }
 
   function voice(index: number) {
@@ -87,5 +93,20 @@ export function useSpeech(lang: "en" | "es") {
     });
   }
 
-  return { supported, on, setOn, onRef, say, jingle, stop: () => supported && window.speechSynthesis.cancel() };
+  /** Play a saved recording (a voice call's patient line). Resolves true when it played to the end or was
+   *  stopped, false if it couldn't play (the caller can fall back to say()). */
+  function play(url: string, rate = 1): Promise<boolean> {
+    if (!onRef.current) return Promise.resolve(true);
+    return new Promise((done) => {
+      const a = new Audio(url);
+      playing.current = a;
+      a.playbackRate = Math.min(4, Math.max(0.5, rate));
+      const end = (ok: boolean) => () => { if (playing.current === a) playing.current = null; done(ok); };
+      a.onended = a.onpause = end(true);
+      a.onerror = end(false);
+      a.play().catch(() => end(false)());
+    });
+  }
+
+  return { supported, on, setOn, onRef, say, play, jingle, stop: halt };
 }

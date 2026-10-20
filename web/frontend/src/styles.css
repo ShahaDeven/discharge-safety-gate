@@ -166,6 +166,9 @@ details ul { margin: 10px 0 0; padding-left: 18px; font-size: 14px; color: var(-
 .line.a .text { background: var(--accent-soft); border-top-right-radius: 2px; }
 .line .note { font: 12px var(--mono); color: var(--bad); }
 .line .rev { font: 12px var(--mono); color: var(--hold); }
+.line .heard { font-size: 13px; color: var(--muted); padding: 2px 12px 0; border-left: 2px solid var(--hold); margin-left: 4px; }
+.line .heard span { font: 11px var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--hold); margin-right: 4px; }
+.voice-note { font-size: 14px; max-width: 72ch; }
 .line.flagged .text { box-shadow: inset 3px 0 0 var(--bad); }
 mark.viol { background: var(--mark); color: inherit; border-bottom: 2px solid var(--bad); padding: 0 1px; }
 .action { justify-self: center; font: 12px var(--mono); color: var(--muted); border: 1px dashed var(--rule); border-radius: 6px;

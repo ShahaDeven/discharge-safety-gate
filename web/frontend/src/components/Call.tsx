@@ -93,6 +93,10 @@ function marked(text: string, marks?: Mark[]) {
 }
 
 /** The conversation, with tool calls as small action rows and rule breaks marked in the agent's words. */
+/** True when what the agent heard differs from what was said in more than case, punctuation or spacing. */
+const words = (s: string) => s.replace(/\[[^\]]*\]/g, " ").toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").replace(/\s+/g, " ").trim();
+const misheard = (said: string, heard: string) => words(said) !== words(heard);
+
 export function Transcript({ rows, sc, typing }: { rows: Row[]; sc: Scenario; typing?: string }) {
   const flagIds = sc.facts.filter((f) => f.red_flag).map((f) => f.id);
   const items: ReactNode[] = [];
@@ -103,6 +107,8 @@ export function Transcript({ rows, sc, typing }: { rows: Row[]; sc: Scenario; ty
         <div key={i} className={`line ${e.w}${e.v ? " flagged" : ""}`}>
           <span className="who">{e.w === "a" ? "Agent" : ROLE[sc.party.role]}</span>
           <div className="text">{marked(e.t || "", e.v)}</div>
+          {e.h != null && misheard(e.t || "", e.h) && <div className="heard"><span>agent heard</span> {e.h || "(nothing)"}</div>}
+          {e.idf && <span className="note">Misheard name: the identity check failed</span>}
           {e.rev?.some((id) => flagIds.includes(id)) && <span className="rev">reveals the warning sign</span>}
           {(e.v || []).map((v, j) => <span key={j} className="note">{RULES[v.rule] || v.rule}</span>)}
         </div>,

@@ -94,6 +94,14 @@ class VoiceCache:
         key = _key([tts.provider, tts.model, tts.voice, tts.rate, text])
         return self._path("audio", key, "wav").exists() and self._path("audio", key, "json").exists()
 
+    def cached_audio(self, tts: TextToSpeech, text: str) -> Audio | None:
+        """The saved audio for this text, or None. Never calls the provider (for playback)."""
+        key = _key([tts.provider, tts.model, tts.voice, tts.rate, text])
+        wav, side = self._path("audio", key, "wav"), self._path("audio", key, "json")
+        if wav.exists() and side.exists():
+            return Audio.from_wav(wav.read_bytes(), json.loads(side.read_text(encoding="utf-8")))
+        return None
+
     def speak(self, tts: TextToSpeech, text: str) -> tuple[Audio, bool]:
         """(audio, came from cache)."""
         key = _key([tts.provider, tts.model, tts.voice, tts.rate, text])
