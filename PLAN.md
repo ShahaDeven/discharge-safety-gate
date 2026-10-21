@@ -961,6 +961,66 @@ C0 text on the same scenarios failed the identity check in **0 of 48** calls.
 Budget for Day 3b: within the plan's minutes, with a cap set after the smoke test. Claude cost for the simulated
 patient and judge is about $0.10-0.20.
 
+#### 13.3b revised: options with ElevenLabs Agents (DRAFT 2026-10-21, not approved)
+
+**What changed on the platform since 2026-10-19** (checked 2026-10-21 against ElevenLabs' docs):
+- **Simulate-conversation is removed on 31 Oct 2026.** It is replaced by **agent tests** of three types:
+  - **Simulation:** a multi-turn conversation with a simulated user, up to 50 turns.
+  - **Next reply:** judges one reply.
+  - **Tool call:** checks a tool's parameters by exact match, regex or LLM.
+
+  Tests can mock tools (never system or workflow tools) and accept `repeat_count` (2-20) with failure
+  bucketing. They run in CI via `elevenlabs agents test <agent-id>`.
+- **Versioning and Experiments.**
+  - Agents have immutable versions and branches; enabling versioning **can't be undone**.
+  - Traffic can be split across branches by percentage.
+  - "Experiments" A/B-test a branch on live callers, measuring CSAT, containment and handling time.
+- **Billing.** Text-only conversations are billed per message, with LLM cost passed through; one third-party
+  source gives about $0.003 a message. Voice calls are billed per connected minute.
+- **Post-call webhooks** deliver the transcript, success-evaluation results and data-collection fields after
+  each call. Batch outbound calling works over Twilio or SIP.
+
+**The options:**
+
+| # | Option | What it shows | Cost | Fit |
+|---|---|---|---|---|
+| 1 | **Agent under test** (the plan above): a workflow agent through a text-mode bridge, gated against C0 | The gate works on a real commercial platform; workflow vs prompt-only design | Text messages + LLM pass-through; Claude ~$0.15 | Core |
+| 2 | **Gate a branch before it gets live traffic.** The bridge takes a branch or version id. A change is a branch; PROMOTE is required before any traffic split | Their Experiments measure business metrics *on real patients*; the gate checks safety *before any patient*. They complement each other | Same as 1, per branch | Core, pairs with 1 |
+| 3 | **Export scenarios as ElevenLabs agent tests,** for example "verify identity before any health detail" as a Tool call test, or a red flag mentioned only if asked as a Simulation. Then compare their pass/fail with the gate's verdict on the same agent | An on-ramp for teams already on ElevenLabs, and an honest comparison: LLM-judged single tests vs deterministic scoring + baseline + noise floor + sealed set | Unknown per test run (measure on 5) | Small add-on |
+| 4 | **Post-call auditor:** the post-call webhook sends each finished call to the deterministic scorer, using the rules that need no answer key (identity before health details, AI disclosure, human request honored, callback booked, told what happens next) | Production monitoring after the gate: the same rules on every real call | Free to run; needs a public HTTPS endpoint | Later: matters with a real deployment (and a BAA) |
+| 5 | **Talk-to-it demo:** the reference agent on an ElevenLabs web widget or phone number. A person role-plays a made-up patient, and the call is scored afterwards via option 4 | The most convincing live demo | Call minutes (75 on the plan) | Later, for a demo audience |
+| 6 | **Voice-to-voice:** an ElevenLabs agent plays the patient, so both sides speak | Interruptions, barge-in, silences, latency, and the agent's own voice, none of which the turn-based loop tests | Minutes on both sides | Not now: it reverses "never as patient", and loses the hidden-script control and the leak filter |
+| 7 | **Calibrate the phone simulator** against real carrier audio (Twilio) | Whether `phone.py` is realistic | Twilio + minutes | Not now |
+
+**Recommendation: 1 + 2 together, plus a small 3.** One bridge serves both: the main branch is the candidate, and
+the seeded regression is a branch. Then 5 scenarios exported as agent tests. Options 4 and 5 come once there is a
+real deployment or a demo audience.
+
+**Steps:**
+0. **Checks (free):**
+   - how text messages and LLM use are billed on the Starter plan (credits or dollars), and whether text chats use
+     call minutes
+   - the client-tool WebSocket message format
+   - dynamic variables in workflow nodes
+   - the branch and version id in the conversation API
+   - what an agent test run costs
+1. **Deven builds the agent in the dashboard.** Claude writes the node texts, the tool JSON and the dynamic
+   variables (as above). Enable versioning only when ready, since it's one-way.
+2. **Bridge** `agentgate/elevenagents.py`: start / hear / tool_results over the WebSocket in text mode, with a
+   branch or version parameter in the fingerprint. Offline tests use a fake WebSocket server.
+3. **Smoke test:** 2-3 calls, measuring messages, LLM cost and credits per call. Set the caps from this.
+4. **Main branch vs C0:** 16-20 scenarios x 2, including C3's privacy scenarios and the only-if-asked red flags.
+5. **Seeded regression branch** (identity check moved after the checklist), which must REJECT. This is the
+   "gate a branch" demo.
+6. **Export 5 scenarios** as agent tests, run them with `repeat_count` 5, and compare with the gate.
+
+**Budget guess** (fixed after the smoke test):
+- About 70-80 text calls of ~20 messages each, so roughly 1,500 messages: about $4.50 at the third-party rate, plus
+  LLM pass-through.
+- Claude for the simulated patient and judge: about $0.30.
+- Zero voice credits (text mode).
+- If the smoke test shows it draws from the 40,000 credits instead, cut step 4 to 12 scenarios.
+
 ### 13.6 Transfer to a person on request (approved 2026-10-20; text calls, ~$0.05, 0 credits)
 
 **Built (2026-10-20):**
