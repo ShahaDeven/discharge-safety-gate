@@ -17,9 +17,11 @@ from discharge import clinical_policy, config, policy
 from discharge.policy import POLICY_DIR
 from evals import label
 from evals import policy as policies
+from evals.voice_summary import summary as voice_summary
 
 LIMITS = [
-    "Synthetic patients and simulated conversations only. No real patient, no PHI, no real speech or audio.",
+    "Synthetic patients and simulated conversations only. No real patient, no PHI, no real recordings. Most "
+    "calls are text; the voice section uses synthetic voices and a simulated phone line on a subset of scenarios.",
     "Not clinical validation: the warning signs, expected actions and scenarios were written from public "
     "discharge guidance (AHRQ RED) and have not been reviewed by a clinician.",
     "Not legal advice: the compliance checks are compliance-informed tests of call behavior; their mapping to "
@@ -152,5 +154,8 @@ def build(data: dict, cand: str) -> dict:
         "judge": {"planted": data.get("judge_check"), "reviewer": policies.reviewer_agreement(), "held_out": label.agreement().get("test")},
         "security": {"redteam": data.get("redteam"), "audit": {"ok": ok, "entries": n, "message": msg}},
         "changes": changes[-8:],
+        # The voice test ran the current agent (C0's prompt and model) behind a speech pipeline: its evidence
+        # belongs in C0's pack only.
+        "voice": voice_summary() if cand == "C0" else None,
         "limits": LIMITS,
     }

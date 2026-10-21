@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getJSON, go, pct, RULES, shortName, STATUS, type Overview, type ValidationPack } from "../api";
+import { getJSON, go, pct, RULES, shortName, STATUS, type Overview, type ValidationPack, type VoiceEvidence } from "../api";
 
 const NAMES: Record<string, string> = {
   HF: "Heart failure", COPD: "COPD", PNA: "Pneumonia", AMI: "Heart attack", PSY: "Mental health",
@@ -16,6 +16,57 @@ function Counts({ title, data }: { title: string; data: Record<string, number> }
   return (
     <div><b>{title}</b>
       <ul className="plain">{Object.entries(data).map(([k, v]) => <li key={k}>{nm(k)}: {v}</li>)}</ul></div>
+  );
+}
+
+const pval = (p: number) => (p < 0.001 ? p.toExponential(0) : p.toFixed(2));
+
+/** The same agent heard through speech: single sentences, then full calls (C0's pack only). */
+function VoiceSection({ voice }: { voice: VoiceEvidence }) {
+  const b = voice.benchmark, c = voice.calls, w = voice.workflows;
+  return (
+    <>
+      <h3>9. Voice: the same agent, hearing the patient through speech</h3>
+      <p>The patient's words were spoken by a synthetic voice{b ? ` (${b.speech_model})` : ""}, passed through a simulated phone line, and transcribed{b ? ` (${b.transcription_model})` : ""}; the agent received only the transcript.</p>
+      {b && (
+        <table>
+          <thead><tr><th>{b.lines} critical sentences, {b.voices.length} voices</th><th>Meaning kept</th><th>Lost vs clear</th><th>p</th></tr></thead>
+          <tbody>{b.conditions.map((x) => (
+            <tr key={x.id}><td>{x.label}</td><td className="num">{frac([x.kept, x.n])}</td><td className="num">{x.lost}</td><td className="num">{pval(x.p)}</td></tr>
+          ))}</tbody>
+        </table>
+      )}
+      {b && (
+        <table>
+          <thead><tr><th>Identity details</th><th>Clean phone line</th><th>Names hinted to the transcriber</th></tr></thead>
+          <tbody>{b.names.map((x) => (
+            <tr key={x.category}><td>{x.label}</td><td className="num">{x.phone ? frac(x.phone) : "-"}</td><td className="num">{x.phone_keyterms ? frac(x.phone_keyterms) : "-"}</td></tr>
+          ))}</tbody>
+        </table>
+      )}
+      {c && (
+        <table>
+          <thead><tr><th>Full calls ({c.scenarios.length} scenarios × {c.k}; vs {c.baseline})</th>{c.candidates.map((x) => <th key={x.id}>{x.id}</th>)}</tr></thead>
+          <tbody>
+            {c.candidates[0]?.metrics.map((m, i) => (
+              <tr key={m.name}><td>{m.label} <span className="muted">(text {pct(m.base)})</span></td>{c.candidates.map((x) => <td key={x.id} className="num">{pct(x.metrics[i]?.cand)}</td>)}</tr>
+            ))}
+            <tr><td>Identity check failed on a misheard name</td>{c.candidates.map((x) => <td key={x.id} className="num">{x.identity_failed}/{x.calls}</td>)}</tr>
+            <tr><td>Verdict</td>{c.candidates.map((x) => <td key={x.id}><span className={`chip v-${x.verdict}`}>{x.verdict}</span></td>)}</tr>
+          </tbody>
+        </table>
+      )}
+      {c && <ul>{c.candidates.map((x) => <li key={x.id}><b>{x.id}</b>: {x.description}.</li>)}</ul>}
+      <p>On a clean phone line, uncommon and Spanish names were misheard and the identity check failed, so those calls never reached the warning signs: rejected. Giving the transcriber the names expected on the call, and having the agent spell details back, brought every safety measure back to the text result. Small sample; the noisier line was not re-run with the fix.</p>
+      {w && (
+        <table>
+          <thead><tr><th>Requests (text, {w.k} replays)</th><th>Transferred to a person when asked</th><th>Callback booked when asked</th></tr></thead>
+          <tbody>{w.candidates.map((x) => (
+            <tr key={x.id}><td>{x.id}: {x.description}</td><td className="num">{frac(x.human)}</td><td className="num">{frac(x.callback)}</td></tr>
+          ))}</tbody>
+        </table>
+      )}
+    </>
   );
 }
 
@@ -150,7 +201,9 @@ export default function Validation({ d, cand }: { d: Overview; cand?: string }) 
             </table>
           ) : <p className="muted">No ledger entries for this version.</p>}
 
-          <h3>9. Limits</h3>
+          {v.voice && <VoiceSection voice={v.voice} />}
+
+          <h3>{v.voice ? 10 : 9}. Limits</h3>
           <ul>{v.limits.map((l) => <li key={l}>{l}</li>)}</ul>
         </article>
       )}

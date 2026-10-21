@@ -249,3 +249,27 @@ def test_console_serves_voice_audio_read_only_and_never_places_voice_calls(tmp_p
     assert c.get(f"/api/voice/VK/{sid}/0/5").status_code == 404
     assert c.get(f"/api/voice/VK/{sid}/0/0?line=raw").status_code == 400
     assert c.get(f"/api/stream?cand=VK&sid={sid}&mode=live").status_code == 400  # replay only: a click spends no credits
+
+
+# ---------------------------------------------------------------- the voice section of the report and the pack
+
+def test_report_voice_section_reads_saved_results_and_says_nothing_without_them():
+    from evals.report import voice_section
+    assert voice_section(None) == []
+    v = {"benchmark": None, "workflows": None, "playback": ["VK"], "calls": {"k": 2, "scenarios": ["A", "B"], "baseline": "C0 in text",
+         "candidates": [{"id": "VK", "description": "fixed", "verdict": "PROMOTE", "expected": "PROMOTE", "calls": 4,
+                         "identity_failed": 0, "attribution": {"not said": 1}, "credits": 900,
+                         "lines": {"heard": 10, "changed": 2, "garbled": 0},
+                         "metrics": [{"name": "red_flag_recall", "label": "Red-flag escalation", "base": 1.0, "cand": 1.0}]}]}}
+    md = "\n".join(voice_section(v))
+    assert "| Red-flag escalation (text: 100%) | 100% |" in md and "**PROMOTE** (PROMOTE)" in md and "0/4" in md
+
+
+def test_only_the_current_agents_pack_carries_the_voice_evidence(monkeypatch):
+    from evals import validation
+    monkeypatch.setattr(validation, "voice_summary", lambda: {"calls": None})
+    data = {"gate": {"A/A": {"verdict": "PROMOTE", "reasons": [], "metrics": [], "rules": [], "scenarios": 1},
+                     "C1": {"verdict": "REJECT", "reasons": [], "metrics": [], "rules": [], "scenarios": 1}},
+            "calls": {"C0": {}, "C1": {}}, "candidates": [], "scenarios": {}}
+    assert validation.build(data, "C0")["voice"] == {"calls": None}
+    assert validation.build(data, "C1")["voice"] is None

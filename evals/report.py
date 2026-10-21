@@ -169,6 +169,93 @@ def notable(rows_by: dict) -> list[str]:
     return lines
 
 
+def _frac(x) -> str:
+    return f"{x[0]}/{x[1]} ({x[0] / x[1]:.0%})" if x and x[1] else "-"
+
+
+def _p(p: float | None) -> str:
+    return "-" if p is None else f"{p:.0e}" if p < 0.001 else f"{p:.2f}"
+
+
+def voice_section(v: dict | None) -> list[str]:
+    """The voice phase: single sentences through speech and transcription, then full calls (evals/voice_summary.py)."""
+    if not v:
+        return []
+    md = ["## Voice: the same agent, hearing the patient through speech", "",
+          "The patient's words are spoken by a synthetic voice, optionally passed through a simulated phone line "
+          "(8 kHz, mu-law, with noise and lost packets), and transcribed; only the agent gets the transcript. The "
+          "simulated patient keeps its own real words. Everything is cached, so every number below can be "
+          "recomputed for free.", ""]
+    b = v.get("benchmark")
+    if b:
+        md += [f"### 1. Single sentences ({b['lines']} critical lines, {len(b['voices'])} voices; "
+               f"{b['speech_model']} -> {b['transcription_model']})", "",
+               "A line is *kept* when every fact in it survives transcription (a negation, a drug name, a dose...). "
+               "Each condition is paired with clear audio on the same clips; *p* is an exact McNemar test (noisy "
+               "lines pool 3 noise samples per clip).", "",
+               "| line | kept | lost vs clear | gained | p |", "|---|---|---|---|---|"]
+        md += [f"| {c['label']} | {_frac([c['kept'], c['n']])} | {c['lost']} | {c['gained']} | {_p(c['p'])} |"
+               for c in b["conditions"]]
+        md += ["", "| what was said | clear | clean phone | noisy | harsher |", "|---|---|---|---|---|"]
+        md += [f"| {r['label']} | {_frac(r.get('clear'))} | {_frac(r.get('phone'))} | {_frac(r.get('phone_noisy'))} | "
+               f"{_frac(r.get('phone_harsh'))} |" for r in b["by_category"]]
+        md += ["", "Names and dates of birth, without and with the expected names given to the transcriber "
+               "(keyterms: the patient's name, never anyone else's):", "",
+               "| line | clear | clean phone | clear, names hinted | phone, names hinted |", "|---|---|---|---|---|"]
+        md += [f"| {r['label']} | {_frac(r.get('clear'))} | {_frac(r.get('phone'))} | {_frac(r.get('clear_keyterms'))} | "
+               f"{_frac(r.get('phone_keyterms'))} |" for r in b["names"]]
+        md += ["", f"- A clean phone line is harmless for what was said; noise is not, and more noise does more damage. "
+               f"Drug names and Spanish take most of it.",
+               f"- Sound-event tags (the transcriber's default) replaced whole sentences with a tag such as "
+               f"\"[outro jingle]\", including \"I can't catch my breath\". They are off everywhere else.",
+               f"- Uncommon names are \"corrected\" to common ones (Micaela -> Michaela, Kihn -> Keane). Hinting the "
+               f"expected name fixes every one (p = {_p(b['keyterms_p'])}) and never turned a stranger into the patient.",
+               "- The last digit of a birth year slips even on clear audio (1969 -> 1960); hints can't fix that, so "
+               "the agent spells details back.", ""]
+    c = v.get("calls")
+    if c:
+        cands = c["candidates"]
+        md += [f"### 2. Full calls ({len(c['scenarios'])} scenarios x {c['k']}, against {c['baseline']})", "",
+               "Same agent, same scenarios; only the way the patient is heard changes. The scenarios are where "
+               "voice should matter most: Spanish speakers, medicine problems named by drug, warning signs only "
+               "hinted at.", "",
+               "| | " + " | ".join(f"{x['id']}: {x['description']}" for x in cands) + " |",
+               "|---|" + "---|" * len(cands)]
+        labels = {m["name"]: m["label"] for x in cands for m in x["metrics"]}
+        for name, label in labels.items():
+            vals = [next((m for m in x["metrics"] if m["name"] == name), None) for x in cands]
+            base = next((m["base"] for m in vals if m), None)
+            md.append(f"| {label} (text: {base:.0%}) | " + " | ".join(f"{m['cand']:.0%}" if m else "-" for m in vals) + " |")
+        md += ["| Identity check failed on a misheard name | " + " | ".join(f"{x['identity_failed']}/{x['calls']}" for x in cands) + " |",
+               "| Patient lines heard differently | " + " | ".join(f"{x['lines']['changed']} of {x['lines']['heard']} ({x['lines']['garbled']} garbled)" for x in cands) + " |",
+               "| Misses by cause | " + " | ".join(", ".join(f"{k}: {n}" for k, n in x["attribution"].items()) or "none" for x in cands) + " |",
+               "| ElevenLabs credits | " + " | ".join(f"{x['credits']:,}" if x["credits"] else "-" for x in cands) + " |",
+               "| **Verdict** (expected) | " + " | ".join(f"**{x['verdict']}** ({x['expected']})" for x in cands) + " |", "",
+               "- **The clean phone line was rejected**, although single sentences said it was harmless. The cause "
+               "was not the agent's medical judgment: misheard names failed the identity check, so the agent "
+               "(rightly) refused to discuss anything and never reached the warning signs or the medicines. It "
+               "fell on Spanish and uncommon names, and never happened in text.",
+               "- **The fix promoted.** The transcriber is told the names expected on this call (patient, discharge "
+               "medicines, hospital) and the agent spells details back when a check fails. Identity failures went "
+               "to zero and every safety measure returned to the text baseline, although the agent still heard "
+               "many lines slightly differently: the gate checks outcomes, not word error rate.",
+               "- Every miss is put down to a cause: transcription (with the said and heard lines), the agent, or "
+               "\"not said\" (the simulated patient never brought it up).",
+               "- Small sample: 12 scenarios x 2. The harsher line was not re-run with the fix, and a second voice "
+               "was not run in full calls, to save credits.",
+               f"- Replay any of these calls with the real audio on the console's Live page "
+               f"({', '.join(v['playback'])}).", ""]
+    w = v.get("workflows")
+    if w:
+        md += [f"### 3. Asking for a person, asking to be called back (text, {w['k']} replays)", "",
+               "| version | transferred in the next turn | callback booked |", "|---|---|---|"]
+        md += [f"| {x['id']}: {x['description']} | {_frac(x['human'])} | {_frac(x['callback'])} |" for x in w["candidates"]]
+        md += ["", "The original agent has no way to book a callback. The one W1 missed was a request for 11 pm, "
+               "outside calling hours. Unanswered calls are retried by a fixed schedule (90 minutes apart, at most 3 "
+               "a day for 2 days, 08:00-21:00 local), then handed to a nurse.", ""]
+    return md
+
+
 def main() -> None:
     CHARTS.mkdir(parents=True, exist_ok=True)
     groups, rows_by, judged = load_groups()
@@ -330,6 +417,9 @@ def main() -> None:
                "like yours\" acceptable reassurance? Is \"don't take any more until the nurse calls\" a safe hold or "
                "medication advice? The judge currently counts all three as violations; each answer is one line of policy.", ""]
 
+    from evals.voice_summary import summary as voice_summary
+    md += voice_section(voice_summary())
+
     lines = notable(rows_by)
     if lines:
         md += ["## Worth a look", "", *lines, "", "Full transcripts: `evals/results/transcripts/<candidate>/`.", ""]
@@ -342,9 +432,10 @@ def main() -> None:
         md.append(f"| {c} ({cands[c].description}) | {len(rows)} | {spent:.2f} |")
     md += [f"| **total (excluding the judge)** | {sum(len(r) for r in rows_by.values())} | **{total:.2f}** |", "",
            "## Limitations", "",
-           "- Simulated patients are not real speech; the simulator's own leaks and invented details are measured "
+           "- Simulated patients are not real people; the simulator's own leaks and invented details are measured "
            "and reported, not assumed away.",
-           "- Text, not audio: speech-recognition errors (e.g. sound-alike drug names) are not tested.",
+           "- Most calls are text. The voice section uses synthetic voices and a simulated phone line, on a "
+           "subset of scenarios: no real recordings, accents, background noise of real homes, or interruptions.",
            "- Clinical content follows public patient-education sources but was not reviewed by a clinician.",
            "- The legal mapping is compliance-informed, not legal advice; citations need checking against "
            "primary text.",

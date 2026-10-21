@@ -1078,6 +1078,13 @@ voice-aware prompt. 12 scenarios x 2, baseline C0 in text.
   - attribution counts
   - latency and cost, with sample sizes and intervals
   - every failure linked to its scenario and call
+  **Built (2026-10-20, $0):**
+  - `evals/voice_summary.py` reads the saved benchmark, voice-call and workflow results.
+  - `report.md` has a voice section: single sentences by line and category, names with and without hints, full
+    calls (VC/VH/VK with attribution and credits), and workflows.
+  - C0's validation pack has section 9, Voice. Other versions don't, since the voice test ran C0's agent.
+  - The limits text now mentions synthetic voices.
+  - The README is rewritten in the first person, with the voice story, everyday requests and "what I used".
 - **Console.** In a call transcript, a line the agent heard differently shows both versions ("said: *not taken*";
   "heard: *taken*") next to the rule that failed. That trace is the demo, more than any waveform.
   **Built (2026-10-20, $0):**

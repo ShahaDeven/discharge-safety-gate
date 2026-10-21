@@ -174,6 +174,17 @@ export type ValidationPack = {
     held_out: { n: number; human_yes: number; judge_yes: number; agree: number; kappa: number } | null };
   security: { redteam: Overview["redteam"]; audit: { ok: boolean; entries: number; message: string } };
   changes: Overview["ledger"]; limits: string[];
+  voice: VoiceEvidence | null;
+};
+type Pair2 = [number, number];
+export type VoiceEvidence = {
+  benchmark: null | { lines: number; voices: string[]; speech_model: string; transcription_model: string; keyterms_p: number | null;
+    conditions: { id: string; label: string; kept: number; n: number; samples: number; lost: number; gained: number; p: number }[];
+    names: { category: string; label: string; clear?: Pair2; phone?: Pair2; clear_keyterms?: Pair2; phone_keyterms?: Pair2 }[] };
+  calls: null | { k: number; scenarios: string[]; baseline: string;
+    candidates: { id: string; description: string; verdict: Gate["verdict"]; expected: string; calls: number; identity_failed: number | null;
+      attribution: Record<string, number>; credits: number | null; metrics: { name: string; label: string; base: number; cand: number }[] }[] };
+  workflows: null | { k: number; candidates: { id: string; description: string; human: Pair2; callback: Pair2 }[] };
 };
 export type AgentCheck = { ok: boolean; seconds: number | null; error: string | null };
 
