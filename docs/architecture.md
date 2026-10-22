@@ -65,7 +65,7 @@ These are the seams. Anything that satisfies them plugs in.
 
 | Contract | Defined in | Methods | Implemented by |
 |---|---|---|---|
-| `CallAgent` | `agentgate/adapter.py` | `start(ctx)`, `hear(utterance) -> AgentTurn`, `tool_results(results) -> AgentTurn` | the reference agent (`discharge/candidates.py`), proposals (`evals/proposals.py`), any agent behind a URL (`agentgate/http_agent.py`) |
+| `CallAgent` | `agentgate/adapter.py` | `start(ctx)`, `hear(utterance) -> AgentTurn`, `tool_results(results) -> AgentTurn` | the reference agent (`discharge/candidates.py`), proposals (`evals/proposals.py`), any agent behind a URL (`agentgate/http_agent.py`), an ElevenLabs Agents agent (`agentgate/elevenagents.py`, text-only WebSocket) |
 | `ToolHarness` | `agentgate/adapter.py` | `run(call) -> ToolResult` | `discharge/tools.py` (`DischargeHarness`) |
 | `Simulator` | `agentgate/conversation.py` | `opening()`, `reply(transcript, sim_turn)` | `agentgate/simulator.py` (LLM persona with a leak filter), `ScriptedSimulator` for tests |
 | `Channel` | `agentgate/conversation.py` | `(text) -> (heard, meta)` | `agentgate/voice/channel.py` (`VoiceChannel`) |
@@ -87,6 +87,7 @@ agentgate/          the generic core
   gate.py, stats.py   verdicts; exact statistics (sign-flip, Wilson, McNemar, bootstrap)
   audit.py, ledger.py hash-chained audit log; the change ledger
   http_agent.py       outside agents over HTTPS (SSRF guard, HMAC signing, strict replies)
+  elevenagents.py     an ElevenLabs Agents agent over its WebSocket, text only, harness tools as client tools
   dialer.py           retry schedule for unanswered calls
   llm.py, batch.py    the Claude client with cost capture; an optional Message Batches transport
   voice/              text to speech, phone-line simulation, transcription, caches

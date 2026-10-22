@@ -1,0 +1,187 @@
+[
+  {
+    "type": "client",
+    "name": "verify_identity",
+    "description": "Check who is on the line against the record. Required before discussing any health information. Pass what the person said: their own name (caller_name), whether they are the patient ('self') or someone on the patient's behalf ('caregiver', 'other'), and the PATIENT's full name and date of birth (YYYY-MM-DD). When the patient is speaking, caller_name and patient_name are the same.",
+    "expects_response": true,
+    "response_timeout_secs": 20,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "caller_name": {
+          "type": "string",
+          "description": "The name of the person on the line, as they said it"
+        },
+        "relationship": {
+          "type": "string",
+          "enum": [
+            "self",
+            "caregiver",
+            "other"
+          ],
+          "description": "self if the patient is speaking, caregiver if they help with the patient's care, other otherwise"
+        },
+        "patient_name": {
+          "type": "string",
+          "description": "The patient's full name, as the caller said it"
+        },
+        "patient_date_of_birth": {
+          "type": "string",
+          "description": "The patient's date of birth as the caller said it, written YYYY-MM-DD"
+        }
+      },
+      "required": [
+        "caller_name",
+        "relationship",
+        "patient_name",
+        "patient_date_of_birth"
+      ]
+    }
+  },
+  {
+    "type": "client",
+    "name": "escalate",
+    "description": "Route a concern to the clinical team. emergency_now: the person must call 911 (or 988) now. same_day_clinician: a nurse must call back today. routine_followup: note for the next routine review.",
+    "expects_response": true,
+    "response_timeout_secs": 20,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "emergency_now",
+            "same_day_clinician",
+            "routine_followup"
+          ],
+          "description": "emergency_now, same_day_clinician or routine_followup"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Why, in one sentence"
+        },
+        "red_flag": {
+          "type": "string",
+          "description": "the symptom or issue, in a few words"
+        }
+      },
+      "required": [
+        "level",
+        "reason",
+        "red_flag"
+      ]
+    }
+  },
+  {
+    "type": "client",
+    "name": "flag_med_issue",
+    "description": "Record a discrepancy between the discharge medication list and what the patient is actually taking, for pharmacist review.",
+    "expects_response": true,
+    "response_timeout_secs": 20,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "drug": {
+          "type": "string",
+          "description": "The medicine's name"
+        },
+        "issue_type": {
+          "type": "string",
+          "enum": [
+            "omission",
+            "duplicate",
+            "stopped_still_taking",
+            "dose_mismatch",
+            "not_filled"
+          ],
+          "description": "omission, duplicate, stopped_still_taking, dose_mismatch or not_filled"
+        },
+        "detail": {
+          "type": "string",
+          "description": "What the patient said, in one sentence"
+        }
+      },
+      "required": [
+        "drug",
+        "issue_type",
+        "detail"
+      ]
+    }
+  },
+  {
+    "type": "client",
+    "name": "handoff_to_human",
+    "description": "Transfer the call to a nurse now. Ends your part of the call.",
+    "expects_response": true,
+    "response_timeout_secs": 20,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "reason": {
+          "type": "string",
+          "description": "Why, in one sentence"
+        }
+      },
+      "required": [
+        "reason"
+      ]
+    }
+  },
+  {
+    "type": "client",
+    "name": "record_opt_out",
+    "description": "Record that the person asked not to receive these calls.",
+    "expects_response": true,
+    "response_timeout_secs": 20,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "note": {
+          "type": "string",
+          "description": "What the person asked for"
+        }
+      },
+      "required": [
+        "note"
+      ]
+    }
+  },
+  {
+    "type": "client",
+    "name": "leave_voicemail",
+    "description": "Leave a voicemail message. Ends the call.",
+    "expects_response": true,
+    "response_timeout_secs": 20,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "The exact voicemail message"
+        }
+      },
+      "required": [
+        "message"
+      ]
+    }
+  },
+  {
+    "type": "client",
+    "name": "end_call",
+    "description": "End the call.",
+    "expects_response": true,
+    "response_timeout_secs": 20,
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "One-line summary of the call"
+        }
+      },
+      "required": [
+        "summary"
+      ]
+    }
+  }
+]

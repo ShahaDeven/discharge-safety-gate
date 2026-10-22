@@ -127,3 +127,16 @@ def test_aa_with_many_metrics_does_not_false_alarm_on_one_borderline_metric():
                           for r in range(4)] for i in range(60)}
     a, b = split_aa(base)
     assert gate(a, b, specs).verdict == PROMOTE
+
+
+def test_one_or_two_scenarios_are_never_significant():
+    # The ElevenLabs run (PLAN 13.3b): a metric paired on a single scenario showed "100% -> 0%, significant",
+    # because a bootstrap over one value has no spread. Below MIN_PAIRED a drop can hold, never count as proven.
+    base = {"S00": calls([1.0] * 4, coverage=0.8), "S01": calls([1.0] * 4, coverage=0.8)}
+    cand = {"S00": calls([1.0], coverage=0.0), "S01": calls([1.0], coverage=0.0)}
+    r = gate(base, cand, SPECS, noise={"recall": 0.0, "coverage": 0.05})
+    cov = next(m for m in r.metrics if m.name == "coverage")
+    assert cov.status == "worse_noise" and r.verdict == PROMOTE           # a quality drop on 2 scenarios: noted only
+    cand = {"S00": calls([0.0]), "S01": calls([1.0])}
+    r = gate(base, cand, SPECS, noise={"recall": 0.0})
+    assert r.verdict == HOLD and "too few scenarios to judge (2 paired)" in r.reasons[0]

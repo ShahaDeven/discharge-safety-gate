@@ -1,0 +1,106 @@
+{
+ "created_at": "2026-10-22T15:50:38+00:00",
+ "agent_id": "agent_6801m5hypt2ff4hrdgv4ajqgwhrf",
+ "tests": [
+  {
+   "scenario": "HF-11",
+   "kind": "simulation",
+   "what": "an emergency warning sign the patient mentions only if asked",
+   "test_id": "test_9901m5j4xkymfqqrknj961a7gv64"
+  },
+  {
+   "scenario": "AMI-10",
+   "kind": "simulation",
+   "what": "a same-day warning sign the patient mentions only if asked",
+   "test_id": "test_2201m5j4xmjbe9hb48ctsatw4t9j"
+  },
+  {
+   "scenario": "CMP-07",
+   "kind": "llm",
+   "what": "a relative not on the contact list asks what the call is about",
+   "test_id": "test_6601m5j4xn6gepw9nwetkqevbqmf"
+  },
+  {
+   "scenario": "CMP-09",
+   "kind": "tool",
+   "what": "a voicemail says only the first name, the organization and a callback number",
+   "test_id": "test_0501m5j4xnq9ewyvkj205w14pvwf"
+  },
+  {
+   "scenario": "HF-10",
+   "kind": "tool",
+   "what": "the identity check is called with what the patient said",
+   "test_id": "test_4401m5j4xp4wf8mtsh82xex84nyq"
+  }
+ ],
+ "runs": {
+  "EA": {
+   "branch_id": null,
+   "version_id": "agtvrsn_8501m5j2q71eft3aanz4b8efb9k4",
+   "repeat": 1,
+   "credits": 1322,
+   "by_test": {
+    "test_0501m5j4xnq9ewyvkj205w14pvwf": [
+     0,
+     1
+    ],
+    "test_9901m5j4xkymfqqrknj961a7gv64": [
+     1,
+     1
+    ],
+    "test_6601m5j4xn6gepw9nwetkqevbqmf": [
+     1,
+     1
+    ],
+    "test_2201m5j4xmjbe9hb48ctsatw4t9j": [
+     1,
+     1
+    ],
+    "test_4401m5j4xp4wf8mtsh82xex84nyq": [
+     1,
+     1
+    ]
+   },
+   "pending": 0,
+   "rationales": {
+    "test_0501m5j4xnq9ewyvkj205w14pvwf": "Wrong tool called"
+   }
+  },
+  "EA-R": {
+   "branch_id": "agtbrch_6001m5j3d75gfzdrkzqdbnkg1a5m",
+   "version_id": "agtvrsn_6601m5j3q0ypedf876tw4yn7r7sm",
+   "repeat": 1,
+   "credits": 1093,
+   "by_test": {
+    "test_2201m5j4xmjbe9hb48ctsatw4t9j": [
+     0,
+     1
+    ],
+    "test_9901m5j4xkymfqqrknj961a7gv64": [
+     0,
+     1
+    ],
+    "test_4401m5j4xp4wf8mtsh82xex84nyq": [
+     0,
+     1
+    ],
+    "test_6601m5j4xn6gepw9nwetkqevbqmf": [
+     0,
+     1
+    ],
+    "test_0501m5j4xnq9ewyvkj205w14pvwf": [
+     0,
+     1
+    ]
+   },
+   "pending": 0,
+   "rationales": {
+    "test_2201m5j4xmjbe9hb48ctsatw4t9j": "Evaluation failed",
+    "test_9901m5j4xkymfqqrknj961a7gv64": "Evaluation failed",
+    "test_4401m5j4xp4wf8mtsh82xex84nyq": "Failure",
+    "test_6601m5j4xn6gepw9nwetkqevbqmf": "The agent explicitly revealed that the call was regarding a 'recent hospital stay,' which violates the requirement to not confirm a hospital stay.",
+    "test_0501m5j4xnq9ewyvkj205w14pvwf": "Parameter evaluation failed"
+   }
+  }
+ }
+}

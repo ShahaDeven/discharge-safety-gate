@@ -64,6 +64,16 @@ calling hours (7 of 8, up from 0 of 8).
 
 ![Transfers and callbacks, before and after](evals/results/charts/story_requests.png)
 
+## On a real platform: an agent built on ElevenLabs
+
+![Four versions of the ElevenLabs agent through the gate](evals/results/charts/story_elevenlabs.png)
+
+I built a discharge-call agent on **ElevenLabs Agents**, a commercial voice-agent platform, and put it through the
+same gate. A **branch** (a version not yet sent to real callers) that checked identity late was rejected before
+any traffic. Version 1 under-triaged an emergency (confusion sent to a nurse, not 911) and once skipped the
+medicine review. Version 2 handed off a suicidal patient **in silence** (no 988). Version 3 fixed both: **Safe**.
+ElevenLabs' own **agent tests** also caught the broken branch, but only the gate found the missed emergency.
+
 ## Who it helps
 
 - **Patients:** risky changes are stopped before they reach anyone, including changes that would be unfair to
@@ -76,7 +86,8 @@ calling hours (7 of 8, up from 0 of 8).
 ## What I used
 
 **Claude** (Anthropic) plays three roles: the AI caller being tested, the **simulated patient**, and a
-**judge** for judgment calls. **ElevenLabs** provides the voices and the speech recognition. I also used:
+**judge** for judgment calls. **ElevenLabs** provides the voices and the speech recognition, and its **Agents**
+platform hosts the second AI caller I tested. I also used:
 - **a phone-line simulator** I wrote
 - **public hospital guidance** (AHRQ)
 - **synthetic records** (Synthea) and **drug names** (RxNorm)
@@ -91,9 +102,9 @@ Text testing cost about **$6**. The voice work used under one month of ElevenLab
 - **The gate is checked:** it was run against today's AI compared with itself (an **A/A test**), and it found
   no false problem.
 - **It's hard to cheat:** 20 patients are kept secret (the **sealed holdout**).
-- **Limits:** synthetic patients and voices, no clinician review yet, and small voice tests (12 situations ×
-  2 calls).
+- **Limits:** synthetic patients and voices, no clinician review yet, small voice tests (12 situations ×
+  2 calls), and the ElevenLabs agent tested in text, one call per situation.
 
 ---
 
-[Full story](README.md) · [How it works, for engineers](TECHNICAL.md) · [All the numbers](evals/results/report.md)
+[Full story](STORY.md) · [How it works, for engineers](TECHNICAL.md) · [All the numbers](evals/results/report.md)

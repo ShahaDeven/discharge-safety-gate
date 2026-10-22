@@ -1,4 +1,4 @@
-"""Pictures for README_SHORT.md: the story in five images, drawn from saved results. No API calls.
+"""Pictures for README.md (the short version): the story in six images, drawn from saved results. No API calls.
 
     python -m evals.story_charts            # writes evals/results/charts/story_*.png
 
@@ -236,10 +236,44 @@ def requests(v: dict) -> str | None:
     return _save(fig, "story_requests.png")
 
 
+# ---------------------------------------------------------------------------------------------- 5. ElevenLabs agent
+
+def elevenlabs_journey() -> str | None:
+    """Four versions of an ElevenLabs workflow agent through the gate: what it found each time, and the verdict."""
+    path = config.RESULTS_DIR / "elevenagents.json"
+    cands = json.loads(path.read_text(encoding="utf-8")).get("candidates", {}) if path.exists() else {}
+    steps = [("EA-R", "A branch with the\nidentity check late", "Health details before\nchecking who answered\n(4 of 8 calls)"),
+             ("EA", "Version 1", "Confusion sent to a nurse,\nnot 911; skipped the\nmedicine review once"),
+             ("EA2", "Version 2: those fixed", "Crisis handoff in silence\n(no 988); voicemail without\n\"I'm an AI\""),
+             ("EA3", "Version 3: those fixed", "All 18 scenarios as safe\nas the current agent")]
+    if not all(c in cands for c, _, _ in steps):
+        return None
+    fig = _fig(10, 2.9)
+    ax = fig.add_axes([0, 0, 1, 0.86])
+    ax.set_xlim(0, 100)
+    ax.set_ylim(0, 26)
+    ax.axis("off")
+    fig.text(0.01, 0.96, "An agent built on ElevenLabs, through the same gate", fontsize=12, fontweight="bold",
+             color=INK, va="top")
+    w, gap, y0, h = 21, 4.6, 1, 23
+    for i, (cid, title, found) in enumerate(steps):
+        x = 1 + i * (w + gap)
+        ax.add_patch(FancyBboxPatch((x, y0), w, h, boxstyle="round,pad=0,rounding_size=1.6",
+                                    fc="#ffffff", ec=GRID, lw=1.4))
+        ax.text(x + 1.6, y0 + h - 2.6, title, fontsize=10.5, fontweight="bold", color=INK, va="top", linespacing=1.3)
+        word, color = VERDICT[cands[cid]["verdict"]]
+        _verdict(ax, x + 1.6, y0 + h - 10.2, word, color, ha="left")
+        ax.text(x + 1.6, y0 + h - 13.2, found, fontsize=9, color=INK2, va="top", linespacing=1.45)
+        if i < len(steps) - 1:
+            ax.add_patch(FancyArrowPatch((x + w + 0.6, y0 + h / 2), (x + w + gap - 0.6, y0 + h / 2),
+                                         arrowstyle="-|>", mutation_scale=14, color=INK2, lw=1.4))
+    return _save(fig, "story_elevenlabs.png")
+
+
 def main() -> None:
     CHARTS.mkdir(parents=True, exist_ok=True)
     v = voice_summary() or {}
-    for name in (how_it_works(), what_it_found(), voice_story(v), names(v), requests(v)):
+    for name in (how_it_works(), what_it_found(), voice_story(v), names(v), requests(v), elevenlabs_journey()):
         if name:
             print(f"chart -> {CHARTS / name}")
 

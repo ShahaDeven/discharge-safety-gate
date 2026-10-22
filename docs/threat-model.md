@@ -72,6 +72,16 @@ Everything an agent says, and everything an outside endpoint returns, is untrust
 - **Strict reply schema** with time, size and step limits; failed calls are never cached or promoted.
 - **Owner-only:** only the token that registered an agent sees its calls.
 
+## ElevenLabs Agents bridge (`agentgate/elevenagents.py`)
+
+- Connects only to `wss://*.elevenlabs.io`, through a signed URL fetched with the API key in a header (never in a
+  URL). The agent is private (authentication on), so nobody else can open conversations with it.
+- Sends the call context as dynamic variables, never the scenario id, hidden facts or answer key.
+- Accepts only the call's own tools (unknown tool names fail the call), caps steps, characters, message size and
+  waiting time; a failed conversation is never cached or promoted.
+- The agent's platform tools (its own end call, transfers) are switched off, so every action is visible to the
+  harness. If the platform ends a conversation anyway, the call ends as an agent error and is scored as it stands.
+
 ## Voice
 
 | Threat | Control |

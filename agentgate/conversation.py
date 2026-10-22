@@ -101,6 +101,16 @@ def run_call(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: 
     """on_event, if given, sees every event as it happens (the live console streams them).
     channel, if given, is the path the person's words take to the agent (for example speech -> phone line ->
     transcription); the agent hears its output, everyone else keeps what was actually said."""
+    try:
+        return _run(agent, simulator, harness, ctx, max_agent_turns, on_event, channel)
+    finally:
+        close = getattr(agent, "close", None)          # agents holding a connection (ElevenAgent) release it here
+        if callable(close):
+            close()
+
+
+def _run(agent: CallAgent, simulator: Simulator, harness: ToolHarness, ctx: CallContext,
+         max_agent_turns: int, on_event: OnEvent, channel: Channel) -> CallRecord:
     record = CallRecord(call_id=ctx.call_id)
     agent.start(ctx)
     event, heard = _party(simulator.opening(), channel)
