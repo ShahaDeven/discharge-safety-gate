@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is November 5th, 1969",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9734145998954773,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6edd11cc59dc7dddd0cd3f1c348435c16bf1cfcccd94fbf4a713421d583a5a59",
+  "audio_seconds": 2.833,
+  "seconds_to_make": 0.922
+ }
+}

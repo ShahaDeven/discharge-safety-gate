@@ -1,0 +1,28 @@
+{
+ "text": "No, I haven't been short of breath. I can walk to the mailbox and back without stopping",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9399314522743225,
+  "request_id": null,
+  "latency_s": 0.921,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "977bd10dcc59f320d1608e4fdbbc2e765c39039483726660988693b69ee24ba6",
+  "audio_seconds": 4.876,
+  "seconds_to_make": 0.921
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is January 13th, 1953",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.992217481136322,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "09a68027ecf599c57189d2ecf0068e4a8f7d9bc1c897ac827728c055d3b71df1",
+  "audio_seconds": 3.344,
+  "seconds_to_make": 1.047
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "text": "Yes, I'm Bebe Simonis. My date of birth is November fifth, nineteen sixty-nine",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8575934171676636,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "1783ff1044f768c346aa8b9d41d6bce188a7d9d345c45d832648618b98e4b4b0",
+  "audio_seconds": 4.737,
+  "seconds_to_make": 1.125
+ }
+}

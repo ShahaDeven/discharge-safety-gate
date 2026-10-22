@@ -1,0 +1,28 @@
+{
+ "text": "No, not really. I can breathe fine when I'm just sitting or walking around the house",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9538750648498535,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "dba6ca2690aab381db586bf6527b4e4e46234829755e8de4a042124ffb5b5cf6",
+  "audio_seconds": 4.783,
+  "seconds_to_make": 1.047
+ }
+}

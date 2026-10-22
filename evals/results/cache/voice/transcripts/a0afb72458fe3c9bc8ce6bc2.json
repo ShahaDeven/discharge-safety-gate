@@ -1,0 +1,18 @@
+{
+ "text": "Yes, it's me, BB. I'm the one who was in the hospital. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9965497255325317,
+  "request_id": null,
+  "latency_s": 8.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8950674b5cb96d9e7562e3eaf84f4069202b72a692ff419d65314e155133cf1e",
+  "audio_seconds": 4.226,
+  "seconds_to_make": 8.938
+ }
+}

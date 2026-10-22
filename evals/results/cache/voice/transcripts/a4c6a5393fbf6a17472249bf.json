@@ -1,0 +1,18 @@
+{
+ "text": "La presión estaba en 180",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9660272002220154,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9ad045778ba1326ff84fa3690b2c651691ca8d570bbbf011b99d8a060c1b8c1b",
+  "audio_seconds": 2.368,
+  "seconds_to_make": 1.031
+ }
+}

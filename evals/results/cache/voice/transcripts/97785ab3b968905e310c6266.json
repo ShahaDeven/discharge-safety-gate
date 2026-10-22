@@ -1,0 +1,18 @@
+{
+ "text": "We had soup for lunch and I watched my shows and I've been waking up at night gasping for air",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9960480332374573,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5af723ae76fe96852dae75ee1b9ac4533c54f9e83395dc113eba3c9ac8b20fd9",
+  "audio_seconds": 5.016,
+  "seconds_to_make": 1.094
+ }
+}

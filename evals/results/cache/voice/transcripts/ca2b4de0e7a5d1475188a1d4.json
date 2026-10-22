@@ -1,0 +1,18 @@
+{
+ "text": "Ay, gracias por todo. Ya entendí lo del peso, lo de la falta de aire y el 911. La cita del 17 de octubre la apunto. Si tengo alguna duda, llamo al número que me dio. Gracias. Que tenga buena tarde",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9669598340988159,
+  "request_id": null,
+  "latency_s": 1.641,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "82f061c5b7a331fb9215e90f26fb153707418f8544069621bf7dd8c330fc4db1",
+  "audio_seconds": 13.746,
+  "seconds_to_make": 1.641
+ }
+}

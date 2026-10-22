@@ -1,0 +1,26 @@
+{
+ "text": "Pues no sé si es lo mismo. Las últimas dos noches duermo en el sillón reclinable, la verdad. Es más cómodo, no es nada del otro mundo. Y en el pecho no, no me duele nada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9810137152671814,
+  "request_id": null,
+  "latency_s": 2.11,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "aba87b2ef87bea6f9a4c8d1bb006aa5784059338a7f92500ca8df73f8cdba81f",
+  "audio_seconds": 12.771,
+  "seconds_to_make": 2.11
+ }
+}

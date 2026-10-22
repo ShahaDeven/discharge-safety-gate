@@ -1,0 +1,16 @@
+{
+ "text": "My date of birth is September 21st, 1960",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9713106155395508,
+  "request_id": null,
+  "latency_s": 0.907,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "d769c20c02ca630a3c0253fe89809147211956ddb7f85137539832659bf59226",
+  "audio_seconds": 3.111,
+  "seconds_to_make": 0.907
+ }
+}

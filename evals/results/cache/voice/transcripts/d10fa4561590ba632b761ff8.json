@@ -1,0 +1,18 @@
+{
+ "text": "My heart rate is about 120",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9779658913612366,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b1acf4fb297bfd04b6918aa1c0472ff4f37a9d24350e7b2da92b62d0a6d45bd1",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 0.844
+ }
+}

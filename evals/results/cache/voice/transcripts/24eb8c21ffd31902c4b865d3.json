@@ -1,0 +1,26 @@
+{
+ "text": "No, nada más. Solo esas que me dieron y el metoprolol viejo que le dije. No tomo vitaminas ni nada sin receta",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8756855726242065,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "7f2e6836ccf70a40db9e32d3b154afa9b2730472ef5397332ed887d8f9004efd",
+  "audio_seconds": 7.988,
+  "seconds_to_make": 1.375
+ }
+}

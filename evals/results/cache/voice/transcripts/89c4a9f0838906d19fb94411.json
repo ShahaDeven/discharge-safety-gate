@@ -1,0 +1,28 @@
+{
+ "text": "Bleeding? No, nothing like that. Nothing black, no. My wrist is fine. No swelling or anything. Just the dizzy thing when I get up",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9363583922386169,
+  "request_id": null,
+  "latency_s": 1.687,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "f9ba2a41700f9bb81cf0aac922a069d9b56069e5b4b5a7f4ec0f120f32fdcd42",
+  "audio_seconds": 8.266,
+  "seconds_to_make": 1.687
+ }
+}

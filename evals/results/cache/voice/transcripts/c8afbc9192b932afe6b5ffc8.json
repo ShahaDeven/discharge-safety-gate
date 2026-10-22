@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Michaela. Who is this again? Is this about my hospital stay?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9713149070739746,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "009d8331c473cc974d7a323bdb3cdab608d3c6b541ab20da9e94d3b276ce81dd",
+  "audio_seconds": 4.226,
+  "seconds_to_make": 0.985
+ }
+}

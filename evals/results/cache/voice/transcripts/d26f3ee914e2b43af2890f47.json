@@ -1,0 +1,18 @@
+{
+ "text": "Nope, that's it. The inhalers and the prednisone, that's all I got at home. No pills, no vitamins, nothing from the store",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9671400785446167,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "828c18470104ee92a0d69eacead5968acd53fdb178df7b911be3c24d9874c367",
+  "audio_seconds": 7.059,
+  "seconds_to_make": 1.344
+ }
+}

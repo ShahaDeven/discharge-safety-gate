@@ -1,0 +1,18 @@
+{
+ "text": "It's Vasili Hogenest speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9596614241600037,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6d937ca5bef3067eff0254a4e312df15d2141b476394598dd75e99c99d7c04c4",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 1.172
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "text": "Plavix, yes. I got that one and I take it every day. I'm not supposed to stop it, right? Sorry, what was the next one?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9945312738418579,
+  "request_id": null,
+  "latency_s": 1.39,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "60f3cee427f554a4cf44927bbb67094ea85ef5d4a55bb448df87bc4d7874162f",
+  "audio_seconds": 7.245,
+  "seconds_to_make": 1.39
+ }
+}

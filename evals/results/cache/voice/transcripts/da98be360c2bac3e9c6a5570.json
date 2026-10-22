@@ -1,0 +1,18 @@
+{
+ "text": "Pues más o menos. Estoy cansada, pero ya estoy en casa. Todavía me acostumbro",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9894757270812988,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5013da9a839617db27d8bb0c24098588190ce5f6df29be7f730f3c707305512c",
+  "audio_seconds": 5.619,
+  "seconds_to_make": 1.109
+ }
+}

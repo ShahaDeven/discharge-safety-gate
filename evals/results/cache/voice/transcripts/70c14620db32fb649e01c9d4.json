@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Roseanne Simonis",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9546841382980347,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "cf91164b15480ab338f1ffd52f08118868c7102628f63aadbae5412cff66cb5a",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 1.375
+ }
+}

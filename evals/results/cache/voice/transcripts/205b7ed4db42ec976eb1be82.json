@@ -1,0 +1,16 @@
+{
+ "text": "Estoy tosiendo flama verde",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9082667231559753,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "74039700c3b3c66093fc0d4ec94bf380c18a1d43a93de9857a57fc927bd1fab2",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.031
+ }
+}

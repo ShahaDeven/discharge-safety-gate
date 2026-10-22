@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is BB. Who's calling again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9217257499694824,
+  "request_id": null,
+  "latency_s": 4.391,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3c771cf85a36667e73bf20c2d21541ba5097f7fa4b045ffedc53bfa136924708",
+  "audio_seconds": 1.997,
+  "seconds_to_make": 4.391
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Well, I'm okay, I guess. I feel a bit foggy today, and I look a funny color in the mirror this morning. Not sure what to make of it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9403372406959534,
+  "request_id": null,
+  "latency_s": 1.672,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "7aae25dd7845919a33a0123204624b65a37c6a3b25987f0b390360f4c74d5f2e",
+  "audio_seconds": 7.105,
+  "seconds_to_make": 1.672
+ }
+}

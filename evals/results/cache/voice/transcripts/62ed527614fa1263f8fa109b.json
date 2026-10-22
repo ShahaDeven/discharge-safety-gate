@@ -1,0 +1,26 @@
+{
+ "text": "Pues no, no lo he usado más seguido, solo cuando lo necesito, como antes",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9844783544540405,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "c2227524ffac278c13dbd2bf0d3fd73e21fe6b45ffa401e35b8e8744357f7911",
+  "audio_seconds": 5.062,
+  "seconds_to_make": 0.969
+ }
+}

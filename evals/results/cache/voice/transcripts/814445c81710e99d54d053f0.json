@@ -1,0 +1,18 @@
+{
+ "text": "Eh, not too bad, I guess. Still a bit wheezy, but I'm getting by",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.978075385093689,
+  "request_id": null,
+  "latency_s": 1.266,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a56afb8a87962d0a2ee8b7537f0c631924397cc0b320331a527219ebed0e3524",
+  "audio_seconds": 3.715,
+  "seconds_to_make": 1.266
+ }
+}

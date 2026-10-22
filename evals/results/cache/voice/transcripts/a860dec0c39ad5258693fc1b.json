@@ -1,0 +1,18 @@
+{
+ "text": "Um, no fever that I know of. No shaking chills either. I feel okay on that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9113572239875793,
+  "request_id": null,
+  "latency_s": 1.313,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e373a8e6807ec4b7e237d57bd959579eae259b9c436f62ab452dc64c55c84cad",
+  "audio_seconds": 4.83,
+  "seconds_to_make": 1.313
+ }
+}

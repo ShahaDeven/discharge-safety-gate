@@ -1,0 +1,18 @@
+{
+ "text": "Albuterol. I use two puffs every four to six hours when I need it, like I said. And no, that's it. Just the inhalers and the prednisone. No other pills or vitamins or anything",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9313399195671082,
+  "request_id": null,
+  "latency_s": 3.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d93d9d8257f877b78c3b68e97565b74932f3ddd0c4d2b3d7fadd991ac69d2ee1",
+  "audio_seconds": 12.028,
+  "seconds_to_make": 3.047
+ }
+}

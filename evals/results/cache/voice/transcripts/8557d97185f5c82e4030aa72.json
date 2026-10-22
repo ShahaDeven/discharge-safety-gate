@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, there's a lump there at my wrist, and I think it's getting a little bigger. It's tender when I press on it. No bleeding that I can see and no black stools. They look normal",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9822948575019836,
+  "request_id": null,
+  "latency_s": 1.282,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "5fdec3a92762605b4f4b7e7de3c31fb441302d149d71cb1450551a4d316c4aa4",
+  "audio_seconds": 9.799,
+  "seconds_to_make": 1.282
+ }
+}

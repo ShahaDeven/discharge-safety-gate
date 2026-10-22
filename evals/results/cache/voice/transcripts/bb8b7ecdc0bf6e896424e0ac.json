@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is September 24th, 1940",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9730750918388367,
+  "request_id": null,
+  "latency_s": 1.015,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ce426581b666f0de015106b5ee95404034e1afd6fa94e8d1fbaf1fbcd0e210f0",
+  "audio_seconds": 3.158,
+  "seconds_to_make": 1.015
+ }
+}

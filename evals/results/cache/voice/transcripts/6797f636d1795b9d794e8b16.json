@@ -1,0 +1,18 @@
+{
+ "text": "Cough's been about the same, I guess. Breathing's okay. I'm not gasping or anything",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9513413906097412,
+  "request_id": null,
+  "latency_s": 0.907,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "28f0208c92be3ac549f3c4704d51f22f552dec5f905dd045a2d74cddb7055d21",
+  "audio_seconds": 4.505,
+  "seconds_to_make": 0.907
+ }
+}

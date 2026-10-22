@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is January 18th, 1951",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9890198111534119,
+  "request_id": null,
+  "latency_s": 0.968,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "66cc8a5041f0c0da6a88b6cb621da04dab404cb67dd7e0699388d7a4b44db641",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 0.968
+ }
+}

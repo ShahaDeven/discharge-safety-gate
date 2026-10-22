@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Matilda Sheddinger",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9643338322639465,
+  "request_id": null,
+  "latency_s": 2.063,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bb1ad73954c7f9e3a816a23772ec99f4f8ff8126c62459ca9fd8ad41f5d55fec",
+  "audio_seconds": 1.997,
+  "seconds_to_make": 2.063
+ }
+}

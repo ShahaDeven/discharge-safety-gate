@@ -1,0 +1,18 @@
+{
+ "text": "Ya no tengo las piernas hinchadas",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9798406362533569,
+  "request_id": null,
+  "latency_s": 0.781,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "08674eb4da581d265c9d886ef406591a8a103d184a917d012ddbfde0ae30a24c",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.781
+ }
+}

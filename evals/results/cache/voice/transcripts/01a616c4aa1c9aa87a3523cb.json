@@ -1,0 +1,18 @@
+{
+ "text": "Sí, me llamo Matilda Keane y nací el siete de octubre de 1958",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8410526514053345,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d6dac2a83f74eb9819fea89fe1a9f15d66412dacd0f875f5c75a8feea995c318",
+  "audio_seconds": 4.691,
+  "seconds_to_make": 0.953
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "I stopped the aspirin. I mean, I'm still taking the aspirin",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9560735821723938,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c6ef3c150f180fc3fb77ec87629c1740fd8faf07b4bda9b4a7c517d72befea70",
+  "audio_seconds": 3.39,
+  "seconds_to_make": 0.828
+ }
+}

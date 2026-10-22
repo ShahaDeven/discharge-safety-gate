@@ -1,0 +1,18 @@
+{
+ "text": "No, not really. Breathing's fine. I just get a little winded if I go up the stairs too fast, but that's normal for me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9670676589012146,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6e0582bd0cefcf91552eba3c56112e0df262289350c4fc692c1ebb03eaf932b6",
+  "audio_seconds": 6.502,
+  "seconds_to_make": 1.328
+ }
+}

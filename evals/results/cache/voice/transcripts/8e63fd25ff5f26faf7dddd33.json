@@ -1,0 +1,18 @@
+{
+ "text": "Well, yeah, there was some pressure in my chest last night, maybe twenty minutes. I was sweaty too",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9962509274482727,
+  "request_id": null,
+  "latency_s": 2.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "cd7786dbd64476340adc9af6a38da6c5faad8d1728adaed2196bd84521aeaf7f",
+  "audio_seconds": 5.201,
+  "seconds_to_make": 2.969
+ }
+}

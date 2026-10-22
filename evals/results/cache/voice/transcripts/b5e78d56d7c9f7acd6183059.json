@@ -1,0 +1,18 @@
+{
+ "text": "Uh, yeah. If I can't catch my breath or my chest starts hurting or I'm getting real confused, I call 911. Otherwise, I call my doctor's office, I guess. The number's on the fridge",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9370806217193604,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "49a6b2fa3443895aea9d6525980126b8531c8320fef27a0cb033b138aa0c53f7",
+  "audio_seconds": 10.588,
+  "seconds_to_make": 1.062
+ }
+}

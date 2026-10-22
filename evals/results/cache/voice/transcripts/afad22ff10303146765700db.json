@@ -1,0 +1,18 @@
+{
+ "text": "Yes, I'm Michaela Rendon. My birthday is June twelfth, nineteen sixty-three.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8600899577140808,
+  "request_id": null,
+  "latency_s": 0.968,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "55f4150b5a4fed7b1f44beca66e6fe07898099fd6be65f26e8f604742892d870",
+  "audio_seconds": 4.551,
+  "seconds_to_make": 0.968
+ }
+}

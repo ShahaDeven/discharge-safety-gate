@@ -1,0 +1,18 @@
+{
+ "text": "Atorvastatin, yes, I take that at night. And the simvastatin, I'm still taking that too, the old cholesterol pill. Nobody told me to stop it yet, so I just kept on with both.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.987244725227356,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6d37c0d90e8a6617c2e424627269e9690b89b7c2ba5d8b3e9abb2389b2a177ed",
+  "audio_seconds": 11.749,
+  "seconds_to_make": 1.062
+ }
+}

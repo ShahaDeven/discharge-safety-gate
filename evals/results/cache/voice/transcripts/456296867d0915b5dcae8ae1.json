@@ -1,0 +1,18 @@
+{
+ "text": "I take two. No, sorry, one in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.7937684059143066,
+  "request_id": null,
+  "latency_s": 0.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "59fe6bd1998667941dce4f7fd75e27bbc9b010b13587017cd40655c11a95a7f0",
+  "audio_seconds": 2.369,
+  "seconds_to_make": 0.75
+ }
+}

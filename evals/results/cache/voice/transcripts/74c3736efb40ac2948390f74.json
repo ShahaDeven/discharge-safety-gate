@@ -1,0 +1,18 @@
+{
+ "text": "The aspirin I take every day, no misses. The Plavix though, I ran out about three days ago and I haven't gotten it refilled yet",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9494162797927856,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4a0538582af955da478826c50b019faa1314ed88cb020d145279707c5e062bd7",
+  "audio_seconds": 7.152,
+  "seconds_to_make": 1.172
+ }
+}

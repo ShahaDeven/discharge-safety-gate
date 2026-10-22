@@ -1,0 +1,18 @@
+{
+ "text": "I'm not confused. I know exactly where I am",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9859883785247803,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "93cf59721004653b9319976b6426ed863e95c22a7a2904b9a16279a0e1826000",
+  "audio_seconds": 2.647,
+  "seconds_to_make": 0.906
+ }
+}

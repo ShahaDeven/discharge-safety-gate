@@ -1,0 +1,24 @@
+{
+ "text": "Well, yeah, I've been mixed up this morning. I couldn't remember what day it was, and I'm tired by the afternoon, like I said, but I'm not sleeping all the time",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9855342507362366,
+  "request_id": null,
+  "latency_s": 1.266,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Preston Little",
+    "Lakeside General Hospital",
+    "amoxicillin-clavulanate",
+    "acetaminophen"
+   ]
+  },
+  "audio_sha256": "7d5541f33d212949dacf0a2007123ebc7b90a3ef17b3a4fd90c6466e26b19f74",
+  "audio_seconds": 8.731,
+  "seconds_to_make": 1.266
+ }
+}

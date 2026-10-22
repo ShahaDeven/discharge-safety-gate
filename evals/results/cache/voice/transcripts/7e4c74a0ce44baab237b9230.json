@@ -1,0 +1,18 @@
+{
+ "text": "Eh, I'm doing all right, I guess. Still tired some. Got home Sunday. They put a stent in my heart, so I'm taking it slow.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9870595335960388,
+  "request_id": null,
+  "latency_s": 1.234,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a32a52b1ff2ff57e16c1f4ba2df373a5821382bf26e6f2588b7d470096db97ce",
+  "audio_seconds": 7.43,
+  "seconds_to_make": 1.234
+ }
+}

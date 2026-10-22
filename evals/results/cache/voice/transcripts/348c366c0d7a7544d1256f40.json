@@ -1,0 +1,18 @@
+{
+ "text": "Aspirin I take every morning. I haven't missed that. But the Plavix and Clopidogrel, I ran out. The hospital gave me a week's worth, and I haven't gotten it refilled. It's been about three days now",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9861901998519897,
+  "request_id": null,
+  "latency_s": 2.422,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3f3d505d5f49b95f20437b6e3f4d5da43d910cad4ddd423c23784c6c55874133",
+  "audio_seconds": 12.26,
+  "seconds_to_make": 2.422
+ }
+}

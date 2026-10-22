@@ -1,0 +1,18 @@
+{
+ "text": "Hinchazón, pues no, creo que no. Los pies están igual que siempre, no he notado nada raro",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9489938020706177,
+  "request_id": null,
+  "latency_s": 0.968,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4a976aedf3d909fa2316868115a3a367c376da858e6bd6561363ca0a2333651a",
+  "audio_seconds": 6.037,
+  "seconds_to_make": 0.968
+ }
+}

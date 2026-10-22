@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I, I got the prednisone. I'm taking the forty milligram one once a day like they told me. It's supposed to go till the thirteenth, right?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9629313349723816,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1ca5bab34583965d55c2b0e647a1eb0a2ce940335d4de4ac4aa5405ff43439e8",
+  "audio_seconds": 8.916,
+  "seconds_to_make": 0.938
+ }
+}

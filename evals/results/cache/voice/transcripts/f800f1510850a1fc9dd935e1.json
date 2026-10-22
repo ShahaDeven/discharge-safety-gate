@@ -1,0 +1,26 @@
+{
+ "text": "Sí, claro. Me llamo Micaela Rendón y nací el 12 de junio de 1946",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9498379826545715,
+  "request_id": null,
+  "latency_s": 1.36,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "d299faae5fa6e352234e03fd5ce5025e6e7f70821b4810638ed67102c0151531",
+  "audio_seconds": 5.851,
+  "seconds_to_make": 1.36
+ }
+}

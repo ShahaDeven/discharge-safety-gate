@@ -1,0 +1,27 @@
+{
+ "text": "Sure. It's July twenty-ninth, nineteen sixty-one",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9058038592338562,
+  "request_id": null,
+  "latency_s": 1.469,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "066b237e1647eedd306289ba9e11d9f4774fe4f71b9c6e000e019ceadd86eb01",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 1.469
+ }
+}

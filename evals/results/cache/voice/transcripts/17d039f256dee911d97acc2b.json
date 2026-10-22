@@ -1,0 +1,16 @@
+{
+ "text": "Tengo dolor en el pecho cuando camino",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9976111054420471,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "bf76eb8838458dcc103199264efe28b4405b89973fe7050808242052bbb0dbbb",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 1.187
+ }
+}

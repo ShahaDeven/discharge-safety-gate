@@ -1,0 +1,16 @@
+{
+ "text": "I give myself Lantus every night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "f1a87f646fbdb540ee6d78f0f625bf335a2a528fa35f488c28cb51379fb8440b",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 0.984
+ }
+}

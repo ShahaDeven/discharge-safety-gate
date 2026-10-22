@@ -1,0 +1,18 @@
+{
+ "text": "I didn't get the inhaler refilled",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9852709770202637,
+  "request_id": null,
+  "latency_s": 1.282,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f1a7065ecefb11814b6bf8d1b2aa082e0560c3640a73794d2f013c8de7842e6a",
+  "audio_seconds": 1.997,
+  "seconds_to_make": 1.282
+ }
+}

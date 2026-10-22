@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la espironolactona también la tengo, la de veinticinco miligramos. Me la tomo una vez al día en la mañana con las otras pastillas",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9890838861465454,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a17a31eb4a7d103e46ba843a62467d420327fa483de5f9b0df9b4b65c7ca2497",
+  "audio_seconds": 7.709,
+  "seconds_to_make": 0.953
+ }
+}

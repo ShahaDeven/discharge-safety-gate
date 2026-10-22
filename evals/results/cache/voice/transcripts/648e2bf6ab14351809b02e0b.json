@@ -1,0 +1,26 @@
+{
+ "text": "No, no me falta el aire cuando estoy quieta. Respiro igual que antes, más o menos. Sigo con mis inhaladores",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9791968464851379,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "52560dd0c72881360524c29029e058a201c94847fc22f10eac75013bc874790a",
+  "audio_seconds": 6.92,
+  "seconds_to_make": 1.109
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "No, no chest pain right now. Just tired, like I said",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9790588617324829,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "12086dc258dd9a6c05e226965a0fc61e030141429c05db23ac8d058e46f101ae",
+  "audio_seconds": 2.879,
+  "seconds_to_make": 1.172
+ }
+}

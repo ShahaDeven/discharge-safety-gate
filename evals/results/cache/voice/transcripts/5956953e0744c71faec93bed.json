@@ -1,0 +1,18 @@
+{
+ "text": "I talked to my sister on the phone for an hour, and then I felt like I was going to pass out.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9936007857322693,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "90d7c3ab56fbf5f72e4f470a980c1fc06b54aa34a961164757dc5fa0c578252c",
+  "audio_seconds": 4.551,
+  "seconds_to_make": 1.172
+ }
+}

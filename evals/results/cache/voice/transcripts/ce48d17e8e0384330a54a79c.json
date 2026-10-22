@@ -1,0 +1,18 @@
+{
+ "text": "It's Marie Sauer speaking.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9431165456771851,
+  "request_id": null,
+  "latency_s": 1.157,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3a0b6ca87447b29c905d221195a9a5e509079e09eca595adde0d0409f10ead8f",
+  "audio_seconds": 1.625,
+  "seconds_to_make": 1.157
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is June twelfth, nineteen sixty-three",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9460020065307617,
+  "request_id": null,
+  "latency_s": 0.766,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e86b5404fccfa36ea0555c44db64871a92ae44b59c63a8a6f207a32f8432db36",
+  "audio_seconds": 3.111,
+  "seconds_to_make": 0.766
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "text": "Sí, claro. Me llamo Matilda Kihn y nací el 7 de octubre de 1958",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8895236253738403,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "ad7163a7b9b54014487861aff9a03b2bcbc58bbed08d177cbe664d9dda66c5d7",
+  "audio_seconds": 5.759,
+  "seconds_to_make": 1.172
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Sí, me llamo Micaela Rendón. Nací el doce de junio de mil novecientos cuarenta y seis",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9474470019340515,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3f763cb47909927fd268c66068d984af0e69e96434769aa44086e447a2534df4",
+  "audio_seconds": 5.294,
+  "seconds_to_make": 1.375
+ }
+}

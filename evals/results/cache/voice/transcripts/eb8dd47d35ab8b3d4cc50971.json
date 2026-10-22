@@ -1,0 +1,27 @@
+{
+ "text": "Ay, está bien. Ya voy a llamar al 911. Gracias. Voy a llamar a mi hija también. Ella vive cerca. Por favor, avise al doctor, ¿sí?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9901189208030701,
+  "request_id": null,
+  "latency_s": 1.734,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "9d8842ea550537638a2b2e3040e891feebecd3adc61920a9a58b26306927b37e",
+  "audio_seconds": 9.149,
+  "seconds_to_make": 1.734
+ }
+}

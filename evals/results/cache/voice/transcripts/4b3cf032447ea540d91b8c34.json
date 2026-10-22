@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Bebe, Bebe Simonis. Who did you say you were with? You're kind of breaking up a little. Could you speak up?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.995317280292511,
+  "request_id": null,
+  "latency_s": 3.64,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f7c3dedd3f277454eb9dbb8d94447eeb4fb5ac428491b9cb1b67dcb82a068d9a",
+  "audio_seconds": 6.269,
+  "seconds_to_make": 3.64
+ }
+}

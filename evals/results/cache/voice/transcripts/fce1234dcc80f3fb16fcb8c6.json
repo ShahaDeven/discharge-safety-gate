@@ -1,0 +1,18 @@
+{
+ "text": "No, mi respiración está igual, no peor. No me falta el aire ni cuando estoy sentada descansando",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9856524467468262,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c23b09a1caf76e737e58634c5c7be61365255119cbe7a5e28cbeb4a4aa77532b",
+  "audio_seconds": 6.641,
+  "seconds_to_make": 0.985
+ }
+}

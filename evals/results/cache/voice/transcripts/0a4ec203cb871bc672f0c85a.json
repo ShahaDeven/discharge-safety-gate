@@ -1,0 +1,18 @@
+{
+ "text": "It's Basilia Hageness speaking.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9735564589500427,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f1c93d93b55dbdbdb9175227c1b04209a74441a23ad092e94996dfe1ad11ae90",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.922
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Aspirin. I've been taking every day, haven't missed any. The other one, the clopidogrel, I never got it. The pharmacy said it wasn't ready, and I never went back for it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9908016324043274,
+  "request_id": null,
+  "latency_s": 1.391,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6f707325e609f894658bd6fd77841f2990f47a945da1e28233875c9cec94e77c",
+  "audio_seconds": 10.078,
+  "seconds_to_make": 1.391
+ }
+}

@@ -1228,6 +1228,29 @@ voice-aware prompt. 12 scenarios x 2, baseline C0 in text.
 4. **Full calls with the best fix (~5,700-7,500 credits),** plus the privacy check: biasing toward the expected name
    must not verify a wrong person or an unauthorized relative.
 
+### 13.9 Review fixes before sending (2026-10-22, $0)
+
+An outside review listed five items. Status:
+- **P0, reproducibility: fixed.**
+  - The saved calls, judge labels and voice transcripts (~19 MB) are now committed; only the voice audio
+    (136 MB) stays out.
+  - Checked on a copy holding only git's files, with no API keys: gate (A/A, C1-C4), voice calls (VC/VH/VK), the
+    ElevenLabs agent (EA, EA-R, EA2, EA3) and the voice benchmark all matched the committed results, and
+    report.md was identical byte for byte.
+  - TECHNICAL.md has a "Reproduce every result without API keys" section.
+- **P0, the VC "false control": already resolved;** the wording is now clear.
+  - "Expected PROMOTE" is labelled as the pre-run expectation and marked disproved, with the cause.
+  - Caveat: the identity check is strict (an exact name, accents ignored). The looser rule (13.8 "Tolerate") was
+    never built, and this is stated in the report, voice-evaluation.md and TECHNICAL.md.
+- **P1, consistent documentation: fixed.**
+  - The names figure is aligned: 38% to 100% on the phone line (35% on clear audio).
+  - `evals/results/report.md` is declared the single source for every number (the report header, TECHNICAL.md
+    and the README footer).
+- **P1, calibration: open.** Done so far: A/A false alarms (0% at K=1, 1% at K=2) and 4/4 seeded regressions
+  caught. Missing: the missed-regression rate by effect size and K. Plan: plant drops of known sizes in the
+  saved calls and re-gate ($0).
+- **P2, clinical review: open.** It needs a clinician; both READMEs already say so.
+
 ### 13.4 Day 4: the release report and documentation ($0)
 
 - **Report.** The voice comparison in `report.md` and in the validation pack:

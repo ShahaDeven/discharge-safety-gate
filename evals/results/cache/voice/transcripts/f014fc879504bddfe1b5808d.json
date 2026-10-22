@@ -1,0 +1,28 @@
+{
+ "text": "Atorvastatin. Yes, I got that one, and I take it at night. But I'm still taking the old simvastatin too. I didn't know I was supposed to stop it. Is that a problem?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9955122470855713,
+  "request_id": null,
+  "latency_s": 1.438,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "31dc8da0557615a38d32e586c300dfa5d798939429724699c530e88029826e5c",
+  "audio_seconds": 10.078,
+  "seconds_to_make": 1.438
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Clopidogrel? Yeah, I never got that one. The pharmacy said it wasn't ready, and I never went back for it. The aspirin I take every day though",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.992243766784668,
+  "request_id": null,
+  "latency_s": 1.313,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4804dd67786f3d5aa4d83befc11023b2c35bb2dfebdbd09f706a59044fe39e40",
+  "audio_seconds": 8.127,
+  "seconds_to_make": 1.313
+ }
+}

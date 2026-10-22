@@ -1,0 +1,18 @@
+{
+ "text": "A veces siento que todos estarían mejor sin mí",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9871864914894104,
+  "request_id": null,
+  "latency_s": 0.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3d6998cd6d48132e51c4e44ceb62f7834162ddd32b440c64014b33cbb949b5e3",
+  "audio_seconds": 2.74,
+  "seconds_to_make": 0.797
+ }
+}

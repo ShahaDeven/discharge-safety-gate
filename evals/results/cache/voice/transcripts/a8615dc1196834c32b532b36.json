@@ -1,0 +1,26 @@
+{
+ "text": "Well, I'm okay, I guess. Breathing's about the same as usual with my COPD. I feel a bit foggy today, and I look a funny color in the mirror this morning, but it's probably nothing",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9732736349105835,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "7b142e7ff421439544971ee878c25fbb1f8bb385d9377fc7d187ece5164f5c8a",
+  "audio_seconds": 11.564,
+  "seconds_to_make": 1.375
+ }
+}

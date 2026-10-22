@@ -1,0 +1,27 @@
+{
+ "text": "Clopidogrel? Uh, no. The pharmacy said it wasn't ready yet, and I never went back for it. Haven't had any of that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9966451525688171,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "00925deff747e63641c9d2afccc5061fa1cc89d98951af534b9c7d992a7acba9",
+  "audio_seconds": 6.176,
+  "seconds_to_make": 1.094
+ }
+}

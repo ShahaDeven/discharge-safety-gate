@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy yo. Me llamo Micah Shanahan y nací el 27 de mayo de 1974",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.960630476474762,
+  "request_id": null,
+  "latency_s": 1.407,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ddd66ef41d7fc45812efe22b611e6d421977b952b5a1e74eb79c6680a24f03f9",
+  "audio_seconds": 6.409,
+  "seconds_to_make": 1.407
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "text": "Eh, not bad, I guess. I get tired easily, but I'm walking a bit further every day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9666205048561096,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Rick Kulas",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "3ca7251a18d354ec1012bbad85e6656178372d0a66dbd00a42192c46ddc78841",
+  "audio_seconds": 5.016,
+  "seconds_to_make": 0.985
+ }
+}

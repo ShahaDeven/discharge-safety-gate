@@ -1,0 +1,18 @@
+{
+ "text": "Yes, I'm Michaela Rendon. My birthday is June 12th, 1963",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9519470930099487,
+  "request_id": null,
+  "latency_s": 3.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "12df14e0d460b4aebd55d5cf80b45b759299df8f7d8aeaaee773df2cec25cfbc",
+  "audio_seconds": 4.551,
+  "seconds_to_make": 3.047
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Pues más o menos. Estoy cansada, pero ya estoy en casa. Me dijeron que era el corazón, que se me juntaba líquido",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9826401472091675,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ae13bb730ca0f9a9a88b09073c35dd4f4f4de04eab5211ca401046568ac06ec7",
+  "audio_seconds": 7.245,
+  "seconds_to_make": 0.937
+ }
+}

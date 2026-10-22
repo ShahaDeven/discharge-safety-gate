@@ -1,0 +1,27 @@
+{
+ "text": "Uh, yeah. If my chest hurts bad or I can't catch my breath or I pass out, I call nine one one. If the wrist starts bleeding a lot, I'd call nine one one too, I guess. Otherwise, I'd call the hospital, I suppose",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.951424241065979,
+  "request_id": null,
+  "latency_s": 1.282,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "87ca4fda85d6cf5ff17299e4045e1d3018663035c1488679d4e6564edbd4ea2f",
+  "audio_seconds": 11.935,
+  "seconds_to_make": 1.282
+ }
+}

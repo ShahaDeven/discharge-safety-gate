@@ -1,0 +1,27 @@
+{
+ "text": "No, no tengo más hinchazón. Los pies están igual, no peor",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9768833518028259,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "603e790f7d7907a387575b4fae02571158845adb496324590f4f4f5a80be979d",
+  "audio_seconds": 3.576,
+  "seconds_to_make": 0.875
+ }
+}

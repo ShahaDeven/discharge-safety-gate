@@ -1,0 +1,18 @@
+{
+ "text": "Pues mis piernas están un poco débiles de estar acostada en la cama, pero ya camino más por la casa",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9849966764450073,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c64a7b411d3a794f1ca8192a03a427e0a3d9e2c8f9d1397a05c2e097331eff7d",
+  "audio_seconds": 6.548,
+  "seconds_to_make": 0.875
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Uh, let me think. Chest pain that doesn't go away, I guess. Trouble breathing, maybe fainting, passing out, stuff like that, right?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9782772064208984,
+  "request_id": null,
+  "latency_s": 1.5,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "12611811827299e2f527090b540df7ecd74b510161668ece8e3ad33d3755b680",
+  "audio_seconds": 7.384,
+  "seconds_to_make": 1.5
+ }
+}

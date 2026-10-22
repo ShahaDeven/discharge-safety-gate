@@ -1,0 +1,18 @@
+{
+ "text": "Nope. No dizziness or passing out. Feel steady enough",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8247693181037903,
+  "request_id": null,
+  "latency_s": 9.907,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "17f3a25674d11ae5c171b7a2d14e530b6c1f0469a333026a3fd1fac21810e2a7",
+  "audio_seconds": 3.483,
+  "seconds_to_make": 9.907
+ }
+}

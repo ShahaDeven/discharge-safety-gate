@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the albuterol at home. I only use it when I need it like I was told",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9974142909049988,
+  "request_id": null,
+  "latency_s": 1.016,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0cc29af8a4a68d85d7e4392f3a051392534c23a49f2e65b142f77db36fd79348",
+  "audio_seconds": 4.691,
+  "seconds_to_make": 1.016
+ }
+}

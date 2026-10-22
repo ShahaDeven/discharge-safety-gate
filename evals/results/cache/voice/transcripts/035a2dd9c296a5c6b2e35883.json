@@ -1,0 +1,16 @@
+{
+ "text": "I've been sleeping well",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9969630837440491,
+  "request_id": null,
+  "latency_s": 0.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "b493a17d02a33dcdfc68ecfae54c5a71f42431be5091336ef55b3475a7785451",
+  "audio_seconds": 1.3,
+  "seconds_to_make": 0.797
+ }
+}

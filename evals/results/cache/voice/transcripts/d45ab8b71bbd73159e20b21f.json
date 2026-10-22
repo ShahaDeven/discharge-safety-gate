@@ -1,0 +1,18 @@
+{
+ "text": "I give myself lanterns every night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8995053768157959,
+  "request_id": null,
+  "latency_s": 0.672,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f066109f08557d2c9962e112407d87695fa59c785b9b07d1771df572b65791de",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 0.672
+ }
+}

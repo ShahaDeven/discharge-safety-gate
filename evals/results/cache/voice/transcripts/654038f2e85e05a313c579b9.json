@@ -1,0 +1,18 @@
+{
+ "text": "Eh, I'm doing okay, I guess. Tired some. Got home from Lakeside on Monday, the stent thing",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9002435803413391,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "15841664601c557096fa3220177591c058d05b9b7004bd47a79f34ed1ff18c04",
+  "audio_seconds": 5.573,
+  "seconds_to_make": 1.328
+ }
+}

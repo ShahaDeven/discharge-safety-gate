@@ -1,0 +1,16 @@
+{
+ "text": "It's Grizelle Balestreri speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8831854462623596,
+  "request_id": null,
+  "latency_s": 1.063,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "6a2e742a8e5e38837ff8eed16ad5d115cad4e48cf42b6a1b6b3ea9b8f4198d81",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 1.063
+ }
+}

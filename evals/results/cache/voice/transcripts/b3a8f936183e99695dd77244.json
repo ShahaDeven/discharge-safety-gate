@@ -1,0 +1,28 @@
+{
+ "text": "Aspirin? Yes, I got the baby aspirin, the eighty-one milligram, and I take one every day. Could you speak up a little, dear?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9654400944709778,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "2061925f617a8f97e3ba8fc78b51f2b609871c7a9bc18d3b1fbaa18c23bc8cec",
+  "audio_seconds": 6.734,
+  "seconds_to_make": 1.0
+ }
+}

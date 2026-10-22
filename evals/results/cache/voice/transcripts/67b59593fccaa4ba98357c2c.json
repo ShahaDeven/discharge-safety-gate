@@ -1,0 +1,18 @@
+{
+ "text": "Well, I'm doing okay, I guess. I get tired easily, but I'm walking a bit further every day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9613243937492371,
+  "request_id": null,
+  "latency_s": 1.25,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d8512e8fda54dfb491d957ae8d05fab7bc20d4dd133a8438f58cd6b2a337e401",
+  "audio_seconds": 5.201,
+  "seconds_to_make": 1.25
+ }
+}

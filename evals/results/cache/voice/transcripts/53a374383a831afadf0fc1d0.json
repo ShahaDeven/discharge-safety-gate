@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the albuterol. I use it two puffs every four to six hours if I need it, like the sheet says",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9582770466804504,
+  "request_id": null,
+  "latency_s": 3.532,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "07ac8b61dcbf1c5758739891d877e1687c598021db61a7dbeb20eff9f41818b9",
+  "audio_seconds": 5.805,
+  "seconds_to_make": 3.532
+ }
+}

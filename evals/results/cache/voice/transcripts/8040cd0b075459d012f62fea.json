@@ -1,0 +1,18 @@
+{
+ "text": "It's Cecilia Hogness speaking.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9668958187103271,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a93f9800d95686a46aa375b36ed89d59a50cd4691bc1a21b83fdf9b3ab04a4d9",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.891
+ }
+}

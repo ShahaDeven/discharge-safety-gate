@@ -1,0 +1,18 @@
+{
+ "text": "I've been taking the aspirin every morning, no problems there. But the clopidogrel, the blood thinner, I ran out. The hospital gave me a week's worth, and I haven't gotten it refilled. So it's been about three days now. I keep meaning to call the pharmacy",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9843078851699829,
+  "request_id": null,
+  "latency_s": 2.266,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "75a1122f8405bfb91b492f7ad2aef6bf12a5b9c20285dffd0e6db6093014069e",
+  "audio_seconds": 13.421,
+  "seconds_to_make": 2.266
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is BB. Who's calling again? I didn't quite catch that AI part",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9898557066917419,
+  "request_id": null,
+  "latency_s": 1.61,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8a17a4d807bb25a5c9b3a7811156a7854756eff445a06a64602f6dd096926bbc",
+  "audio_seconds": 4.505,
+  "seconds_to_make": 1.61
+ }
+}

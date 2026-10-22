@@ -1,0 +1,18 @@
+{
+ "text": "Me mareo cuando me levanto",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.973580002784729,
+  "request_id": null,
+  "latency_s": 0.703,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "af691be5d7c0b4e0b93a1ae9849455fd53590dc0e124b503bfac0a0d9c20744f",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 0.703
+ }
+}

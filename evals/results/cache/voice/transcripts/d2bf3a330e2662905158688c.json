@@ -1,0 +1,18 @@
+{
+ "text": "Sí, el de budesonida y formoterol también lo tengo. Lo uso dos veces al día, dos inhalaciones cada vez, como me dijeron",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9776092767715454,
+  "request_id": null,
+  "latency_s": 1.454,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f24e062d2d691b1d390eada1a30dad51110e5a4a2866fbf97ebed63f563f3c4e",
+  "audio_seconds": 8.591,
+  "seconds_to_make": 1.454
+ }
+}

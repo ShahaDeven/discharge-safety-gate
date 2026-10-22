@@ -1,0 +1,18 @@
+{
+ "text": "Oh, okay. I'm doing all right, I guess. Tired some, but I'm home now from the hospital. It was a heart attack. They put a stent in",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.990232527256012,
+  "request_id": null,
+  "latency_s": 1.297,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "52cafd0f64c72e36b32a98ef3efa2ca72a1b98c07dcbfe9355c6d087b0fef197",
+  "audio_seconds": 7.895,
+  "seconds_to_make": 1.297
+ }
+}

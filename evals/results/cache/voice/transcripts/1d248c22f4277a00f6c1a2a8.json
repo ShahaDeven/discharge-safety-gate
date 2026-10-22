@@ -1,0 +1,26 @@
+{
+ "text": "Ah, the tiotropium? No, I never picked that one up. The copay was like eighty dollars, so I skipped it. I've been using the other inhaler, the budesonide one, two puffs twice a day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9502888321876526,
+  "request_id": null,
+  "latency_s": 1.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "d22c7aa81828f6b495eb0aae00375ed1a852b30f75336f30f8716aacd045e44c",
+  "audio_seconds": 11.564,
+  "seconds_to_make": 1.985
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "No había tomado la pastilla de las aguas del Marcos",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9926624894142151,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "56adbf28c468ef802fbdd22bdee1de932d4feb049d86cd1d2a4d1e039e591114",
+  "audio_seconds": 2.647,
+  "seconds_to_make": 0.937
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Pues si me falta el aire más de lo normal o se me hinchan las piernas o los pies, o si me duele el pecho, eso sería, ¿no? No sé bien más allá de eso",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9779101610183716,
+  "request_id": null,
+  "latency_s": 2.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "08755f8411e9ee0cf86c5010c22caeae422fe3fb36d3b1f7bd7a79a56c45f456",
+  "audio_seconds": 8.406,
+  "seconds_to_make": 2.031
+ }
+}

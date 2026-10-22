@@ -1,0 +1,24 @@
+{
+ "text": "Cough's about the same, I guess. Breathing's fine. No chest pain when I breathe in",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8858695030212402,
+  "request_id": null,
+  "latency_s": 1.171,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Preston Little",
+    "Lakeside General Hospital",
+    "amoxicillin-clavulanate",
+    "acetaminophen"
+   ]
+  },
+  "audio_sha256": "8cfe59b6fa6ff3a2b0c3acb013e6d40f0fc24e936e6ab919370b41e15e4b9164",
+  "audio_seconds": 4.458,
+  "seconds_to_make": 1.171
+ }
+}

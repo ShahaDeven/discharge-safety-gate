@@ -1,0 +1,18 @@
+{
+ "text": "Yes, I'm Michaela Rendon. My birthday is June twelfth, nineteen sixty-three. I'm the patient. Is this about my COPD?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8561883568763733,
+  "request_id": null,
+  "latency_s": 3.656,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e47899938aba4a1abb5d77b0292b1dbc477114a484b6b167ec1c51f665ccddd7",
+  "audio_seconds": 7.523,
+  "seconds_to_make": 3.656
+ }
+}

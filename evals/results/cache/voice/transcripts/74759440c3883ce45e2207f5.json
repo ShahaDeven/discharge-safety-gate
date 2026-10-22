@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Michaela Rendon",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9928554892539978,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "17acd0422811f217a118d4429f69e5cbee8041016cc8a230d09c4a7d7e7a7f4f",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.953
+ }
+}

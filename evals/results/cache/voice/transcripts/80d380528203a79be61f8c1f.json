@@ -1,0 +1,18 @@
+{
+ "text": "No, no chest pain or tightness that I've had. Nothing like that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9401715397834778,
+  "request_id": null,
+  "latency_s": 2.5,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a540dd7be15ca0c7bdb72d015ead2a49e8d1ba0cc04b2be97caf0a095c95be66",
+  "audio_seconds": 3.576,
+  "seconds_to_make": 2.5
+ }
+}

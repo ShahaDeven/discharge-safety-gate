@@ -1,0 +1,26 @@
+{
+ "text": "Um, no, not really at rest. It's about the same as usual for me, I guess. I get a little winded going up the stairs, but that's normal with my COPD",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9927977323532104,
+  "request_id": null,
+  "latency_s": 1.188,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "c76c60f9bc306ff181eb0ec640690d9771246a217cf7958d6db39ea9347018f7",
+  "audio_seconds": 9.799,
+  "seconds_to_make": 1.188
+ }
+}

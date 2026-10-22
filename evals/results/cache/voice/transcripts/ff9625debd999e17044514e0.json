@@ -1,0 +1,18 @@
+{
+ "text": "Ay, gracias por explicarme y ya lo anoté. Bueno, pues ahí le dejo. Muchas gracias por llamar. Que tenga buen día",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9881917238235474,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b6f55012e9a4ee5d466106adfac349e33d1f4dd2d5f3a511d062ae460b705bea",
+  "audio_seconds": 6.687,
+  "seconds_to_make": 1.0
+ }
+}

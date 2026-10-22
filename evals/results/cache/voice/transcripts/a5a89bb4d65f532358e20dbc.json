@@ -1,0 +1,16 @@
+{
+ "text": "Subí tres kilos en dos días",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8001859188079834,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "4a7bf997b33ccab26aa691b39860cfd8cf10c754cc5daf8cd31975aa2fab89f1",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 1.125
+ }
+}

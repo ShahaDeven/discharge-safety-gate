@@ -1,0 +1,18 @@
+{
+ "text": "No me había pensado eso esta semana",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9770572781562805,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f86aeaa4fa839860c3d99016c5557424175d3bce3a5a4d2fb4c1305714f0a1b6",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 1.094
+ }
+}

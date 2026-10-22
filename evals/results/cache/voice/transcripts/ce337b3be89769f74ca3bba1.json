@@ -1,0 +1,28 @@
+{
+ "text": "Yeah, this is Jordan. Who's calling again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9065696001052856,
+  "request_id": null,
+  "latency_s": 1.11,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "2c3a42970019f075151d575809a04bced9fc6a3ffeb278ed24f6d2b5fca0a7f9",
+  "audio_seconds": 2.461,
+  "seconds_to_make": 1.11
+ }
+}

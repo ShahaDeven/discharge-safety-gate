@@ -1,0 +1,18 @@
+{
+ "text": "No, no me siento confundida ni con más sueño de lo normal. Y los labios y los dedos no se me ponen azules, se ven normales",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9136374592781067,
+  "request_id": null,
+  "latency_s": 1.437,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0313e83691d3f008da6c70f1edde3542a854f1a5479daa5aab533f51506cd76e",
+  "audio_seconds": 8.638,
+  "seconds_to_make": 1.437
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Matilda King",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9652295112609863,
+  "request_id": null,
+  "latency_s": 0.734,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "88830f865fa61da31d2b43b0f6d80f7369ec8c57631d4107edd524244f821d2b",
+  "audio_seconds": 1.625,
+  "seconds_to_make": 0.734
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Me falta el aire cuando me acuesto",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9940953254699707,
+  "request_id": null,
+  "latency_s": 4.5,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f1011dfc4834033de39ecea10db561356af95cf310b2de28bafbe47bc1d98291",
+  "audio_seconds": 2.229,
+  "seconds_to_make": 4.5
+ }
+}

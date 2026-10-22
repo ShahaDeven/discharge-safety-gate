@@ -1,0 +1,28 @@
+{
+ "text": "Yeah, I, I take a few. Atorvastatin at night, metoprolol every day, amlodipine once a day, and I keep nitroglycerin under my tongue just in case for chest pain. That's about it. No vitamins or anything else.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9655703902244568,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "fe4622a7e705b1186dc4f3a53676fb869c33799a0b60cf3acc0b284c539e8c67",
+  "audio_seconds": 13.793,
+  "seconds_to_make": 1.328
+ }
+}

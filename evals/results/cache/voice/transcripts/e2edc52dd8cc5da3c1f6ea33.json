@@ -1,0 +1,18 @@
+{
+ "text": "It's Maurice Hauer speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9148817658424377,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7b3c1daf02711206f449997999b1e16f359e6004a5d6c6f804965ca62af3d0aa",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.047
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "text": "No, no chest pain, nothing like that. Just the tired feeling",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9672490954399109,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "e6e0fcef338cf71133515e8808d33032fbd04fafdc29787d61fe673ce207d590",
+  "audio_seconds": 3.483,
+  "seconds_to_make": 0.875
+ }
+}

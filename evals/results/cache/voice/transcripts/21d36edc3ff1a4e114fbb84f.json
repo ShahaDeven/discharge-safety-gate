@@ -1,0 +1,28 @@
+{
+ "text": "Warning signs? Hmm. Chest pain, I guess, and trouble breathing. And if I feel like I'm gonna pass out. I'd call nine one one for that, right? Sorry, my hearing. You're kind of soft on the phone.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9701849818229675,
+  "request_id": null,
+  "latency_s": 1.485,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "2ce8bf33ab42f77bb6181455faabb89f7651652332e6a1acd7cd0289eb664aea",
+  "audio_seconds": 11.471,
+  "seconds_to_make": 1.485
+ }
+}

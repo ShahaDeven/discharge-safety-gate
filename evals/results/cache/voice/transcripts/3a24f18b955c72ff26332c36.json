@@ -1,0 +1,18 @@
+{
+ "text": "It's Arnolfo Boyer speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 1.329,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "52ba91677a03d7dfbdae789e58e1840fdfee5d10c80488812335a17131490258",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 1.329
+ }
+}

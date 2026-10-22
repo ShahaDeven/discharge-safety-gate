@@ -1,0 +1,18 @@
+{
+ "text": "It's Arnold Provoir speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8527001738548279,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5c5047204d1277ddd2fd35ba351afbcf2bac60434931fa99fdcee632a1d8b1ab",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.859
+ }
+}

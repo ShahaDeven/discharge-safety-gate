@@ -1,0 +1,18 @@
+{
+ "text": "Um, I guess if I'm really struggling to breathe or my lips turn blue or I get real confused, then I'd call somebody or get myself to the ER, I suppose",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9736984372138977,
+  "request_id": null,
+  "latency_s": 1.578,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "27abbdd06c064ee2edeb2616e974048db92cf71a244bc7d2e2a6a62fe48c7570",
+  "audio_seconds": 8.963,
+  "seconds_to_make": 1.578
+ }
+}

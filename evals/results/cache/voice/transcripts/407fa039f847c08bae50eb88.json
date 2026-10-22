@@ -1,0 +1,18 @@
+{
+ "text": "Oh, okay. Well, I get tired pretty easily, but I'm walking a bit further every day. The stent's doing all right, I think. Sorry, what was that again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9858888387680054,
+  "request_id": null,
+  "latency_s": 1.015,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5df3c22c4ad8dead227b33b9ce916aef673cd31498fe1bbad3f0102b744ddf84",
+  "audio_seconds": 8.452,
+  "seconds_to_make": 1.031
+ }
+}

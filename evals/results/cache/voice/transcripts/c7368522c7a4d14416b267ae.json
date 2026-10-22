@@ -1,0 +1,28 @@
+{
+ "text": "Yes, this is Bebe. Who did you say you were with again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9989651441574097,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "b0f850e583f4ac7f89c1e3a7dabb100592efd16ac323865748b82a4822307078",
+  "audio_seconds": 2.972,
+  "seconds_to_make": 0.985
+ }
+}

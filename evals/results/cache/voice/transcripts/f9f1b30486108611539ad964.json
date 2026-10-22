@@ -1,0 +1,18 @@
+{
+ "text": "I give myself Lamctis every night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8995053768157959,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "fa3262aaf30ee4a2139119a76ad9c7d59fdab0cd8711946bace9a4286b44e1dc",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 1.109
+ }
+}

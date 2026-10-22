@@ -1,0 +1,16 @@
+{
+ "text": "Mi amadeo quando mi levanto",
+ "meta": {
+  "detected_language": "ita",
+  "language_probability": 0.8230496644973755,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "ca3717c177f98730782ab479fc30f3318bb28bacf0e19c9b9ab3370629834c00",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.109
+ }
+}

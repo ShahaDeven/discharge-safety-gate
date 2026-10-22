@@ -1,0 +1,26 @@
+{
+ "text": "Uh, no, not really. Same as always, I think",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9992660284042358,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "0f409d3feb6ae60c8c28f054a7dc9f4fc6fc2cb34613aa809310811af1771986",
+  "audio_seconds": 2.786,
+  "seconds_to_make": 0.969
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Estoy poniendo flema verde",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9486895799636841,
+  "request_id": null,
+  "latency_s": 0.796,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a3672506b9de579063dc8ff5033958450f8ab73b5628ea45c4970112a0299f3e",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 0.796
+ }
+}

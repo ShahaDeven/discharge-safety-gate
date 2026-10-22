@@ -1,0 +1,18 @@
+{
+ "text": "No he llamado la policía de lagunas del marches",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.7106558680534363,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "894a41c771535a773d429c035bf2429c4fb42426edc2df27f2e4d38e8aca8acb",
+  "audio_seconds": 2.647,
+  "seconds_to_make": 1.078
+ }
+}

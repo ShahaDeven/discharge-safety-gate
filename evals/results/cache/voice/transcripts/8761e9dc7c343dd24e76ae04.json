@@ -1,0 +1,18 @@
+{
+ "text": "Nah, no confusion or anything like that. I'm just tired, you know? No blue lips or fingers that I've seen",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9894734025001526,
+  "request_id": null,
+  "latency_s": 7.485,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b49bc58e33e36f0702e13d28dd392ecd149f185d9e7e10eeee0002b4db13de97",
+  "audio_seconds": 5.944,
+  "seconds_to_make": 7.485
+ }
+}

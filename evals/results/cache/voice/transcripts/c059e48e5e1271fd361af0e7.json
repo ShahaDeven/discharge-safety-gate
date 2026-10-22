@@ -1,0 +1,18 @@
+{
+ "text": "My weight was 160, no, 170 this morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9634637832641602,
+  "request_id": null,
+  "latency_s": 1.188,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "01ff6f2092c5a617c948656c15dc56b733d0a1ae95b34448462f9d85b166018c",
+  "audio_seconds": 4.087,
+  "seconds_to_make": 1.188
+ }
+}

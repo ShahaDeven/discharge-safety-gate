@@ -1,0 +1,26 @@
+{
+ "text": "Eh, I'm doing okay, I guess. Breathing's about the same as usual. Nothing new. Still a bit tired from being in there",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9657148718833923,
+  "request_id": null,
+  "latency_s": 1.235,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "8a88971e0d68532c5e1354c5ef7ebc73a9c2a113985c491ff41369fcf0857ef3",
+  "audio_seconds": 6.92,
+  "seconds_to_make": 1.235
+ }
+}

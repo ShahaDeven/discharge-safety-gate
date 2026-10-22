@@ -1,0 +1,18 @@
+{
+ "text": "No, no bleeding that I've seen. No black stuff either. My wrist looks fine, just a little bruised where they went in",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9661554098129272,
+  "request_id": null,
+  "latency_s": 1.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e389fcc4dc186cc4c573cc4158c3afd74d75aa259168d4ce3dbecc263d035087",
+  "audio_seconds": 6.595,
+  "seconds_to_make": 1.156
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Um, chest pain that doesn't go away, trouble breathing, or if I pass out or fall, then I call 911, I guess. Oh, and if the room spins and I can't get my feet under me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9812769889831543,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d7c90ee0aac39b167ba075d3a708c90ad88fe9abd16061b6673b398e72597400",
+  "audio_seconds": 10.124,
+  "seconds_to_make": 1.187
+ }
+}

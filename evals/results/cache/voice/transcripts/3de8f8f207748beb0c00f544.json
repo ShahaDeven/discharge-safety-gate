@@ -1,0 +1,18 @@
+{
+ "text": "I'm not coughing up any blood",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8594220876693726,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "63c4665cfc78948590c5e90e22185c494b38661c4f6eb031d9e01d4b6e034ed4",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.844
+ }
+}

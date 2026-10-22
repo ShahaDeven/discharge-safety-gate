@@ -1,0 +1,18 @@
+{
+ "text": "No, de dolor en el pecho no. Ni me siento mareada ni he tenido desmayos. Estoy sentadita en el sillón nada más",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.966827392578125,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1dc7bd88517fb551b8a7a1cb1bd3f1aa0996a666fd095655d7400bcb7a9f73d8",
+  "audio_seconds": 7.895,
+  "seconds_to_make": 0.922
+ }
+}

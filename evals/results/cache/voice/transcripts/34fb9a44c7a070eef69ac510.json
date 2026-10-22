@@ -1,0 +1,18 @@
+{
+ "text": "No, not really more than usual. I use it now and then when I need it. That's about it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9892333745956421,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d61324a6dd15bbb4b398e28df7e06c35aa6bf0b928f03045a8b06abe4bddce77",
+  "audio_seconds": 4.365,
+  "seconds_to_make": 1.031
+ }
+}

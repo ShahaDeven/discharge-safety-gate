@@ -1,0 +1,18 @@
+{
+ "text": "Me llamo Matilda Keen. Mi fecha de nacimiento es el siete de octubre de 1958",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9767509698867798,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4ac70c79eb0354d474480987bd718d06c5d6591e40d689abbe19cb10d5d9f1c8",
+  "audio_seconds": 6.084,
+  "seconds_to_make": 1.219
+ }
+}

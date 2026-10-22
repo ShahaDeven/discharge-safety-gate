@@ -1,0 +1,28 @@
+{
+ "text": "Oh, I'm doing okay, I guess. Tired some days. Still getting used to being home from Lakeside",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9678491950035095,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "dc9cd68bf616c041427d7824c50bff8103ed94a19b9c66945f6a6ec87b53e970",
+  "audio_seconds": 5.155,
+  "seconds_to_make": 0.859
+ }
+}

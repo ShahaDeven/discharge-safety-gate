@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la metoprolol succinato de 50 mg sí la tengo y me la tomo una vez al día. Pero también sigo tomando la metoprolol tartrato vieja, la de 25 mg dos veces al día, porque todavía tengo esa botella de antes del hospital",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.979112446308136,
+  "request_id": null,
+  "latency_s": 1.703,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3fc635bdf26febf2d6733118647d05f38656e843ac62c6e1dd3c67f6c3f557c1",
+  "audio_seconds": 14.722,
+  "seconds_to_make": 1.703
+ }
+}

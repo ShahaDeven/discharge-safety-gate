@@ -1,0 +1,26 @@
+{
+ "text": "Oh, okay. Um, do I really need to call nine one one? I'm sort of tired. I can sit here a bit. Should I call my daughter first?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9464273452758789,
+  "request_id": null,
+  "latency_s": 1.391,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "6948f6153bbbe319c1881ffe8fcc207599f1b4916f1988a8cb1a050bbbd7e2fc",
+  "audio_seconds": 7.477,
+  "seconds_to_make": 1.391
+ }
+}

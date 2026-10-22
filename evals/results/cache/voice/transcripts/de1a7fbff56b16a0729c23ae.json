@@ -1,0 +1,16 @@
+{
+ "text": "The incision isn't red or warm",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8909202218055725,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "09dc9d951f84099cfe1fe16887df49a154d116a9d1ca89c56c83a42f63f5ecb9",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.969
+ }
+}

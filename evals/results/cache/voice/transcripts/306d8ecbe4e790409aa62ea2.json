@@ -1,0 +1,18 @@
+{
+ "text": "No me ha pesado esta semana",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.5684252977371216,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "cbea21c7e6704e0d0127ee0495126c5c8edf6706556487fa3a6e754686042a3f",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.828
+ }
+}

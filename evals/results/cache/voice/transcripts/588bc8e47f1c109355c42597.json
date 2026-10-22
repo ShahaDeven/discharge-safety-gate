@@ -1,0 +1,18 @@
+{
+ "text": "It's Brittany Massey speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9129053354263306,
+  "request_id": null,
+  "latency_s": 0.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "350096fa022366ba9f30116e9e61dae69e1753f22c81f54196f206787e0cc3bd",
+  "audio_seconds": 1.625,
+  "seconds_to_make": 0.765
+ }
+}

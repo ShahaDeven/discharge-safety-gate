@@ -1,0 +1,26 @@
+{
+ "text": "Pues no lo he usado mucho, como dos veces desde que llegué a la casa, más o menos",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9883614778518677,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "286501999b15e34ded393c0089b68ce60797e5b26e4bd4a3734c66f830891f06",
+  "audio_seconds": 5.108,
+  "seconds_to_make": 1.031
+ }
+}

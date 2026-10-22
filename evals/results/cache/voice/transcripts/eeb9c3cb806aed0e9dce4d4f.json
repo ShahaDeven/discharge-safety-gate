@@ -1,0 +1,21 @@
+{
+ "text": "It's John D'Amore speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9454988837242126,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "John D'Amore"
+   ]
+  },
+  "audio_sha256": "9eb0e1feaacfe3058c0004c47fb0c23f5bf4caa91b47183886a6fe8817c093f4",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 0.875
+ }
+}

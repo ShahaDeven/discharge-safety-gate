@@ -1,0 +1,18 @@
+{
+ "text": "It's Griselle Balestre speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8814208507537842,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c811d0fd82801aec512513fc9922fd2364a643eba49f49c83e3e5ce76bdbaff9",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 1.047
+ }
+}

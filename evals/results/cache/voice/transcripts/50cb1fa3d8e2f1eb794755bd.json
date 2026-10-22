@@ -1,0 +1,16 @@
+{
+ "text": "I won't be able to make the appointment on Friday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9801527857780457,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "85b4e3c365f12c291ff8caaf771ccc9adf2a8217e61f3b559d981a11d6f3697b",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.922
+ }
+}

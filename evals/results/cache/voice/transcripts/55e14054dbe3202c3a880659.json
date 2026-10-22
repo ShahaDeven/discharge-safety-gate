@@ -1,0 +1,26 @@
+{
+ "text": "Um, no fever or chills, I don't think. But I do feel a bit foggy today, and I look a funny color in the mirror this morning. My lips looked kind of bluish, I think. I'm real sleepy too",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9391547441482544,
+  "request_id": null,
+  "latency_s": 1.547,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "acef48deea01f5ee5362de80569be096e16e8066066120fcc0b320361af52bd0",
+  "audio_seconds": 11.749,
+  "seconds_to_make": 1.547
+ }
+}

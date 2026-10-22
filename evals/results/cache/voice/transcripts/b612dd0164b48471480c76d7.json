@@ -1,0 +1,18 @@
+{
+ "text": "No, no tomo ninguna otra medicina, solo las que le dije: la prednisona, el tiotropio, el de budesonida con formoterol y el albuterol cuando lo necesito. No tengo pastillas ni vitaminas",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.951028048992157,
+  "request_id": null,
+  "latency_s": 1.578,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "15adfeecacab8bc22d4afba248e1ea0a4a8c81312942e233bffaf0d8fc3c8764",
+  "audio_seconds": 12.539,
+  "seconds_to_make": 1.578
+ }
+}

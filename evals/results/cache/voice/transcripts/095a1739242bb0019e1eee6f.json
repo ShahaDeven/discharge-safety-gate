@@ -1,0 +1,18 @@
+{
+ "text": "Pues de peso no me he subido mucho, creo. Hinchazón, los pies están un poco hinchados, pero eso ya lo tenía antes. No sé, no me fijo mucho",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9802416563034058,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "850312e90d60324775774adf7702d066a73ff8bab2fd2f3d378391d9cd896563",
+  "audio_seconds": 8.963,
+  "seconds_to_make": 1.344
+ }
+}

@@ -9,8 +9,10 @@ __pycache__/
 .env
 .secrets/
 
-# Replay caches and raw transcripts (regenerable, can be large)
-evals/results/cache/
+# Saved calls, judge labels and voice transcripts ARE committed (about 19 MB), so every result can be recomputed
+# from a clean checkout without API keys. Only the voice audio (136 MB) stays out: nothing is recomputed from it,
+# it's only played back in the local console.
+evals/results/cache/voice/audio/
 
 # Private outreach notes
 OUTREACH.md

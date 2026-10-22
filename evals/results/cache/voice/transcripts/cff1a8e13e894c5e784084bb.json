@@ -1,0 +1,26 @@
+{
+ "text": "Um, the mucus is about the same, I think. Nothing new. No fever or chills that I know of. Oh, and I feel a bit foggy today, and I look a funny color in the mirror this morning, kind of bluish around the lips",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9161737561225891,
+  "request_id": null,
+  "latency_s": 1.297,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "843b25d7ab3d19cfc220963cc38c5cd51a5e5359ae3ee19640e1ca0c1db91d57",
+  "audio_seconds": 12.26,
+  "seconds_to_make": 1.297
+ }
+}

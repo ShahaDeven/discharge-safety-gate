@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Manuel Promi",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9773584604263306,
+  "request_id": null,
+  "latency_s": 1.234,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "523ad57e5c774371612a93b1e515db24373fda291bb830c4f814bd3ab53c2a22",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.234
+ }
+}

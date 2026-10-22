@@ -1,0 +1,28 @@
+{
+ "text": "Aspirin. Yeah, I take that one every morning. The other one, the Plavix or clopidogrel, I ran out. The hospital gave me like a week of it, and I haven't gotten it refilled. It's been about three days without",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9791604280471802,
+  "request_id": null,
+  "latency_s": 1.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "fb211c99c8c0a3b81bd11c48f5ed906ea330fd0c51bbc958dd431a14864d2a70",
+  "audio_seconds": 11.146,
+  "seconds_to_make": 1.156
+ }
+}

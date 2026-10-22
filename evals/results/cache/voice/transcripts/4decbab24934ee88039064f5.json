@@ -1,0 +1,16 @@
+{
+ "text": "No había tomado la pastilla de las aguas del marches",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9926624894142151,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "3796104812e938f6016375190fbf82305d281ccdcb7e1ef125351147b182e324",
+  "audio_seconds": 2.647,
+  "seconds_to_make": 1.203
+ }
+}

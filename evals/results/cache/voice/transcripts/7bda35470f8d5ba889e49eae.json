@@ -1,0 +1,18 @@
+{
+ "text": "No, ahorita sentada estoy bien. No me falta el aire ni al hablar ni al moverme. Solo me canso un poquito si camino mucho",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9558247923851013,
+  "request_id": null,
+  "latency_s": 1.594,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "920d58f2dfea86983e37e80cd569d37c8758a54e4ae7df4eece5498c52bfecf0",
+  "audio_seconds": 7.477,
+  "seconds_to_make": 1.594
+ }
+}

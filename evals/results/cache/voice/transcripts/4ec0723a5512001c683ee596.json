@@ -1,0 +1,28 @@
+{
+ "text": "No, no water pill. I don't take one. It's the amlodipine, the blood pressure one. That's the only one I was mixing up",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9943442344665527,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "a4128508b31901aa014f18ec6810ba21394a682f317a6ab8cf8da354cd8b402d",
+  "audio_seconds": 7.198,
+  "seconds_to_make": 1.187
+ }
+}

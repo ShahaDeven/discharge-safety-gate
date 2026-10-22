@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Manuel Crommie",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9352341294288635,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "efb79cb8d4e79e8fb8788464568d30456ada7a6276ef7b8f1ebcccf0f6084c67",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.922
+ }
+}

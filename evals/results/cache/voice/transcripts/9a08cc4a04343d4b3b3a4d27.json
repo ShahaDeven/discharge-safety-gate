@@ -1,0 +1,28 @@
+{
+ "text": "Other medicines? No, just those ones you read off. Oh, and the simvastatin. I told you about that one already",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9737852811813354,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "2560b4bb1aa035f8a29c2a186634547d690ffbb24033a74607095e12152834e4",
+  "audio_seconds": 6.78,
+  "seconds_to_make": 0.953
+ }
+}

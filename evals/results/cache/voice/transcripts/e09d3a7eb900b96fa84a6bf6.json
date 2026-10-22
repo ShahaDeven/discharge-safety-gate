@@ -1,0 +1,28 @@
+{
+ "text": "Yes, I got the baby aspirin, the 81 one. I take one every morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9134331941604614,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "d0a4f682383bf36d468e696573a288d47ae67771f10799b0176d511fd7fffc8d",
+  "audio_seconds": 3.762,
+  "seconds_to_make": 0.969
+ }
+}

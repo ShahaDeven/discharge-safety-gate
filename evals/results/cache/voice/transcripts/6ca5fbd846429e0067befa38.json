@@ -1,0 +1,18 @@
+{
+ "text": "Yes, I'm Jordan. My date of birth is November seventh, nineteen sixty-six. Is this about my heart stuff from the hospital?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9250766038894653,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3c5c065396860591cbfafc3fb181fb889f59d0b487f60b288ce8ac96f4914afb",
+  "audio_seconds": 7.105,
+  "seconds_to_make": 1.375
+ }
+}

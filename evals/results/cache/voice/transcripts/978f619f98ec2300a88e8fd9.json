@@ -1,0 +1,16 @@
+{
+ "text": "Two days ago, no, three days ago, the cough got worse",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.898313581943512,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "82c77b6e00471a44b0ffefc33897ac421d38a65597fea6a50694389579041313",
+  "audio_seconds": 3.158,
+  "seconds_to_make": 1.109
+ }
+}

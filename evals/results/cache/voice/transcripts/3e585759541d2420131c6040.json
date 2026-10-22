@@ -1,0 +1,18 @@
+{
+ "text": "Sí, el sacubitrilo con valsartán de 24/26 miligramos sí lo tengo y me lo tomo dos veces al día, en la mañana y en la noche",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9625852704048157,
+  "request_id": null,
+  "latency_s": 1.656,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6891766babfb747481d18e4a40a63d70156f98a221c7e3dab19ce686d5067923",
+  "audio_seconds": 7.802,
+  "seconds_to_make": 1.656
+ }
+}

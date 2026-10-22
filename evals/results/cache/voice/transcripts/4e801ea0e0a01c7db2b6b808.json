@@ -1,0 +1,18 @@
+{
+ "text": "It's Vasili Ahogganis speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9551553130149841,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "00a5f6b01232d9bf3db2169388fcc541e5d780e9a37fd89e9e54474e604be684",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.984
+ }
+}

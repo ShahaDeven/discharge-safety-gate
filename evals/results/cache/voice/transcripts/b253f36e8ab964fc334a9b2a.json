@@ -1,0 +1,18 @@
+{
+ "text": "Olá",
+ "meta": {
+  "detected_language": "por",
+  "language_probability": 0.2915836572647095,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1a9d8f112bd10cc48cf7d27ba8025b9adde28acc6f1a97c8c691daad0ba8eea7",
+  "audio_seconds": 0.65,
+  "seconds_to_make": 1.078
+ }
+}

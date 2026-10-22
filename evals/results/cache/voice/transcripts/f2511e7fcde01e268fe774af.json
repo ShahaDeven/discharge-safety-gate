@@ -1,0 +1,18 @@
+{
+ "text": "Clopidogrel? Hmm. The pharmacy said it wasn't ready yet, and I never went back to pick it up. So no, I haven't got it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9913327693939209,
+  "request_id": null,
+  "latency_s": 1.422,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e05db7d5b90828680374340bd9a3f802a641c16499d4ffc15f0eb7646360b43c",
+  "audio_seconds": 6.78,
+  "seconds_to_make": 1.422
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "No, de pecho no me duele nada. Ni mareada tampoco me he sentido ni ganas de desmayarme",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.7783952951431274,
+  "request_id": null,
+  "latency_s": 3.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "20105dc7c21f87f29f30a2bdfb85bf2e09efb29d00a549d365c1ad58a0d188f0",
+  "audio_seconds": 6.13,
+  "seconds_to_make": 3.031
+ }
+}

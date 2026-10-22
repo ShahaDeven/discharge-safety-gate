@@ -1,0 +1,27 @@
+{
+ "text": "Eh, not bad, I guess. Tired some, but that's about it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9814856648445129,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "b522a4a1197dc62af799427e3160cd6603ff2d1b7b688c3b3c199fe4407053d8",
+  "audio_seconds": 3.39,
+  "seconds_to_make": 1.078
+ }
+}

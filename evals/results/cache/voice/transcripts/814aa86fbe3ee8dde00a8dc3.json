@@ -1,0 +1,18 @@
+{
+ "text": "Pues la verdad no sé bien. Me siento muy mal o me cuesta mucho trabajo respirar. Supongo que llamo. Ya le anoto el número. Gracias",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9821984767913818,
+  "request_id": null,
+  "latency_s": 1.5,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "423c39caf52f214e6963746a69a63d587b93e6952d9d130808f39b154705170d",
+  "audio_seconds": 8.359,
+  "seconds_to_make": 1.5
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "This is Michael Shannon. I'm his coworker",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9822895526885986,
+  "request_id": null,
+  "latency_s": 1.015,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "92cbe889b243bb36ce2b753a1fdf07a17c68d676eb6266e7e940ff2340b3bc7d",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 1.015
+ }
+}

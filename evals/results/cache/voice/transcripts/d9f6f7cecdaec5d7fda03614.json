@@ -1,0 +1,18 @@
+{
+ "text": "Mmm, no sé, la verdad. No me he pesado desde que llegué, pero no creo que haya subido mucho. La ropa me queda igual",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9821308851242065,
+  "request_id": null,
+  "latency_s": 2.297,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ccf9d852331e20a14bf0ebafbd357cd032246a1d419701038a6016125365d95d",
+  "audio_seconds": 6.687,
+  "seconds_to_make": 2.297
+ }
+}

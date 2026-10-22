@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy Micaela Rendón. Nací el 12 de junio de 1946",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.970514714717865,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e1a2ac4527a448bcdcaed908f27c47df76745ea939eb332e6a84b6e5010fb3e5",
+  "audio_seconds": 5.248,
+  "seconds_to_make": 1.094
+ }
+}

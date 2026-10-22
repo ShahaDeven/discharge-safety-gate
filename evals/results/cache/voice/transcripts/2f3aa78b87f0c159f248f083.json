@@ -1,0 +1,18 @@
+{
+ "text": "Mmm, no sé. Me pesé ayer en la mañana y creo que estaba igual que cuando salí del hospital. No tengo la báscula muy a la mano, la verdad",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9821118116378784,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d1abb66b4407afaa56615314206983aa503ad771e80eaa12c9d607ec1e527faa",
+  "audio_seconds": 8.638,
+  "seconds_to_make": 1.125
+ }
+}

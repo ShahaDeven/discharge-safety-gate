@@ -1,0 +1,28 @@
+{
+ "text": "Yes, I got the atorvastatin 80 and I take it at night before bed",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9315186738967896,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "9a9bddba8eaaaa96ef54210ae91293cccb26b9a47adefceeb4a800aa3b69faa0",
+  "audio_seconds": 4.226,
+  "seconds_to_make": 0.891
+ }
+}

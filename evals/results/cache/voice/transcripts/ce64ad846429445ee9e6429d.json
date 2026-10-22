@@ -1,0 +1,26 @@
+{
+ "text": "Yeah, that's me. My date of birth is October fourth, nineteen sixty-four",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9881829023361206,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "6c886dad3b6ea8cf67a35e0696dfbdb3fc6f42b6d8469fe4b817d1c82be69a13",
+  "audio_seconds": 4.087,
+  "seconds_to_make": 1.047
+ }
+}

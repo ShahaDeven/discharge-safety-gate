@@ -1,0 +1,26 @@
+{
+ "text": "No, just those. No pills or vitamins or anything like that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9635523557662964,
+  "request_id": null,
+  "latency_s": 1.313,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "73968d66ad9fcdadc62e287ae31d5ef9d915b30088603c1bebf9ed4fa264cc04",
+  "audio_seconds": 3.344,
+  "seconds_to_make": 1.313
+ }
+}

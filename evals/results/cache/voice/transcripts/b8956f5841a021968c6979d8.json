@@ -1,0 +1,15 @@
+{
+ "text": "The nurse is coming Friday, sorry, Thursday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9451241493225098,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "audio_sha256": "8a45d4f325633fd3732dd9468ff36e8a9164e91424cdbbb3fbb0a201158bd855",
+  "audio_seconds": 2.833,
+  "seconds_to_make": 0.828
+ }
+}

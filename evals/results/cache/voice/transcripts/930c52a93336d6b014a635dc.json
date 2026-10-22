@@ -1,0 +1,28 @@
+{
+ "text": "Sure. It's November 7th, 1966",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9596198201179504,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "1dbf46929dbdb55a7bd27790df9f8b185579c66196e00b0fea4c8b1ab07ea0c7",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 0.937
+ }
+}

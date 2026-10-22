@@ -1,0 +1,18 @@
+{
+ "text": "¿Tú viste tres kilos en esos días?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.962480366230011,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "35ecab9735255cb4df8a2bd197aa713ebea83537ef702f8b6bac6c4ba84c7c1d",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.859
+ }
+}

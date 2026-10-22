@@ -1,0 +1,18 @@
+{
+ "text": "My son drove me to the pharmacy and I got all my prescriptions, though my stool has been black since yesterday.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9908441305160522,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bba760fe0f56b29fb348c39da8ba30052fb726d10cf4aba6b1ccb9f184e0dabb",
+  "audio_seconds": 6.223,
+  "seconds_to_make": 0.953
+ }
+}

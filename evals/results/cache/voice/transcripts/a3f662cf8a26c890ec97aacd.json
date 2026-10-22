@@ -1,0 +1,26 @@
+{
+ "text": "No, de eso no tomo nada más. Solo las que le dije, las del hospital y la de antes del metoprolol. No tengo vitaminas ni hierbas ni nada de eso",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9563651084899902,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "a0fdf4dd75eb265ee9b7c9d636a354fab029daa800dfa8b9cb0b82ed7a239efc",
+  "audio_seconds": 9.056,
+  "seconds_to_make": 1.094
+ }
+}

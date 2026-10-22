@@ -1,0 +1,27 @@
+{
+ "text": "Hola. Sí, hablo español. Por favor, ¿quién llama? Es del hospital",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9880892038345337,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "eb32ff8ef80a478c84fdb656da64d4506c66cb406223af7622a0eda5f406378b",
+  "audio_seconds": 4.365,
+  "seconds_to_make": 1.344
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Well, I'm okay, I guess. Still a little tired from the COPD thing. I'm just taking it slow",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9786783456802368,
+  "request_id": null,
+  "latency_s": 1.016,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "304bc5a45626ef2470f31b1e2814e7ffa042ba054eed4ba00561669a65ee8d8c",
+  "audio_seconds": 5.851,
+  "seconds_to_make": 1.016
+ }
+}

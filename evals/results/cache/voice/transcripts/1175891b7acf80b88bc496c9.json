@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, it's Grady Davis. My date of birth is July twenty-ninth, nineteen sixty-one",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9326246380805969,
+  "request_id": null,
+  "latency_s": 1.063,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "93d6c821a6b6754d10a5aa4eed9f2b6a6641103cfcdb4ecb1403452fcf2021a6",
+  "audio_seconds": 4.83,
+  "seconds_to_make": 1.063
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "I've paid five pounds since Monday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9973847270011902,
+  "request_id": null,
+  "latency_s": 0.688,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "68c66c59f6c488353ff94e3add0953afba7ad12bd856519ccd4c4036b74d4584",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 0.688
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy Micah Shanahan. Nací el 27 de mayo de 1964. ¿Y usted para qué llama? Es que hoy estoy un poco cansada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9937047958374023,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "410320fb65848f306bb0ef9ede69216a3cca2e5ec662e7228ace378793be3f11",
+  "audio_seconds": 8.591,
+  "seconds_to_make": 0.906
+ }
+}

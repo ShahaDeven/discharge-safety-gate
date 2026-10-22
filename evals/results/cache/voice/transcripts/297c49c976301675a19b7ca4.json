@@ -1,0 +1,18 @@
+{
+ "text": "The pharmacy delivered everything on Monday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.6885677576065063,
+  "request_id": null,
+  "latency_s": 0.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c899f519d499fa75d72ccf5eafc6e343b6520e55ed75f101e54703b53e41a19c",
+  "audio_seconds": 2.183,
+  "seconds_to_make": 0.813
+ }
+}

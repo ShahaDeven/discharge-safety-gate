@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is June 12th, 1963",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.994398832321167,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón"
+   ]
+  },
+  "audio_sha256": "d0b261deb9bf803d2664d7d7cf0c72e7cb66f82ac4208d6a44e52874c9fd215e",
+  "audio_seconds": 3.111,
+  "seconds_to_make": 0.938
+ }
+}

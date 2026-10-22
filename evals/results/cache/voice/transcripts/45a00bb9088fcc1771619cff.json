@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, I take my atorvastatin at night, the metoprolol every morning, and I've got the nitro pills under my tongue if my chest acts up. That's about it. No others.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.976358950138092,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "319d7732202d05805395f3e128130132a62d95e4bfa89f93c6e8203c2df37631",
+  "audio_seconds": 9.288,
+  "seconds_to_make": 1.125
+ }
+}

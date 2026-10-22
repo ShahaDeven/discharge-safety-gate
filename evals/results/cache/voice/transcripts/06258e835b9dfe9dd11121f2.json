@@ -1,0 +1,18 @@
+{
+ "text": "I accidentally took six of the water pills",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9978678226470947,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2882cf6f57999801a53ada690249a782f421f809236341d38b93f2986fe39ec2",
+  "audio_seconds": 2.508,
+  "seconds_to_make": 0.984
+ }
+}

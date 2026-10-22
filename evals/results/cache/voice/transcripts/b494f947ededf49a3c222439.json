@@ -1,0 +1,18 @@
+{
+ "text": "To be traced silos and those seas",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8347439169883728,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "552e04b597b1aba0a969012d59011948ab4ffbd30726bd0e43844b077dad1896",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.969
+ }
+}

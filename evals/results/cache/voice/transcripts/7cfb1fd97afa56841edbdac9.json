@@ -1,0 +1,26 @@
+{
+ "text": "Sí, la recogí. Me la tomo una vez al día en la mañana con el desayuno. Creo que hasta el 14 es lo que me dijeron",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9833665490150452,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "2025c5506ff6b30cd7fc82a0c9b5089833505c4fa3b74e8411c1b98811426edf",
+  "audio_seconds": 7.477,
+  "seconds_to_make": 1.125
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the atorvastatin, the eighty-one, and I take it at night. The metoprolol, the twenty-five, I take that once a day too. Both of those I'm taking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9663210511207581,
+  "request_id": null,
+  "latency_s": 1.25,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6eccd56766ec3de6e11c6e4cbeb5a0c40f7bedc49f34f9f089af21bedf3166d5",
+  "audio_seconds": 9.335,
+  "seconds_to_make": 1.25
+ }
+}

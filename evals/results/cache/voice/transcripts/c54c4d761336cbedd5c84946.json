@@ -1,0 +1,18 @@
+{
+ "text": "No, nothing like that. I haven't felt dizzy or passed out or anything, just tired",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968398928642273,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4648d094885b7566c945ca8df8733b0e2edaa5bde20e75889e6dcfc957444ff2",
+  "audio_seconds": 5.016,
+  "seconds_to_make": 1.344
+ }
+}

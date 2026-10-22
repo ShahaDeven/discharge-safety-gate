@@ -1,0 +1,18 @@
+{
+ "text": "Sí, lo tengo, el de cincuenta miligramos. Me lo tomo una vez al día en la mañana, pero también sigo tomando el otro, el de tartrato de veinticinco, dos veces al día. Es el frasquito de antes, todavía lo tengo ahí",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9882225394248962,
+  "request_id": null,
+  "latency_s": 1.687,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d16556b20906df08ddcb5f07b72d81a75aa38c7d62ad0b58a2ee7a1ac866385d",
+  "audio_seconds": 13.932,
+  "seconds_to_make": 1.687
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "text": "Um, let me think. I've been taking the aspirin every morning, I think. The clopidogrel too, I haven't missed any that I know of. I keep them in the blue box by the sink",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9748449325561523,
+  "request_id": null,
+  "latency_s": 1.688,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "ccab684f8db944def9e0d0e49bed97218bf36d15e2894237d4bc3c4b3e6ed288",
+  "audio_seconds": 9.381,
+  "seconds_to_make": 1.688
+ }
+}

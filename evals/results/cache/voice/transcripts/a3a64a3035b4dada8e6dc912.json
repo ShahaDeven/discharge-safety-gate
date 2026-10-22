@@ -1,0 +1,18 @@
+{
+ "text": "Estoy tosiendo flema verde",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9296964406967163,
+  "request_id": null,
+  "latency_s": 0.734,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8cb88384090a5c4f8df4e12fb08c74c868e5e708853e8621603ea3161f3de682",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 0.734
+ }
+}

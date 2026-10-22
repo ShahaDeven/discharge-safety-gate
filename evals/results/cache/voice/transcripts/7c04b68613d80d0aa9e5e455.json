@@ -1,0 +1,18 @@
+{
+ "text": "I give myself Lamtais every night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.7884083390235901,
+  "request_id": null,
+  "latency_s": 0.907,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4627f181c2cbcce11139ff19d314f9d622af9eff7646923ab820bce245ff8f71",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 0.907
+ }
+}

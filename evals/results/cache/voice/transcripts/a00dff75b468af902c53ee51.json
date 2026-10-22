@@ -1,0 +1,18 @@
+{
+ "text": "Well, since you're asking, yeah, there's a lump at the wrist now. It's been getting a little bigger and it's tender when I press on it. No blood that I've seen and no black stuff in my stool",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9911550879478455,
+  "request_id": null,
+  "latency_s": 1.515,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4375639eacbdca12834a6cb657ff3e7f9699dab79cedbcc9099fe1ec0b28bdec",
+  "audio_seconds": 10.356,
+  "seconds_to_make": 1.515
+ }
+}

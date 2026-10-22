@@ -1,0 +1,16 @@
+{
+ "text": "We went to the market and I bought some flowers, and my lips look a little blue",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9928762912750244,
+  "request_id": null,
+  "latency_s": 1.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "e44705f7a47bcb42529ed336b3a3b7cacb836fd0d17d54aeee6605d4c91d6675",
+  "audio_seconds": 4.272,
+  "seconds_to_make": 1.156
+ }
+}

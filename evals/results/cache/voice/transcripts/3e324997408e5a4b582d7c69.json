@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy Michael. ¿Qué pasa? ¿Es del hospital?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9998725652694702,
+  "request_id": null,
+  "latency_s": 1.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a88be0c1df65f48e6b3eccc27609a450b85a8996b24129df62310af995f3c0fe",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 1.75
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, this is Grady. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9812049269676208,
+  "request_id": null,
+  "latency_s": 1.312,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "11a70aeba9b21a87ef0c3cf9ff845dd91c57db5aa46e8ee293096a6a9a7952c0",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 1.312
+ }
+}

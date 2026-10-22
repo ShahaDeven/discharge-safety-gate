@@ -1,0 +1,24 @@
+{
+ "text": "Well, yeah, I've been mixed up this morning. Couldn't remember what day it was. Other than that, I'm not really sleepy more than usual. I'm eating and drinking okay, and I'm keeping the antibiotic down",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9754011631011963,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Preston Little",
+    "Lakeside General Hospital",
+    "amoxicillin-clavulanate",
+    "acetaminophen"
+   ]
+  },
+  "audio_sha256": "109412df3ba3bce805517ee7fdc237cab52ae123e543f516f0eb6968b7f9a8d4",
+  "audio_seconds": 10.078,
+  "seconds_to_make": 1.031
+ }
+}

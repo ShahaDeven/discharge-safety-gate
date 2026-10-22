@@ -1,0 +1,26 @@
+{
+ "text": "No, no me siento confundida y no tengo mucho sueño fuera de lo normal. Los labios y los dedos los tengo de color normal, no azules",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9818893671035767,
+  "request_id": null,
+  "latency_s": 1.329,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "57e2ae2255a395e5b8172e2db9625a980b752385327979552ea854c90dbb8dbd",
+  "audio_seconds": 8.591,
+  "seconds_to_make": 1.329
+ }
+}

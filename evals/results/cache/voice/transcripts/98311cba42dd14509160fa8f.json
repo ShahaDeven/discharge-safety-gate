@@ -1,0 +1,18 @@
+{
+ "text": "I think two, no, sorry, one in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9598366022109985,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "cb9c21d5f4b2736e362429a24636acc2e17a7df882c1230928ab0bb91552f7b1",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 1.094
+ }
+}

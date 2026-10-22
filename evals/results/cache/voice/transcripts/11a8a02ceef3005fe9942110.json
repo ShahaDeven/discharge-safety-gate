@@ -1,0 +1,16 @@
+{
+ "text": "I take one Toprol in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8731051087379456,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "7debe71ed6ceac9a25588d86ff8c2c2f0b06504f5b66ec6fd728469a59160e93",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 1.172
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is January 20th, 1963",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.992217481136322,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "13e33fd94c40469320a1e98787d9a4c129ce22b7d396f89bae5a2aea9cbe8d56",
+  "audio_seconds": 3.251,
+  "seconds_to_make": 1.0
+ }
+}

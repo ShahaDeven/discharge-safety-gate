@@ -1,0 +1,18 @@
+{
+ "text": "No, I'm not short of breath at all",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9756364226341248,
+  "request_id": null,
+  "latency_s": 0.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "260a9d1d991bf19f1ec219499a26087af56db9072fca47a817346e4a98ea5445",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 0.813
+ }
+}

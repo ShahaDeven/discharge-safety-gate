@@ -1,0 +1,18 @@
+{
+ "text": "I still take my Celexa every morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8947199583053589,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "edaa61c1adb54a0ab41e72ab6fc37304932fe3fb6c866ed6564a41bd1ba755cd",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 0.969
+ }
+}

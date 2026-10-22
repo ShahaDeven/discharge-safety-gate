@@ -267,7 +267,7 @@ def show(res: dict) -> None:
         sm = res["smoke"]
         print(f"smoke test: {sm.get('calls')} calls, about {sm.get('credits_per_call')} credits per call by balance")
     for cid, r in res["candidates"].items():
-        ok = "as expected" if r["verdict"] == r["expected"] else f"EXPECTED {r['expected']}"
+        ok = "as expected" if r["verdict"] == r["expected"] else f"expected {r['expected']} before the run; not met"
         n = len(r.get("scenario_ids") or res["scenarios"])
         print(f"\n{cid} {r['description']}: {r['verdict']} ({ok}) | {r['calls']} calls on {n} scenarios, "
               f"K={r.get('k', res['k'])} | ended by {r['ended_by']}")

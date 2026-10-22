@@ -1,0 +1,18 @@
+{
+ "text": "Kin, K-I-N. Ya le dije mi nombre y mi fecha de nacimiento. ¿Qué más necesita? Si hay un problema con su registro, llame otra vez o pregunte en el hospital",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9763566851615906,
+  "request_id": null,
+  "latency_s": 1.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "fa7e8243aa251e672245a87188620dfdf3455a516fe9ba4ef548c43de38cabf9",
+  "audio_seconds": 10.403,
+  "seconds_to_make": 1.797
+ }
+}

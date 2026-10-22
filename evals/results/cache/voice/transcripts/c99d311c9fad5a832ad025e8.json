@@ -1,0 +1,27 @@
+{
+ "text": "Nope. No trouble breathing and no dizzy spells or passing out feelings. Just the wrist and being tired",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9089223742485046,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "38f4a2bc8079198d46f19323db95c25c16fa87adb65ab330015404d8177ef41b",
+  "audio_seconds": 6.037,
+  "seconds_to_make": 1.187
+ }
+}

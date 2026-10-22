@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Michaela. Who is calling again? Is this about my hospital stay?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9631927609443665,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "16c7f0ecc4f1a3295be4566aed53ebfa9ff4ea1aae20b35bef6d82a496ac39bd",
+  "audio_seconds": 4.598,
+  "seconds_to_make": 0.859
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Sí, me llamo Micah Shanahan. Nací el 27 de mayo de 1964",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8076344728469849,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "4982a8bd71a5abdb55eb8f8f31fe3784aa69cf09fc99eadf933b5e974eb63223",
+  "audio_seconds": 6.176,
+  "seconds_to_make": 1.203
+ }
+}

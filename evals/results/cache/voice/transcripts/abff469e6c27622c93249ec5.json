@@ -1,0 +1,18 @@
+{
+ "text": "No, de pecho no siento nada. Solo estoy cansada, nada más",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.973654568195343,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0de1930838e5248fa4984d76e17d4ad11e0673c0482de5e24d977632292856d4",
+  "audio_seconds": 3.669,
+  "seconds_to_make": 0.953
+ }
+}

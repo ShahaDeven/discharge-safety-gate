@@ -1,0 +1,18 @@
+{
+ "text": "Sí, lo tengo. Lo uso cuando me falta el aire, dos inhalaciones cada cuatro o seis horas, pero solo si lo necesito",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9582876563072205,
+  "request_id": null,
+  "latency_s": 1.015,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "dad8e2f8a7898af7cd7c68f0702ab11d71ebb8aa40b4782d86fbce63764cf27a",
+  "audio_seconds": 7.663,
+  "seconds_to_make": 1.015
+ }
+}

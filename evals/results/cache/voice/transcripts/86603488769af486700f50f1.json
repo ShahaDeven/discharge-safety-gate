@@ -1,0 +1,26 @@
+{
+ "text": "Pues mis piernas están un poco débiles de estar acostada en la cama, pero ya camino más por la casa. Respiro más o menos bien, la verdad",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9763318300247192,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "e08c62d1e9e81e5dd309590f7945197ab7c383b98eac943d89121edecf26c445",
+  "audio_seconds": 9.892,
+  "seconds_to_make": 0.953
+ }
+}

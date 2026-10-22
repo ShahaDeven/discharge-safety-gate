@@ -1,0 +1,26 @@
+{
+ "text": "Oh, okay. Okay. I'm going to try, but my daughter is at work, and I don't have anyone here right now. Should I just hang up and dial nine one one on my phone?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9883371591567993,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "308bf382732c7d2064ad010ab399ff7e8acbef21fe55d1cafebb9b2cb4843dbe",
+  "audio_seconds": 9.242,
+  "seconds_to_make": 1.141
+ }
+}

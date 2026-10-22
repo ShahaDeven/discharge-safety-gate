@@ -1,0 +1,26 @@
+{
+ "text": "Ay, eh, no sé, no me he pesado todavía en la casa. ¿Y hinchazón? Pues no, no me he fijado en eso. Creo que estoy igual que antes",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.962895393371582,
+  "request_id": null,
+  "latency_s": 1.594,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "2dcd44088d0e0a8a8e0c2c724e2fde4b345a92b9fb0cbbe1cd60b8c747567923",
+  "audio_seconds": 7.709,
+  "seconds_to_make": 1.594
+ }
+}

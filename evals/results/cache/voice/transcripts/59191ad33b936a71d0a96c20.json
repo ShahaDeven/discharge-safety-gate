@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Matilda Keane",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9874683618545532,
+  "request_id": null,
+  "latency_s": 0.781,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7517b7c20a3c6462879889579c9eb13411a9e2a4fb84379ed4653f66f23d55ff",
+  "audio_seconds": 1.579,
+  "seconds_to_make": 0.781
+ }
+}

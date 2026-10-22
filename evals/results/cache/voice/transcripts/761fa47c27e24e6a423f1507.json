@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is May 27th, 1943",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9761595129966736,
+  "request_id": null,
+  "latency_s": 1.093,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2807ad3f04954fbca421817fec388efae0e98ede1dca12991aa7650f2e23b44a",
+  "audio_seconds": 3.204,
+  "seconds_to_make": 1.093
+ }
+}

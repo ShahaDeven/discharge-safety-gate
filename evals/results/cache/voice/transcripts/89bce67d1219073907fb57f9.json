@@ -1,0 +1,28 @@
+{
+ "text": "Other medicines? Hmm. No, I don't think so. Just the ones we talked about. Could you speak up a little, please?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9791685938835144,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "d3b53b4988d8a166f9782761dae8819a6c1ae3fbf77783ab41ea8b5d270580a0",
+  "audio_seconds": 7.43,
+  "seconds_to_make": 0.984
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "[outro jingle]",
+ "meta": {
+  "detected_language": "por",
+  "language_probability": 0.7767283916473389,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "921ecbcfe880bbe150f340f541cce2c5f3e7a43ec62261b091ef1103e825e1d7",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 0.953
+ }
+}

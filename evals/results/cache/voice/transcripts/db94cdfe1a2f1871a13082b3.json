@@ -1,0 +1,18 @@
+{
+ "text": "No tomo metoprolol de Venus Ismana",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.5892823934555054,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d8154acf091259936d031ea3c02d120c1968ee8ad00bf63991babe95f62c9835",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 0.938
+ }
+}

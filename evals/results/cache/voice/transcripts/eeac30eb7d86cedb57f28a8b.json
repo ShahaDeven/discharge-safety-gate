@@ -1,0 +1,18 @@
+{
+ "text": "I've been walking around the block every day.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9901336431503296,
+  "request_id": null,
+  "latency_s": 1.656,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "837ab859e3eaab60b90880f1805ca447d4d1e202b47dca53141234a0dbd90ccc",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 1.656
+ }
+}

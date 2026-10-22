@@ -1,0 +1,26 @@
+{
+ "text": "Uh, let me think. If I can't catch my breath or my lips start looking blue, I'd call nine one one, I guess. And if I get real confused or pass out, that too. Otherwise, call your folks, I suppose",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9676077961921692,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "d040b8c5fbdb454275ee23b4ed12b0bd62bc2e91e7f5042cfe62c70b83b4dd2f",
+  "audio_seconds": 11.564,
+  "seconds_to_make": 1.219
+ }
+}

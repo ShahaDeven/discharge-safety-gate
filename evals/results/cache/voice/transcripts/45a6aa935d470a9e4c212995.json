@@ -1,0 +1,18 @@
+{
+ "text": "Missed any? No, I've been taking my aspirin and my Plavix every day, the little blood thinners. Sorry, was that the right one you asked about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9912601709365845,
+  "request_id": null,
+  "latency_s": 1.265,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "54094006a9767f15ca82fc2248ae77040007f1447a1e6a32bc66c36925445e5a",
+  "audio_seconds": 8.081,
+  "seconds_to_make": 1.265
+ }
+}

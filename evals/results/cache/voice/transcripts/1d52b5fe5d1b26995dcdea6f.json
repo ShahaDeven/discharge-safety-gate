@@ -1,0 +1,18 @@
+{
+ "text": "Yo no tengo la pierna su chata",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9438025951385498,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "224e61cbf0434c72b40b199d9c574c36c4c09d5f3444bc372a58a5e80abced0f",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.031
+ }
+}

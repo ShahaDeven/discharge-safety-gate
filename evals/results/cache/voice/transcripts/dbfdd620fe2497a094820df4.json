@@ -1,0 +1,26 @@
+{
+ "text": "Pues no me falta el aire como tal, pero la verdad he dormido sentada en el sillón reclinable las últimas dos noches. Es que ahí me siento más cómoda",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9830584526062012,
+  "request_id": null,
+  "latency_s": 1.593,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "4539e7d81369f6742bafcd86e77312e0a11b9f381d2bad176aa53b4ce9caf79c",
+  "audio_seconds": 9.52,
+  "seconds_to_make": 1.593
+ }
+}

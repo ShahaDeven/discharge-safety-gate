@@ -1,0 +1,18 @@
+{
+ "text": "No, nothing like that. I haven't passed out or anything, just the tired thing",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9452875852584839,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9f620f4afdea65d8183884393ce80d7639f8f387d859acf2fd14110d0db5d5aa",
+  "audio_seconds": 4.04,
+  "seconds_to_make": 0.937
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Well, I'm doing okay, I guess. Breathing's been all right. Not great, not terrible. I'm still getting used to being home",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9689427614212036,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "5ad85fd0d3bb21f4543769cd83899e35a60309cf9042b59c8691745f8da177e5",
+  "audio_seconds": 8.174,
+  "seconds_to_make": 1.141
+ }
+}

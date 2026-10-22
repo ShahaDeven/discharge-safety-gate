@@ -1,0 +1,18 @@
+{
+ "text": "Pues si me falta el aire, si me da fiebre o escalofríos, si la flema se pone peor o si me siento confundida, llamo al doctor o pido ayuda. Anoto el número y el cinco cinco cinco cero uno cero cuatro cuatro siete siete. Gracias",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9153355360031128,
+  "request_id": null,
+  "latency_s": 1.265,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "172829166faf2d4cc02c9b558836c95ee4abc3e4768ca6bf7f1886cbe3d93d7f",
+  "audio_seconds": 21.595,
+  "seconds_to_make": 1.265
+ }
+}

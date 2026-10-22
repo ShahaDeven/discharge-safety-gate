@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, it's Julian Walsh. My birthday is October fourth, nineteen sixty-four",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9826253056526184,
+  "request_id": null,
+  "latency_s": 0.89,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0660664645075e4c0a4ae35d4b7b64f8fca1b86d13e978f6d38f12f63ba28a9d",
+  "audio_seconds": 4.551,
+  "seconds_to_make": 0.89
+ }
+}

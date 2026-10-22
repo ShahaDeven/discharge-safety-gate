@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, it's Grady Davis. My date of birth is July 29th, 1961",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9835088849067688,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "e751b321a88c46a20186f6b20782b5d4bbc4d804dc45b5e8963a4430a8f86a3c",
+  "audio_seconds": 4.83,
+  "seconds_to_make": 1.047
+ }
+}

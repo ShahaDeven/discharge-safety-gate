@@ -1,0 +1,18 @@
+{
+ "text": "It was Tuesday. Actually, no, Wednesday when the flowing started",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9952289462089539,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "27cd0e8a78664c5cbc896631315baca68273bdd4777d764d659563235b77a79b",
+  "audio_seconds": 3.669,
+  "seconds_to_make": 0.828
+ }
+}

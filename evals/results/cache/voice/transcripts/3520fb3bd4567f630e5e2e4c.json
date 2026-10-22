@@ -1,0 +1,18 @@
+{
+ "text": "Pues sí, un poco. Desde hace un par de noches duermo en el sillón reclinable. Es más cómodo para mí",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9783920645713806,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7350388057ac0a0902eecb17b6efbec84d7b0fb8764fcbe7c6b87c7ac98213c4",
+  "audio_seconds": 5.898,
+  "seconds_to_make": 1.031
+ }
+}

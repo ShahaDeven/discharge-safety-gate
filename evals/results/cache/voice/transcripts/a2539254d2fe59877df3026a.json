@@ -1,0 +1,26 @@
+{
+ "text": "No, mareo no, ni a punto de desmayarme. Estoy bien de la cabeza, solo cansada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9175664186477661,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "8b5e621c61d7dfa2b51e01fe954a48c49d8be86741dae4b7e9aa9b0adcb19c36",
+  "audio_seconds": 5.248,
+  "seconds_to_make": 1.031
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Yeah, this is Julian. Yes, that's me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9800007343292236,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "6ee89d4db913a389fc5bbb458a188395e40096db2fd9047d2dd41e06e00a1824",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.844
+ }
+}

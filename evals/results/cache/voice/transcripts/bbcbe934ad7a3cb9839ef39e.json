@@ -1,0 +1,28 @@
+{
+ "text": "Oh, okay. I'm doing all right, I guess. Tired some days, but it's been about a couple days since I got home from Lakeside",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9930975437164307,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "daa19d7d583c4871b92c4f8e17d7eaca80db29c80b94df7b2065d72c32ea442c",
+  "audio_seconds": 7.152,
+  "seconds_to_make": 1.047
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "Estou te sendo a flema verde",
+ "meta": {
+  "detected_language": "por",
+  "language_probability": 0.978054940700531,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "29182497a3f0fa1cda860a0a83596a2e98d78e16d843e4e9ebfa6d976e987464",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.328
+ }
+}

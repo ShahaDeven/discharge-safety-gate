@@ -1,0 +1,28 @@
+{
+ "text": "Chest pain? No, no chest pain. Nothing like that at all. Sorry, what was the last part? You're still a bit quiet for me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9781578183174133,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "4ae4182f3ebfae3cbf57cd67c0b947c54f6eca5b17e3196cd897ae2bded620f2",
+  "audio_seconds": 6.873,
+  "seconds_to_make": 0.937
+ }
+}

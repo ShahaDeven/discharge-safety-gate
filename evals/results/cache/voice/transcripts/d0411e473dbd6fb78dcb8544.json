@@ -1,0 +1,18 @@
+{
+ "text": "Uh, I'm doing all right, I guess. Tired some, but I'm home now. My wrist is a bit sore where they did the procedure, but it's no big deal",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.989030659198761,
+  "request_id": null,
+  "latency_s": 1.5,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "33dcae9f765ed3f0a04424c447b367f276b8ad08dea6cba4090cbe7091f8b3fc",
+  "audio_seconds": 8.638,
+  "seconds_to_make": 1.5
+ }
+}

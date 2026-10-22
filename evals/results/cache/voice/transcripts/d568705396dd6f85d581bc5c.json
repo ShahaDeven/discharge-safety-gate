@@ -1,0 +1,18 @@
+{
+ "text": "I haven't been able to keep any food down since yesterday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9864509701728821,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c10145c315873afc40e5097800ec8221413660d8264db47a251cee07a169459c",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 0.937
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, this is Preston. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9031157493591309,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6bb80f3feaab7447aec2b1c0a4c38bb6bc9d366d355fa639cc4a89d31fb94b41",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 0.938
+ }
+}

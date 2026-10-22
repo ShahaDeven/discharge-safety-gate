@@ -1,0 +1,18 @@
+{
+ "text": "It's Basilia Hogginus speaking.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9695010781288147,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "873bb1fcffaa79a27fb1a26759d6eb3bfb462bff5f93faaac7fadc8021638ad0",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.906
+ }
+}

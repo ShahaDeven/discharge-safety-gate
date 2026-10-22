@@ -1,0 +1,18 @@
+{
+ "text": "Yes, I'm Bebe Simonis. I'm the patient. My date of birth is November fifth, nineteen fifty-nine. Is this about my heart stent? I came home from the hospital on the tenth.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9115413427352905,
+  "request_id": null,
+  "latency_s": 1.562,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "583465ee7f7b88960c047a214edc6d9d692428091c3c93b64838fcc36924be3b",
+  "audio_seconds": 11.099,
+  "seconds_to_make": 1.562
+ }
+}

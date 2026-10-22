@@ -1,0 +1,18 @@
+{
+ "text": "I don't take the metoprolol on the weekend",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9675138592720032,
+  "request_id": null,
+  "latency_s": 1.343,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "93163a9231fa97e2208696a1759448bd236b95839b47d2a72c8103acdf17b7f8",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 1.343
+ }
+}

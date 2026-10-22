@@ -1,0 +1,18 @@
+{
+ "text": "No, not really. I can breathe fine. I'm just slow getting up from the chair sometimes",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9736727476119995,
+  "request_id": null,
+  "latency_s": 2.593,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2eb8eb97ae3095b629b8bfe3aea451e48b99cfdf28423bd95cea7dba5b21d0cb",
+  "audio_seconds": 4.876,
+  "seconds_to_make": 2.593
+ }
+}

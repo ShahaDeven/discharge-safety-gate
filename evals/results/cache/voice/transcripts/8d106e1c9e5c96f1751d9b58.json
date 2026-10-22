@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, a little. When I stand up fast, I get lightheaded, and one time I almost fell over. I didn't pass out though. I just grabbed onto the counter till it passed",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9079071283340454,
+  "request_id": null,
+  "latency_s": 2.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1f6e156a9789948357451fad1e74d44d96791f6f4a4946a31ac6fbf29d41b524",
+  "audio_seconds": 9.195,
+  "seconds_to_make": 2.75
+ }
+}

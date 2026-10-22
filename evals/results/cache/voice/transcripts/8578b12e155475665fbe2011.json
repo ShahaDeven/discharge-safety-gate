@@ -1,0 +1,27 @@
+{
+ "text": "Ay, sí, la verdad es que esta mañana me desmayé un segundito en el baño. Me desperté en el suelo. Ya estoy bien, pero me asusté",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9658939838409424,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "1a0b937a8c0eab771ae429e1a6f891b385f5a830b4a5415a2341d4fbabecf7af",
+  "audio_seconds": 7.941,
+  "seconds_to_make": 1.109
+ }
+}

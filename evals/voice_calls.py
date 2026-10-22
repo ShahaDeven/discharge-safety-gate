@@ -209,7 +209,7 @@ def _mean(xs: list) -> float | None:
 def show(res: dict) -> None:
     print(f"\nvoice candidates vs C0 (text), {res['k']} replays, scenarios: {', '.join(res['scenarios'])}")
     for cid, r in res["candidates"].items():
-        ok = "as expected" if r["verdict"] == r["expected"] else f"EXPECTED {r['expected']}"
+        ok = "as expected" if r["verdict"] == r["expected"] else f"expected {r['expected']} before the run; disproved"
         L = r["lines"]
         print(f"\n{cid} {r['description']}: {r['verdict']} ({ok}) | {r['calls']} calls | patient lines {L['heard']}: "
               f"{L['changed']} heard differently, {L['garbled']} garbled (word error > {GARBLED:.0%}) | "

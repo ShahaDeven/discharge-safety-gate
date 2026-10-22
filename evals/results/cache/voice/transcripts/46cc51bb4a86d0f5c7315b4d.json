@@ -1,0 +1,18 @@
+{
+ "text": "It's Brady Olson speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "58b146d5b8c41b197233a2c069e71fe1d986b7c799849a677311245818878fbb",
+  "audio_seconds": 1.904,
+  "seconds_to_make": 1.328
+ }
+}

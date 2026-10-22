@@ -1,0 +1,18 @@
+{
+ "text": "Ne mareo quando me levanto",
+ "meta": {
+  "detected_language": "ita",
+  "language_probability": 0.4942816495895386,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b9a2d5ec7fb7847e53c0a4f19419e234a2e7ceccdc5506ea1c473427252aea8f",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.078
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "I take hydroxyzine at night for my nerves",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8711572289466858,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "43d76acb616f5d195e9389bed976077b68987f7acaf4f324a66cdc8fb0d9b9ac",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.891
+ }
+}

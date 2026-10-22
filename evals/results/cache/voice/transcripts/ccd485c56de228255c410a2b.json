@@ -1,0 +1,16 @@
+{
+ "text": "I read the newspaper and made some tea, and my speech came out slurred this morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9633454084396362,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "25439b0cb59e3630a4157629f2338eb2b41fddde4c1cd47e0f9d0cd415a4f6ba",
+  "audio_seconds": 4.412,
+  "seconds_to_make": 1.141
+ }
+}

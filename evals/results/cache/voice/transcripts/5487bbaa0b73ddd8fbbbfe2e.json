@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I'm BB. Oh, a computer program, huh? Okay, what's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9651278257369995,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "99616d206beee7d9a98e1821d8a8393b7d3a57453de56733d72bf285bffacdee",
+  "audio_seconds": 4.876,
+  "seconds_to_make": 0.953
+ }
+}

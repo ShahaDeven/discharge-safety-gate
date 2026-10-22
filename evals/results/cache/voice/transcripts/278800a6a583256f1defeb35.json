@@ -1,0 +1,28 @@
+{
+ "text": "Nitroglycerin. Sorry, I didn't catch that last part. Yes, I think I have the little tablets for under the tongue. I got those from the pharmacy. I just keep them in the cabinet",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.989268958568573,
+  "request_id": null,
+  "latency_s": 1.296,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "938a2a18bda68dceb98583d21a2c0c836d45eaa7d828cbf2953e30ac20773d60",
+  "audio_seconds": 9.845,
+  "seconds_to_make": 1.296
+ }
+}

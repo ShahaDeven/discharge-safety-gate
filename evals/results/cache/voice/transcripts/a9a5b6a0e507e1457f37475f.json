@@ -1,0 +1,18 @@
+{
+ "text": "I'm taking the forty-- wait, the twenty milligram tablet",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8343914151191711,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b423c05d1f8206cc4f1db5e7f4fa6ca419fb02e7c1077cdb99e8f62713f270b8",
+  "audio_seconds": 3.483,
+  "seconds_to_make": 0.984
+ }
+}

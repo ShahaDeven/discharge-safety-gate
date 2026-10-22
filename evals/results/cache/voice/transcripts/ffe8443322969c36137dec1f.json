@@ -1,0 +1,18 @@
+{
+ "text": "It's John Damore speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9619519114494324,
+  "request_id": null,
+  "latency_s": 0.782,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b2695bca2ff03298021e55e2b2ac3499ea0513e275def6346217fda71750c896",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 0.782
+ }
+}

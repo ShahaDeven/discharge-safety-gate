@@ -1,0 +1,18 @@
+{
+ "text": "Uh, I'd call my doctor, I guess, the one at the clinic or the number on the hospital papers if it's after hours. Is that right?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9774097800254822,
+  "request_id": null,
+  "latency_s": 2.343,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2553de69ffa11a45ba4a406c67e8320924640ea33a821d723d83aad57488717c",
+  "audio_seconds": 7.198,
+  "seconds_to_make": 2.343
+ }
+}

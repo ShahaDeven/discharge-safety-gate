@@ -1,0 +1,18 @@
+{
+ "text": "I take 12 units of insulin at night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8493779897689819,
+  "request_id": null,
+  "latency_s": 0.672,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "84478667110ce594e8ede636a6f8212176e1c2328c7c8bf64b4bf44aca73c101",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 0.672
+ }
+}

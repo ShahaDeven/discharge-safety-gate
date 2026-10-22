@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I take a few. Aspirin, the Plavix I told you about, Atorvastatin at night, Metoprolol once a day, Amlodipine once a day, and I've got nitroglycerin under the tongue if my chest hurts",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.984225869178772,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4aad1db8c15c721445ecf11079ff40ab1dbb6e45a11770fb8a7eac87b8af4325",
+  "audio_seconds": 12.353,
+  "seconds_to_make": 1.375
+ }
+}

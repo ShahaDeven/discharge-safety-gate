@@ -1,0 +1,16 @@
+{
+ "text": "I take Plopik since the scent",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9537296295166016,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "d264db68c745b4a0e1186131189cbd9667fcdcd003174f8c1ee2931cd4350329",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.844
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "It's Arnulfo lawyers speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9833860397338867,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2f1f59a3776a1607199a4d79d11a06052d87a3eadd17ba6b30b494d66f602d71",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 1.0
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "It's Cristo Balestreri speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8247778415679932,
+  "request_id": null,
+  "latency_s": 1.11,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d16799bb3e50db23419f8b9c6dd716311e654a9b0d50809a25be803533244115",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 1.11
+ }
+}

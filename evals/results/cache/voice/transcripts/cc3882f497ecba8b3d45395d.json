@@ -1,0 +1,18 @@
+{
+ "text": "No, mareada no me he sentido. Estoy bien de la cabeza, solo cansada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9284366369247437,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "09c8150f168193bda91685bb749040e367b6e478d4ac6f75c8bd5f34ce3e6caa",
+  "audio_seconds": 4.691,
+  "seconds_to_make": 1.172
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "text": "It's October 5th, 1956. Is this about my heart stuff? I just got home from the hospital",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9913663268089294,
+  "request_id": null,
+  "latency_s": 1.14,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Rick Kulas",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "e0fcedbe64d4ac71fa2f2c021ad74b5b58d357bdb1f5378aab8aa14523eb8b27",
+  "audio_seconds": 6.037,
+  "seconds_to_make": 1.14
+ }
+}

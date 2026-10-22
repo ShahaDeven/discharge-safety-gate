@@ -1,0 +1,18 @@
+{
+ "text": "It's Phoebe Simotas speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.942005455493927,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8dfc3181b30ff3ee3a56703f4ed4f2864a94403e45f011a3b47b8a6da58e1e8d",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 0.953
+ }
+}

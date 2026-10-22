@@ -1,0 +1,18 @@
+{
+ "text": "No, I haven't been short of breath. I can breathe fine, just tired some days",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.978602409362793,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bbc59216531730fbbef8bedaf2f6753e8b4a9716903d1cf11f1ca4394e2dafec",
+  "audio_seconds": 4.551,
+  "seconds_to_make": 1.218
+ }
+}

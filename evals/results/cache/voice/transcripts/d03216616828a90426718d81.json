@@ -1,0 +1,16 @@
+{
+ "text": "The weather's been nice and I sat outside most of the afternoon, but I'm coughing up green stuff now",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9631680250167847,
+  "request_id": null,
+  "latency_s": 1.234,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "906570191de2c8bd5d0075b23417657c7b623edf60de9528efa455cba0359631",
+  "audio_seconds": 5.944,
+  "seconds_to_make": 1.234
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is September 24th, 1946",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9652162790298462,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Basilia Hagenes"
+   ]
+  },
+  "audio_sha256": "3159de04357c8e648a9749fd66e0f4828b8d0327f3d292b10b1748071971903d",
+  "audio_seconds": 3.065,
+  "seconds_to_make": 1.078
+ }
+}

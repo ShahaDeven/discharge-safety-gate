@@ -1,0 +1,16 @@
+{
+ "text": "They started me on Inderal for my heart rate",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9948420524597168,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "698bcb5aa8fcb659244991b80e96e6aa124d540a267fe048ad18de5c871b653b",
+  "audio_seconds": 2.601,
+  "seconds_to_make": 0.844
+ }
+}

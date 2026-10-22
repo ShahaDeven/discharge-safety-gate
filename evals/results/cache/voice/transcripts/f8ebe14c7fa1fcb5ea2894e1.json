@@ -1,0 +1,18 @@
+{
+ "text": "",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.12450417876243591,
+  "request_id": null,
+  "latency_s": 1.218,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7cba7c0aae3f5856849ff66a82c2dab3699a83e016ad8d14b383d7c16ba4212c",
+  "audio_seconds": 2.833,
+  "seconds_to_make": 1.218
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "text": "Yes, yes, I'm BB. Sorry, my hearing isn't so good on the phone. Go ahead",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9496955275535583,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "5788047966ebb03baf2a67d3c8fd33c7a7354bfbbe13bff1f21c74cfc2c6b399",
+  "audio_seconds": 4.783,
+  "seconds_to_make": 0.953
+ }
+}

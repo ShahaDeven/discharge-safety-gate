@@ -1,0 +1,18 @@
+{
+ "text": "Bleeding? Well, my gums do bleed a fair bit when I brush, and I've got some bruises on my arms. No black stuff in my stool that I've seen, and my wrist is fine. No swelling there.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9703913927078247,
+  "request_id": null,
+  "latency_s": 1.312,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "181b0568462fae7322c121f2391e122a46dc5c249db4a185fbc335e0cb5ac446",
+  "audio_seconds": 11.053,
+  "seconds_to_make": 1.312
+ }
+}

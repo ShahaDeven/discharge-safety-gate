@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy yo, Matilda. ¿Qué pasa? Hable un poquito más despacio, por favor",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9944868087768555,
+  "request_id": null,
+  "latency_s": 1.437,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1c4e1403447729e14374cafc4fb5d884f8a9388c40d4df11d2aad858030a3fe0",
+  "audio_seconds": 5.062,
+  "seconds_to_make": 1.437
+ }
+}

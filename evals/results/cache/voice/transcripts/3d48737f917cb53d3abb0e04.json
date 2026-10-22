@@ -1,0 +1,18 @@
+{
+ "text": "It's our notebook warrior speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9203371405601501,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "89d1b4e1c20e7b0db86e3702562e3d27d34af69d9e67ea7c49e5833ffd17312c",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 1.0
+ }
+}

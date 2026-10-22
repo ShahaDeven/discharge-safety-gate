@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is December 25th, 1956",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9894171357154846,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1fdd4d8ea647cb3e23de9321d0fe4bd9f8c2f0e2a9cd1f879f8c1a631d703ff5",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 1.125
+ }
+}

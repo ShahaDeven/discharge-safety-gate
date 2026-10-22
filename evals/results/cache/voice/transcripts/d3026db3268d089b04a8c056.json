@@ -1,0 +1,28 @@
+{
+ "text": "Yeah, I got the atorvastatin, the 81, and I take it at night. But I'm still taking the old simvastatin too, the cholesterol pill I've been on for years. Nobody told me to stop it.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9918168783187866,
+  "request_id": null,
+  "latency_s": 1.407,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "e16c74c43d8f6d295536ebf01ca3fa195334ef57a584baf77dda2df4797844da",
+  "audio_seconds": 10.681,
+  "seconds_to_make": 1.407
+ }
+}

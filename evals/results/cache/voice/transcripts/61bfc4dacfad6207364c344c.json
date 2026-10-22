@@ -1,0 +1,18 @@
+{
+ "text": "It's Arnulf Oboyer speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9426994919776917,
+  "request_id": null,
+  "latency_s": 0.843,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a0a67055053c4a00c9c070481163a2f398888448a2559693ea43b5b754a66fb4",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 0.843
+ }
+}

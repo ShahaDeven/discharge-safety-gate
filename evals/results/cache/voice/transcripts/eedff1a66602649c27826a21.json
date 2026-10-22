@@ -1,0 +1,18 @@
+{
+ "text": "Pues la verdad es que últimamente duermo en el sillón reclinable las últimas noches. Es más cómodo, nada más",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9783941507339478,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "11cbd65bf69c1c37566f4c858376575b5a324bb98eb256bbea3f1eed9aa0382f",
+  "audio_seconds": 7.059,
+  "seconds_to_make": 1.125
+ }
+}

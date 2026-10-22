@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Bebe. Who's calling? You'll have to speak up a little. I'm a bit hard of hearing",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9752335548400879,
+  "request_id": null,
+  "latency_s": 2.687,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "37bd92893f7b16e39589539d63e5115bffe74c4266fef874c8df91a3189dd93c",
+  "audio_seconds": 4.876,
+  "seconds_to_make": 2.687
+ }
+}

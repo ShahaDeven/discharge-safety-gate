@@ -1,0 +1,28 @@
+{
+ "text": "Yeah, I've got the atorvastatin and the metoprolol. I take the atorvastatin at night and the metoprolol every day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9572740197181702,
+  "request_id": null,
+  "latency_s": 1.562,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "3b0798b10cea6bad730121afeb2b2093500950c31f2a1e5c809fbc79369923d2",
+  "audio_seconds": 7.105,
+  "seconds_to_make": 1.562
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yes, I picked them all up from the pharmacy, and yes, I'm taking the aspirin and the Plavix every day like it says on the bottles",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.983565092086792,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9a60cc9b98205387d59badf6032da960de6acb819fb37816c71007f2ca71c362",
+  "audio_seconds": 6.734,
+  "seconds_to_make": 1.0
+ }
+}

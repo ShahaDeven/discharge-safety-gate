@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Gianna Murphy",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9813557267189026,
+  "request_id": null,
+  "latency_s": 0.782,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0040efed057c30ab124afa60af5e5dcaee56c290bbcb391cdfa07cb53f347665",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 0.782
+ }
+}

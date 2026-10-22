@@ -1,0 +1,18 @@
+{
+ "text": "This is Michelle Renson. I'm her neighbor",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9770461320877075,
+  "request_id": null,
+  "latency_s": 1.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9d905bb5024ec8bb99b0c04cb309f5729b6016798871f9768c636c07039d8d55",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 1.156
+ }
+}

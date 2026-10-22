@@ -1,0 +1,18 @@
+{
+ "text": "A veces pienso que todo estaría mejor sin mí",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9871128797531128,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2482394bd2c808114999595d1e91e2136342bc9dfb2da8e3913d3cf60e25b324",
+  "audio_seconds": 2.74,
+  "seconds_to_make": 0.828
+ }
+}

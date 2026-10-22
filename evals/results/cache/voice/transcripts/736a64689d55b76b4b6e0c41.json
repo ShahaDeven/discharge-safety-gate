@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is November fifth, nineteen sixteen",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8877679705619812,
+  "request_id": null,
+  "latency_s": 1.266,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e8c3ac8e6ef64cd27129e776bfff08d3b7d7eafe7951732ac80f13775549663b",
+  "audio_seconds": 2.74,
+  "seconds_to_make": 1.266
+ }
+}

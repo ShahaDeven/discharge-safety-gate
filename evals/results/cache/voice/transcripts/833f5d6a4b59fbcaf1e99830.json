@@ -1,0 +1,18 @@
+{
+ "text": "My grandson helped me with the laundry, and I've had a fever and chills since last night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9992842674255371,
+  "request_id": null,
+  "latency_s": 1.079,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4da7cee4607a4aecd9d35d714c14773f7f9abdff518955cbcb5820cedbfde197",
+  "audio_seconds": 4.644,
+  "seconds_to_make": 1.079
+ }
+}

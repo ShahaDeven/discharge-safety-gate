@@ -1,0 +1,18 @@
+{
+ "text": "It's Carmen Bergnone speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c8fdddb90f683d638d88f92926ef1c81ece167318f3cfd85d1242e6ec4a35789",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.141
+ }
+}

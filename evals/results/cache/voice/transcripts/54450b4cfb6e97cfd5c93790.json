@@ -1,0 +1,18 @@
+{
+ "text": "my daughter's sorry and my son picks up my pills",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.841650664806366,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6cf764bf2e2aaef18e346182782707a27f9205e88d092619f41c7936e6fde623",
+  "audio_seconds": 2.833,
+  "seconds_to_make": 0.844
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, it's Rick Kulas. Date of birth is October fifth, nineteen fifty-six",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9579060077667236,
+  "request_id": null,
+  "latency_s": 1.016,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Rick Kulas",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "9c30085a28c228fdc9a4ad79ab96af7963ec9e86bf3796558e6331ec79efa29a",
+  "audio_seconds": 4.412,
+  "seconds_to_make": 1.016
+ }
+}

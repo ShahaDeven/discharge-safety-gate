@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, it's Preston Little. My birthday is March fourth, nineteen seventy-one",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9631431698799133,
+  "request_id": null,
+  "latency_s": 1.609,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7e15e5e93ee9a484fc4a637bcfc566c7554479263f63208648899b1d72451904",
+  "audio_seconds": 4.458,
+  "seconds_to_make": 1.609
+ }
+}

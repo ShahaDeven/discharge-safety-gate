@@ -1,0 +1,28 @@
+{
+ "text": "Yeah, it's Bebe Simonis. My birthday is November fifth, nineteen sixty-nine. Is this about my heart stent thing?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9424560070037842,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "dfe254cf1bb521741a711a739866ff9a35feb50d252ed4accbb90a361d825d5a",
+  "audio_seconds": 7.245,
+  "seconds_to_make": 1.109
+ }
+}

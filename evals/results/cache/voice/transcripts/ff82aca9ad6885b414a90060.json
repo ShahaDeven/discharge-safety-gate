@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I use the budesonide one, two puffs twice a day, and the prednisone, I'm taking the forty milligram once a day, I think through the thirteenth",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9188627600669861,
+  "request_id": null,
+  "latency_s": 1.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "25cca5f6b8c50ea78f35d16a6bdd4d19da765365302e7056282bb4e1bd848cf4",
+  "audio_seconds": 8.777,
+  "seconds_to_make": 1.813
+ }
+}

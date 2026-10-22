@@ -1,0 +1,26 @@
+{
+ "text": "Claro, mi fecha de nacimiento es el 12 de junio de 1940",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9935062527656555,
+  "request_id": null,
+  "latency_s": 1.063,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "ae467694c7555048925ea6fee20fcc9f04205dfb6dcdf25d951c9f8ef8124d3c",
+  "audio_seconds": 3.947,
+  "seconds_to_make": 1.063
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "I'm on Zyprexa, five milligrams at bedtime",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.33901292085647583,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "629198e1f9802f9f163ac7e66ef3ca17aa5d5f3262001646c8f7874597f780d4",
+  "audio_seconds": 2.693,
+  "seconds_to_make": 0.984
+ }
+}

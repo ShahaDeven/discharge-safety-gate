@@ -1,0 +1,15 @@
+{
+ "text": "No tengo dolor en el pecho",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9856586456298828,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "audio_sha256": "adb62113af783ea24c441d969e5104a0eee7d5079d4f7818991f0d8bb96694ea",
+  "audio_seconds": 1.579,
+  "seconds_to_make": 0.875
+ }
+}

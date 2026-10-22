@@ -1,0 +1,18 @@
+{
+ "text": "Uh, yeah, I guess if I can't catch my breath or my chest starts hurting bad, I'd call nine one one. Or if I get real confused. Otherwise, I'd call you folks, I guess",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9740734100341797,
+  "request_id": null,
+  "latency_s": 3.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d4bac2623eb5cc07cfee0e36b6ddf96e6ecf4965455894bb5f3452c4b4c26f5b",
+  "audio_seconds": 9.892,
+  "seconds_to_make": 3.375
+ }
+}

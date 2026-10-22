@@ -1,0 +1,15 @@
+{
+ "text": "I take one top roll in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8168052434921265,
+  "request_id": null,
+  "latency_s": 1.188,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "audio_sha256": "977c13f319688b246a8a4b6763df91b45b6a498554ce459dcde2ba8b00bf48b5",
+  "audio_seconds": 1.904,
+  "seconds_to_make": 1.188
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, this is Rick. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9791831970214844,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Rick Kulas",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "d3c00e75c7ee1560893b7216054023957ae1a7b395cc2c273940974cd09295f5",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.937
+ }
+}

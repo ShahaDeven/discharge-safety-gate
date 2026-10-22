@@ -1,0 +1,18 @@
+{
+ "text": "I'm doing my breathing exercises",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9077869057655334,
+  "request_id": null,
+  "latency_s": 0.718,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5e0b768a527a4b07317886d427129b4a55a2a864d8da9a94232ef6e72b156a24",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 0.718
+ }
+}

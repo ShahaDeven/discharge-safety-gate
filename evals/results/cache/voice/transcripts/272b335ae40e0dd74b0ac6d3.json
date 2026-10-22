@@ -1,0 +1,26 @@
+{
+ "text": "Mmm, no, no estoy confundida ni tengo mucho sueño. Y mis labios y dedos se ven normales, de su color de siempre",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9764982461929321,
+  "request_id": null,
+  "latency_s": 1.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "722ec4d50543e54ecb4c418bd9d3be8a0a6ffee9d9b8197583d82e174c3bf061",
+  "audio_seconds": 7.709,
+  "seconds_to_make": 1.828
+ }
+}

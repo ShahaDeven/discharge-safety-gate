@@ -1,0 +1,18 @@
+{
+ "text": "My seizure medicine is Lamictal",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8988326787948608,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "948e94c4c21fba0d78f249afa752d499aa5756e6492e25dcf1edaee0dda635d5",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 1.094
+ }
+}

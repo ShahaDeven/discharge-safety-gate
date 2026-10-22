@@ -1,0 +1,18 @@
+{
+ "text": "It's Rick Kulas. Date of birth is October fifth, nineteen fifty-six. Is this about my heart stuff from the hospital?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9358262419700623,
+  "request_id": null,
+  "latency_s": 1.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "96aac9cc08496b0fe44788bf626322fbd1ef941c62d65a2bb50fa301d39a6302",
+  "audio_seconds": 7.709,
+  "seconds_to_make": 1.985
+ }
+}

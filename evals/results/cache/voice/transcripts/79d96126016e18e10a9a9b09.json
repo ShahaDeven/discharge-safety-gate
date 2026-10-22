@@ -1,0 +1,18 @@
+{
+ "text": "No, no tengo fiebre ni escalofríos. No tengo calentura. Me siento igual de bien",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9417213797569275,
+  "request_id": null,
+  "latency_s": 1.218,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2f1a06ff57292c554a1e49509e12af23f93716f9e99470216d53c54ee985959c",
+  "audio_seconds": 4.923,
+  "seconds_to_make": 1.218
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la de 50 mg la tengo, me la tomo una vez al día. Ah, y también sigo tomando la de 25 de antes, la del metoprolol tartrato dos veces al día, porque todavía tengo ese frasco",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9852780103683472,
+  "request_id": null,
+  "latency_s": 1.453,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "606754d3b8f891c4a711271eff8eeb2a3628a13938eb6336c8a89e00291821e3",
+  "audio_seconds": 12.771,
+  "seconds_to_make": 1.453
+ }
+}

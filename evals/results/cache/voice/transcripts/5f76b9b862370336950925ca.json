@@ -1,0 +1,16 @@
+{
+ "text": "Subí dos kilos desde el lunes",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9550116658210754,
+  "request_id": null,
+  "latency_s": 1.015,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "b08fa6c3804442c434bd4fcf051456b451d31dcdccbf73d5a7d1246e40e560f4",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 1.015
+ }
+}

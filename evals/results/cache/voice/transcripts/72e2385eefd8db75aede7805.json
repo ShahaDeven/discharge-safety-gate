@@ -1,0 +1,18 @@
+{
+ "text": "Ay, perdón. Sí, es Matilda Keen, con K-E-E-H-N. Mi fecha de nacimiento es el 7 de octubre de 1958. ¿Ya está bien así?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9951671361923218,
+  "request_id": null,
+  "latency_s": 1.407,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "79163f1648f93e7f1bd9136a195ee0fe605addc082245c6ff96b44d7ef27d304",
+  "audio_seconds": 10.449,
+  "seconds_to_make": 1.407
+ }
+}

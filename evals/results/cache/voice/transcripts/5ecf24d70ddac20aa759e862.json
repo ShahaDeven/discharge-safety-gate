@@ -1,0 +1,26 @@
+{
+ "text": "Sí, el de tiotropio lo uso una vez al día, dos puffs, y el de budesonida con formoterol dos veces al día, también dos puffs. Eso lo hago todos los días",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9888009428977966,
+  "request_id": null,
+  "latency_s": 2.407,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "3ce67635d670cfdb5bee772a033920d1cd5d943719f519b838a9181b43374074",
+  "audio_seconds": 11.146,
+  "seconds_to_make": 2.407
+ }
+}

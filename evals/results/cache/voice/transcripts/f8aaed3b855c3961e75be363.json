@@ -1,0 +1,18 @@
+{
+ "text": "Well, yeah, actually. Last night there was pressure in my chest, maybe twenty minutes. I was sweaty too. It went away after a while, but I didn't really know what to do about it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9952509999275208,
+  "request_id": null,
+  "latency_s": 1.516,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7959862d01a1990d3b74877617d1a91fa383ff6d9c6cd76fb2a214d12096a4e0",
+  "audio_seconds": 10.17,
+  "seconds_to_make": 1.516
+ }
+}

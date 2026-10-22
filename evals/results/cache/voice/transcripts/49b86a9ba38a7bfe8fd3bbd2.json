@@ -1,0 +1,18 @@
+{
+ "text": "Sí, ya la recogí. La tomo una vez al día, 40 miligramos hasta el 14 de octubre",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9615741968154907,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d2912376181b0e53c7939f50f73bb023d2175da09e86e4f21f0d4eb26f888e89",
+  "audio_seconds": 5.712,
+  "seconds_to_make": 1.047
+ }
+}

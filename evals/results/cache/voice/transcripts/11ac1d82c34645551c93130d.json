@@ -1,0 +1,28 @@
+{
+ "text": "Hmm, I think it's my heart doctor's office or maybe the hospital number on the paper they gave me. I've got it somewhere by the phone, I think",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9981744289398193,
+  "request_id": null,
+  "latency_s": 1.234,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "3f5e0c678408786b3d8d5c4630af9f61719f1e90a6a1d5444f52878878caf0a1",
+  "audio_seconds": 7.709,
+  "seconds_to_make": 1.234
+ }
+}

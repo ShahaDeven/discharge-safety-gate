@@ -1,0 +1,18 @@
+{
+ "text": "Uh, 911 is if the hand goes cold or numb or pale or the bleeding won't stop. And I'd call the hospital if the wrist gets worse or I feel dizzy or chest pain, I guess. The number's on the paper somewhere.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9365776181221008,
+  "request_id": null,
+  "latency_s": 1.188,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0b1d74fbdf3d7e1176c0664c1811842bc0e2b425daad10034374617fc945b771",
+  "audio_seconds": 14.025,
+  "seconds_to_make": 1.188
+ }
+}

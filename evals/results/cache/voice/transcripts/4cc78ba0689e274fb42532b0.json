@@ -1,0 +1,18 @@
+{
+ "text": "Pues sí, la flema desde ayer se puso verde y espesa y hay más, pero no sé si es grave",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9852010607719421,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "081caf9d1455e7a1ca18c65b3177d5e42ff30aff28f00bc2e65065fc98232276",
+  "audio_seconds": 6.316,
+  "seconds_to_make": 0.984
+ }
+}

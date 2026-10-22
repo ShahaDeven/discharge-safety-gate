@@ -1,0 +1,27 @@
+{
+ "text": "No, breathing's fine. Like I said, just a little tired",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9299233555793762,
+  "request_id": null,
+  "latency_s": 1.578,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "7358a515a5aaffbbb9ed802382f2554d1abc0977047d6c410028a8aeff546d3b",
+  "audio_seconds": 3.297,
+  "seconds_to_make": 1.578
+ }
+}

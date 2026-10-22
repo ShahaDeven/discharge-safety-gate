@@ -1,0 +1,16 @@
+{
+ "text": "Yes, this is me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9928554892539978,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "08b82ad879b5bc50a9299fe5039dca9cb50f3d5a255bd10a624b5662d6848cf5",
+  "audio_seconds": 1.208,
+  "seconds_to_make": 1.031
+ }
+}

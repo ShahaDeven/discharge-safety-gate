@@ -1,0 +1,18 @@
+{
+ "text": "I take Celexa's suspense",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8419025540351868,
+  "request_id": null,
+  "latency_s": 0.843,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e4c0e69a1b46d2dff3408e09e3ef97b8b3a778c64b26a85c2830c74a9b0410e6",
+  "audio_seconds": 1.765,
+  "seconds_to_make": 0.843
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the aspirin, eighty-one milligram. I take one every day. The other one, the clopidogrel, the pharmacy said it wasn't ready yet, and I never went back for it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.982729434967041,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "237be05613d5a55e564a716709afac24b4435d1941577bbe26e34056c33d4f53",
+  "audio_seconds": 9.102,
+  "seconds_to_make": 1.125
+ }
+}

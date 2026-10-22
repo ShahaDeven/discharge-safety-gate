@@ -1,0 +1,28 @@
+{
+ "text": "Amlodipine? Yes, the five milligram one. I take that once a day. Oh, and I'm still taking the old cholesterol pill too, the simvastatin. I haven't stopped that one yet",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9764134883880615,
+  "request_id": null,
+  "latency_s": 1.218,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "3e4ddc0f3b284488921ac360339730c4f22806806983229ded7fefc74ef31b6f",
+  "audio_seconds": 12.074,
+  "seconds_to_make": 1.218
+ }
+}

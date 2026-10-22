@@ -1,0 +1,18 @@
+{
+ "text": "Sí, yo soy la paciente. Soy Micah Shanahan. Nací un 27 de mayo de 1984",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9053107500076294,
+  "request_id": null,
+  "latency_s": 2.781,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0e1dba2a37481358516760ebd72a6d17b124d80379bc1ac1d90afb98ed0feadc",
+  "audio_seconds": 5.944,
+  "seconds_to_make": 2.781
+ }
+}

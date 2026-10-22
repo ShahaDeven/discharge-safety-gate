@@ -1,0 +1,26 @@
+{
+ "text": "Sí, soy yo, Micah. Dígame, ¿de qué se trata? Estoy un poco cansada, pero aquí estoy",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9948583841323853,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "4df49348ba53e36505624f4cb65949a4a0bce15e2af9a185750ee8d1425b5c14",
+  "audio_seconds": 5.48,
+  "seconds_to_make": 1.047
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Okay, let me get my bottles. I've got the aspirin, the clopidogrel we talked about, atorvastatin at night, metoprolol every day, amlodipine once a day, and the nitroglycerin under the tongue if I get chest pain. That's everything I take.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9391154050827026,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bdb7278556ff51f27d9d9c24e3e3f3987589230186282a6fb7ddfb1f0aafaa00",
+  "audio_seconds": 15.604,
+  "seconds_to_make": 1.125
+ }
+}

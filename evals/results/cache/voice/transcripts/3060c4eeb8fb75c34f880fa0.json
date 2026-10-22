@@ -1,0 +1,18 @@
+{
+ "text": "My follow-up appointment is on Thursday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.982714056968689,
+  "request_id": null,
+  "latency_s": 0.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "582f344d05536a7ab13a05d33fb2410ff109f199e35503c1ced53649b31de5d6",
+  "audio_seconds": 2.554,
+  "seconds_to_make": 0.75
+ }
+}

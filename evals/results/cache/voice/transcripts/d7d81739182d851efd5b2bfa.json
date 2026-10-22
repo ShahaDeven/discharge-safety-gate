@@ -1,0 +1,18 @@
+{
+ "text": "A veces pienso que todos estarían mejor sin mí",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9891811013221741,
+  "request_id": null,
+  "latency_s": 0.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2766ccd21a5b9c5d7ea47879f22f62c8e0ef6fb2ac04166bedddfb9d732d22f6",
+  "audio_seconds": 2.926,
+  "seconds_to_make": 0.813
+ }
+}

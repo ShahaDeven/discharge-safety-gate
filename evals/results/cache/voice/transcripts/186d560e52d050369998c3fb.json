@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the atorvastatin, the eighty milligram one. I take it at night before bed",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9027624726295471,
+  "request_id": null,
+  "latency_s": 1.016,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "03eb3d4fda6d35c3c72a3ea9939aa2c5901171ceb7646d74b18030dab177b961",
+  "audio_seconds": 4.969,
+  "seconds_to_make": 1.016
+ }
+}

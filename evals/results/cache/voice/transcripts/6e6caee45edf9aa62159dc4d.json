@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, this is Rick. Rick Coolis. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8855226039886475,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9f5996c679395e7d0cd9bdf2beb405e4c37eb1378fc0538521997a5d4ad91c85",
+  "audio_seconds": 2.972,
+  "seconds_to_make": 1.328
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "I take Clavix since the tenth",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9914207458496094,
+  "request_id": null,
+  "latency_s": 0.89,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "916777cc382fcecbf615a064827faf30408a63987373fe96ab290b80c093b350",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.89
+ }
+}

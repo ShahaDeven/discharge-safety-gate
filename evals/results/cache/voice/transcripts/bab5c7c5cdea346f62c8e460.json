@@ -1,0 +1,26 @@
+{
+ "text": "Hmm, let me think. I've used it a couple times here and there, I think. Not a lot more than usual, I don't think",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9889196753501892,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "913994317d26067772acd609de7e0fc4c058dac6d6bcb02e17695fbf3f3cf927",
+  "audio_seconds": 6.13,
+  "seconds_to_make": 1.187
+ }
+}

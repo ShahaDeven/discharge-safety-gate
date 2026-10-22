@@ -1,0 +1,18 @@
+{
+ "text": "No tomo el metoprolol los fines de semana",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9717304110527039,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "73eecccacc2d392ffde050c25c7e6ced52cf4101cd2f81be1d3e5600f3f83ce4",
+  "audio_seconds": 3.065,
+  "seconds_to_make": 0.938
+ }
+}

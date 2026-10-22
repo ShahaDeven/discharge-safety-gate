@@ -1,0 +1,18 @@
+{
+ "text": "It's the blue inhaler. No, wait, the orange one",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8335444331169128,
+  "request_id": null,
+  "latency_s": 1.015,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "69aadfe1e4b2404316335e183b5ea22d827ed854b07bcd11f0e94622999c0493",
+  "audio_seconds": 2.833,
+  "seconds_to_make": 1.015
+ }
+}

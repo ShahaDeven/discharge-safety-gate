@@ -1,0 +1,18 @@
+{
+ "text": "I already told you it's Rick Kulas. My birthday is October fifth, nineteen fifty-six",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9813136458396912,
+  "request_id": null,
+  "latency_s": 1.171,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c1da2efa10a78047325d6b86bee5f53f113808ac1a39f56e213fea0a64eb6b5e",
+  "audio_seconds": 5.016,
+  "seconds_to_make": 1.171
+ }
+}

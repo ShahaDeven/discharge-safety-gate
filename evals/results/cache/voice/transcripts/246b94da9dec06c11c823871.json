@@ -1,0 +1,18 @@
+{
+ "text": "Um, it's the twenty-five milligram one, the succinate, and yeah, just once a day in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.943761944770813,
+  "request_id": null,
+  "latency_s": 1.032,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "019e7e33b5d00167bff8226b01624de9192e39768aef7b3e95ed827d8670f6de",
+  "audio_seconds": 5.851,
+  "seconds_to_make": 1.032
+ }
+}

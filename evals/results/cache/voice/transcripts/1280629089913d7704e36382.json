@@ -1,0 +1,18 @@
+{
+ "text": "Uh, chest pain that won't go away, trouble breathing, passing out, or my wrist swelling up fast, or my hand going cold or numb, then I call 911, I guess. One",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9385099411010742,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b8c03cd44305a5ca9d5b100dfee951d48b651b5cf4b90d9a466a94abe8c8d9d2",
+  "audio_seconds": 11.099,
+  "seconds_to_make": 1.328
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Sí, esa también la recogí. La tomo una vez al día en la mañana con las otras pastillas",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9974637627601624,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "877342e9a9b5b1922af01ff1de2401c898d457452083156d88febfba9f131924",
+  "audio_seconds": 5.48,
+  "seconds_to_make": 0.875
+ }
+}

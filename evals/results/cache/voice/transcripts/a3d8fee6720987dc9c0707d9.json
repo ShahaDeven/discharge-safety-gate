@@ -1,0 +1,21 @@
+{
+ "text": "Yes, this is Manuel Frami",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9773584604263306,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Manuel Frami"
+   ]
+  },
+  "audio_sha256": "f4d0fafbcbc7caa68d1998a31eda3936c93aaba7481ec648f85d69b83703a1a2",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.094
+ }
+}

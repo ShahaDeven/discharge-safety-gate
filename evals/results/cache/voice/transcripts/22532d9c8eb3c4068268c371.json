@@ -1,0 +1,18 @@
+{
+ "text": "Estoy haciendo flema verde",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9661939144134521,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8786dc28e3a3f7acb73b0d097c403594c90e61c16cd151f6467c9eab3e063400",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 0.984
+ }
+}

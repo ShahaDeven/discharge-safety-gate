@@ -1,0 +1,24 @@
+{
+ "text": "Cough's about the same, I guess. Breathing's okay. Nothing new. I'm not short of breath just sitting here",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8857561945915222,
+  "request_id": null,
+  "latency_s": 1.188,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Preston Little",
+    "Lakeside General Hospital",
+    "amoxicillin-clavulanate",
+    "acetaminophen"
+   ]
+  },
+  "audio_sha256": "a9dbe1b1309609c4796826d1b0713b3e7532d4a6a3c170d362a66584581083ec",
+  "audio_seconds": 6.269,
+  "seconds_to_make": 1.188
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "text": "Yes, this is Bebe. Who is this again? You're a bit quiet. Could you speak up?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9592592716217041,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "321b30f04724abdd701da461afbd03ccb5b7f2ec45ea6afa9be4f1f805e52c3c",
+  "audio_seconds": 4.691,
+  "seconds_to_make": 1.375
+ }
+}

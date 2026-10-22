@@ -1,0 +1,18 @@
+{
+ "text": "Hmm, yeah, I guess it's a little bigger than it was, and it's tender when I press on it. There's kind of like a lump there now. I'm not sure if that's normal",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9942733645439148,
+  "request_id": null,
+  "latency_s": 1.313,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "acf996e42d0929da60a77f13ba5f7153d2ebc45c63ed3fc538613dbba16c3618",
+  "audio_seconds": 7.848,
+  "seconds_to_make": 1.328
+ }
+}

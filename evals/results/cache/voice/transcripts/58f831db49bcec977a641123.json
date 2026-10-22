@@ -1,0 +1,18 @@
+{
+ "text": "I take Xanax when I can't sleep",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.991594135761261,
+  "request_id": null,
+  "latency_s": 0.734,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "00395b58c9e049adcd57241e35251fa62446f75319264f2ef7d971282b9267be",
+  "audio_seconds": 1.904,
+  "seconds_to_make": 0.734
+ }
+}

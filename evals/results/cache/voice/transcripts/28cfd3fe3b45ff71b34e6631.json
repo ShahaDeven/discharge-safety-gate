@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is September twenty-fourth, nineteen forty-six",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8848195672035217,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ea98b717849ffe9b3125391b870169278ebed62e64495d3bd43f924d3b0bf676",
+  "audio_seconds": 3.065,
+  "seconds_to_make": 0.953
+ }
+}

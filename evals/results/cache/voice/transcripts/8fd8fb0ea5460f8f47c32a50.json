@@ -1,0 +1,28 @@
+{
+ "text": "No, no dizziness. I'm not fainting or anything like that. I feel fine on that front",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9757161736488342,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "d2e3a29f8cab2cf34615c24e50da0308d763b113cef91700f2b0b4e9d024175e",
+  "audio_seconds": 4.691,
+  "seconds_to_make": 0.875
+ }
+}

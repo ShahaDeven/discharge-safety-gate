@@ -1,0 +1,18 @@
+{
+ "text": "Pues más o menos. Estoy cansada, pero ya estoy en casa. Gracias por llamar",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9973088502883911,
+  "request_id": null,
+  "latency_s": 1.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8e59d98485e982af101dce83f139487148df40ecf727bd6c888c86681df51756",
+  "audio_seconds": 5.526,
+  "seconds_to_make": 1.156
+ }
+}

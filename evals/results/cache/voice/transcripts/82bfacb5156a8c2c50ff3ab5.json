@@ -1,0 +1,18 @@
+{
+ "text": "Now it's not worse than when I got home. I'm not gasping or anything when I'm just sitting around",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9862558245658875,
+  "request_id": null,
+  "latency_s": 1.188,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3218139a87f58c0a7e3e7525aab3a411d6944a6e192783b0ad71740a00cea67a",
+  "audio_seconds": 5.016,
+  "seconds_to_make": 1.188
+ }
+}

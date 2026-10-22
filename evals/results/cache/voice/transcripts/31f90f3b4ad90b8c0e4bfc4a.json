@@ -1,0 +1,21 @@
+{
+ "text": "Yes, this is Mathilde Hettinger",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9584007263183594,
+  "request_id": null,
+  "latency_s": 1.157,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Mathilde Hettinger"
+   ]
+  },
+  "audio_sha256": "87b2c479d40ba8088c09cfa31d6323fceb6939997e1ad16259f91a0bef9c213d",
+  "audio_seconds": 1.765,
+  "seconds_to_make": 1.157
+ }
+}

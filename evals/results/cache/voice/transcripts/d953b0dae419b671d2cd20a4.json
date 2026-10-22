@@ -1,0 +1,18 @@
+{
+ "text": "This is Matthew Keane. I'm a friend of the family",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9878567457199097,
+  "request_id": null,
+  "latency_s": 0.968,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a4d73f992f6d5fdd4c57511f89e43d3114062a187bd2713d597c46b051f5aebd",
+  "audio_seconds": 2.786,
+  "seconds_to_make": 0.968
+ }
+}

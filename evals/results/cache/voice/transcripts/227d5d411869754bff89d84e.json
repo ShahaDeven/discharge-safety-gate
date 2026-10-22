@@ -1,0 +1,18 @@
+{
+ "text": "Um, no, nothing different that I've noticed. Same as it's been",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9971444606781006,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "356f7ce24e98dbf0c13c48e3aa9eae5ca51b82312e8197c41eaaf592b8186134",
+  "audio_seconds": 3.437,
+  "seconds_to_make": 0.922
+ }
+}

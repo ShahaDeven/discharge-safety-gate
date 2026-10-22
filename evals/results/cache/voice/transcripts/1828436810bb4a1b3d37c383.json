@@ -1,0 +1,26 @@
+{
+ "text": "Yeah, I got the prednisone. I take one a day, the big one, and, uh, the new inhaler, the tiotropium, I never picked that up. It was like eighty bucks",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9222431778907776,
+  "request_id": null,
+  "latency_s": 1.734,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "03bcf03c3a2f62d771138bbc1edaa5d658db803354c60583d8ebec7a64c3ee34",
+  "audio_seconds": 8.406,
+  "seconds_to_make": 1.734
+ }
+}

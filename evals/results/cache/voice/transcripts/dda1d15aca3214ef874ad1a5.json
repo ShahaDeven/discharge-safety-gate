@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the prednisone. I take the 40 milligrams once a day like they said till the 13th",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8869883418083191,
+  "request_id": null,
+  "latency_s": 4.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "373648184068e6739022633c01694f920e44731c49753ac8b55eb5d4a5b1c8b9",
+  "audio_seconds": 5.991,
+  "seconds_to_make": 4.203
+ }
+}

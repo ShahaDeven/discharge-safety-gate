@@ -1,0 +1,18 @@
+{
+ "text": "There's no blood in my stool",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8756440281867981,
+  "request_id": null,
+  "latency_s": 0.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "99d5297939f9891cf565ef1b2425b7447572ea04cd9ff060b7ae5cb7f782177c",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 0.75
+ }
+}

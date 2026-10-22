@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la flema se ha puesto verde y espesa desde ayer y sale más cantidad que antes",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9883548617362976,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1ed244d3282ef60ceb0ee768f7da29da5e6b6195ed9214caefa99b1ea601039f",
+  "audio_seconds": 5.898,
+  "seconds_to_make": 1.172
+ }
+}

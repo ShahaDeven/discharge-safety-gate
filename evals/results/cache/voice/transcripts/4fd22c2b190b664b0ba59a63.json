@@ -1,0 +1,18 @@
+{
+ "text": "No, not really. I get a little winded going up the stairs, but that's probably just from being out of shape lately",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.993250846862793,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1a07d32b4561e3a0260a6f6e7a9a6cf1cbbea674dbed58e1047071b236dcf942",
+  "audio_seconds": 6.269,
+  "seconds_to_make": 1.344
+ }
+}

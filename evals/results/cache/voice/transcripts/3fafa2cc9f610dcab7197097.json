@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Phoebe. Who did you say this was? You're a bit quiet. Could you speak up a little?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.96039879322052,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "29068186ca4db3f2bb45306646b970ff7d354a97ef01c8d74d6c4728f48fb2ce",
+  "audio_seconds": 5.248,
+  "seconds_to_make": 1.062
+ }
+}

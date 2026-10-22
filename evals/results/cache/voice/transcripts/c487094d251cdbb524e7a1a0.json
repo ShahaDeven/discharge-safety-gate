@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the cholesterol one, the atorvastatin, and I take it at night. And yes, I've got the nitro bottle in the cabinet, the little tablets under the tongue",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9722777009010315,
+  "request_id": null,
+  "latency_s": 2.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1bbb2791db913e84db026aabd767320b5855e7e55c71eaea260647504c237cce",
+  "audio_seconds": 9.567,
+  "seconds_to_make": 2.0
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "I wasn't using the oxygen last night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8534604907035828,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "b7095b025fd416ed53dcbcf973aec215628bda39422af57d9d76e4b8b997fe3d",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.984
+ }
+}

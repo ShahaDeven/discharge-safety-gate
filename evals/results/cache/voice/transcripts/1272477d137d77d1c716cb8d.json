@@ -1,0 +1,18 @@
+{
+ "text": "Sí, ya la tengo. Me tomo 40 mg una vez al día hasta el 14 de octubre. Creo que así me dijeron",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9811335206031799,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6f7bf1c264a7021f07907c86e3606ab432efa5d149c8d735093ec96e14878af2",
+  "audio_seconds": 6.687,
+  "seconds_to_make": 1.172
+ }
+}

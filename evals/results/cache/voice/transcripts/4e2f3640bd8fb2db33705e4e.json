@@ -1,0 +1,28 @@
+{
+ "text": "Yeah, the clopidogrel 75, I got that one. I take it once a day, same time as the aspirin. I'm not stopping it unless the heart doctor says so",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9475348591804504,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "382ea37f0c55f16f82d616d771c052748f486c62ee4aea15051a20546eb985d3",
+  "audio_seconds": 9.009,
+  "seconds_to_make": 1.047
+ }
+}

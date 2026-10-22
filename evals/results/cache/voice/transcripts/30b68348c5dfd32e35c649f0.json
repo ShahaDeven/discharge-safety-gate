@@ -1,0 +1,18 @@
+{
+ "text": "La presión estaba en ciento ochenta",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8974891304969788,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bb27a6f313e23156549f8caad31f008ea145638c1d6eebb704f3c35082955cb0",
+  "audio_seconds": 2.369,
+  "seconds_to_make": 0.906
+ }
+}

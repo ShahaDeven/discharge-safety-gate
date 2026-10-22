@@ -1,0 +1,18 @@
+{
+ "text": "No tomo el metoprolol, lo dejé hace dos semanas",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9897855520248413,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1c472269a06d548b3cc256d7b23da324074e4ff6a2c27e4b2fb0356a30786be4",
+  "audio_seconds": 3.065,
+  "seconds_to_make": 1.203
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "The new dose is 50 milligrams",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.778545618057251,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "79890b8b4ccbd485850fdff2ca312ba5dffbf8c94c813a3255a1f4a5a4bbdcdc",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 0.938
+ }
+}

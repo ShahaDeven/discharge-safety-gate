@@ -1,0 +1,18 @@
+{
+ "text": "Sí, el sacubitrilo con valsartán también lo tengo, el de veinticuatro, veintiséis. Me lo tomo dos veces al día, en la mañana y en la noche",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.968624472618103,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7dc23dc611d81119ba8af3305c383d9eef1238d7510897f8029d6cfc07a44adc",
+  "audio_seconds": 8.777,
+  "seconds_to_make": 1.141
+ }
+}

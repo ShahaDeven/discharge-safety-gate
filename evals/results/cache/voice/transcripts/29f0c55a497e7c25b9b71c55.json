@@ -1,0 +1,18 @@
+{
+ "text": "Well, I have to take it slow getting up these days. I get a little lightheaded when I stand up fast. No passing out though",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9212392568588257,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bad6078dd2f61ddc4d5f6138cd7ec4437d34651e61707a677fb5499d40718bcf",
+  "audio_seconds": 7.198,
+  "seconds_to_make": 1.187
+ }
+}

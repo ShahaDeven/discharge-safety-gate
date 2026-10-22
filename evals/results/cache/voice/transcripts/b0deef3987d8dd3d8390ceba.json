@@ -1,0 +1,27 @@
+{
+ "text": "Sí, soy yo. ¿Quién habla, por favor?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9982271790504456,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "05b4c356ea4ce4412bf05e3ea0dbdaa10c2dd0f9a15d0f5b45f0f94060b8e430",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 0.859
+ }
+}

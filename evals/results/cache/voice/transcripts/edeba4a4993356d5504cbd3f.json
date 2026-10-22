@@ -1,0 +1,18 @@
+{
+ "text": "Sí, me llamo Matilda King. Nací el siete de octubre de mil novecientos cincuenta y ocho",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8721320033073425,
+  "request_id": null,
+  "latency_s": 2.296,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c51a18f91ab36d6848fb1ea116896532f9b9a348ed21aebb7d2096925a94ca0b",
+  "audio_seconds": 5.387,
+  "seconds_to_make": 2.296
+ }
+}

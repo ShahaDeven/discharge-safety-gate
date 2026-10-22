@@ -1,0 +1,18 @@
+{
+ "text": "Pues si me falta mucho el aire, si se me hinchan las piernas o la barriga, si me duele el pecho o si me mareo o me desmayo, creo que ahí sí llamaría. Y si empeora la respiración, pediría ayuda enseguida",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9623327851295471,
+  "request_id": null,
+  "latency_s": 1.781,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "985f909aa804f4a064fcb207cefde5e570361c51513da5b9b2142ea4994a099f",
+  "audio_seconds": 13.189,
+  "seconds_to_make": 1.781
+ }
+}

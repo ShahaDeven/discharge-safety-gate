@@ -1,0 +1,26 @@
+{
+ "text": "Ay, sí, la flema se me puso verde y espesa desde ayer y hay más cantidad. No, fiebre no tengo y tampoco tengo escalofríos",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9884420037269592,
+  "request_id": null,
+  "latency_s": 1.5,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "0ae91c088e63ef33f910386e98d7041507fdf761dc94e9e5763475257abf3a5c",
+  "audio_seconds": 8.777,
+  "seconds_to_make": 1.5
+ }
+}

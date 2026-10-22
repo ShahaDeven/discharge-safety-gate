@@ -1,0 +1,18 @@
+{
+ "text": "I'm on Depressa five milligrams at bedtime",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9166647791862488,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0b55f191db079fc39e5e2b0aaa7057ec1dc70c3e5413b1a416bdc7faafbeeba2",
+  "audio_seconds": 2.693,
+  "seconds_to_make": 0.891
+ }
+}

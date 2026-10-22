@@ -1,0 +1,18 @@
+{
+ "text": "Sí, el de veinticuatro, veintiséis. El enpresto ese lo recogí y me lo tomo dos veces al día, en la mañana y en la noche",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9198635816574097,
+  "request_id": null,
+  "latency_s": 1.719,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ec9d98950cfe2f5dc0bd7e0f8831fb8a11fea74904cc775c07f4e2e65c008f41",
+  "audio_seconds": 8.22,
+  "seconds_to_make": 1.719
+ }
+}

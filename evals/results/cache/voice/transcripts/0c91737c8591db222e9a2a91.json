@@ -1,0 +1,18 @@
+{
+ "text": "It's Maurice Hower speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9592980742454529,
+  "request_id": null,
+  "latency_s": 1.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3b3c3b2afe146cff558f2001cfb33aa3fc33dd96e6c4d45ababd3c561f9df357",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.984
+ }
+}

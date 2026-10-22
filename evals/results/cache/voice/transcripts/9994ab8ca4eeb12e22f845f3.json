@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Jessica Cormier",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9321305751800537,
+  "request_id": null,
+  "latency_s": 0.921,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "10439e964ba19997943671f5c2486bb3d4da53a7a90e9dad97c5cd58fff3c653",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 0.921
+ }
+}

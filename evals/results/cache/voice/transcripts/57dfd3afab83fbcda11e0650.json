@@ -1,0 +1,21 @@
+{
+ "text": "It's Carman Bergnaum speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Carman Bergnaum"
+   ]
+  },
+  "audio_sha256": "773f5f2c7f19e8f9331d85e9a64a2f672cd073a9d355ed3630a5e310a033c673",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 0.844
+ }
+}

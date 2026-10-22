@@ -94,7 +94,8 @@ platform hosts the second AI caller I tested. I also used:
 - **statistics**, so a verdict isn't luck
 - a **web console** to watch and hear calls
 
-Text testing cost about **$6**. The voice work used under one month of ElevenLabs' starter plan.
+Text testing cost about **$6**. The voice work and the ElevenLabs agent together used one month of ElevenLabs'
+starter plan.
 
 ## Why you can trust it, and its limits
 
@@ -107,4 +108,4 @@ Text testing cost about **$6**. The voice work used under one month of ElevenLab
 
 ---
 
-[Full story](STORY.md) · [How it works, for engineers](TECHNICAL.md) · [All the numbers](evals/results/report.md)
+[Full story](STORY.md) · [How it works, for engineers](TECHNICAL.md) · [All the numbers](evals/results/report.md) (the single source; anyone can recompute it without API keys)

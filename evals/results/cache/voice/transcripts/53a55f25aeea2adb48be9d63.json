@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, the metoprolol, the 25 milligram ones, I take one each morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8178811073303223,
+  "request_id": null,
+  "latency_s": 1.266,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5230654d21aee9103b768df2fcda25dd1282785145777b8a4e89f18697b83370",
+  "audio_seconds": 4.598,
+  "seconds_to_make": 1.266
+ }
+}

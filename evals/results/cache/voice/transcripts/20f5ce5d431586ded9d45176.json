@@ -1,0 +1,18 @@
+{
+ "text": "I can't catch my breath when I lie down",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9870560765266418,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "26fe09a775555f343052b57537300da1dfd27e7b574e7bad47a28057a211c2a2",
+  "audio_seconds": 2.183,
+  "seconds_to_make": 0.875
+ }
+}

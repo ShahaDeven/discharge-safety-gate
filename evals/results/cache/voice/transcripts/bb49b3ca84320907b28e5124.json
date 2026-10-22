@@ -1,0 +1,18 @@
+{
+ "text": "Pues no, no lo he usado más de lo normal. Lo uso cuando lo necesito, nada más",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9428999423980713,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d65a12723d5711b094825d33d4f64a3bfcc0069f95c06f39bc6b7fb26d1ad845",
+  "audio_seconds": 5.248,
+  "seconds_to_make": 0.922
+ }
+}

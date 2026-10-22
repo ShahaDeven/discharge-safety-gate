@@ -1,0 +1,18 @@
+{
+ "text": "Nope, that's it. Just those inhalers and the prednisone. No other pills or vitamins",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9321057200431824,
+  "request_id": null,
+  "latency_s": 1.531,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "dfe51c5c3aa53626dec988ba979380f79b3e6eb64b93f0366bba6c3843733939",
+  "audio_seconds": 5.155,
+  "seconds_to_make": 1.531
+ }
+}

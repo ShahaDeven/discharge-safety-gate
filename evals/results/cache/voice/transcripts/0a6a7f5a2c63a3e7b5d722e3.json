@@ -1,0 +1,26 @@
+{
+ "text": "Sí, claro. Micaela Rendón, M-I-C-A-E-L-A R-E-N-D-O-N, y mi fecha de nacimiento es el 12 de junio de 1946",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9813200235366821,
+  "request_id": null,
+  "latency_s": 1.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "c10bed8c1ffd21a3904d88ca8a201e73bac4004e53961bea84385400eff5b79a",
+  "audio_seconds": 12.074,
+  "seconds_to_make": 1.891
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "text": "No, no he tenido dolor ni presión en el pecho. Estoy tranquila en ese sentido",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9909771084785461,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "5efe3e1a967a49b08a7a3fb322a19cd67524dc1b5f909847a26f089761390b9f",
+  "audio_seconds": 4.876,
+  "seconds_to_make": 1.219
+ }
+}

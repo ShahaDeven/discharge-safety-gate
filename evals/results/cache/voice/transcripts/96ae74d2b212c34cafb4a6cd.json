@@ -1,0 +1,16 @@
+{
+ "text": "[müzik]",
+ "meta": {
+  "detected_language": "tur",
+  "language_probability": 0.960165798664093,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "acc61223bbb5523f8ed3bf36bd7dc8d82c1accf893a5fb59f5566469f01cebde",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 1.328
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Uh, if I can't catch my breath or my lips turn blue or I get real confused, I guess I call nine one one or get to the ER. Chest pain too, I suppose. That's about all I got",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9695641398429871,
+  "request_id": null,
+  "latency_s": 3.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4849ad7a73964d5b1b36a3c9e0aafe6090bbea9261c08d6d17221960e12f5209",
+  "audio_seconds": 10.681,
+  "seconds_to_make": 3.047
+ }
+}

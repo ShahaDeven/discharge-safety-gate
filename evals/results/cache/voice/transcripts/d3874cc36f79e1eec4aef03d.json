@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, this is Julian. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.954943060874939,
+  "request_id": null,
+  "latency_s": 1.235,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "91873aaf8f842076aa3850e81627ba49a99466d9f76924049095108dd184885e",
+  "audio_seconds": 2.461,
+  "seconds_to_make": 1.235
+ }
+}

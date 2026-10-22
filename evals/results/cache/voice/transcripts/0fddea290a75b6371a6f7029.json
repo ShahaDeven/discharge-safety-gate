@@ -1,0 +1,28 @@
+{
+ "text": "Oh yeah, I'm, I'm still taking the old cholesterol pill too, the simvastatin twenty at night. I didn't take anything else besides what I already told you",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9843066334724426,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "31e4d64de4f138edc4088e3e3884108d92d899cc98a98f07d865834b334e3d0e",
+  "audio_seconds": 9.242,
+  "seconds_to_make": 1.219
+ }
+}

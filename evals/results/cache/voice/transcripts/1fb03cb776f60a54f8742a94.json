@@ -1,0 +1,18 @@
+{
+ "text": "It's Carman Birgnam speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c50064748834d7cfad0194faca9364a3fc14f2ffdb1f267020209f0a09a6ce23",
+  "audio_seconds": 1.904,
+  "seconds_to_make": 0.969
+ }
+}

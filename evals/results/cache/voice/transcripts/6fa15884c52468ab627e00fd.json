@@ -1,0 +1,26 @@
+{
+ "text": "Pues la verdad no me siento tan mal, pero estoy cansada. Me dieron de alta el viernes y desde entonces todo ha sido ir y venir en la casa, ya sabe cómo es. Mi hija me dijo que tenía que estar pendiente de cosas, pero yo no entiendo mucho de eso",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9812654256820679,
+  "request_id": null,
+  "latency_s": 1.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "654c39641369e0e0c23fe90a15249c4c9d9ff7b103fb800bea636a7ae388a4bd",
+  "audio_seconds": 16.347,
+  "seconds_to_make": 1.859
+ }
+}

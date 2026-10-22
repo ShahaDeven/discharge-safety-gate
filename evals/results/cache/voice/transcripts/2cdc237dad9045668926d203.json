@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is September 24th, 1946",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9652162790298462,
+  "request_id": null,
+  "latency_s": 0.921,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2bae0239247c32075a78889983def7fb6d831f519ade1e1a998d3f0ef3b67eec",
+  "audio_seconds": 3.065,
+  "seconds_to_make": 0.921
+ }
+}

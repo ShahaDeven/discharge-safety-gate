@@ -1,0 +1,18 @@
+{
+ "text": "No, mareada no, ni desmayos. Ya le dije, no me he sentido mal de eso",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.5356968641281128,
+  "request_id": null,
+  "latency_s": 1.25,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2c53785de78a5867c693055b3b9a02eef215e7b2f741817e8c53b9f3d304de1c",
+  "audio_seconds": 4.783,
+  "seconds_to_make": 1.25
+ }
+}

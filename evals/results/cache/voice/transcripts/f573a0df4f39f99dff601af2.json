@@ -1,0 +1,16 @@
+{
+ "text": "I watered the garden and called my brother, and I've been coughing up blood",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9953921437263489,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "458848a31b698e4ea6749c8369018c0818c4e1448ee87e1b325c8e96829d7a25",
+  "audio_seconds": 3.901,
+  "seconds_to_make": 1.109
+ }
+}

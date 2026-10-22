@@ -1,0 +1,18 @@
+{
+ "text": "Oh, okay. Yes, I'm BB Simonis. My date of birth is November fifth, nineteen sixty-nine. Sorry, my hearing isn't so great on the phone",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8940786123275757,
+  "request_id": null,
+  "latency_s": 3.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "fa8a22a7d4e4faee31bd6e92b94002cbd4e34153001809adfaba6591e05d1430",
+  "audio_seconds": 8.777,
+  "seconds_to_make": 3.156
+ }
+}

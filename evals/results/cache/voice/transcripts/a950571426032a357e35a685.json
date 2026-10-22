@@ -1,0 +1,18 @@
+{
+ "text": "Um, no bleeding that I've seen. No black stuff in my stool either. The wrist looks fine. No swelling. It's just a little bruised, that's all",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9327669739723206,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8b353029e9e47212580d0b55082e6e8218449055a00d10300ecea2080179f595",
+  "audio_seconds": 7.802,
+  "seconds_to_make": 1.062
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy Michael Shanahan. ¿Qué pasa? ¿Es del hospital?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9989116191864014,
+  "request_id": null,
+  "latency_s": 2.032,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7dcfd773eba7d3bb56d4dc296b65da2a06743a2e97f0563a748bbc2cb7c8e5ae",
+  "audio_seconds": 3.344,
+  "seconds_to_make": 2.032
+ }
+}

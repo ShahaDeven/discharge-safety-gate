@@ -1,0 +1,26 @@
+{
+ "text": "Pues si me falta el aire mucho, si no puedo respirar bien o si me pongo confundida, llamo al 911 o pido ayuda de inmediato. Creo que eso es lo que me dijeron",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9643242955207825,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "0a486a8feb499cdb364d30e7a2d7d8f0a65ea6572344e040610a7efdc60c31e2",
+  "audio_seconds": 10.078,
+  "seconds_to_make": 1.203
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Sí, claro. Me llamo Matilda King y nací el siete de octubre de 1958",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8582522869110107,
+  "request_id": null,
+  "latency_s": 2.547,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1424dc1a9d56dc0e4f2114227d119cd8561a03fbc831c8aea4f5b695979c3a82",
+  "audio_seconds": 5.759,
+  "seconds_to_make": 2.547
+ }
+}

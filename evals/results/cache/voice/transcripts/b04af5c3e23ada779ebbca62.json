@@ -1,0 +1,16 @@
+{
+ "text": "My weight this morning was 204.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "8aa40f5509df10b5258608e4bcb5e12ef71acf7d694575cd3973215eb8b936f0",
+  "audio_seconds": 2.554,
+  "seconds_to_make": 1.125
+ }
+}

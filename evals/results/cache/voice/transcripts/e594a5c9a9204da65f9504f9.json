@@ -1,0 +1,28 @@
+{
+ "text": "Yes, this is Jordan. Jordan Abbott. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.7810438275337219,
+  "request_id": null,
+  "latency_s": 1.719,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "0b8886e22f79a00e3b1ddf8c3b012aa25afc6f242a69bb5a9a1e63ffd4ccad2d",
+  "audio_seconds": 3.111,
+  "seconds_to_make": 1.719
+ }
+}

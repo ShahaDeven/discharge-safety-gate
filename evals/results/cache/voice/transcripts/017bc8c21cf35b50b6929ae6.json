@@ -1,0 +1,28 @@
+{
+ "text": "It's 1966. 1966. Something wrong with the line?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.954055905342102,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "f424da478bb1aa274fc5720d69cc5d513600669494d692fa96380c7f26db1838",
+  "audio_seconds": 3.994,
+  "seconds_to_make": 1.062
+ }
+}

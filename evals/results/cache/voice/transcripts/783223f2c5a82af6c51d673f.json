@@ -1,0 +1,18 @@
+{
+ "text": "Estoy subiendo flema verde",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9770268797874451,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "817eeb53b1e9c7f6b17e3c9c3d90265fc6430d4bc12c12e16e8304bdd76fd599",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.047
+ }
+}

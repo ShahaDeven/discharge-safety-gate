@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Jessica Fournier",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8471844792366028,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6dd0c158548d204335307a80b58bbf8eb6c923eddef732c36cacde78fa89fe76",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 0.891
+ }
+}

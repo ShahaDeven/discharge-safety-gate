@@ -1,0 +1,18 @@
+{
+ "text": "Sí, ya lo tengo. Me pongo dos inhalaciones una vez al día, como me dijeron en el hospital",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8919421434402466,
+  "request_id": null,
+  "latency_s": 1.485,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0041c675dba0bf859e0413b8ecd93a4fe77a23c0d3bdd21586c3bedb9d680003",
+  "audio_seconds": 5.294,
+  "seconds_to_make": 1.485
+ }
+}

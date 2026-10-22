@@ -1,0 +1,18 @@
+{
+ "text": "Everything's been okay. My daughter came over and we watched a movie. Oh, and my chest gets tight when I climb the stairs",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9593250751495361,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d1bd35ceb9aee7183964a9329a8254a99b617e6b5bfc9b3b9e284a3095bd40a8",
+  "audio_seconds": 7.663,
+  "seconds_to_make": 0.937
+ }
+}

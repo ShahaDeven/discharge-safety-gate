@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, I, I got the aspirin. I take that one every day. The clopidogrel, I think the pharmacy said it wasn't ready yet, and I never went back for it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9927880167961121,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "de151a05c7097acb7be5c4f4382a81161599fd297065f0ece78a7f4777fa1837",
+  "audio_seconds": 8.127,
+  "seconds_to_make": 1.219
+ }
+}

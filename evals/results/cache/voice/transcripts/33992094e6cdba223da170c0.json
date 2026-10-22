@@ -1,0 +1,18 @@
+{
+ "text": "Thank you for calling. Have a nice day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8979528546333313,
+  "request_id": null,
+  "latency_s": 0.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "03b7a01f5c6eee5b6b40c1d2b2a87ac50cf9b228ab49884f6fc04e1726f84208",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.75
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the nitroglycerin, the little pills under the tongue. I've got them in the cabinet in case I need them, but I haven't had to use any",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.989876389503479,
+  "request_id": null,
+  "latency_s": 1.281,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a576e679fbe9ea0936c6e5f50bfead6a3ea619aaee45dbc9a847260f197a97c5",
+  "audio_seconds": 7.616,
+  "seconds_to_make": 1.281
+ }
+}

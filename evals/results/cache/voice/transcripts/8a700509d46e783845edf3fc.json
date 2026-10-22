@@ -1,0 +1,27 @@
+{
+ "text": "Olá",
+ "meta": {
+  "detected_language": "por",
+  "language_probability": 0.2915836572647095,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "54c17196255ffd477f28dc384ff232aec138b726d584a3b54cbda4536d9ebf86",
+  "audio_seconds": 0.65,
+  "seconds_to_make": 1.047
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, this is Grady. Go ahead. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9684646129608154,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "cfa231781bfedd719a5aa59aacc99ba90bbe582287a5a601879858b08f8b095e",
+  "audio_seconds": 2.693,
+  "seconds_to_make": 0.937
+ }
+}

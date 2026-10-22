@@ -1,0 +1,28 @@
+{
+ "text": "No, no dizziness or fainting. I feel steady enough",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.880779504776001,
+  "request_id": null,
+  "latency_s": 1.093,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "cb5297cb95deaeb2cb83e169a93938ffd51bb2f00e9394b709185730358277c7",
+  "audio_seconds": 3.344,
+  "seconds_to_make": 1.093
+ }
+}

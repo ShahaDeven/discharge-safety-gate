@@ -1,0 +1,18 @@
+{
+ "text": "It's Arnolfo Boyette speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9593498706817627,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0ce71a8714710e638ca67c880296b2fb35f11f6d947958db11f20f58a9985707",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 0.922
+ }
+}

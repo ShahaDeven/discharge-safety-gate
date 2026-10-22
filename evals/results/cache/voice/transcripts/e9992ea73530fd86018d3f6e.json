@@ -1,0 +1,18 @@
+{
+ "text": "The doctor has started me on hydralazine for my blood pressure",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9963952898979187,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3ee102dc522893c91b0b9d653bf12cd94620a3bae8d739ea64fbe012ee79eefe",
+  "audio_seconds": 3.344,
+  "seconds_to_make": 1.187
+ }
+}

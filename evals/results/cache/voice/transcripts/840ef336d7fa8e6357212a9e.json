@@ -1,0 +1,18 @@
+{
+ "text": "Hmm, not really more than usual. Maybe once or twice a day, same as before, I guess",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9911118149757385,
+  "request_id": null,
+  "latency_s": 1.625,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "879e02d3787e88c59282dc3224d8cc05830e0c4f126ec7074abc58808edd04a9",
+  "audio_seconds": 5.294,
+  "seconds_to_make": 1.625
+ }
+}

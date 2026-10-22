@@ -1,0 +1,18 @@
+{
+ "text": "Sí, el tiotropio lo tengo. Lo uso una vez al día, dos inhalaciones como me dijeron",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8875133395195007,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "98d2e3a2cabe0b3011284a711b4b9a772a0adc629c845d4a92beb5da03769db8",
+  "audio_seconds": 5.805,
+  "seconds_to_make": 0.938
+ }
+}

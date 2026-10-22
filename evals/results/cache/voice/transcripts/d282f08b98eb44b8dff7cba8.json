@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, that's me. My date of birth is November seventh, nineteen sixty-six",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9786884784698486,
+  "request_id": null,
+  "latency_s": 1.531,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "82b57cbc71bb2b39f7f87667761f236de08f1f89c67f33ce3ad8205bb659d762",
+  "audio_seconds": 3.994,
+  "seconds_to_make": 1.531
+ }
+}

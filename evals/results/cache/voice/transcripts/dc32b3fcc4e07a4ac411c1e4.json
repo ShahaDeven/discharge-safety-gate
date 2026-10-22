@@ -1,0 +1,18 @@
+{
+ "text": "Yes, I'm BB. It's BB Simonis. My birthday is November 5th, 1969",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9640973806381226,
+  "request_id": null,
+  "latency_s": 4.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "29c26d96fb0dbe8b9e23f1967deb3d9128a21aa4954b980397c4185c6ed16fb2",
+  "audio_seconds": 5.666,
+  "seconds_to_make": 4.859
+ }
+}

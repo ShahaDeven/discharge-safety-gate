@@ -1,0 +1,27 @@
+{
+ "text": "Sí, me llamo Matilda Kihn. Mi fecha de nacimiento es el siete de octubre de 1958",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.977017343044281,
+  "request_id": null,
+  "latency_s": 1.406,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "447ad808dd28551f0c0e4ab04d39c81887235a92d938fdb12a962d8db85e8759",
+  "audio_seconds": 6.455,
+  "seconds_to_make": 1.406
+ }
+}

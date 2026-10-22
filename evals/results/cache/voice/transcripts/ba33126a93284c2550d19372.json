@@ -1,0 +1,26 @@
+{
+ "text": "Sí, la espironolactona de 25 mg también la tengo. Me la tomo una vez al día en la mañana con las otras pastillas",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9952412843704224,
+  "request_id": null,
+  "latency_s": 2.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "d9030e39f1ab6c01dbb5c5aabd9e14379b3a33db8342feaab44145398fa681ef",
+  "audio_seconds": 7.523,
+  "seconds_to_make": 2.172
+ }
+}

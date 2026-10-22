@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, this is Jordan, Jordan Abbott. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8268620371818542,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "311809f9897816d7a998b24e2ce16af684e57e423835b3a2493eef542f602fb2",
+  "audio_seconds": 3.065,
+  "seconds_to_make": 0.906
+ }
+}

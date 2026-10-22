@@ -1,0 +1,18 @@
+{
+ "text": "No he tomado la pastilla del agua desde el martes",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9755980968475342,
+  "request_id": null,
+  "latency_s": 1.063,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bd2a3612b4558e32d7bf68527e587decd1a078c182fe4e1a6da484f5e43fe134",
+  "audio_seconds": 2.647,
+  "seconds_to_make": 1.063
+ }
+}

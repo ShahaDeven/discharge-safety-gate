@@ -1,0 +1,18 @@
+{
+ "text": "It's Carmen Burknow speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9761641621589661,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d2f0e592eb12d99e39ead8976efbc58c70450c252a530cbed4a5d868de9864d6",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.141
+ }
+}

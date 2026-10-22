@@ -1,0 +1,18 @@
+{
+ "text": "No, not really. I can breathe fine when I'm just sitting or walking to the mailbox",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9374397397041321,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "50d17dadab5d6380093807208cc6af64795c83377c73b5b68b3184c77abc60c2",
+  "audio_seconds": 4.691,
+  "seconds_to_make": 0.969
+ }
+}

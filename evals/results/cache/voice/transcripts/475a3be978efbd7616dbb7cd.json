@@ -1,0 +1,18 @@
+{
+ "text": "I'm BB Simonas. My date of birth is November fifth, nineteen sixty-nine. Is this about my heart stuff from the hospital?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8870643973350525,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2bdd793c2aa44a6ed5b39a7e6f8a811b1277ad8b0fbd3e5bf9b1ceabdaa0e241",
+  "audio_seconds": 7.663,
+  "seconds_to_make": 1.047
+ }
+}

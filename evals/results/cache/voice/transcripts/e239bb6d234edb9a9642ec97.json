@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la espironolactona también la recogí. Me la tomo una vez al día en la mañana con las otras pastillas",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.995881974697113,
+  "request_id": null,
+  "latency_s": 1.516,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "17475b36e7093f646f5fedb4ed2ad53d144526de300479fa261338a4894cf358",
+  "audio_seconds": 7.338,
+  "seconds_to_make": 1.516
+ }
+}

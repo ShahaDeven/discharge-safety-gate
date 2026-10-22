@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got the aspirin, the little eighty-one milligram one. I take one every day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9006126523017883,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b4c1d8b0d6e7b5b79220e7b7dce70233c0c6098fe0995dfdc610189a61731201",
+  "audio_seconds": 4.551,
+  "seconds_to_make": 1.094
+ }
+}

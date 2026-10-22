@@ -1,0 +1,27 @@
+{
+ "text": "No, nothing like that. No black stuff, no blood anywhere else that I've seen. Just the wrist",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9449366331100464,
+  "request_id": null,
+  "latency_s": 1.297,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "d64f8c2888c1dfb7fbf8d7c3d0b3d24ce3b562c4961795828409d56349710f8e",
+  "audio_seconds": 5.016,
+  "seconds_to_make": 1.297
+ }
+}

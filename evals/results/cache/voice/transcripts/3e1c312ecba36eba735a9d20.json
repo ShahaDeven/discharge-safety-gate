@@ -1,0 +1,18 @@
+{
+ "text": "It's Griselda Ostreri speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9117645025253296,
+  "request_id": null,
+  "latency_s": 1.422,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "150d780dd1720c1b8fb846d308d6276f893daec6c4489f43467b20ccb2cfb1a9",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 1.422
+ }
+}

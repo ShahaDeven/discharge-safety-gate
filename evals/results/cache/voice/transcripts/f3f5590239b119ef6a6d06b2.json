@@ -1,0 +1,18 @@
+{
+ "text": "No, no estoy confundida ni con más sueño de lo normal. Los labios y los dedos se ven normales, no azules. Solo me siento cansada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9588978886604309,
+  "request_id": null,
+  "latency_s": 1.438,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1f6ed4341255e1861277ddd1f77903f4e2c3d78516c50c55b24156e3e62dc98f",
+  "audio_seconds": 8.545,
+  "seconds_to_make": 1.438
+ }
+}

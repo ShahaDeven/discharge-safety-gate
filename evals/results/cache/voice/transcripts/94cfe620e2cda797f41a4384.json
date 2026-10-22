@@ -1,0 +1,18 @@
+{
+ "text": "Singo de Lorno pecho cuando camino",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9877455234527588,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9ebacb09dacefbaccb9c8a4a9ad69a05803692a9a2bd8dd122afc75097aaaf8b",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 1.0
+ }
+}

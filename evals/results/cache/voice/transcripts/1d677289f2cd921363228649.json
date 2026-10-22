@@ -1,0 +1,26 @@
+{
+ "text": "Pues si me siento peor, como que me falte el aire mucho o me duela el pecho, llamo al 911. Y si es algo menos, llamo al hospital. Anoto el número: 555-4467. Gracias, mijo. Ya me voy a descansar",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9740413427352905,
+  "request_id": null,
+  "latency_s": 1.515,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "96e1db25a8b3bfd06717129e9001dc76334fb0bf2af332dc5dc129af5c048e9d",
+  "audio_seconds": 18.39,
+  "seconds_to_make": 1.515
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "After the stent, they gave me Brilinta",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9912023544311523,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "720cec1a262ea6684bea561ec24402e40941ef511ef9d3a320360d0a57877a64",
+  "audio_seconds": 2.183,
+  "seconds_to_make": 1.047
+ }
+}

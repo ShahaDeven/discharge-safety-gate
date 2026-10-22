@@ -1,0 +1,18 @@
+{
+ "text": "It was Tuesday, actually no, Wednesday when the swelling started",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9954726696014404,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2af5104a0ece493e1b1c1b68dd6131201d4ee782985dc6d5d95aaa67365b8e75",
+  "audio_seconds": 3.808,
+  "seconds_to_make": 1.031
+ }
+}

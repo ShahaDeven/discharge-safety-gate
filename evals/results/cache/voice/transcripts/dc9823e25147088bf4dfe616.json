@@ -1,0 +1,26 @@
+{
+ "text": "No, de pecho no siento dolor ni presión y mareos tampoco, ni me he desmayado. Solo estoy cansada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9608152508735657,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "7315df96dd0c8f22be40ea01f578772a4f7422c7ce4810a6afc941c9deefad4a",
+  "audio_seconds": 6.595,
+  "seconds_to_make": 1.344
+ }
+}

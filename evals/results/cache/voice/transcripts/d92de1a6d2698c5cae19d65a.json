@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is September 21st, 1960",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9713106155395508,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Mathilde Hettinger"
+   ]
+  },
+  "audio_sha256": "d193827f3e008997b2a0972f97e5effff9065fe7dc1c898d1765165f916c4590",
+  "audio_seconds": 2.786,
+  "seconds_to_make": 1.219
+ }
+}

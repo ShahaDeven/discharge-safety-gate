@@ -1,0 +1,27 @@
+{
+ "text": "Ay, está bien. Gracias. Voy a llamar al nueve once ahorita mismo. Yo no manejo, no se preocupe",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9560611248016357,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "67519dd2262923f2534a646d12019b862c9d3c25bc6ef78f2101bdbad9318d8b",
+  "audio_seconds": 5.759,
+  "seconds_to_make": 0.969
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "I take Lipizide before breakfast",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.4887463450431824,
+  "request_id": null,
+  "latency_s": 0.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "eb9af31f1ba878a2edf277a149d3f1c93dc354b4661776d2056fdb77d518833c",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.75
+ }
+}

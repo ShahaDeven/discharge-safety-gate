@@ -1,0 +1,18 @@
+{
+ "text": "It's Phoebe Simona speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "733c53f31ba86bd80365fc0416adc92ab467a4fc6fda9fd0771f92ecad092006",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 0.953
+ }
+}

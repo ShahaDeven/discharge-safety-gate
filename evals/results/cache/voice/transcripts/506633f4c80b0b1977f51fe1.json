@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, the Budesonide one I take two puffs twice a day like they said, and the Prednisone I'm taking the forty milligram once a day. I got about a few more days left on it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9681702256202698,
+  "request_id": null,
+  "latency_s": 1.235,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3a0ab3e0397924cb4397dd4d6952ed10d0303f0d19939b494e147afb30d66545",
+  "audio_seconds": 10.124,
+  "seconds_to_make": 1.235
+ }
+}

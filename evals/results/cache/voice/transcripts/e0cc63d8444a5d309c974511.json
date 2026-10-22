@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I was a bit shivery last night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9920209050178528,
+  "request_id": null,
+  "latency_s": 8.531,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "77e1ee3764ff24990de4b800476dc7e1c79c1228fec7c73ad731605d48dfcbb6",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 8.531
+ }
+}

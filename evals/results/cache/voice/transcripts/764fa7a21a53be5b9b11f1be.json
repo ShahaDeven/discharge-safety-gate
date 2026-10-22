@@ -1,0 +1,27 @@
+{
+ "text": "Metoprolol, yeah, the 25/1. I take that once a day. And the nitro pills, I've got those, the little ones you put under your tongue. I haven't needed them, though",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9635888934135437,
+  "request_id": null,
+  "latency_s": 1.703,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "40058ff8e4a5a55a306917588c8adfb72404083e02bf8b8fb62b7a191647a10a",
+  "audio_seconds": 9.52,
+  "seconds_to_make": 1.703
+ }
+}

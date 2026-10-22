@@ -1,0 +1,18 @@
+{
+ "text": "My weight went up fifteen pounds this week",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9737311601638794,
+  "request_id": null,
+  "latency_s": 0.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a02f9717ccd949c3c3fd46458e3fb6eac5872048a771d7c72dd552a0b662066b",
+  "audio_seconds": 2.183,
+  "seconds_to_make": 0.797
+ }
+}

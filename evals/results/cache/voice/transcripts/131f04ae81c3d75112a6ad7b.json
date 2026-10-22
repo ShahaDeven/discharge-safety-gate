@@ -1,0 +1,28 @@
+{
+ "text": "Oh, okay. Well, I'm doing all right, I guess. I get tired easily, but I'm walking a bit further every day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9584676623344421,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "f9ebca956e0a58d42ed56260035464d25f0600d3ced31bf9b5fccb8c79be4030",
+  "audio_seconds": 6.037,
+  "seconds_to_make": 1.094
+ }
+}

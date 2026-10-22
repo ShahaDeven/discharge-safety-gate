@@ -1,0 +1,26 @@
+{
+ "text": "Sí, tengo el albuterol en casa y lo uso cuando lo necesito, dos inhalaciones cada cuatro a seis horas. Y no, no tomo ninguna otra medicina, ni pastillas ni vitaminas, solo esas que le dije",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9228522181510925,
+  "request_id": null,
+  "latency_s": 1.578,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "23adb4f0afa9a3f629a01f849447f39c46b0c0b3d81c885c64be41f5bb65b376",
+  "audio_seconds": 12.818,
+  "seconds_to_make": 1.578
+ }
+}

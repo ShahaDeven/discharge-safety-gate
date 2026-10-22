@@ -1,0 +1,18 @@
+{
+ "text": "No, no chest pain or pressure, nothing like that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9312489628791809,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "45f93cc20dda8c6ddc0748962a96564fa84000a66fb6a0612e1409e733f967ac",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 0.953
+ }
+}

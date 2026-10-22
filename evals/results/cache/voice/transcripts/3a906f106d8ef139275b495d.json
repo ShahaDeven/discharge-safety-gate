@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Manuel Trami",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9773584604263306,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5e1a1d0f048a79049987323e9e92e42ee424a08c33438f36a8ad0d6ee208958e",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 0.938
+ }
+}

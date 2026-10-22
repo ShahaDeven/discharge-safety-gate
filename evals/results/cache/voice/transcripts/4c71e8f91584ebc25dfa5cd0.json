@@ -1,0 +1,28 @@
+{
+ "text": "Dizzy? No, no, I haven't felt dizzy or faint. Just the tired thing, that's all. Could you speak up a bit more, please?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9678786993026733,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "6dc868834b3c244fd439e7c405231acf7b040aeaabf3a76e01a42cf98ced2fe7",
+  "audio_seconds": 7.709,
+  "seconds_to_make": 0.891
+ }
+}

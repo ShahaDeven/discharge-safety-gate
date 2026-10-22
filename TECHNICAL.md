@@ -101,6 +101,10 @@ Details, tables and limits: [docs/voice-evaluation.md](docs/voice-evaluation.md)
   | VH | harsher line | REJECT (100% -> 54%) | 11/24 |
   | VK | clean line + keyterms (patient, medicines, hospital) + spell-back prompt | PROMOTE | 0/24 |
 
+- **VC was planned as the harmless control,** and the run disproved that. The cause was found in the calls,
+  so it is a genuine failure, not an evaluation error, under a **strict identity rule**: the spoken name must
+  match the record, accents ignored. A looser rule (a close spelling plus an exact date of birth) was not
+  built or tested.
 - **Attribution** (`discharge/voice_attribution.py`): each miss is put down to transcription, the agent, "not
   said", or "identity check (transcription)", with the said and heard lines as evidence.
 - **Console:** the Live page replays VC, VH and VK with the saved audio on the patient's lines, clean or as heard
@@ -193,6 +197,29 @@ python -m web                                   # http://localhost:8001, paste t
 
 Every paid command prints its estimate first and has a cap (`--max-usd`, `--max-credits` for ElevenLabs, plus
 per-run, per-session and per-day caps in the console). Voice runs need `ELEVENLABS_API_KEY` in `.env`. Outside agents: see [adapters/HTTP_CONTRACT.md](adapters/HTTP_CONTRACT.md).
+
+### Reproduce every result without API keys
+
+**What's in the repo:** every saved call (`evals/results/cache/*.json`), the judge labels (`cache/judge.json`)
+and the voice transcripts (`cache/voice/transcripts/`), about 19 MB. All scoring, gating and reporting is
+recomputed from them. **What's not:** the voice audio (136 MB), which is only played back in the local console.
+
+From a fresh clone, with no `.env` and no keys:
+
+```bash
+python -m evals.gate                                              # C0-C4 and the A/A -> gate.json
+python -m evals.voice_calls results --only VC,VH,VK --scenarios 12   # voice in full calls
+python -m evals.voice show                                        # the voice benchmark
+python -m evals.elevenagents results --only EA,EA2,EA3 --k 1        # the ElevenLabs agent
+python -m evals.elevenagents results --only EA-R --k 1 --set privacy
+python -m evals.report                                            # evals/results/report.md
+```
+
+Checked 2026-10-22 on a copy holding only the files git publishes, with no API keys set. Every verdict, reason
+and metric matched the committed results, and `report.md` was identical byte for byte.
+
+**The single source for numbers is [evals/results/report.md](evals/results/report.md),** generated from the saved
+calls. The READMEs, STORY.md and the docs quote it; if they ever disagree, the report is right.
 
 ## Layout
 

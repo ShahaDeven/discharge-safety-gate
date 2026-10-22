@@ -1,0 +1,18 @@
+{
+ "text": "Yes, that's me, Michaela Rendon. My birthday is June twelfth, nineteen sixty-three. Is this about my stay at Lakeside?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9397485852241516,
+  "request_id": null,
+  "latency_s": 1.11,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "527c1a5aa6b4630c93e92fe64c4611bd192e3e2446758c546bfc333df8792047",
+  "audio_seconds": 6.873,
+  "seconds_to_make": 1.11
+ }
+}

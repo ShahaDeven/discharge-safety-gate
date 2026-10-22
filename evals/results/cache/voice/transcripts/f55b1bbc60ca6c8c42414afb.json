@@ -1,0 +1,18 @@
+{
+ "text": "Uh, the T-O something inhaler? No, I never picked that one up. It was like eighty bucks for the copay, so I skipped it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9790136218070984,
+  "request_id": null,
+  "latency_s": 4.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "df4a99c450a4ad8ee3d04988243b60e4c210bdf059e24756c2f2f39b099161b9",
+  "audio_seconds": 6.78,
+  "seconds_to_make": 4.047
+ }
+}

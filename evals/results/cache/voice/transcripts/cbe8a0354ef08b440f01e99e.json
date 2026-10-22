@@ -1,0 +1,18 @@
+{
+ "text": "Okay, let's see. I take aspirin eighty-one every day and atorvastatin eighty at night. There's the metoprolol succinate twenty-five once a day, and I've got nitroglycerin under the tongue if my chest hurts. That's about it, I think.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9536980986595154,
+  "request_id": null,
+  "latency_s": 2.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8a1a2066b00487912b681009e0fe9b0442578039d4a40da4f63715768bd109d9",
+  "audio_seconds": 13.607,
+  "seconds_to_make": 2.844
+ }
+}

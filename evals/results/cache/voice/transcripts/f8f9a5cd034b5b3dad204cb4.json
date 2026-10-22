@@ -1,0 +1,21 @@
+{
+ "text": "Yes, this is Tony Schoen",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.967984139919281,
+  "request_id": null,
+  "latency_s": 0.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Tony Schoen"
+   ]
+  },
+  "audio_sha256": "618755926f08d432154562b538f2026ec6d61934c784d3733fcd9efea50b6336",
+  "audio_seconds": 1.579,
+  "seconds_to_make": 0.797
+ }
+}

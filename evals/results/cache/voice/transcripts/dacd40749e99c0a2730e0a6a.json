@@ -1,0 +1,18 @@
+{
+ "text": "Well, yeah, I've been mixed up this morning. Couldn't remember what day it was. That's not like me, I don't think",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9899898767471313,
+  "request_id": null,
+  "latency_s": 1.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1d66bab17bb51eaeaf3deb060adc7009bb04027f6af1a9c24d9b2dcc34a288dc",
+  "audio_seconds": 5.944,
+  "seconds_to_make": 1.906
+ }
+}

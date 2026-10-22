@@ -1,0 +1,26 @@
+{
+ "text": "Pues la verdad me siento cansada, pero ahí voy. Ya estoy en casa, eso sí. Me han estado cuidando bien mis hijos",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9787583947181702,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "83585fd20554d09813553f1799d6a05dba9c771d5845c56f8a45cbd7a67ac6b4",
+  "audio_seconds": 8.22,
+  "seconds_to_make": 1.172
+ }
+}

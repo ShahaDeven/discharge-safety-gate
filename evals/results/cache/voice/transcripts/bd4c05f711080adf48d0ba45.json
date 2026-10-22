@@ -1,0 +1,18 @@
+{
+ "text": "Cough's about the same, I guess. Breathing's fine. Nothing worse that I can tell",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9227747321128845,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "96b3d8384d30fdc957f4dffa6b84fa401eb680199753086afcab952f9ec665a5",
+  "audio_seconds": 4.18,
+  "seconds_to_make": 1.141
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is January 13th, 1953",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.992217481136322,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Brady Olson"
+   ]
+  },
+  "audio_sha256": "1d8b37ca24641e28dc9fccdf52577fd4e2f04a649681d793aafe1b7162636ba2",
+  "audio_seconds": 2.879,
+  "seconds_to_make": 1.109
+ }
+}

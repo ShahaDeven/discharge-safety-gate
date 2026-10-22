@@ -1,0 +1,28 @@
+{
+ "text": "Um, chest pain, trouble breathing, or passing out, I guess. And if I'm bleeding and it won't stop or my stool turns black, I call nine one one. Is that about right?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9472312927246094,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "2351594c8fd6bdb3cb477225b6f9136ea3b7e47495245ef4f6ce083ac9523da8",
+  "audio_seconds": 9.335,
+  "seconds_to_make": 1.125
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "This is Rosanna Simons. I'm her cousin",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9947386384010315,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "35e6fc068b75e3a61fe3f0385e84707eed51ef75341d63dd391a208564617c03",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 0.859
+ }
+}

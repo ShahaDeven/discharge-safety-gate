@@ -1,0 +1,18 @@
+{
+ "text": "Other medicines? Just the ones from the hospital. The blood pressure one, the heart pill, the nitro if I need it. No vitamins or anything like that. Sorry, is there a nurse I can talk to about the simvastatin?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9766761660575867,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "283d688dc41ad1c256b44aca5fb7070b6d2fde6c5a4bb187cf439370166f1fe3",
+  "audio_seconds": 11.703,
+  "seconds_to_make": 1.203
+ }
+}

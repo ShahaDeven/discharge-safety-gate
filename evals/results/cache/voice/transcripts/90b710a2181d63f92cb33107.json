@@ -1,0 +1,18 @@
+{
+ "text": "Just the ones I told you about, the aspirin, the Plavix I ran out of, the cholesterol one at night, the metoprolol, the amlodipine, and the nitro under my tongue if I get chest pain. That's all I've got.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9813383221626282,
+  "request_id": null,
+  "latency_s": 1.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bbe5bac7f6b7bd1a7235e121bccf5aca20fc868a9c16ce10bf53c66b876c6d5b",
+  "audio_seconds": 12.167,
+  "seconds_to_make": 1.937
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy Matilda. Sí, por favor, hablemos en español. Gracias",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9816608428955078,
+  "request_id": null,
+  "latency_s": 0.781,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3cbb87dbaaa8be74976150ef8095a12d1458a5a8a2ac4113d2a514eb42b7b87a",
+  "audio_seconds": 3.576,
+  "seconds_to_make": 0.797
+ }
+}

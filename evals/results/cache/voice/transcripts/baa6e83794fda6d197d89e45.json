@@ -1,0 +1,16 @@
+{
+ "text": "My sugar was over 300 this morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9797893762588501,
+  "request_id": null,
+  "latency_s": 0.688,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "bda4d25a853a0c1b3558f0fda0b0ecf1e95d075b097afab9aff46f7114cd5176",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 0.688
+ }
+}

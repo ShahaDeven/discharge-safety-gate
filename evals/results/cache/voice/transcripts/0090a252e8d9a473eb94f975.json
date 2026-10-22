@@ -1,0 +1,16 @@
+{
+ "text": "I'm not taking the prednisone anymore. I stopped on Sunday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "485de36d1f06f341247dd880614e488a02557faa1d1e9727240a8cbd0ab19083",
+  "audio_seconds": 3.204,
+  "seconds_to_make": 1.062
+ }
+}

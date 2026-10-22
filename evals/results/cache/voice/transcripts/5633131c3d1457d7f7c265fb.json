@@ -1,0 +1,18 @@
+{
+ "text": "No, no he notado hinchazón en los pies ni en las piernas. Todo está igual, creo",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9648434519767761,
+  "request_id": null,
+  "latency_s": 0.812,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "da7c3ff89b6412b243ad1c2562d61517555175bb28e3d5c3c283503d199a4b91",
+  "audio_seconds": 5.294,
+  "seconds_to_make": 0.812
+ }
+}

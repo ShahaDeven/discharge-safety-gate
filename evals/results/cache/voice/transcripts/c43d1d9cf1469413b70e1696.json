@@ -1,0 +1,26 @@
+{
+ "text": "Sí, la furosemida la tengo y me la tomo una vez al día en la mañana con el desayuno",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9883016347885132,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "ce2efe40b1ca0ddc111407e84bb457d2fcbb1cd64a4055e3e99d42a5ce928d3e",
+  "audio_seconds": 5.062,
+  "seconds_to_make": 1.062
+ }
+}

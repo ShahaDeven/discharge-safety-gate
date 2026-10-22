@@ -1,0 +1,26 @@
+{
+ "text": "Ah, sí, la flema. Pues sí, ya se puso verde y espesa desde ayer y sale más",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9782121777534485,
+  "request_id": null,
+  "latency_s": 0.937,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "460564592bcda57f2146077af5af6d8f7944fe47c27d1cb2cf84530d33b8df6c",
+  "audio_seconds": 5.155,
+  "seconds_to_make": 0.937
+ }
+}

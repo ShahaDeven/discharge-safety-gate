@@ -1,0 +1,18 @@
+{
+ "text": "Aspirin is the 81 milligram once a day. And no, I don't take any vitamins or supplements or anything else besides what I told you.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9816288352012634,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c6f3b74b8dc9965d7a760c0c11ae3e81b8823aa2461f7884017597cdff3f6f78",
+  "audio_seconds": 7.848,
+  "seconds_to_make": 1.219
+ }
+}

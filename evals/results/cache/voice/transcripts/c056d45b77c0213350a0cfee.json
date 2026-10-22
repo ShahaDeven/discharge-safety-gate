@@ -1,0 +1,18 @@
+{
+ "text": "Hello?",
+ "meta": {
+  "detected_language": "ita",
+  "language_probability": 0.7669269442558289,
+  "request_id": null,
+  "latency_s": 0.921,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "46c248ac684348b399f2e9091c6a1df24069c7be10e8a6b4e5f214c9fd1da5e1",
+  "audio_seconds": 0.65,
+  "seconds_to_make": 0.921
+ }
+}

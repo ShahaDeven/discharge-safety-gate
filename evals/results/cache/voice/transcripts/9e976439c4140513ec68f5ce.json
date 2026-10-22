@@ -1,0 +1,18 @@
+{
+ "text": "Well, my wrist is a bit sore where they did the procedure. No bleeding that I've seen and no black stuff in my stool",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.975780189037323,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ecb9e346768cdddd217d3891f3d07fb43fb49dae6fd203ba0bfdb7b9cd8e9544",
+  "audio_seconds": 6.13,
+  "seconds_to_make": 1.344
+ }
+}

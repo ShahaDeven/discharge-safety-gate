@@ -1,0 +1,18 @@
+{
+ "text": "It's Rizzo Balestreri speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9289236664772034,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "357b5096a7113b0f0ae5923142169cf2289d2a743bc682d7fc775f6f58809a49",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 0.859
+ }
+}

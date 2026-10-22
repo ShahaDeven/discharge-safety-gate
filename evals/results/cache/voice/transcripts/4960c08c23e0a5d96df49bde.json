@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy yo, Micaela Rendón. ¿Qué pasa? ¿Es del hospital?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9989362955093384,
+  "request_id": null,
+  "latency_s": 3.438,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "01bcc7978dfb6012eeaf5ae3ac52c0249726b9cce8a80b9d08b54059f250e27e",
+  "audio_seconds": 3.901,
+  "seconds_to_make": 3.438
+ }
+}

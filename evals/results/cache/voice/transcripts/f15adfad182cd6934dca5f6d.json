@@ -1,0 +1,26 @@
+{
+ "text": "No, fiebre no he tenido, ni escalofríos, nada de eso",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9060437083244324,
+  "request_id": null,
+  "latency_s": 0.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "8847a65049479f9937ede8c64c26e5d23e6a3d35ccbbf002cddad15d8d115fbb",
+  "audio_seconds": 3.947,
+  "seconds_to_make": 0.813
+ }
+}

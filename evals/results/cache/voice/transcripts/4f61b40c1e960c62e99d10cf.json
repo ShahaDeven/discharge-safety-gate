@@ -1,0 +1,18 @@
+{
+ "text": "The trazodone helps me sleep",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.6993879675865173,
+  "request_id": null,
+  "latency_s": 0.719,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ab980d52e7a60fe42ddde8d6ea040f2170be880f93496f3961dbb319017bc69d",
+  "audio_seconds": 1.625,
+  "seconds_to_make": 0.719
+ }
+}

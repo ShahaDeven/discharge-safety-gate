@@ -1,0 +1,18 @@
+{
+ "text": "It's Marie Power speaking.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.970070481300354,
+  "request_id": null,
+  "latency_s": 0.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "acb57f003a134df5c9f0775af1aca4b5e9b56a6547a7ed4f7ae2433891e4fb14",
+  "audio_seconds": 1.625,
+  "seconds_to_make": 0.797
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "I take Levick's defense",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8986940383911133,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e9ab104c121b731b692627464ade5f78379f3957e3bcf964fb4e7625ec67d893",
+  "audio_seconds": 1.765,
+  "seconds_to_make": 0.985
+ }
+}

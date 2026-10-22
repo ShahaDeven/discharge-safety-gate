@@ -1,0 +1,18 @@
+{
+ "text": "No tomo metoprolol o fenusistamona",
+ "meta": {
+  "detected_language": "epo",
+  "language_probability": 0.9737160801887512,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "679ca8e9e2f2cfe781a8092edf888a360e221465e75e436a5421928d96ee6124",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 0.953
+ }
+}

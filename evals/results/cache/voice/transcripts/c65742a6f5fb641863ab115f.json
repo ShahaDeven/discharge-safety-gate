@@ -1,0 +1,28 @@
+{
+ "text": "Yes, I got the metoprolol, the 25-1. I take it once a day in the morning with my other pills",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9382005333900452,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "6016b2af12cc298647bd0698af8631dbceb9dc9a72ae17e2c04e79d35ae3e6d4",
+  "audio_seconds": 5.201,
+  "seconds_to_make": 1.0
+ }
+}

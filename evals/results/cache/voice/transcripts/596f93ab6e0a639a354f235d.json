@@ -1,0 +1,18 @@
+{
+ "text": "Sí, el metoprolol de cincuenta lo tengo y me lo tomo una vez al día, pero también me queda el otro casito viejo, el de veinticinco, y ese lo sigo tomando también dos veces al día",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9962736964225769,
+  "request_id": null,
+  "latency_s": 1.406,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "19b93d65b91f595c023e9553a5a40b6c8861857c8a9a94ff9d5689ff07a5365b",
+  "audio_seconds": 10.96,
+  "seconds_to_make": 1.406
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Jaicy Formier",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9631217122077942,
+  "request_id": null,
+  "latency_s": 1.032,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "31def6778eeebf54288a91c0f77f6fb6bb29be9217e66d2174040479190acd36",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 1.032
+ }
+}

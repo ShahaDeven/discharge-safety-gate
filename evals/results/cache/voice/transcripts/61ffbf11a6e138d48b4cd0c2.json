@@ -1,0 +1,18 @@
+{
+ "text": "To be those heroes as they'll learn it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9992457032203674,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7435e879cb53c2c305d61fd6e0704f2a5793b0544859d474f0a304249ddb9330",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.938
+ }
+}

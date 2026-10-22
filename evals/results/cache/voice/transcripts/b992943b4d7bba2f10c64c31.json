@@ -1,0 +1,26 @@
+{
+ "text": "Nah, I'm not confused or anything, just tired like I said. My lips and fingers look normal to me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.973160982131958,
+  "request_id": null,
+  "latency_s": 1.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "ed8606a117744b88dc94705b3cd0e8e83a7dd12deb8ff1c0ecae3c4945e7c6da",
+  "audio_seconds": 6.037,
+  "seconds_to_make": 1.156
+ }
+}

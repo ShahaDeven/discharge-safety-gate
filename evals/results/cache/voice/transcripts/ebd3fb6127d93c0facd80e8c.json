@@ -1,0 +1,26 @@
+{
+ "text": "Um, the rescue inhaler, the albuterol? No, I haven't been reaching for it any more than normal. And the mucus, no, nothing different that I've noticed. Same as always",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9744558930397034,
+  "request_id": null,
+  "latency_s": 1.406,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "1b0ea26fa7e7aa2ca76d355725903632892bfdb4dd6d71262578a68ddc6208e8",
+  "audio_seconds": 10.356,
+  "seconds_to_make": 1.406
+ }
+}

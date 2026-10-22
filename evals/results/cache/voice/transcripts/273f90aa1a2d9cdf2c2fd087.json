@@ -1,0 +1,26 @@
+{
+ "text": "Yeah, I've got that one at home. I take two puffs in the morning and two at night like the paper says",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9837803840637207,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "a542572f36fbf89be64dbd841c509f78b26e311d85816b66e0e17984650c47ad",
+  "audio_seconds": 5.294,
+  "seconds_to_make": 0.906
+ }
+}

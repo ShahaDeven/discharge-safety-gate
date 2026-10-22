@@ -1,0 +1,27 @@
+{
+ "text": "Pues estoy bien, solo un poco cansada, pero mejor cada día",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.986599862575531,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "fe39b9a7e6112a000b027841d9520c106a253ab32db4f7f8fc4f531396e6628c",
+  "audio_seconds": 3.437,
+  "seconds_to_make": 0.984
+ }
+}

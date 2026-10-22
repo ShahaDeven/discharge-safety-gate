@@ -1,0 +1,26 @@
+{
+ "text": "Sí, lo recogí. Ese lo tomo una vez al día en la mañana. Pero también tengo el otro de metoprolol, el de antes del hospital, y todavía me lo tomo dos veces al día porque no sé si debo dejarlo",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9909343719482422,
+  "request_id": null,
+  "latency_s": 1.625,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "3d98153bcb7c43a84a5e0d65c2a0a091746c81fded583932f41b2b5b73e061a2",
+  "audio_seconds": 13.235,
+  "seconds_to_make": 1.625
+ }
+}

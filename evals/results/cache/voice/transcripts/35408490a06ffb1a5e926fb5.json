@@ -1,0 +1,28 @@
+{
+ "text": "Aspirin. Yes, the little baby one. Once a day. I picked that up",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9654650688171387,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "1184eda8189c01dab01979927256d22cc5bce6064123d24d354da660b595655d",
+  "audio_seconds": 3.994,
+  "seconds_to_make": 0.859
+ }
+}

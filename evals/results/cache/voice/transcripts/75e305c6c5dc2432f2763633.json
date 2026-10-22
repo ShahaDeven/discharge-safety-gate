@@ -1,0 +1,18 @@
+{
+ "text": "Sure, it's July 29th, 1961",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9991731643676758,
+  "request_id": null,
+  "latency_s": 1.656,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "19a700ff4fa57721f8ab975b75089c67a172d374d7cf6fcaa0c0e193882cd111",
+  "audio_seconds": 2.926,
+  "seconds_to_make": 1.656
+ }
+}

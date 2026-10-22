@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Angelina West",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9846104979515076,
+  "request_id": null,
+  "latency_s": 0.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "988e605d999e718757c6de73ab0de56770d658b529953d359c8e13bb9c149e9c",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 0.813
+ }
+}

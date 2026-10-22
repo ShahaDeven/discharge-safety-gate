@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, this is Julian. Who's calling again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8916772603988647,
+  "request_id": null,
+  "latency_s": 1.266,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a7496a192186cdd1de6fb4505cc82c74c25b17706f3d440e7dc9491bd971fd5a",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 1.266
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "text": "Eh, I'm okay, I guess. Still a bit tired by the afternoon, but I'm up and about more each day and eating better",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9844945073127747,
+  "request_id": null,
+  "latency_s": 1.156,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Preston Little",
+    "Lakeside General Hospital",
+    "amoxicillin-clavulanate",
+    "acetaminophen"
+   ]
+  },
+  "audio_sha256": "928829d9f2fc15b8f65cab7d2be928edac06b29201ac2fb9cd840fd80694d4c8",
+  "audio_seconds": 6.362,
+  "seconds_to_make": 1.156
+ }
+}

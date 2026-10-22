@@ -1,0 +1,16 @@
+{
+ "text": "I've been taking the Lasix like they said",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9964525103569031,
+  "request_id": null,
+  "latency_s": 0.672,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "37fd937f6333428cd5fa7d4b603a13381f0796602e6abf488a16f906c1fd84be",
+  "audio_seconds": 2.183,
+  "seconds_to_make": 0.672
+ }
+}

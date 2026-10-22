@@ -1,0 +1,26 @@
+{
+ "text": "It's Micaela Rendón. My date of birth is June 12th, 1963",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8400976657867432,
+  "request_id": null,
+  "latency_s": 1.016,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "b2cd8d6725fe7a0b65302ab498d3c700f68e4bf81f850e7947d9fde78947d74c",
+  "audio_seconds": 4.412,
+  "seconds_to_make": 1.016
+ }
+}

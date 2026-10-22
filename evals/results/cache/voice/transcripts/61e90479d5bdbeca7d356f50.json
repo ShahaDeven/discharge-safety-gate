@@ -1,0 +1,18 @@
+{
+ "text": "I take a DeerTek for my allergies",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8750147223472595,
+  "request_id": null,
+  "latency_s": 0.734,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "82fdaa0e20632b2b5541482ed020a294e998e059af58048a99abedd6715e51a2",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.734
+ }
+}

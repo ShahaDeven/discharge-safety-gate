@@ -1,0 +1,26 @@
+{
+ "text": "Sí, la metoprolol de 50 mg también la, la tengo. Me la tomo una vez al día en la mañana junto con la furosemida",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9918399453163147,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "2d3b551cf9afe6ec209e00a3be3613c57e763f1e0401fb7e697407148073091e",
+  "audio_seconds": 7.802,
+  "seconds_to_make": 1.328
+ }
+}

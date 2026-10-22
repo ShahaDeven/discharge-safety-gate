@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is my Kayla. Who's calling again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8879578113555908,
+  "request_id": null,
+  "latency_s": 4.609,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a5b3b66a2e601759cd1872ae2e15a5c014fa060a58c78be0dc2108f6f3cdc81d",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 4.609
+ }
+}

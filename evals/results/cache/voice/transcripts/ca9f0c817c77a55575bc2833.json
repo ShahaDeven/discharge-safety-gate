@@ -1,0 +1,18 @@
+{
+ "text": "Pues sí, cuando me acuesto plana me cuesta respirar. Por eso llevo dos noches durmiendo en el sillón reclinable. Ahí estoy más cómoda. No tengo dolor en el pecho, eso no",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9741619825363159,
+  "request_id": null,
+  "latency_s": 2.734,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f30d51ff3277c01c60ebe5cdc06415dcde0e81787aeab03302beadd2498e43e5",
+  "audio_seconds": 11.796,
+  "seconds_to_make": 2.734
+ }
+}

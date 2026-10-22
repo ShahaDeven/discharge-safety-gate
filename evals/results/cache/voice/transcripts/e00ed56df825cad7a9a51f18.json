@@ -1,0 +1,16 @@
+{
+ "text": "They sent me home with oxycodone for j- for the pain",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9801193475723267,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "745fd64f8b8164a3c3391f5906c0b7f8f46bfc3a3c5a0a0c1caf134f22247fd1",
+  "audio_seconds": 5.712,
+  "seconds_to_make": 1.078
+ }
+}

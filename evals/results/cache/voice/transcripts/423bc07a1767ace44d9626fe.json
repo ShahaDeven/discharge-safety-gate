@@ -1,0 +1,18 @@
+{
+ "text": "Okay, thank you. Goodbye",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9858418703079224,
+  "request_id": null,
+  "latency_s": 0.687,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a33a779e3fb0213c260cf93f75923805059ff77ead98cfd74fda57dc0f9b7618",
+  "audio_seconds": 1.486,
+  "seconds_to_make": 0.687
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "It was Tuesday, actually no, Wednesday when the calling started",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9954726696014404,
+  "request_id": null,
+  "latency_s": 0.843,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0beeb923698857b49c30196f390c068da71a10ab6e72829ea26aacccf9e0902d",
+  "audio_seconds": 3.669,
+  "seconds_to_make": 0.843
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Uh, not too bad, I guess. Tired some. My wrist is a bit sore where they did the procedure, but it's no big deal",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9823890924453735,
+  "request_id": null,
+  "latency_s": 1.281,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bc7cb158dfdcc3662e787c4cfef2b383bfdc06fbbc87dcc916dcc91cf5eb744f",
+  "audio_seconds": 6.873,
+  "seconds_to_make": 1.281
+ }
+}

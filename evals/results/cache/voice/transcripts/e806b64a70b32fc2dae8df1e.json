@@ -1,0 +1,21 @@
+{
+ "text": "It's Basilia Hagenes speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9399288892745972,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Basilia Hagenes"
+   ]
+  },
+  "audio_sha256": "bfb460e01906a35040afa634aa27b391f04834d06f37f79b36a955860ed9f3ec",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.906
+ }
+}

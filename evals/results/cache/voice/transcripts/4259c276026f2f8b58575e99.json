@@ -1,0 +1,18 @@
+{
+ "text": "It's Phoebe Simonis. My date of birth is November fifth, nineteen sixteen",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8690910935401917,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7a05f40e21ccb79c8b3a27d0f439ffb63b1c13108db08a1b07c49a3a827c548b",
+  "audio_seconds": 4.365,
+  "seconds_to_make": 1.0
+ }
+}

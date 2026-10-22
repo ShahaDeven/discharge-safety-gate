@@ -1,0 +1,28 @@
+{
+ "text": "Bebe Simonis. My birthday is November 5th, 1969. Is that what you need? Speak up a little, okay?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9351168274879456,
+  "request_id": null,
+  "latency_s": 1.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "af391a7c9697bec7e20ea2fe19f8c3979940e5cd713d2cfbc62ac4a2f4435c86",
+  "audio_seconds": 7.43,
+  "seconds_to_make": 1.922
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "I watered the garden and called my brothers. And I've been coughing up blood",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9920879006385803,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "dd04e2cc693dc7112fa9db2922c18daee89c4204a167af428234d69913c1accf",
+  "audio_seconds": 4.133,
+  "seconds_to_make": 0.875
+ }
+}

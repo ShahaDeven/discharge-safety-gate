@@ -1,0 +1,18 @@
+{
+ "text": "My blood pressure was 180 over 100",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9961158633232117,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "26600f247b80d8cdc22bd721b2e7302e51c3ed4321ac00281c902957949196a6",
+  "audio_seconds": 3.111,
+  "seconds_to_make": 1.094
+ }
+}

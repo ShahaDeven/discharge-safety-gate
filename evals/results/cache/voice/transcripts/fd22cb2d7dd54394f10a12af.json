@@ -1,0 +1,16 @@
+{
+ "text": "It's BB Simona speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 0.89,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "e9ad6d8d3741b2d307c320bc35b86e84c8ad00dbf269e9de93dcd71b6ff1509f",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.89
+ }
+}

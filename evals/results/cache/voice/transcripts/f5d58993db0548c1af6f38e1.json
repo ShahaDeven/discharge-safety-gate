@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, sometimes when I stand up fast, my head goes light and the room sort of tilts. One time I nearly fell over, but I grabbed the counter and sit back down for a minute and it passes",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.930774986743927,
+  "request_id": null,
+  "latency_s": 2.437,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3d47542cfb09b9513333c7bebb7555cfe8cf2515a645c6e5004448b378873852",
+  "audio_seconds": 11.192,
+  "seconds_to_make": 2.437
+ }
+}

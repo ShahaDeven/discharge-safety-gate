@@ -1,0 +1,26 @@
+{
+ "text": "I'm the patient. It's me, Micaela. I'm home from the hospital since Thursday. What's this about?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9672229886054993,
+  "request_id": null,
+  "latency_s": 1.016,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "3ad2d2ae14205788228af9dcd736728df8958404dc8a1f123f4b26f45d2b28a4",
+  "audio_seconds": 5.108,
+  "seconds_to_make": 1.016
+ }
+}

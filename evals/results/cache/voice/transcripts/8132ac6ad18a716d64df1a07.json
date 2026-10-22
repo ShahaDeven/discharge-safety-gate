@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la furosemida la tengo. Me la tomo una vez al día en la mañana, como me dijeron en el hospital. Creo que la de 40 miligramos, sí",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.96243816614151,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3e254b8efb65f653b768eed4f6e1785fae5f5465d8d1ab503d2f3f9ea9bb0f61",
+  "audio_seconds": 8.081,
+  "seconds_to_make": 1.031
+ }
+}

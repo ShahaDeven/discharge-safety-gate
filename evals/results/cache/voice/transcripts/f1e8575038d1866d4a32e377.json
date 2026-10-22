@@ -1,0 +1,18 @@
+{
+ "text": "It's John DeMors speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9619519114494324,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9eb0e1feaacfe3058c0004c47fb0c23f5bf4caa91b47183886a6fe8817c093f4",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 1.062
+ }
+}

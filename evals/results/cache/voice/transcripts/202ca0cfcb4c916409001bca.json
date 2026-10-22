@@ -1,0 +1,18 @@
+{
+ "text": "It's Brady Olsen speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 0.782,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ae3c7720aad9d1f1a93a0bfb2ab18de1c082c67a2fabbc58a313da8874596e58",
+  "audio_seconds": 1.579,
+  "seconds_to_make": 0.782
+ }
+}

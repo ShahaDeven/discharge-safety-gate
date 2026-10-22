@@ -1,0 +1,18 @@
+{
+ "text": "They gave me quantity to take twice a day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9916073679924011,
+  "request_id": null,
+  "latency_s": 0.796,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "45d27b59b3d73dcfbaff8dc3a1544d945dead480c5daa49ae3a3159cb5758142",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.796
+ }
+}

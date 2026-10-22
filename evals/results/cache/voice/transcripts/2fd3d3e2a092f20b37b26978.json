@@ -1,0 +1,16 @@
+{
+ "text": "My temperature was 102 last night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9958388209342957,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "853b822e6c561432b6165e37ae4ae3f6e08d9ed256f310b391256f3eedc68a2b",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 1.031
+ }
+}

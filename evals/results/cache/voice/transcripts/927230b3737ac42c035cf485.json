@@ -1,0 +1,18 @@
+{
+ "text": "Nah, no worse than usual. I'm not gasping or anything when I'm just sitting around",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9584363698959351,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "955b20529bfc3eedfb73ecd26b30824732f8f318d62e3d780b7eae4987edb792",
+  "audio_seconds": 4.644,
+  "seconds_to_make": 0.875
+ }
+}

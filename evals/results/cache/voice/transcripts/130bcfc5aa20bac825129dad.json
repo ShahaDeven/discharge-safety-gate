@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, it's Grady Davis. My birthday is July 29th, 1961",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.987610399723053,
+  "request_id": null,
+  "latency_s": 1.703,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "35d69037f13e563df485270e9598e5c49ee1f4ace35328b64cf55ed26512a291",
+  "audio_seconds": 4.458,
+  "seconds_to_make": 1.703
+ }
+}

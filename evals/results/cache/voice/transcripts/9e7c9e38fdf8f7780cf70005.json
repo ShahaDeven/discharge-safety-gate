@@ -1,0 +1,18 @@
+{
+ "text": "Hey, I'm okay, I guess. A bit tired by the afternoon, but I'm up and about more and eating better",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9844945073127747,
+  "request_id": null,
+  "latency_s": 0.954,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a3d78368226d26574d538df4d5282b51be4579e76f6a6b288e2b65d750ab0076",
+  "audio_seconds": 5.48,
+  "seconds_to_make": 0.954
+ }
+}

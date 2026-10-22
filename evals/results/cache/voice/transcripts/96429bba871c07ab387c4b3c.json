@@ -1,0 +1,18 @@
+{
+ "text": "Well, my wrist is a bit sore where they did the procedure. Nothing bleeding that I've seen and no black stuff in my stool. Haven't noticed any swelling either, I don't think",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9745272397994995,
+  "request_id": null,
+  "latency_s": 4.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "907a866da79120dc3064eb85fde9e5c7b5ad70bd07bc1976e9f1583a8b6fe8ec",
+  "audio_seconds": 9.892,
+  "seconds_to_make": 4.875
+ }
+}

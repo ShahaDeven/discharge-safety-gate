@@ -1,0 +1,18 @@
+{
+ "text": "Eh, I'm all right, I guess. Breathing's been okay mostly. Still tired, you know how it goes after the hospital",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9798302054405212,
+  "request_id": null,
+  "latency_s": 1.469,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d6b5644cddab72f8e355ce496d52e5b7832dac1fabc2926383876346cb31a5bc",
+  "audio_seconds": 6.734,
+  "seconds_to_make": 1.469
+ }
+}

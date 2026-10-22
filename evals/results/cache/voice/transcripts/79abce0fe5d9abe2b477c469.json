@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Emmanuel Considine",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.956504225730896,
+  "request_id": null,
+  "latency_s": 0.766,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "862e8926c213f672192b49d92df526a60374336b550cfef58337062b00b93ce5",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 0.766
+ }
+}

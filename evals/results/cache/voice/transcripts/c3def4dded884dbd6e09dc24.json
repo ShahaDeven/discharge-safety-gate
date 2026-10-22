@@ -1,0 +1,18 @@
+{
+ "text": "No, no tengo otra medicina aparte de esas. Solo las que le dije: la furosemida, las dos de metoprolol, el sacubitrilo con valsartán y la espironolactona. No tengo vitaminas ni pastillas de otro tipo",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9496267437934875,
+  "request_id": null,
+  "latency_s": 1.422,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "98e3f187cc82f8813f284b5432bec31ab8073d1eddee3f57eefb6dfddaeeeeba",
+  "audio_seconds": 13.653,
+  "seconds_to_make": 1.422
+ }
+}

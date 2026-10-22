@@ -1,0 +1,18 @@
+{
+ "text": "Bleeding? No, nothing like that. No black stuff either. My wrist is fine. No swelling there that I've seen",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9780236482620239,
+  "request_id": null,
+  "latency_s": 1.453,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "8853a30b52a82a1ccb08f8d231241e6e85b5a3421a1fdebabd5d9ce49f14d1b5",
+  "audio_seconds": 6.084,
+  "seconds_to_make": 1.453
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Mmm, no sé bien cuánto peso. No me he pesado desde que llegué a casa, la verdad",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9611331224441528,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e1a98691903f8a4149778be6dc887849b91915d1e40e59e64dd5af7778c9f0a6",
+  "audio_seconds": 4.969,
+  "seconds_to_make": 0.984
+ }
+}

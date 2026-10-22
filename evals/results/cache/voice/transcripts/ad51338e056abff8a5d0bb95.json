@@ -1,0 +1,16 @@
+{
+ "text": "The oxygen reading said 88%.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 1.313,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "91f58257061b3d5e9fab45a2fc8f0ee30ff304f81de849934e5f71cd12e8a12a",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 1.313
+ }
+}

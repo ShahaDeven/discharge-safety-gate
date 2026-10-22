@@ -1,0 +1,18 @@
+{
+ "text": "Uh, no, not really. Same as always, I think. Nothing green or anything like that that I've noticed",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9878617525100708,
+  "request_id": null,
+  "latency_s": 9.609,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c05cb5bba4b8ad3c368baa98db64a6f61a7006780b1f0a8f14cef94cf8a50f39",
+  "audio_seconds": 5.712,
+  "seconds_to_make": 9.609
+ }
+}

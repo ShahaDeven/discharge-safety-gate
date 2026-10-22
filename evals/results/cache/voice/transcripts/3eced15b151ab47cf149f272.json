@@ -1,0 +1,28 @@
+{
+ "text": "Um, let me think. There's the metoprolol, the water pill. No, wait, it's amlodipine for my blood pressure, and I've got nitroglycerin under the tongue if I get chest pain. Oh, and the metoprolol I take every day. That's about it, I think.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9789541959762573,
+  "request_id": null,
+  "latency_s": 2.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "e1f523bf27503f819c8aac329fb64a645beb18d7ebe04674147a2c5f5fbefb34",
+  "audio_seconds": 15.697,
+  "seconds_to_make": 2.094
+ }
+}

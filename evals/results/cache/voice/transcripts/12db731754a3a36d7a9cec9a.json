@@ -1,0 +1,28 @@
+{
+ "text": "No, no chest pain or pressure, nothing like that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9312489628791809,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "b274130898a8ba7ef3fe8985d771530e8eef47d5acea1d4ba88ae24f2bc4c886",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 0.891
+ }
+}

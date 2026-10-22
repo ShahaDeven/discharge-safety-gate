@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy yo, Matilda. ¿Qué pasa?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9963687658309937,
+  "request_id": null,
+  "latency_s": 1.781,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1ecb40483eaf0de36dfc1e3ffb7f805064c188da04dadb92923a0eb0c0e2a709",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 1.781
+ }
+}

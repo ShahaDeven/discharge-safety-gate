@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is October 7th, 1948",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9901231527328491,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2167d66a39bce49e6f158559c032e203480a3bf0ff710bad01a33f07c601818c",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 1.062
+ }
+}

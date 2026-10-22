@@ -1,0 +1,16 @@
+{
+ "text": "They gave me clonidine to take twice a day",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9994938969612122,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "2e060de8e8752e65c576a8ead3f5a0d3d475972e92211f27baff6e10080e3196",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.875
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Well, I was a bit shivery last night. Confused or sleepy? No, I'm thinking clear. My lips and fingers look normal to me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9787848591804504,
+  "request_id": null,
+  "latency_s": 1.234,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Julian Walsh",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "31b1bf52b9858c26d6733108a0ab277117c199d23a33ea6a87280ef996a7e0bc",
+  "audio_seconds": 7.709,
+  "seconds_to_make": 1.234
+ }
+}

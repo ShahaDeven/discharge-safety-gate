@@ -1,0 +1,26 @@
+{
+ "text": "Um, no, I haven't needed the albuterol more than normal, and the mucus is about the same. Nothing new",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9474918246269226,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "dfba48946086f1a645ea54b62caf745329cc5ec0094d15cdd53b2a033834b36a",
+  "audio_seconds": 5.712,
+  "seconds_to_make": 1.031
+ }
+}

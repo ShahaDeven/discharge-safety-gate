@@ -1,0 +1,18 @@
+{
+ "text": "I take one Popril in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.834589958190918,
+  "request_id": null,
+  "latency_s": 0.921,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "891c65bbb6853601ac7f73f13c9072434ce9ee04ea6ffad877b97db1a10ab63f",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 0.921
+ }
+}

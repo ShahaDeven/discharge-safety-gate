@@ -1,0 +1,18 @@
+{
+ "text": "It's Maurice Howard speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.942566990852356,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1407a3122167776c9d44ab7b3a0ea6a9c5a2e8c39e1c26bedd8b0f87185d12fd",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.047
+ }
+}

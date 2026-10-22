@@ -1,0 +1,27 @@
+{
+ "text": "Pues no, no me falta el aire. Duermo bien con dos almohadas como siempre",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9587348103523254,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "0879c1bb710f153dfd2be8711989c2adab13c7fcd5e4a4bc773816c64078dc8c",
+  "audio_seconds": 4.505,
+  "seconds_to_make": 1.219
+ }
+}

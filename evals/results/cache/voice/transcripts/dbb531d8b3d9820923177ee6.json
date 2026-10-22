@@ -1,0 +1,18 @@
+{
+ "text": "I'm weighing myself every morning like they told me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9779142141342163,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "28a45f882e52e789d677460bad04a0fc7e0aeb4faa2c1ea0efed32c024e1a22e",
+  "audio_seconds": 2.879,
+  "seconds_to_make": 1.187
+ }
+}

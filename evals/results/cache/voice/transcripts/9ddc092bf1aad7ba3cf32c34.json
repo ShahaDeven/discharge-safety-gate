@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, the budesonide one, the bluish inhaler. I got that one. I'm using it two puffs morning and night like they said",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9200417995452881,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b5b27032e28263f1559134bcb3e5c639e8fc14453a4daf2be0abd52626e2c16f",
+  "audio_seconds": 6.92,
+  "seconds_to_make": 0.953
+ }
+}

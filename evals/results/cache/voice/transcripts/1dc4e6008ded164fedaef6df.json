@@ -1,0 +1,18 @@
+{
+ "text": "Pues más o menos. Estoy cansada, pero ya estoy en casa y me siento un poquito hinchada de vez en cuando. Nada del otro mundo",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9878963828086853,
+  "request_id": null,
+  "latency_s": 2.25,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b0ff986458b189f3ecc525f9b2b2842e4b34db3d1cbc37412668ac6a159880c6",
+  "audio_seconds": 8.174,
+  "seconds_to_make": 2.25
+ }
+}

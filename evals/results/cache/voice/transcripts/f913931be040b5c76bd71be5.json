@@ -1,0 +1,18 @@
+{
+ "text": "No, no trouble breathing that I've noticed. Just the tired thing mostly",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9555909037590027,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "160402585abcbd686371a837b4ea0235521de39cdc3eaccc101b55c8f7a63778",
+  "audio_seconds": 4.365,
+  "seconds_to_make": 1.0
+ }
+}

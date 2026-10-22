@@ -1,0 +1,18 @@
+{
+ "text": "I take a Zyrtec for my allergies",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.5787736773490906,
+  "request_id": null,
+  "latency_s": 1.391,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "15d33e3c57d87aa28e32dc07b2e600b4d97f630ddcc461b8ebb9f9ddd08fb34d",
+  "audio_seconds": 1.997,
+  "seconds_to_make": 1.391
+ }
+}

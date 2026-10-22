@@ -1,0 +1,18 @@
+{
+ "text": "This is Michelle Renton. I'm her neighbor",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9569178223609924,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7ee7f8d3dadb2abf9e8d8eb3eca80e41c9470448cc995eb8d9587eee6927a899",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.922
+ }
+}

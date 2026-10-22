@@ -1,0 +1,18 @@
+{
+ "text": "Oh, I, I'm doing okay, I guess. Still getting used to being home. I came home on the 11th. They put a stent in after the heart attack",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.978945255279541,
+  "request_id": null,
+  "latency_s": 1.39,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ca60c192d666ff0f18006d26a082e20911e2b8dfdc421f57e7ddae914b8e2753",
+  "audio_seconds": 7.523,
+  "seconds_to_make": 1.39
+ }
+}

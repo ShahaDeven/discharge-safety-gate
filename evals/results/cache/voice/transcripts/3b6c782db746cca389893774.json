@@ -1,0 +1,24 @@
+{
+ "text": "Uh, no fever that I know of. No shaking chills either. I feel warm sometimes, but that's from the blankets",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9580562114715576,
+  "request_id": null,
+  "latency_s": 1.25,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Preston Little",
+    "Lakeside General Hospital",
+    "amoxicillin-clavulanate",
+    "acetaminophen"
+   ]
+  },
+  "audio_sha256": "2f809299969f429ca01e51c6ba8f1733fe79578774facf1f99be68f7a721046f",
+  "audio_seconds": 6.687,
+  "seconds_to_make": 1.25
+ }
+}

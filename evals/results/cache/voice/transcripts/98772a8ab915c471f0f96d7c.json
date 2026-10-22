@@ -1,0 +1,27 @@
+{
+ "text": "Mmm, no, creo que no he subido de peso. Me peso de vez en cuando y está igual, más o menos",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.974852442741394,
+  "request_id": null,
+  "latency_s": 1.297,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "3e2a4d1f7f62a2f8588ec080cff847466c01774d9a54dd0a6091c0fa0da85915",
+  "audio_seconds": 5.48,
+  "seconds_to_make": 1.297
+ }
+}

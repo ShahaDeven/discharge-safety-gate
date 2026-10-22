@@ -1,0 +1,18 @@
+{
+ "text": "No, no chest pain or tightness at all, not resting and not when I'm up moving around. Sorry, you're still a bit fuzzy on my end. Could you say that last part again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9312121272087097,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "33fed12d903589c7286f0aa0e0728ee819999586170442eae9ad5ee4205bab7a",
+  "audio_seconds": 10.31,
+  "seconds_to_make": 1.078
+ }
+}

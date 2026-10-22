@@ -1,0 +1,28 @@
+{
+ "text": "Hang on, let me go look. Okay, there's maybe three or four in the bottle, I think. Not a whole lot",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9679083228111267,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "22781224cce303290234b306c3a95d8e52b2edbee04e77e5ccf7755c5cc1b860",
+  "audio_seconds": 5.341,
+  "seconds_to_make": 1.031
+ }
+}

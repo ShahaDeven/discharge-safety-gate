@@ -1,0 +1,27 @@
+{
+ "text": "Oh, I'm doing all right, I guess. Tired a bit, but I'm getting around. My wrist is a bit sore where they did the procedure",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9787296056747437,
+  "request_id": null,
+  "latency_s": 1.235,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "880bc97aae397571270ffae6483153905a6a3dde97f48100edd425c4df7a64b6",
+  "audio_seconds": 7.013,
+  "seconds_to_make": 1.235
+ }
+}

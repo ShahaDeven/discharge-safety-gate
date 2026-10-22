@@ -1,0 +1,26 @@
+{
+ "text": "Sí, soy yo, Micaela Rendón. Dígame, ¿de qué se trata? ¿Es del hospital?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9978474974632263,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "d45ca3818c5bafb165ed03e05df9f67d8f73d9e623c21fd87b70afb382de7740",
+  "audio_seconds": 4.969,
+  "seconds_to_make": 1.031
+ }
+}

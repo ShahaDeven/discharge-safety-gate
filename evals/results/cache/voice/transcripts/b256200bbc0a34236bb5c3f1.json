@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, the atorvastatin, the 81. I take that at night like they told me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.980362057685852,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "03521dbceec083b7a6959d78c78b32d50e67ee5e94edf5faac2bb5f4e2018d75",
+  "audio_seconds": 4.923,
+  "seconds_to_make": 1.0
+ }
+}

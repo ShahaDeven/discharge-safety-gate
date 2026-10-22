@@ -1,0 +1,18 @@
+{
+ "text": "No tomo metoprolol o fenazopiramona",
+ "meta": {
+  "detected_language": "epo",
+  "language_probability": 0.9640520215034485,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "e991b260afce5b63349f666b5929969367d6cf6a3027d012119975f59e40348b",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 0.828
+ }
+}

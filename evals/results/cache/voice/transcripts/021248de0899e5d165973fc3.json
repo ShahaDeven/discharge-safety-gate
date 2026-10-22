@@ -1,0 +1,28 @@
+{
+ "text": "Yeah, I'm-- I've got the amlodipine, the blood pressure one. I take it every day, and the nitroglycerin is in the cabinet. I only use it if my chest hurts. I haven't needed it.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.974717915058136,
+  "request_id": null,
+  "latency_s": 1.406,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "b4d343905e7ea68dac73d97047676f7f9f20accaa8c3c22018cdd94555bbfd29",
+  "audio_seconds": 9.752,
+  "seconds_to_make": 1.406
+ }
+}

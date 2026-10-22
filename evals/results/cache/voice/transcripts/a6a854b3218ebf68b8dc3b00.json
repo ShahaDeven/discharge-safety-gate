@@ -1,0 +1,18 @@
+{
+ "text": "Pues la verdad, sí me cuesta un poquito cuando me acuesto, Flannan. Desde hace un par de noches duermo en el sillón reclinable. Es más cómodo, nada del otro mundo",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.966212809085846,
+  "request_id": null,
+  "latency_s": 1.359,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7c37854b477331aa925e2c0b52f3b3aca13e67f4196bbaab03fae16061a30c4e",
+  "audio_seconds": 10.867,
+  "seconds_to_make": 1.359
+ }
+}

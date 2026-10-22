@@ -1,0 +1,18 @@
+{
+ "text": "No, no chest pain or tightness that I've had. I feel okay that way, just tired, like I said",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9733503460884094,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9f1a094473833ad94e74506f85e6e8c6dec196a4586d0fd6d2117cb2fb07925e",
+  "audio_seconds": 5.387,
+  "seconds_to_make": 1.203
+ }
+}

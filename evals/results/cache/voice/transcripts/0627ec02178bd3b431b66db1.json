@@ -1,0 +1,26 @@
+{
+ "text": "Pues no, no tengo hinchazón en los pies, ni en las piernas, ni en la barriga. Del peso no sé decirle, no me he subido a la báscula desde que llegué",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9693375825881958,
+  "request_id": null,
+  "latency_s": 2.563,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "0ca355a73c669789350107580bb0b6fde22833c6b6b48e580985e42a6446ab86",
+  "audio_seconds": 8.127,
+  "seconds_to_make": 2.563
+ }
+}

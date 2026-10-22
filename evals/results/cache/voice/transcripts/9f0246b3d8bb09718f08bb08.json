@@ -1,0 +1,18 @@
+{
+ "text": "Ah, theiotropium. Nah, I never picked that one up. It was like eighty dollars at the counter, so I just didn't get it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9875697493553162,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "81ef77b351d0af1ccdd6a63bccd41dd976aa202184d130e130e1c45d77d13684",
+  "audio_seconds": 6.502,
+  "seconds_to_make": 1.219
+ }
+}

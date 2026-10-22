@@ -1,0 +1,18 @@
+{
+ "text": "I got my hair done and had lunch with a friend, and my left arm has been numb since breakfast",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9984409213066101,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "90a0dcb3d09d1310e7fda16ed48d521351ed41b1a6aa80e12b2fe8840fabd96f",
+  "audio_seconds": 5.387,
+  "seconds_to_make": 0.875
+ }
+}

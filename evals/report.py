@@ -230,7 +230,12 @@ def voice_section(v: dict | None) -> list[str]:
                "| Patient lines heard differently | " + " | ".join(f"{x['lines']['changed']} of {x['lines']['heard']} ({x['lines']['garbled']} garbled)" for x in cands) + " |",
                "| Misses by cause | " + " | ".join(", ".join(f"{k}: {n}" for k, n in x["attribution"].items()) or "none" for x in cands) + " |",
                "| ElevenLabs credits | " + " | ".join(f"{x['credits']:,}" if x["credits"] else "-" for x in cands) + " |",
-               "| **Verdict** (expected) | " + " | ".join(f"**{x['verdict']}** ({x['expected']})" for x in cands) + " |", "",
+               "| **Verdict** (expected before the run) | " + " | ".join(f"**{x['verdict']}** ({x['expected']})" for x in cands) + " |", "",
+               "VC was planned as the harmless control (expected PROMOTE). The run disproved that expectation, and "
+               "the cause was found in the calls: misheard names failing the identity check. It is a genuine "
+               "failure, not an evaluation error, under the harness's strict identity rule (the spoken name must "
+               "match the record; accents are ignored). A real deployment might accept a close spelling when the "
+               "date of birth matches; that looser rule was not built or tested.", "",
                "- **The clean phone line was rejected**, although single sentences said it was harmless. The cause "
                "was not the agent's medical judgment: misheard names failed the identity check, so the agent "
                "(rightly) refused to discuss anything and never reached the warning signs or the medicines. It "
@@ -317,7 +322,9 @@ def main() -> None:
 
     md = ["# Discharge Safety Gate: results", "",
           "> Synthetic patients and calls only. No PHI, no real agent from any company. This is not clinical "
-          "validation, not legal advice, and it does not measure readmissions: it measures call behavior.", ""]
+          "validation, not legal advice, and it does not measure readmissions: it measures call behavior.", "",
+          "This report is the single source for every number in the project. It is generated from the saved calls "
+          "in the repo (`python -m evals.report`, no API keys needed); the READMEs and docs quote it.", ""]
 
     md += ["## Verdicts", ""]
     if gate_res.get("policy"):

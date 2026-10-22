@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is November 5th, 1969",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9734145998954773,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis"
+   ]
+  },
+  "audio_sha256": "97846915f75936ba8cecea373d57406e557f3e07db16d269f43cfb42fd601c5c",
+  "audio_seconds": 2.833,
+  "seconds_to_make": 1.125
+ }
+}

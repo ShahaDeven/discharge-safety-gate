@@ -1,0 +1,16 @@
+{
+ "text": "My daughter picked up all my medicines",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 1.203,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "5b1f1f012f75990c6a25af0f767af18d7d8e623b2e0b5231e84a2bd42ace57b2",
+  "audio_seconds": 1.997,
+  "seconds_to_make": 1.203
+ }
+}

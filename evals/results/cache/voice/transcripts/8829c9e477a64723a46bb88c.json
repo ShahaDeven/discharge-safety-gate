@@ -1,0 +1,18 @@
+{
+ "text": "No, nada más. Solo esas que le dije. Ah, y ya no tomo nada de lo de antes, aparte del frasco viejo",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.8597608804702759,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "05030faba097e1e814718d8112c89c6008ab6fe17588396a44c7bde3ffe39453",
+  "audio_seconds": 6.734,
+  "seconds_to_make": 0.906
+ }
+}

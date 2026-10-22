@@ -1,0 +1,18 @@
+{
+ "text": "Well, I got most of them. The aspirin and the blood pressure ones, yeah. The clopidogrel, the Plavix, I ran out after the week they gave me and I haven't got more yet. It's been about three days",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9879286289215088,
+  "request_id": null,
+  "latency_s": 3.406,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f0b99bec284e17ad43a3632681f2a16b448917b42060452436c5df012164128d",
+  "audio_seconds": 12.028,
+  "seconds_to_make": 3.406
+ }
+}

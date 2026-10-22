@@ -1,0 +1,28 @@
+{
+ "text": "No bleeding that I've seen. No black stuff either. My wrist looks all right. No swelling there. Is the nurse going to call me today or tomorrow?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9511740207672119,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "9b8219ba83f96dd2a7ded9f4c0e702f8117d83f09c50743144ba295b4bbd936d",
+  "audio_seconds": 7.988,
+  "seconds_to_make": 1.125
+ }
+}

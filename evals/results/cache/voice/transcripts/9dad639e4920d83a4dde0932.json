@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy yo, Micaela. ¿Qué pasa? ¿Por qué me llamas del hospital?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.998786449432373,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a88ffd04a7cb66eb40f971da1bac3d4e642f7a6fc770c9f131a12216d7e06408",
+  "audio_seconds": 4.133,
+  "seconds_to_make": 0.859
+ }
+}

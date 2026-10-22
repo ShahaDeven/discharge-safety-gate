@@ -1,0 +1,26 @@
+{
+ "text": "Sí, tengo el de albuterol en casa. Lo uso cuando me falta el aire, dos puffs cada cuatro a seis horas. Y no, no tomo ninguna otra medicina, ni pastillas, ni vitaminas, solo esas que le dije",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9206007122993469,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "05bf691cc690ff2d8fe1946e76fba9d39c2c4a977c5b63303371e5fa022642fc",
+  "audio_seconds": 11.703,
+  "seconds_to_make": 0.984
+ }
+}

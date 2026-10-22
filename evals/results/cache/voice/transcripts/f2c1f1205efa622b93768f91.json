@@ -1,0 +1,18 @@
+{
+ "text": "It's Micah Shanahan speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9470459222793579,
+  "request_id": null,
+  "latency_s": 1.032,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7714c691bd51d0250d518aa8f2066d332eeb3cf630cae98eaa3e0cbde7cdfb1d",
+  "audio_seconds": 1.625,
+  "seconds_to_make": 1.032
+ }
+}

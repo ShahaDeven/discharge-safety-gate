@@ -1,0 +1,16 @@
+{
+ "text": "They sent me home with oxycodone for the pain",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 1.062,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "01625e1ec319bc4df639f890955b6109890e5fc94c22a95c0478ecc00ae8b657",
+  "audio_seconds": 2.601,
+  "seconds_to_make": 1.062
+ }
+}

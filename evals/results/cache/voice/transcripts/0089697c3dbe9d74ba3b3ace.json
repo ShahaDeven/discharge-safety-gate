@@ -1,0 +1,18 @@
+{
+ "text": "I don't take the Metapromol on the weekends",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9454016089439392,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "acaeaec22ab712e55de659f9156975c05058b384d872f43795bd7e8937c093a5",
+  "audio_seconds": 2.276,
+  "seconds_to_make": 1.141
+ }
+}

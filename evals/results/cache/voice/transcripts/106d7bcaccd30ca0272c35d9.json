@@ -1,0 +1,18 @@
+{
+ "text": "Nah, no confusion or anything like that. I'm thinking clear enough. My lips and fingers look normal to me, I think",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9740615487098694,
+  "request_id": null,
+  "latency_s": 1.218,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "02eb3d4af7680ca06b79ff4d4ceba85dca5011446ab74b8dc3f588e49e73e27e",
+  "audio_seconds": 6.734,
+  "seconds_to_make": 1.218
+ }
+}

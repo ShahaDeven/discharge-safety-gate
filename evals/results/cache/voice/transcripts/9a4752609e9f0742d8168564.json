@@ -1,0 +1,27 @@
+{
+ "text": "Ay, ya le dije, me desmayé un segundo en el baño y me desperté en el piso. Ahorita estoy sentada, no me siento tan mal. ¿Tengo que llamar al nueve once? Voy a ver si puedo llamar a mi hija para que venga",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9816592335700989,
+  "request_id": null,
+  "latency_s": 1.625,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "a92a60930e4dd2a4ce289ee35f4938152093469f9fb7dbc1791c41bf8ac407fa",
+  "audio_seconds": 13.05,
+  "seconds_to_make": 1.625
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Y además tengo la experiencia en cada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9677696824073792,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "827cadf40bd54c1b678fd30501857ff812cca9431c0116f1f268848d176440fa",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 0.985
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "text": "Mostly, yeah. The metoprolol and amlodipine I've got and take like they said. The nitroglycerin I've got, I think there's a few left. I'd have to look. Only the Plavix I'm out of",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9887977242469788,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "14516ae162f2d2345e1473610a71150348ea95ae71accd53585c951b715991e6",
+  "audio_seconds": 11.146,
+  "seconds_to_make": 1.328
+ }
+}

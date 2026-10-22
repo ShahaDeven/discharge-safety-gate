@@ -1,0 +1,18 @@
+{
+ "text": "ഞാൻ മടയൂർ പാണ്ടെന്നുള്ളതാണ് സർ",
+ "meta": {
+  "detected_language": "mal",
+  "language_probability": 0.9991698861122131,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "35b3d90fe8f0774461a73a22a0b3db994698983959f6f17734ee97400aed3962",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.094
+ }
+}

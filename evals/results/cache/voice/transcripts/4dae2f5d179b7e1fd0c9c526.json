@@ -1,0 +1,18 @@
+{
+ "text": "I haven't had any chest pain since I got home",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9981197714805603,
+  "request_id": null,
+  "latency_s": 1.312,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "fdf353320dc201818ae0c4f0db7d8138210c25fb56c5dfb5f1e9246a89f5a783",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 1.312
+ }
+}

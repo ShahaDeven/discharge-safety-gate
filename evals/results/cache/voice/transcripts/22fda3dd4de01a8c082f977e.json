@@ -1,0 +1,21 @@
+{
+ "text": "It's Grisel Balistreri speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9117645025253296,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grisel Balistreri"
+   ]
+  },
+  "audio_sha256": "6a2e742a8e5e38837ff8eed16ad5d115cad4e48cf42b6a1b6b3ea9b8f4198d81",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 0.906
+ }
+}

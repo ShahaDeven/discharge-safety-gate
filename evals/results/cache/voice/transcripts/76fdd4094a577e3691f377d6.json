@@ -1,0 +1,18 @@
+{
+ "text": "Warning signs? Um, chest pain, I guess. And if I can't breathe or I pass out, call nine one one, and the black stools and bleeding that won't stop. Is that what you mean? Sorry, I missed a bit of that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9724725484848022,
+  "request_id": null,
+  "latency_s": 1.61,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "62d719d349477d2cbb978475e1ff0877b0177cf7484c0e3ef85625181d33ee15",
+  "audio_seconds": 12.864,
+  "seconds_to_make": 1.61
+ }
+}

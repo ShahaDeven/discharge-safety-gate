@@ -1,0 +1,18 @@
+{
+ "text": "Tengo los tobillos más hinchados que ayer",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9882985949516296,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "c9564b3f2374e63cf910139eb1a741cb5e61cfe05247be753ce5dc2dfd38a73d",
+  "audio_seconds": 2.693,
+  "seconds_to_make": 0.875
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "I've been reading and doing my puzzles, and sometimes I think everyone would be better off without me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 1.219,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "4cdf30ea69430346356b36b48c450d135ed697b89920900c7aeb69b5281f5781",
+  "audio_seconds": 5.248,
+  "seconds_to_make": 1.219
+ }
+}

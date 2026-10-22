@@ -1,0 +1,28 @@
+{
+ "text": "Yes, the atorvastatin. I got that one. I take it at night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9394310116767883,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "b4cd28a381500e8e7712cd9f807252af81c20c416ef5a4a1e7567047974a7b63",
+  "audio_seconds": 3.622,
+  "seconds_to_make": 0.906
+ }
+}

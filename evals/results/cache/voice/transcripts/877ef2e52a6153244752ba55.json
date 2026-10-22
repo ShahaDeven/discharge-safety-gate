@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is January 18th, 1951",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9890198111534119,
+  "request_id": null,
+  "latency_s": 1.234,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Rosanne Simonis"
+   ]
+  },
+  "audio_sha256": "1fed1a8019a7e34cd6600cefdc49bed68814ac52b4e8bdc0dccfefbffb8dad88",
+  "audio_seconds": 3.251,
+  "seconds_to_make": 1.234
+ }
+}

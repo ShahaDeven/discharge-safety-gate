@@ -1,0 +1,18 @@
+{
+ "text": "Dizzy? No, I haven't fainted or anything like that. Sorry, the line's still crackly. Could you speak up a bit?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9838034510612488,
+  "request_id": null,
+  "latency_s": 1.547,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bcef93149467ba4d1c2d9753a14e836f0a8cbb72ff4d31d01f3769779719b5bb",
+  "audio_seconds": 7.059,
+  "seconds_to_make": 1.547
+ }
+}

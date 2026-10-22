@@ -1,0 +1,18 @@
+{
+ "text": "De salsa y aire cuando me acuesto",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9822940826416016,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9fe93e7cdd5321b3bb26ca721782a7989dc2d9e5f9a95bacac19bf31a5340522",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 0.906
+ }
+}

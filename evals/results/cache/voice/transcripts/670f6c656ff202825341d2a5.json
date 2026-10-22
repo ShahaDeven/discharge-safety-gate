@@ -1,0 +1,18 @@
+{
+ "text": "Um, chest pain that won't go away or trouble breathing, I guess. And if I pass out or can't get up, that's nine one one. Is that right?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9814847111701965,
+  "request_id": null,
+  "latency_s": 1.672,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9e617a66fb734e0ce702dd76cfb1fd801113ee9e84a16bd142c50aab71827d5d",
+  "audio_seconds": 7.941,
+  "seconds_to_make": 1.672
+ }
+}

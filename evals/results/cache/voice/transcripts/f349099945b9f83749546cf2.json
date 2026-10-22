@@ -1,0 +1,15 @@
+{
+ "text": "They told me 40 milligrams, but I'm taking 20",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.997768759727478,
+  "request_id": null,
+  "latency_s": 1.407,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "audio_sha256": "29ab86bdcdbefd924755671dd0e6f814f857e672e2613626121cfab81d314933",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 1.407
+ }
+}

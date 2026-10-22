@@ -1,0 +1,18 @@
+{
+ "text": "It's Cecilia Haganis speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9306229948997498,
+  "request_id": null,
+  "latency_s": 0.921,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "921f4636ffa9d001f84f521d558b3b0b3a56f449c4d8ba9d221e022a342bb8a6",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 0.921
+ }
+}

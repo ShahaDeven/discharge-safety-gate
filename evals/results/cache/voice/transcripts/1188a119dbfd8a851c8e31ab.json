@@ -1,0 +1,18 @@
+{
+ "text": "It's John Demore speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9619519114494324,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2d8296914b775cb1f51be3ef14e5de8e0b734e943342ad9878d5790811e2b55f",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 1.094
+ }
+}

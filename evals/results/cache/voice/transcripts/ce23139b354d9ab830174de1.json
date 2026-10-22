@@ -1,0 +1,27 @@
+{
+ "text": "Well, there's a little lump there kinda getting bigger, I think, and it's tender when I touch it. Not sure what to make of it, to be honest",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9836224913597107,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "4906ee460a6565d80dac1824d749ef4babab845310135417caea3a6c78a9113b",
+  "audio_seconds": 7.43,
+  "seconds_to_make": 1.0
+ }
+}

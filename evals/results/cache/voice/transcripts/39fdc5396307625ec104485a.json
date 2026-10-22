@@ -1,0 +1,16 @@
+{
+ "text": "Yes, this is Tony Schoen.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8376948833465576,
+  "request_id": null,
+  "latency_s": 0.969,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "4497d1d2d9c03c7ff24e2ea1c8f59052307efe8cbfedd1c0a5915be25ceccaf0",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 0.969
+ }
+}

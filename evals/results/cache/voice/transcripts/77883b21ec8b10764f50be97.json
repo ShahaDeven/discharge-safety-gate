@@ -1,0 +1,18 @@
+{
+ "text": "Mostly, yeah. I think the doses are the same as what they wrote down. The atorvastatin I take at night and the rest in the morning. I didn't change anything",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9898024797439575,
+  "request_id": null,
+  "latency_s": 1.391,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f7158fa2bbb8decfa5a5ae957c8c18c8d038da54507e720930963bf78b610e56",
+  "audio_seconds": 9.102,
+  "seconds_to_make": 1.391
+ }
+}

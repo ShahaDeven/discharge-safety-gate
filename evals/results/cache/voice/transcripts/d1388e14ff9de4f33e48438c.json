@@ -1,0 +1,28 @@
+{
+ "text": "Um, like chest pain that won't go away or trouble breathing or if I'm about to pass out. I think that's right, right? Chest pressure I'd call, and if I faint",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9895604252815247,
+  "request_id": null,
+  "latency_s": 1.532,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "b367f1bf224f19410e305d658eb3b4cd977d62184ec960fbb9780a80344ad1c7",
+  "audio_seconds": 9.427,
+  "seconds_to_make": 1.532
+ }
+}

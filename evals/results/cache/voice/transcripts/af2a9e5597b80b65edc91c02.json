@@ -1,0 +1,21 @@
+{
+ "text": "It's Brittany Mante speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8769728541374207,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Brittany Mante"
+   ]
+  },
+  "audio_sha256": "a956b75f341dca3dab1fa51028073185994c503253d3be8d7ae825cd1007e144",
+  "audio_seconds": 1.765,
+  "seconds_to_make": 1.094
+ }
+}

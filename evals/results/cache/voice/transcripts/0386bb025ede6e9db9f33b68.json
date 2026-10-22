@@ -1,0 +1,18 @@
+{
+ "text": "Eh, not too bad, I guess. Still kinda tired and the breathing's been okay-ish. I was a bit shivery last night, but I'm all right now",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9878113269805908,
+  "request_id": null,
+  "latency_s": 3.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4e9efca01e4f0f485d86e12be3a88b309549729a47f3ed4a6623546b0b983c92",
+  "audio_seconds": 7.477,
+  "seconds_to_make": 3.375
+ }
+}

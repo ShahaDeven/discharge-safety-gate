@@ -1,0 +1,18 @@
+{
+ "text": "Sí, soy yo, Matilda. ¿Qué pasa? ¿Es del hospital?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9995134472846985,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "df940f9e047acefdd62f6fbb7288ec5341b259e125d254559543c4ea77f8d9d3",
+  "audio_seconds": 3.53,
+  "seconds_to_make": 0.953
+ }
+}

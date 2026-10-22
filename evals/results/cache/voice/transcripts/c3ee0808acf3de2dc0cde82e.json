@@ -1,0 +1,18 @@
+{
+ "text": "I'm feeling pretty good today",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.950606107711792,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "52f1ffc1a9db99f38a4166b616640eee4f1c9dccd14c2b93711fe017f4150c41",
+  "audio_seconds": 1.579,
+  "seconds_to_make": 0.891
+ }
+}

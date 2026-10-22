@@ -1,0 +1,26 @@
+{
+ "text": "Yes, my lips looked kind of bluish in the mirror this morning, and I feel real drowsy, like I'm in a fog. I don't know about my fingers. I didn't look at them.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9833096265792847,
+  "request_id": null,
+  "latency_s": 1.079,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "3c32dec3d47ac5243896d64f2172b145b3d8684405d9a79bcd6d25c0d8c01683",
+  "audio_seconds": 9.845,
+  "seconds_to_make": 1.079
+ }
+}

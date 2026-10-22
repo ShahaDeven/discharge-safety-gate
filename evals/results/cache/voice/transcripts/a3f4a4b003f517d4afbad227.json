@@ -1,0 +1,18 @@
+{
+ "text": "I take one Pop Roll in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8731051087379456,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "7d1697ea29229fb4a510172d45e149a5cf5f7509b469f6934b87811b943242c3",
+  "audio_seconds": 1.858,
+  "seconds_to_make": 0.828
+ }
+}

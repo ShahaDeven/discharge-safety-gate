@@ -1,0 +1,21 @@
+{
+ "text": "Yes, this is Micaela Rendón",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.7520206570625305,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón"
+   ]
+  },
+  "audio_sha256": "12d35a56895915b103b8bce8718b20b8cbe18b4b4e872b167ef0f6c46c1d25d4",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.906
+ }
+}

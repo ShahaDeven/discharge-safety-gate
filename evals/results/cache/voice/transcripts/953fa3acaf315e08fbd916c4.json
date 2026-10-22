@@ -1,0 +1,18 @@
+{
+ "text": "Nah, no fever that I know of. No shaking or anything like that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9677386283874512,
+  "request_id": null,
+  "latency_s": 1.765,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9b20d395af3b2d91d89604eb2d5bdde9797b2840791adc0739858214cfcda804",
+  "audio_seconds": 3.669,
+  "seconds_to_make": 1.765
+ }
+}

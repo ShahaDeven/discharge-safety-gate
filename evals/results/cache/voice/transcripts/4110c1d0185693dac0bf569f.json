@@ -1,0 +1,28 @@
+{
+ "text": "Missed any doses? Hmm, no. I've taken my aspirin and my Plavix every day since I got home. Could you speak up a little, dear?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9832753539085388,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "46d5027cabba1413a1e5b1a8bfe22c6a74deeb9721e210bf04b5c97b01954cff",
+  "audio_seconds": 7.43,
+  "seconds_to_make": 1.141
+ }
+}

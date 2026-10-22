@@ -1,0 +1,21 @@
+{
+ "text": "Yes, this is Matilda Kihn",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9029886722564697,
+  "request_id": null,
+  "latency_s": 0.781,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn"
+   ]
+  },
+  "audio_sha256": "e618386de4f64287695c08542a9a8445aa34c13d29bd2ca0d5d8733d399541ec",
+  "audio_seconds": 1.579,
+  "seconds_to_make": 0.781
+ }
+}

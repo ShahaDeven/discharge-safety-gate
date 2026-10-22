@@ -1,0 +1,18 @@
+{
+ "text": "No, no tengo fiebre ni escalofríos. Me siento igual, solo cansada",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9287149310112,
+  "request_id": null,
+  "latency_s": 0.984,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "fab3c551dd72c5260dddcd3ebc3e4fe856eee1b22a40b9459ee2720a0f1d100c",
+  "audio_seconds": 4.505,
+  "seconds_to_make": 0.984
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Nah, not really at rest. It's about the same as usual. Maybe a little worse when I walk to the mailbox",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9863256812095642,
+  "request_id": null,
+  "latency_s": 1.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "97adc5374d6f5c7571f856264de136fd46c21c048fe247b93c301e596207764b",
+  "audio_seconds": 5.712,
+  "seconds_to_make": 1.344
+ }
+}

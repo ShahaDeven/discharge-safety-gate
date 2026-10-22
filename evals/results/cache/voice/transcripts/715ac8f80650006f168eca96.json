@@ -1,0 +1,16 @@
+{
+ "text": "The visiting nurse came on Tuesday and it went fine, but I gained three pounds overnight",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 1.0,
+  "request_id": null,
+  "latency_s": 0.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": "en",
+  "settings": {},
+  "audio_sha256": "5a05262eaec38f1061c59bc0b578e372bdf560059c7343b0de0128f5321bb430",
+  "audio_seconds": 4.551,
+  "seconds_to_make": 0.797
+ }
+}

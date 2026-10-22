@@ -1,0 +1,18 @@
+{
+ "text": "Um, chest pain that won't quit, trouble breathing, passing out, or if I feel really faint. Then I call nine one one, I guess. I've got the nitro under my tongue too if the chest thing starts",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9445790648460388,
+  "request_id": null,
+  "latency_s": 1.438,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "cf465046e568025265674b0a36978ae7775b27ba7e91b73f686a9c1bd492f1b7",
+  "audio_seconds": 11.471,
+  "seconds_to_make": 1.438
+ }
+}

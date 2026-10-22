@@ -1,0 +1,16 @@
+{
+ "text": "The physical therapist came by and showed me some exercises, and my heart has been racing for an hour",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9883164167404175,
+  "request_id": null,
+  "latency_s": 1.484,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "5b390d4cf46ea2b65d779d2520c1a8e588dc708968057c2cd41b1b47f8b18231",
+  "audio_seconds": 5.434,
+  "seconds_to_make": 1.484
+ }
+}

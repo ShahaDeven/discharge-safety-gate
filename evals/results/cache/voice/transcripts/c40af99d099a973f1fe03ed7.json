@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is January 20th, 1963",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.992217481136322,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jesica Cormier"
+   ]
+  },
+  "audio_sha256": "169b6b58dc415cf16fb645e9eef7907e2ede262543fa28dd6f6608406cea8bb0",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 1.125
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "The metoprolol, the atorvastatin, the amlodipine, I take those like they said. The nitro I've got under my tongue for chest pain, haven't needed it. Nothing else at home, no other pills or vitamins",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9635180234909058,
+  "request_id": null,
+  "latency_s": 2.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "2d3f34412c439b3e011bbfca4203b31e4128244ba328ea74e41cb425cb06dca2",
+  "audio_seconds": 13.421,
+  "seconds_to_make": 2.375
+ }
+}

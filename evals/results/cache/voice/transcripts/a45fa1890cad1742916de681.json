@@ -1,0 +1,16 @@
+{
+ "text": "I never picked up the new blood thinner from the pharmacy",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9105246663093567,
+  "request_id": null,
+  "latency_s": 0.922,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "ca79f44ad96b3d5f4740a505fa1bfe311590d2a675c949935b17c6025e2ef5d2",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 0.922
+ }
+}

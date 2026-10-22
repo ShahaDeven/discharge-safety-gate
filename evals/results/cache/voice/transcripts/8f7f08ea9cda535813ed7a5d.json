@@ -1,0 +1,26 @@
+{
+ "text": "Pues si me falta el aire cuando estoy quieta o si tengo fiebre o mucho dolor en el pecho, llamo al médico o voy a emergencias. Y si me pongo muy confundida, también. Eso es lo que sé",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9926109313964844,
+  "request_id": null,
+  "latency_s": 3.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "575c33970d5815a21a45c8cad8eb7b7af16239eab6966ffdf3634d0e92f4c4f9",
+  "audio_seconds": 11.796,
+  "seconds_to_make": 3.375
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "text": "Yeah, it's Preston Little. My date of birth is March fourth, nineteen seventy-one",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9566128849983215,
+  "request_id": null,
+  "latency_s": 1.281,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Preston Little",
+    "Lakeside General Hospital",
+    "amoxicillin-clavulanate",
+    "acetaminophen"
+   ]
+  },
+  "audio_sha256": "c89f27679616ffef0da821cad050b32981571453911b8461e29895db1f0c8104",
+  "audio_seconds": 4.737,
+  "seconds_to_make": 1.281
+ }
+}

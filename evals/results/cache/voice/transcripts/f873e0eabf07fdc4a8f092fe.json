@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Michaela. Who did you say you were again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9985864162445068,
+  "request_id": null,
+  "latency_s": 7.89,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a9c577fa668b4cd292a4aafb5bcd256b3f03aa57c1e004a6dda915b0ead03e1a",
+  "audio_seconds": 3.019,
+  "seconds_to_make": 7.89
+ }
+}

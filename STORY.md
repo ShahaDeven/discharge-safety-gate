@@ -99,7 +99,7 @@ which makes it a fairness problem as well as a safety one.
 **The fix.** Before dialing, the AI already knows who it's calling. So I gave the speech recognition a short
 list of names to expect: the patient's name, their medicines and the hospital, and never anyone else's. I
 also taught the AI to ask people to spell details back when a check fails.
-- **Names:** heard correctly went from **35% to 100%**.
+- **Names:** heard correctly on the phone line went from **38% to 100%** (35% to 100% on clear audio).
 - **Strangers with a similar name:** never mistaken for the patient (10 of 10).
 - **Full calls:** failed identity checks went from **10 of 24 to 0 of 24**, and every safety measure returned
   to where it was in text. The gate's verdict: **Safe to use.**

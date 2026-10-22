@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I got that one. I'm using it two puffs twice a day like they told me",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9871731400489807,
+  "request_id": null,
+  "latency_s": 4.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "519f908255fb5df85edfa5cee334d28c2695320d49ec60444e8741c3d4a77379",
+  "audio_seconds": 4.598,
+  "seconds_to_make": 4.031
+ }
+}

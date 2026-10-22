@@ -1,0 +1,28 @@
+{
+ "text": "Metoprolol, yes. The twenty-five milligram one. I take it once a day in the morning. I got it from the pharmacy",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9070842266082764,
+  "request_id": null,
+  "latency_s": 1.234,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "e6edee26bd826dd259221b3fd055bba1df282175590ab31c389e86b438420f82",
+  "audio_seconds": 6.176,
+  "seconds_to_make": 1.234
+ }
+}

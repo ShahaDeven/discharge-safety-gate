@@ -1,0 +1,26 @@
+{
+ "text": "Sí, esa la recogí también. La tomo dos veces al día, una en la mañana y otra en la noche con agua",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9905924201011658,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "edb905af3ea306d1443b313401d7b0d17b798a805e869698d11032a228236439",
+  "audio_seconds": 6.316,
+  "seconds_to_make": 0.938
+ }
+}

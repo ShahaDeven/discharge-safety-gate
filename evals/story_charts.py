@@ -66,7 +66,7 @@ def how_it_works() -> str:
     ax.set_ylim(0, 26)
     ax.axis("off")
     steps = [("1  Practice patients", "102 made-up patients,\neach with a hidden\nwarning sign"),
-             ("2  Practice calls", "The AI calls each one\nseveral times\n(replays)"),
+             ("2  Practice calls", "The AI calls each one\nseveral times, in text\nor with ElevenLabs voices"),
              ("3  Grading", "Warning sign caught?\nPrivacy kept?\nNo medical advice?"),
              ("4  Verdict", "")]
     w, gap, y0, h = 21, 4.6, 1, 23
@@ -146,19 +146,22 @@ def voice_story(v: dict) -> str | None:
     if not {"VC", "VK"} <= calls.keys():
         return None
     rf = lambda c: next(m for m in c["metrics"] if m["name"] == "red_flag_recall")
-    stages = ["Typed text", "Real voice,\nclean phone line", "Real voice\n+ the name fix"]
+    stages = ["Typed text", "ElevenLabs voice,\nclean phone line", "ElevenLabs voice\n+ the name fix"]
     acted = [rf(calls["VC"])["base"], rf(calls["VC"])["cand"], rf(calls["VK"])["cand"]]
     failed = [0.0, calls["VC"]["identity_failed"] / calls["VC"]["calls"], calls["VK"]["identity_failed"] / calls["VK"]["calls"]]
     failed_lbl = ["0 of 48", f"{calls['VC']['identity_failed']} of {calls['VC']['calls']}",
                   f"{calls['VK']['identity_failed']} of {calls['VK']['calls']}"]
     verdicts = [None, VERDICT[calls["VC"]["verdict"]], VERDICT[calls["VK"]["verdict"]]]
-    fig = _fig(10, 4.4)
+    fig = _fig(10, 5.0)
     fig.suptitle("Same AI, same patients. Only how the AI hears them changes.", x=0.06, ha="left", y=1.0,
                  fontsize=12, fontweight="bold", color=INK)
+    fig.text(0.06, 0.935, "ElevenLabs speaks each patient line (text to speech), a simulated phone line carries it,\n"
+             "and ElevenLabs speech recognition turns it back into the text the AI hears.",
+             ha="left", va="top", fontsize=9.5, color=INK2, linespacing=1.4)
     panels = [("Warning signs acted on", acted, [f"{a:.0%}" for a in acted]),
               ("Calls where a misheard name\nfailed the identity check", failed, failed_lbl)]
     for k, (title, ys, labels) in enumerate(panels):
-        ax = fig.add_axes([0.06 + k * 0.49, 0.22, 0.42, 0.6])
+        ax = fig.add_axes([0.06 + k * 0.49, 0.2, 0.42, 0.52])
         _axes(ax, title)
         ax.bar(range(3), ys, width=0.42, color=BLUE, edgecolor=SURFACE, linewidth=2)
         for x, (y, lbl) in enumerate(zip(ys, labels)):
@@ -184,25 +187,25 @@ def names(v: dict) -> str | None:
     before, after = row["phone"][0] / row["phone"][1], row["phone_keyterms"][0] / row["phone_keyterms"][1]
     fig = _fig(10, 2.9)
     ax = fig.add_axes([0.25, 0.2, 0.4, 0.55])
-    _axes(ax, "Patient names heard correctly on the phone line")
+    _axes(ax, "Names heard correctly by ElevenLabs speech recognition")
     ax.yaxis.grid(False)
     ax.xaxis.grid(True, color=GRID, linewidth=1)
     ax.barh([1, 0], [before, after], height=0.42, color=[CONTEXT, BLUE], edgecolor=SURFACE, linewidth=2)
     for y, val, n in ((1, before, row["phone"]), (0, after, row["phone_keyterms"])):
         ax.annotate(f"{val:.0%}  ({n[0]} of {n[1]})", (val, y), xytext=(6, 0), textcoords="offset points",
                     va="center", fontsize=10, color=INK, fontweight="bold")
-    ax.set_yticks([1, 0], ["Speech recognition\non its own", "Told the names\nto expect (keyterms)"])
+    ax.set_yticks([1, 0], ["ElevenLabs Scribe\non its own", "Scribe told the names\nto expect (keyterms)"])
     ax.tick_params(axis="y", labelsize=10, labelcolor=INK)
     ax.set_xlim(0, 1.3)
     ax.set_xticks([0, 0.5, 1])
     ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
     ax.spines["bottom"].set_visible(False)
-    fig.text(0.72, 0.78, "What it heard on its own", fontsize=10, fontweight="bold", color=INK, va="top")
-    fig.text(0.72, 0.66, "Micaela  ->  Michaela\nKihn  ->  Keane\nBebe  ->  BB\nJesica  ->  Jessica",
+    fig.text(0.72, 0.72, "What it heard on its own", fontsize=10, fontweight="bold", color=INK, va="top")
+    fig.text(0.72, 0.6, "Micaela  ->  Michaela\nKihn  ->  Keane\nBebe  ->  BB\nJesica  ->  Jessica",
              fontsize=10, color=INK2, va="top", linespacing=1.6, family="monospace")
     decoy = next((r for r in b["names"] if r["category"] == "name_decoy"), None)
     if decoy and "phone_keyterms" in decoy:
-        fig.text(0.25, 0.02, f"And a stranger with a similar name was never heard as the patient "
+        fig.text(0.25, 0.02, f"On a simulated phone line. A stranger with a similar name was never heard as the patient "
                  f"({decoy['phone_keyterms'][0]} of {decoy['phone_keyterms'][1]}).", fontsize=9, color=INK2)
     return _save(fig, "story_names.png")
 
@@ -249,12 +252,15 @@ def elevenlabs_journey() -> str | None:
     if not all(c in cands for c, _, _ in steps):
         return None
     fig = _fig(10, 2.9)
-    ax = fig.add_axes([0, 0, 1, 0.86])
+    ax = fig.add_axes([0, 0, 1, 0.8])
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 26)
     ax.axis("off")
-    fig.text(0.01, 0.96, "An agent built on ElevenLabs, through the same gate", fontsize=12, fontweight="bold",
+    fig.text(0.01, 0.99, "An agent built on ElevenLabs, through the same gate", fontsize=12, fontweight="bold",
              color=INK, va="top")
+    fig.text(0.01, 0.905, "Built with ElevenLabs Agents (workflow builder), run over its live connection. ElevenLabs' "
+             "own agent tests also caught the broken branch; only the gate found the missed emergency.",
+             fontsize=9, color=INK2, va="top")
     w, gap, y0, h = 21, 4.6, 1, 23
     for i, (cid, title, found) in enumerate(steps):
         x = 1 + i * (w + gap)

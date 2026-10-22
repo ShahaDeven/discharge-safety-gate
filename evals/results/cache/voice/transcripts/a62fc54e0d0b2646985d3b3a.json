@@ -1,0 +1,18 @@
+{
+ "text": "I take Levax as the sense",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.976020336151123,
+  "request_id": null,
+  "latency_s": 0.766,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b403a321bf95fa9d20af0860a899a803c65ed1156c5143df584382c37b632ba2",
+  "audio_seconds": 1.765,
+  "seconds_to_make": 0.766
+ }
+}

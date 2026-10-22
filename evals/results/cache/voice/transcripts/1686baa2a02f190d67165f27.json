@@ -1,0 +1,18 @@
+{
+ "text": "Breathing? No, I'm breathing fine. Not short of breath, not when I'm walking either. Sorry, could you speak up a little?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.966759979724884,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "538281e269e6f9342bd9b30feb8ad7fba53a2d9a1e17faa2cd8d7814b7fdd271",
+  "audio_seconds": 6.548,
+  "seconds_to_make": 0.875
+ }
+}

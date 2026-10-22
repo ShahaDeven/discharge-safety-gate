@@ -1,0 +1,26 @@
+{
+ "text": "Sí, ya recogí todas las medicinas. El tiotropio lo uso una vez al día, dos inhalaciones, y el budesonida con formoterol dos inhalaciones dos veces al día. Ah, y también estoy tomando la prednisona de 40 miligramos una vez al día hasta el 14",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9818321466445923,
+  "request_id": null,
+  "latency_s": 2.297,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "9cfec4bdf13a3892985d639bb57fb9fa151da2d7c20afbfab185ba7c40681347",
+  "audio_seconds": 17.833,
+  "seconds_to_make": 2.297
+ }
+}

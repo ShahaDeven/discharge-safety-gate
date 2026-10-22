@@ -1,0 +1,27 @@
+{
+ "text": "No, no me falta el aire. Duermo bien, respiro normal",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.304648756980896,
+  "request_id": null,
+  "latency_s": 1.109,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "f68a9f8dbb91739312eafd3b38c6155c420a0e6cfeec00b532ddcbc5a2cc2a36",
+  "audio_seconds": 3.251,
+  "seconds_to_make": 1.109
+ }
+}

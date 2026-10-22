@@ -1,0 +1,27 @@
+{
+ "text": "Mmm, no, no he notado hinchazón. Los pies y las piernas están normales, creo",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9752771258354187,
+  "request_id": null,
+  "latency_s": 1.218,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "bcb98a6f60b46e38ed48012ae52fa1fd9bab334abe504be788402c63a50961d6",
+  "audio_seconds": 5.294,
+  "seconds_to_make": 1.218
+ }
+}

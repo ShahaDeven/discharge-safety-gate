@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is BB. Who is this again?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9822938442230225,
+  "request_id": null,
+  "latency_s": 4.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a32e1c7e57e93b3b472d088d701781cc3bc0edd69445b896666457e03acf85c4",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 4.328
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Toni Schoen",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9594342708587646,
+  "request_id": null,
+  "latency_s": 1.171,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "4497d1d2d9c03c7ff24e2ea1c8f59052307efe8cbfedd1c0a5915be25ceccaf0",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 1.171
+ }
+}

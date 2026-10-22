@@ -1,0 +1,18 @@
+{
+ "text": "Nah, breathing's about the same as it was, not worse. I'm not gasping or anything when I sit still",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9686005115509033,
+  "request_id": null,
+  "latency_s": 2.344,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "41ccb36ab9b5b628e44784520dd0dd1f7bd80f2f6281f2c0d810fa0abf570a4c",
+  "audio_seconds": 5.805,
+  "seconds_to_make": 2.344
+ }
+}

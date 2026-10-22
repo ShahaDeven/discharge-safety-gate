@@ -1,0 +1,21 @@
+{
+ "text": "It's Bebe Simonis speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis"
+   ]
+  },
+  "audio_sha256": "71258f1e33a73f70c0b7a8bb9e834f82360f31d5c4c11c33fd90279e920907df",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.141
+ }
+}

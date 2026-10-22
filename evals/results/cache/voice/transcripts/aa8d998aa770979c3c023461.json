@@ -1,0 +1,18 @@
+{
+ "text": "No, no dizzy spells or fainting. Just tired mostly",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8127092123031616,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d40d2e05e9d2e8da8f58d0313cb185ce9d267712d96c8613082fb152f69f1517",
+  "audio_seconds": 3.53,
+  "seconds_to_make": 1.094
+ }
+}

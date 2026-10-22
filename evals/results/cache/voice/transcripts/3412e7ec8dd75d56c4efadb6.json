@@ -1,0 +1,16 @@
+{
+ "text": "It's Bebe Simona speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 1.078,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "f9e094bb8bb08bd8d70b520c8b39b716429956824e1842e658bc49819ef71317",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 1.078
+ }
+}

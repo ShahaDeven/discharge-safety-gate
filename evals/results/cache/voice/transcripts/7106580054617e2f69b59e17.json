@@ -1,0 +1,18 @@
+{
+ "text": "Oh, I, I'm doing okay, I guess. Getting around is a bit slow, but I'm managing.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.977828323841095,
+  "request_id": null,
+  "latency_s": 1.329,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "32f8f4fcb8b7985f9e3e6ca85dc4d6f19506837e5c1e92cce51979b007dde74f",
+  "audio_seconds": 4.644,
+  "seconds_to_make": 1.329
+ }
+}

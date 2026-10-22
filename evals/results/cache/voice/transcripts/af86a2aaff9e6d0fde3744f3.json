@@ -1,0 +1,18 @@
+{
+ "text": "I take it two times a day, not three",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9276526570320129,
+  "request_id": null,
+  "latency_s": 0.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "19ca91ada89243f8ab33b1d535779d5f57d81108aab00affba7c1a926b977c5a",
+  "audio_seconds": 2.368,
+  "seconds_to_make": 0.797
+ }
+}

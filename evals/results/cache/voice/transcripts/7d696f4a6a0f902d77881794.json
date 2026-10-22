@@ -1,0 +1,18 @@
+{
+ "text": "No, not really. Breathing's fine. Just tired, like I said",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9745609164237976,
+  "request_id": null,
+  "latency_s": 1.484,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "15cf664f7a20bbe9307c32f1a9f7168d68c2596321192dae782de620ee6fe238",
+  "audio_seconds": 3.669,
+  "seconds_to_make": 1.484
+ }
+}

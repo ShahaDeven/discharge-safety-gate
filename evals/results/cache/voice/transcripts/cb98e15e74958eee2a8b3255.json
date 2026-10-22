@@ -1,0 +1,18 @@
+{
+ "text": "My ankles are not swollen anymore",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9964016675949097,
+  "request_id": null,
+  "latency_s": 0.891,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1a6a845fb1e0c12ee1f1877819b27c8daf62365dcca8f4fde4b36df11755a650",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 0.891
+ }
+}

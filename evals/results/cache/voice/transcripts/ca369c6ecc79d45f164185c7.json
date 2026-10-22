@@ -1,0 +1,18 @@
+{
+ "text": "I'm eating better, walking a little every day, sleeping fine, but I did notice my legs are more swollen than yesterday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.965472936630249,
+  "request_id": null,
+  "latency_s": 1.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5910ad2e6c3855f07d0be6b5c82a8f4f176cad125e2c385d0932d9e1777a4219",
+  "audio_seconds": 6.455,
+  "seconds_to_make": 1.172
+ }
+}

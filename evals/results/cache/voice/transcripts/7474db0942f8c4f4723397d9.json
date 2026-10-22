@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, I was a bit shivery last night. No confusion that I know of. I'm not sleepy in a weird way, and my lips and fingers looked normal to me.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9937853813171387,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "12a6faf74a2eca60604953bf12f3f16b00a3718d3388eddef60aace638590d0c",
+  "audio_seconds": 9.009,
+  "seconds_to_make": 1.094
+ }
+}

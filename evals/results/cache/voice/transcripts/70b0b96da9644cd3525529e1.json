@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la furosemida la tengo y me la tomo una vez al día en la mañana",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9761946201324463,
+  "request_id": null,
+  "latency_s": 1.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "5e0b81182e48bcc41d0e0206dad99dd899c15d41a6787feb783d433848f620de",
+  "audio_seconds": 4.18,
+  "seconds_to_make": 1.828
+ }
+}

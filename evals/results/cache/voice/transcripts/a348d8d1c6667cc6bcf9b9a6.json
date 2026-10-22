@@ -1,0 +1,18 @@
+{
+ "text": "No fever that I know of. No shaking chills either. I did take some Tylenol a while back, though",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9674926996231079,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d51c1ddff99c6568445009678d874c5b478f86fa511eae65c735d777a838e862",
+  "audio_seconds": 5.944,
+  "seconds_to_make": 1.047
+ }
+}

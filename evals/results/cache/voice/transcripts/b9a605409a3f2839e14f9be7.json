@@ -1,0 +1,18 @@
+{
+ "text": "Yes, this is Manuel Fromme",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9352341294288635,
+  "request_id": null,
+  "latency_s": 0.859,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0bedeac6e20d886f003f3e1f11ee140767a981248bfb366e57934c6bd5bed20b",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.859
+ }
+}

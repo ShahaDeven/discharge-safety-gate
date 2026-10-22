@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is June 12th, 1963",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.994398832321167,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "bad263cb0cdc1fec06f9b72f779f2ed21b0272d55b18c996fcfe1cc9ac041cc5",
+  "audio_seconds": 2.786,
+  "seconds_to_make": 0.828
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "text": "Um, no, my breathing is about the same as before. I'm not gasping or anything when I sit still",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9767269492149353,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "963300281f21695a89bbaa45a834ec62dea669576aabf27f24ea3de5cc142b06",
+  "audio_seconds": 5.712,
+  "seconds_to_make": 0.938
+ }
+}

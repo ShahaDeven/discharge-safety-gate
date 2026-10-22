@@ -1,0 +1,18 @@
+{
+ "text": "I take one cup roll in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8449881076812744,
+  "request_id": null,
+  "latency_s": 0.828,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "cc761da19f7b576618376cb7941c6de0fd4b11ee0e8e69e2dcca34a847711924",
+  "audio_seconds": 1.904,
+  "seconds_to_make": 0.828
+ }
+}

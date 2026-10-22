@@ -1,0 +1,27 @@
+{
+ "text": "Mmm, no, no me he subido de peso. Me peso en la mañana y está igual, más o menos",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9685665369033813,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "49b9115ff0c18a91c3e1f151b67343f3054d587bbc1c9ba83be8914a39c473b0",
+  "audio_seconds": 4.83,
+  "seconds_to_make": 0.953
+ }
+}

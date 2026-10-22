@@ -1,0 +1,18 @@
+{
+ "text": "Nel mare o quando nel levante?",
+ "meta": {
+  "detected_language": "ita",
+  "language_probability": 0.9999706745147705,
+  "request_id": null,
+  "latency_s": 0.968,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "3f988e3000a4079d5acba2ac94150ca9888cd6888241d97e54cc0976f5adc191",
+  "audio_seconds": 1.532,
+  "seconds_to_make": 0.968
+ }
+}

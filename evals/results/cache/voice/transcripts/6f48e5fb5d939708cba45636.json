@@ -1,0 +1,27 @@
+{
+ "text": "Yeah, it says 80 milligrams on the bottle, same as what they gave me at the hospital",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9963526129722595,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "fd052593b3e8f8fa86acb289a224cc0102f0d6753ca3317d9f47dd56a601d2ba",
+  "audio_seconds": 4.691,
+  "seconds_to_make": 1.125
+ }
+}

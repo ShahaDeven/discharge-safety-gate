@@ -1,0 +1,18 @@
+{
+ "text": "No, no chest pain or pressure. I feel okay that way, just tired like I said",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9561823010444641,
+  "request_id": null,
+  "latency_s": 1.422,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "dd9063252e62184b0d3bda064a51fd1bca7139c7629f8953a71ce06b9613f520",
+  "audio_seconds": 4.876,
+  "seconds_to_make": 1.422
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Sí, claro. Nací el 12 de junio de 1946",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9587565660476685,
+  "request_id": null,
+  "latency_s": 2.25,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6b4e4353f6ca485d4aca706839cabe61ab5467a48141bd18d39fdb0f80c2b0d2",
+  "audio_seconds": 3.808,
+  "seconds_to_make": 2.25
+ }
+}

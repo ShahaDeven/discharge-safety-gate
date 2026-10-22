@@ -1,0 +1,18 @@
+{
+ "text": "Pues si me falta mucho el aire o si me duele el pecho o si me pongo muy confundida, eso sería. También si tengo fiebre, creo. Llamaría al 911 si es muy grave, ¿no?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9954555630683899,
+  "request_id": null,
+  "latency_s": 1.562,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "429f53229db044d9d44d8104a332cbf6571c9121a778f7ccc97017ca29bc5b23",
+  "audio_seconds": 11.378,
+  "seconds_to_make": 1.562
+ }
+}

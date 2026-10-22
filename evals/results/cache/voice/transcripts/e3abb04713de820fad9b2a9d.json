@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la de 24,26 mg sí la tengo. Me la tomo dos veces al día, en la mañana y en la noche",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9370715618133545,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ccfa79993e5e8198ef3ecfdfd228d0bd8f085127df46649fd71cf0c756c6b6af",
+  "audio_seconds": 7.152,
+  "seconds_to_make": 1.141
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "text": "Yes, this is Matilda Hettinger",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9605531096458435,
+  "request_id": null,
+  "latency_s": 1.578,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "9fc2869554b1548ca99f6b9a1499ec4d5394a03405d7dbf0e54e50c59dcaf85d",
+  "audio_seconds": 1.997,
+  "seconds_to_make": 1.578
+ }
+}

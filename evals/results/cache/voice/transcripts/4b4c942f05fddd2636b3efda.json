@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is May twenty-seventh, nineteen forty-three",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8711622953414917,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "da98bd0e3fd05f714b9f4b6872762e7a29a5df3914b5e89505d35003327840fe",
+  "audio_seconds": 3.204,
+  "seconds_to_make": 0.875
+ }
+}

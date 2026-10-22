@@ -1,0 +1,28 @@
+{
+ "text": "Breathing? No, I'm breathing fine. Nothing like that. Could you talk a little louder, dear?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9612146019935608,
+  "request_id": null,
+  "latency_s": 0.844,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "38db8c3e963fa281740a5e7ba295b48b7d60a34ab215339b8ad4a3c48fab5432",
+  "audio_seconds": 5.108,
+  "seconds_to_make": 0.844
+ }
+}

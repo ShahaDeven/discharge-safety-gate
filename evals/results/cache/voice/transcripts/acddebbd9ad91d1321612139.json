@@ -1,0 +1,18 @@
+{
+ "text": "Uh, the rescue inhaler, not really more than usual. Mucus is the same, I think. Nothing different",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9399164319038391,
+  "request_id": null,
+  "latency_s": 9.656,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "13a1243ca758fb81564b0aae054be441ddfbfd9a28cda0e2c822240dfe8224a8",
+  "audio_seconds": 5.619,
+  "seconds_to_make": 9.656
+ }
+}

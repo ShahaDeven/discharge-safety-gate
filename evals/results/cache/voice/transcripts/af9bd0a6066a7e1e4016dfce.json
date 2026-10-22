@@ -1,0 +1,18 @@
+{
+ "text": "No, not really. I can breathe okay when I walk around the house. Nothing weird",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9427825212478638,
+  "request_id": null,
+  "latency_s": 1.281,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "645ce27b9a6e5ebeadbfc382fe8f668706913385171651dc21eef41c53e56992",
+  "audio_seconds": 4.598,
+  "seconds_to_make": 1.281
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "It's John DeMoor speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9399461150169373,
+  "request_id": null,
+  "latency_s": 0.875,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a5f6aa61a1fe0c574cb977135448bf65144fa963dd725a2461f2c47b6d1d15c1",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 0.875
+ }
+}

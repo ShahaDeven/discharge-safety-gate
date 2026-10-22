@@ -1,0 +1,28 @@
+{
+ "text": "Well, my gums do bleed a fair bit when I brush my teeth, and I've got some bruises on my arms. No black stools that I've seen. My right wrist looks fine, no swelling there",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9346411228179932,
+  "request_id": null,
+  "latency_s": 1.328,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "ca9c541465de678a5c52008b34ac6b59f04a886bed3dc5cd8d4201aaf0ea2007",
+  "audio_seconds": 9.985,
+  "seconds_to_make": 1.328
+ }
+}

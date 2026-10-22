@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is November fifth, nineteen sixty-eight",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9072844982147217,
+  "request_id": null,
+  "latency_s": 1.094,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis"
+   ]
+  },
+  "audio_sha256": "6659f738696dd879ba75dfa077c5daddb5b83d52ab7fd0bbdc399619ebfc7c80",
+  "audio_seconds": 2.74,
+  "seconds_to_make": 1.094
+ }
+}

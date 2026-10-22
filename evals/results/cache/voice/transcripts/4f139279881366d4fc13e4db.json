@@ -1,0 +1,28 @@
+{
+ "text": "Okay, thanks. I'll wait for the nurse. I'll try to get the refill too. Oh, and I've been taking it slow getting up these days",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9838749170303345,
+  "request_id": null,
+  "latency_s": 1.39,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "f8aad531805e4ed72f3c76c2d340c239b58c018f1339c6b3403129d93b2185ca",
+  "audio_seconds": 6.827,
+  "seconds_to_make": 1.39
+ }
+}

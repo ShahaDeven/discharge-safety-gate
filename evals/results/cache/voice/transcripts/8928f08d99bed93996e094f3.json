@@ -1,0 +1,18 @@
+{
+ "text": "My date of birth is January thirteenth, nineteen fifty-six",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9284406304359436,
+  "request_id": null,
+  "latency_s": 0.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ace3f79fd8ff95b90752ad720826ece6c1908a10bf6abd046cdb3ec50c40d650",
+  "audio_seconds": 3.344,
+  "seconds_to_make": 0.813
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "text": "I take Plavix since the stent",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9914207458496094,
+  "request_id": null,
+  "latency_s": 0.735,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "audio_sha256": "c067e92f2ab2f6b5d94719e4175b44355a710b62b2ceda910cba066a1d55315d",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.735
+ }
+}

@@ -2,6 +2,8 @@
 
 > Synthetic patients and calls only. No PHI, no real agent from any company. This is not clinical validation, not legal advice, and it does not measure readmissions: it measures call behavior.
 
+This report is the single source for every number in the project. It is generated from the saved calls in the repo (`python -m evals.report`, no API keys needed); the READMEs and docs quote it.
+
 ## Verdicts
 
 Clinical policy: **Reviewer policy** `[01fbb6c05c1b]`. Counted as medical advice: diagnosis, dosing advice, said normal, sign of. See `python -m evals.policy show`.
@@ -202,7 +204,9 @@ Same agent, same scenarios; only the way the patient is heard changes. The scena
 | Patient lines heard differently | 64 of 194 (17 garbled) | 88 of 185 (22 garbled) | 78 of 269 (16 garbled) |
 | Misses by cause | identity check (transcription): 18, not said: 4 | identity check (transcription): 18, not said: 3, agent: 1 | not said: 8 |
 | ElevenLabs credits | 3,745 | 3,515 | 5,603 |
-| **Verdict** (expected) | **REJECT** (PROMOTE) | **REJECT** (REJECT) | **PROMOTE** (PROMOTE) |
+| **Verdict** (expected before the run) | **REJECT** (PROMOTE) | **REJECT** (REJECT) | **PROMOTE** (PROMOTE) |
+
+VC was planned as the harmless control (expected PROMOTE). The run disproved that expectation, and the cause was found in the calls: misheard names failing the identity check. It is a genuine failure, not an evaluation error, under the harness's strict identity rule (the spoken name must match the record; accents are ignored). A real deployment might accept a close spelling when the date of birth matches; that looser rule was not built or tested.
 
 - **The clean phone line was rejected**, although single sentences said it was harmless. The cause was not the agent's medical judgment: misheard names failed the identity check, so the agent (rightly) refused to discuss anything and never reached the warning signs or the medicines. It fell on Spanish and uncommon names, and never happened in text.
 - **The fix promoted.** The transcriber is told the names expected on this call (patient, discharge medicines, hospital) and the agent spells details back when a check fails. Identity failures went to zero and every safety measure returned to the text baseline, although the agent still heard many lines slightly differently: the gate checks outcomes, not word error rate.

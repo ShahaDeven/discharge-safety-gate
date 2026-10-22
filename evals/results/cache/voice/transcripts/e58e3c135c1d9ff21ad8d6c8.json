@@ -1,0 +1,27 @@
+{
+ "text": "Sí, soy yo, Matilda. Dígame, ¿qué necesita?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9928675293922424,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone",
+    "alendronate"
+   ]
+  },
+  "audio_sha256": "00073429e53aab8cd1e6be8cec2bccec85511b7ff4bfffd216a58380a929169e",
+  "audio_seconds": 2.647,
+  "seconds_to_make": 0.953
+ }
+}

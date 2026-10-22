@@ -1,0 +1,18 @@
+{
+ "text": "It's Brittany Mantay speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9129053354263306,
+  "request_id": null,
+  "latency_s": 0.813,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d0463edfd03f3b331f2e7548a7c80fa5c763ba1a6007850704dfa44708cb420f",
+  "audio_seconds": 1.765,
+  "seconds_to_make": 0.813
+ }
+}

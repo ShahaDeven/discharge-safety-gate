@@ -1,0 +1,21 @@
+{
+ "text": "Yes, this is Jesica Cormier",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9607680439949036,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jesica Cormier"
+   ]
+  },
+  "audio_sha256": "0a1df198374a0e36757d6dae9714eda84ffbaed5bb040cd55690158c092d0482",
+  "audio_seconds": 1.672,
+  "seconds_to_make": 1.375
+ }
+}

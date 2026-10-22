@@ -1,0 +1,16 @@
+{
+ "text": "No one had has called me about my test results",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9999000430107117,
+  "request_id": null,
+  "latency_s": 1.015,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "4c695e40e0a10930bd4f0579af5d378ac09d2c4ffe80f22df271e0965bfdb1b3",
+  "audio_seconds": 2.09,
+  "seconds_to_make": 1.015
+ }
+}

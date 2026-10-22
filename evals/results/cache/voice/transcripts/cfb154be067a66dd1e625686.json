@@ -1,0 +1,18 @@
+{
+ "text": "It's Carmen Bergnam speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ddc9bcd1e62c6f705de7117c88258579c5a5678089f9c8e7bf48284e64c88a2f",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.047
+ }
+}

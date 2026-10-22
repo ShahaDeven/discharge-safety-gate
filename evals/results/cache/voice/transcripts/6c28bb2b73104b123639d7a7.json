@@ -1,0 +1,18 @@
+{
+ "text": "I take it in the evening. I mean in the morning",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8898093700408936,
+  "request_id": null,
+  "latency_s": 0.719,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "82303984b4b1eff7d24523ced21b119b55a8292ef898303de535e72e367f1b90",
+  "audio_seconds": 2.369,
+  "seconds_to_make": 0.719
+ }
+}

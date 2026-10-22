@@ -1,0 +1,18 @@
+{
+ "text": "Uh, no, I didn't get that one. The copay was like eighty dollars, so I just didn't pick it up",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9985195398330688,
+  "request_id": null,
+  "latency_s": 10.172,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a25d1af9e5cf6c6cfcfb7ff463549cdf26326e6ead2f50532f5f1207c46a4cc9",
+  "audio_seconds": 5.155,
+  "seconds_to_make": 10.172
+ }
+}

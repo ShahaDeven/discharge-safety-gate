@@ -1,0 +1,18 @@
+{
+ "text": "Pues si me cuesta respirar mucho o me duele el pecho, llamo al 911 y si se me hincha más o subo de peso rápido, llamo al hospital. Creo que sería eso, ¿no? Ya me lo va a recordar la enfermera, ¿verdad?",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9811010360717773,
+  "request_id": null,
+  "latency_s": 1.531,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "a5789702d83b36a72d396944a17a59766f60109024e34458668366314a25dcf5",
+  "audio_seconds": 13.189,
+  "seconds_to_make": 1.531
+ }
+}

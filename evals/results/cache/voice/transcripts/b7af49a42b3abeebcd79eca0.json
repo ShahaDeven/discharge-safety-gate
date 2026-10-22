@@ -1,0 +1,16 @@
+{
+ "text": "My son is staying with me this week.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.96990567445755,
+  "request_id": null,
+  "latency_s": 0.968,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "9729d2258bf32feccdb7b851b5592927022a99e4a375ce4d2efa74b838630e83",
+  "audio_seconds": 1.904,
+  "seconds_to_make": 0.968
+ }
+}

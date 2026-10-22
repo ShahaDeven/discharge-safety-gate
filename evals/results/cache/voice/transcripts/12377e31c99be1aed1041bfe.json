@@ -1,0 +1,18 @@
+{
+ "text": "It's our notebook lawyer speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9872559905052185,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "920009a67bb231e59b49e3dcb3cf28a2b69b0ee5fd9373defa59f41ed9def177",
+  "audio_seconds": 1.718,
+  "seconds_to_make": 0.953
+ }
+}

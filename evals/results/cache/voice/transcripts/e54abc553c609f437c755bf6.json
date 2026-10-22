@@ -1,0 +1,18 @@
+{
+ "text": "Pues báscula tengo, pero no me peso todos los días, la verdad. Y la hinchazón está igual que antes, no peor",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9515995979309082,
+  "request_id": null,
+  "latency_s": 1.266,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "cd362716288f6ae19afbefbe155f2900adc956a6a86cb2df38309f0e19b8beae",
+  "audio_seconds": 7.198,
+  "seconds_to_make": 1.266
+ }
+}

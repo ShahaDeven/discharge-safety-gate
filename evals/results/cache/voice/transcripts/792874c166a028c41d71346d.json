@@ -1,0 +1,21 @@
+{
+ "text": "This is Matthew Kihn. I'm a friend of the family",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9847609996795654,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Matilda Kihn"
+   ]
+  },
+  "audio_sha256": "7f16da25d7850306445d203f1e2cebfef5a6b6d302ec6b472cde3ea367035a4d",
+  "audio_seconds": 2.786,
+  "seconds_to_make": 0.985
+ }
+}

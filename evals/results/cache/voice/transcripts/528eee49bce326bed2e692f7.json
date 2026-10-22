@@ -1,0 +1,28 @@
+{
+ "text": "Aspirin. I take every morning, no misses. But the Plavix clopidogrel ran out. They gave me a week's worth at the hospital, and I haven't gotten it refilled yet, so it's been about three days without it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.98276287317276,
+  "request_id": null,
+  "latency_s": 1.296,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "737429e8d05eb19bb9d1e059061d0291471d11b9a847d1133b95fa3de2e6a16d",
+  "audio_seconds": 12.353,
+  "seconds_to_make": 1.296
+ }
+}

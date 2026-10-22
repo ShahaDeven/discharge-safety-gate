@@ -1,0 +1,27 @@
+{
+ "text": "Uh, if I can't breathe or my chest is hurting bad or I pass out, I'd call nine one one. And if the wrist starts bleeding and won't quit, I guess that too",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9727668762207031,
+  "request_id": null,
+  "latency_s": 1.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "b665150fa12430d3bd2dc19bf207c0eccbbe56212213624ccd8c2f523d375b84",
+  "audio_seconds": 8.777,
+  "seconds_to_make": 1.141
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "I gained two pounds overnight",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8419119119644165,
+  "request_id": null,
+  "latency_s": 0.672,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6be7222ef7b79dad84efe8751c0db8bff644faf9d9cea51c2f3e251613cac509",
+  "audio_seconds": 1.625,
+  "seconds_to_make": 0.672
+ }
+}

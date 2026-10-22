@@ -1,0 +1,18 @@
+{
+ "text": "No, mariadas, no vi. Yes, yes. Tai, eh, tai, tres amarras, ¿no? Gracias por avisármelo de la enfermera",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9783746004104614,
+  "request_id": null,
+  "latency_s": 2.141,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "12f3af08fa25f8a76032e0a579dce4707cee1518cf809d3e046830ca3d5df1b4",
+  "audio_seconds": 11.053,
+  "seconds_to_make": 2.141
+ }
+}

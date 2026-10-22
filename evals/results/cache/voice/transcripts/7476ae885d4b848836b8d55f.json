@@ -1,0 +1,28 @@
+{
+ "text": "Well, I have to take it slow getting up these days. Kind of lightheaded sometimes, but I haven't passed out or anything",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.943388044834137,
+  "request_id": null,
+  "latency_s": 1.031,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "99195c0e3d6f8f3261c75598efe98a88dad032cba2732f7909b6ecf6e2a883b8",
+  "audio_seconds": 6.548,
+  "seconds_to_make": 1.031
+ }
+}

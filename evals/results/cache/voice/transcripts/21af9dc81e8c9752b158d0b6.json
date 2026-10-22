@@ -1,0 +1,18 @@
+{
+ "text": "I did not feel dizzy when I stood up today",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9738146662712097,
+  "request_id": null,
+  "latency_s": 0.75,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "ad75210ac219f47f8d9156ead637d7fb5d07aad738697e64ecdeafff39c4c212",
+  "audio_seconds": 2.229,
+  "seconds_to_make": 0.75
+ }
+}

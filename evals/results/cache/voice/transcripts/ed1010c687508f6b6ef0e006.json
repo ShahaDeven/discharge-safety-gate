@@ -1,0 +1,18 @@
+{
+ "text": "Sí, la furosemida la recogí y me la tomo una vez al día en la mañana, como me dijeron en el hospital",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9751514196395874,
+  "request_id": null,
+  "latency_s": 2.204,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "91c0e0aa0e9743d7e4d7ed92256b0579f131db86141a9249d07824e968e55f6b",
+  "audio_seconds": 6.037,
+  "seconds_to_make": 2.204
+ }
+}

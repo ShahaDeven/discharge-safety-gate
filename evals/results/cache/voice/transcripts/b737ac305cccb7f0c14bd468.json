@@ -1,0 +1,18 @@
+{
+ "text": "This is Phoebe Simmons. I just live next door",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8568598031997681,
+  "request_id": null,
+  "latency_s": 0.938,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "d1d7f9bdaa77b59960f79d7d34e028642777b3920731755363b1b61a3c42b56a",
+  "audio_seconds": 2.647,
+  "seconds_to_make": 0.938
+ }
+}

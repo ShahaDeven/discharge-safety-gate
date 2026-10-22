@@ -1,0 +1,18 @@
+{
+ "text": "It's Carman Birdnum speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.8912724852561951,
+  "request_id": null,
+  "latency_s": 0.86,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9d21f493e54c28fec74bfcd6767c8a67e85952b3c7299c3d6426c660be4de58b",
+  "audio_seconds": 1.904,
+  "seconds_to_make": 0.86
+ }
+}

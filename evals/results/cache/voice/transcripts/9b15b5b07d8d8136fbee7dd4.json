@@ -1,0 +1,18 @@
+{
+ "text": "Well, I have to take it slow getting up these days. No fainting or anything like that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9762451648712158,
+  "request_id": null,
+  "latency_s": 2.406,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "1b7edf846bfa9f86151dfea5ec7fe143c582747160dad6dbac15a82dfd5fc494",
+  "audio_seconds": 4.18,
+  "seconds_to_make": 2.406
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "No, no chest pain, nothing like that",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9692209362983704,
+  "request_id": null,
+  "latency_s": 4.64,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "25550276ad1d51b58a66c80a5eb308526b694ff096e153d9c9e42c56ef3c5d33",
+  "audio_seconds": 2.369,
+  "seconds_to_make": 4.64
+ }
+}

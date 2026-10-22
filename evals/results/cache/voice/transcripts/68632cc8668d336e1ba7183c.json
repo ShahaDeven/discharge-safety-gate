@@ -1,0 +1,18 @@
+{
+ "text": "Hubi dos kilos desde el lunes",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9345961213111877,
+  "request_id": null,
+  "latency_s": 0.86,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "174d90d14dac215faa590edac644725cf25601f2559d2504a9d6fca2be7352cd",
+  "audio_seconds": 1.95,
+  "seconds_to_make": 0.86
+ }
+}

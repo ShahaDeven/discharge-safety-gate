@@ -1,0 +1,18 @@
+{
+ "text": "Well, now that you ask, there's a lump on my wrist where the catheter went in. It's been getting a little bigger and it's tender. No bleeding that I've seen and no black stools",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9898250102996826,
+  "request_id": null,
+  "latency_s": 1.797,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "6d047b39a6afaa46e69f7e4cf888bade57e3a73732135001ec2d94e75a13369f",
+  "audio_seconds": 9.288,
+  "seconds_to_make": 1.797
+ }
+}

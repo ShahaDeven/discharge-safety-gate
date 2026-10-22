@@ -1,0 +1,26 @@
+{
+ "text": "Pues no, la verdad no me falta el aire cuando estoy sentada o acostada. Respiro más o menos como antes, un poquito cansada nada más",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9915884137153625,
+  "request_id": null,
+  "latency_s": 1.188,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micah Shanahan",
+    "Lakeside General Hospital",
+    "tiotropium inhaler",
+    "budesonide/formoterol inhaler",
+    "albuterol inhaler",
+    "prednisone"
+   ]
+  },
+  "audio_sha256": "9dc3e4dd58172cd834c2fe68502779971c473834d6787f077b0af1dbc5fb85fd",
+  "audio_seconds": 8.963,
+  "seconds_to_make": 1.188
+ }
+}

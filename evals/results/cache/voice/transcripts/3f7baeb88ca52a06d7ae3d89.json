@@ -1,0 +1,28 @@
+{
+ "text": "Nitroglycerin? The little tablets under the tongue? Yes, I've got those. I picked them up. I only use them if my chest hurts, and I haven't needed them. Could you speak up a little, dear?",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9787951111793518,
+  "request_id": null,
+  "latency_s": 1.375,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Bebe Simonis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "f3d6f5764a8c39d3cc6d744fdf61b644683131b61ab1fe53eee546962f707cf0",
+  "audio_seconds": 11.471,
+  "seconds_to_make": 1.375
+ }
+}

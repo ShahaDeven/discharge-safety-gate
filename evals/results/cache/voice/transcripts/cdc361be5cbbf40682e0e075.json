@@ -1,0 +1,18 @@
+{
+ "text": "I took a Tramadol for the pain last night",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9947088956832886,
+  "request_id": null,
+  "latency_s": 0.812,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "81430bd5e7e765014403d25ce3225188e94e90bc81f85b61d7b84c7740382f89",
+  "audio_seconds": 2.136,
+  "seconds_to_make": 0.812
+ }
+}

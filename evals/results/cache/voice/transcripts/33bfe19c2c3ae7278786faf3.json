@@ -1,0 +1,18 @@
+{
+ "text": "My weight this morning was two hundred and four.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9636567831039429,
+  "request_id": null,
+  "latency_s": 1.047,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "9e3f5f630a084d3b3adc59383809e44c394a4d86968fd4d88f4d71925284527e",
+  "audio_seconds": 2.508,
+  "seconds_to_make": 1.047
+ }
+}

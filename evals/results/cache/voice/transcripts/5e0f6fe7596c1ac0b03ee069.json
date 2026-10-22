@@ -1,0 +1,18 @@
+{
+ "text": "It's Basilia Haganas speaking",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.968999445438385,
+  "request_id": null,
+  "latency_s": 1.312,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "0ff389eac87f23aef5075abb194b7d3d0d6e3fc1e18805cb028d6f75705afba7",
+  "audio_seconds": 1.811,
+  "seconds_to_make": 1.312
+ }
+}

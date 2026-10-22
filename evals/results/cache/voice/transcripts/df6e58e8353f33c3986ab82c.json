@@ -1,0 +1,18 @@
+{
+ "text": "I have not taken the water pill since Tuesday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9951562285423279,
+  "request_id": null,
+  "latency_s": 0.921,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "135f32fb129f2c9cd7c3995bf566889a88bd14b0ba36bc296da80579e1a6cb64",
+  "audio_seconds": 2.322,
+  "seconds_to_make": 0.921
+ }
+}

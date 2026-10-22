@@ -1,0 +1,26 @@
+{
+ "text": "Pues si me cuesta mucho trabajo respirar o me duele fuerte el pecho, llamo al 911 de una vez. Lo del peso me lo apunto. Me voy a pesar en la mañana y si se me hinchan mucho los pies o las piernas, le aviso a mi hija. Creo que eso es todo, ¿verdad? Gracias por llamar",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.9913187623023987,
+  "request_id": null,
+  "latency_s": 1.703,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Micaela Rendón",
+    "Lakeside General Hospital",
+    "furosemide",
+    "metoprolol succinate",
+    "sacubitril/valsartan",
+    "spironolactone"
+   ]
+  },
+  "audio_sha256": "2ef7db8f548396be496c17f726bf7ccd1c9165e05d5c62e89b2828c47abcf6e9",
+  "audio_seconds": 18.437,
+  "seconds_to_make": 1.703
+ }
+}

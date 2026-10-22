@@ -1,0 +1,18 @@
+{
+ "text": "It's Julian Walsh, October fourth, 1964",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9933346509933472,
+  "request_id": null,
+  "latency_s": 1.125,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "f5127352bc2dea05347c3f1e8723bdc8ea57f6bc4564bbac509ecb2f33a1ce98",
+  "audio_seconds": 3.344,
+  "seconds_to_make": 1.125
+ }
+}

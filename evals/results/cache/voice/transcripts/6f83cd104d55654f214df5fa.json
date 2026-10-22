@@ -1,0 +1,18 @@
+{
+ "text": "I take Glipizide before breakfast",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.46162015199661255,
+  "request_id": null,
+  "latency_s": 0.796,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "05ae2edf21bf236ef7f54636f9b35f3fc97af694564b639cac99c80944d2a14c",
+  "audio_seconds": 2.183,
+  "seconds_to_make": 0.796
+ }
+}

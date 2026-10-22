@@ -1,0 +1,28 @@
+{
+ "text": "Um, no, just the ones I told you about. No vitamins or anything like that, and no Advil or Tylenol or anything either",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9711201786994934,
+  "request_id": null,
+  "latency_s": 1.187,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Jordan Abbott",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin",
+    "amlodipine"
+   ]
+  },
+  "audio_sha256": "e01ce1462b3c67a264352e09aa06d206d214982bd32936cc6a1ff1dfd4936621",
+  "audio_seconds": 7.013,
+  "seconds_to_make": 1.187
+ }
+}

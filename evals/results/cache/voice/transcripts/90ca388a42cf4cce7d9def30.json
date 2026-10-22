@@ -1,0 +1,27 @@
+{
+ "text": "Well, my wrist is a bit sore where they did the procedure. Nothing much, I don't think. No bleeding that I've seen",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9753957390785217,
+  "request_id": null,
+  "latency_s": 0.985,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Grady Davis",
+    "Lakeside General Hospital",
+    "aspirin",
+    "clopidogrel",
+    "atorvastatin",
+    "metoprolol succinate",
+    "nitroglycerin"
+   ]
+  },
+  "audio_sha256": "adb114319e1c59b08e8cdb69d993a597a4080764659179e253295074a0c413d8",
+  "audio_seconds": 6.595,
+  "seconds_to_make": 0.985
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "text": "My date of birth is December 25th, 1956.",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9849410653114319,
+  "request_id": null,
+  "latency_s": 0.953,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false,
+   "keyterms": [
+    "Carman Bergnaum"
+   ]
+  },
+  "audio_sha256": "98103e33a6bb063addc4c1fe5a8e80ea582bf077ffe019b0c429a8e15d3f3d7f",
+  "audio_seconds": 3.251,
+  "seconds_to_make": 0.953
+ }
+}

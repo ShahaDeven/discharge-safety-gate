@@ -1,0 +1,18 @@
+{
+ "text": "No tomo metoprolol, lofina, cisamana",
+ "meta": {
+  "detected_language": "spa",
+  "language_probability": 0.42234721779823303,
+  "request_id": null,
+  "latency_s": 0.906,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b6a2c4c2e3b7f597ec78c58c0b03bf4a4a8b3861ab6c02dd3074a9f4046ce9e8",
+  "audio_seconds": 2.415,
+  "seconds_to_make": 0.906
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "text": "Yeah, about that inhaler, I never picked it up. The copay was $80 and I just couldn't swing it",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.991843044757843,
+  "request_id": null,
+  "latency_s": 0.843,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {
+   "tag_audio_events": false
+  },
+  "audio_sha256": "b588ae0ae73618474b41b4c3164a0b99e997eafb25f089a9f830c8371bac08da",
+  "audio_seconds": 5.851,
+  "seconds_to_make": 0.843
+ }
+}

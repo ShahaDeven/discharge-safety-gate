@@ -1,0 +1,16 @@
+{
+ "text": "I've gained five pounds since Monday",
+ "meta": {
+  "detected_language": "eng",
+  "language_probability": 0.9913630485534668,
+  "request_id": null,
+  "latency_s": 1.0,
+  "provider": "elevenlabs",
+  "model": "scribe_v2",
+  "language": null,
+  "settings": {},
+  "audio_sha256": "dac74d92b7808d88db5d9a4512349a1136fc33e7c04529bb032d6fa248ad787d",
+  "audio_seconds": 2.043,
+  "seconds_to_make": 1.0
+ }
+}
